@@ -1,3 +1,11 @@
+.bd-article p,
+.bd-article li,
+.bd-article .admonition,
+.bd-article figcaption {
+  text-align: justify;
+  hyphens: auto;
+}
+
 .destaque-azul {
   border-left-color: #42a5d5 !important;
   background-color: #eaf7fd !important;
@@ -15,4 +23,3 @@
 .destaque-vermelho > .admonition-title {
   background-color: #ffd9d9 !important;
 }
-
