@@ -1,0 +1,18 @@
+.destaque-azul {
+  border-left-color: #42a5d5 !important;
+  background-color: #eaf7fd !important;
+}
+
+.destaque-azul > .admonition-title {
+  background-color: #cdeefa !important;
+}
+
+.destaque-vermelho {
+  border-left-color: #d84a4a !important;
+  background-color: #fff0f0 !important;
+}
+
+.destaque-vermelho > .admonition-title {
+  background-color: #ffd9d9 !important;
+}
+
