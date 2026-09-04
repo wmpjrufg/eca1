@@ -1,40 +1,50 @@
-# Aula 02 — Ações na estrutura
+# Aula 02: Ações na estrutura
 
-Esta aula apresenta os critérios iniciais para determinar as ações que atuam em uma estrutura de concreto armado. O objetivo é transformar o peso dos materiais, as cargas de utilização e as cargas de elementos construtivos em carregamentos compatíveis com o modelo estrutural de lajes, vigas e pilares. Nesse caso vamos empregar a normativa NBR 6120 [[1]](#ref-1).
+## 1. Introdução
+
+Esta aula apresenta os critérios iniciais para determinar as ações que atuam em
+uma estrutura de concreto armado. O objetivo é transformar o peso dos materiais,
+as cargas de utilização e as cargas dos elementos construtivos em carregamentos
+compatíveis com o modelo estrutural de lajes, vigas e pilares. Para isso, será
+empregada a **ABNT NBR 6120:2019 — Ações para o cálculo de estruturas de
+edificações** [[1]](#ref-1).
 
 ```{admonition} Objetivos da aula
 :class: destaque-azul
 
-- compreender o caminho das cargas entre lajes, vigas e pilares.
 - identificar as principais fontes de carregamento de uma edificação;
 - distinguir cargas por unidade de volume, área e comprimento;
 - calcular o peso próprio de lajes maciças;
 - distribuir cargas de alvenaria sobre lajes;
-- revisão sobre a carga de vento no edifício.
+- revisar a ação do vento no edifício.
 ```
 
-## Referência normativa — slide 2
+## 2. As ações no subsistema horizontal
 
-Os valores de peso específico aparente dos materiais e de cargas de utilização
-devem ser obtidos na **ABNT NBR 6120 — Ações para o cálculo de estruturas de
-edificações**.
-
-[[1]](#ref-1) 
+Inicialmente, serão tratadas as ações que ocorrem no subsistema horizontal,
+formado por lajes e vigas. Essas ações podem ter naturezas diversas, desde o peso
+de um piano na sala de um edifício até o carregamento produzido por um elemento
+construtivo, como uma parede revestida de uma sala de raios X. Na maioria dos
+casos, essas cargas podem ser avaliadas com base na ABNT NBR 6120:2019
+[[1]](#ref-1).
 
 ```{admonition} Atenção
 :class: destaque-vermelho
 
-Antes de elaborar um projeto, consulte a edição vigente da norma. Os valores
-reproduzidos nesta aula correspondem ao material apresentado nos slides e devem
-ser confirmados para uso profissional.
+No caso de carregamentos específicos, como os produzidos por máquinas, consulte
+o catálogo do fabricante e verifique também, quando possível, a posição dos
+pontos de apoio. Essa é uma situação comum na avaliação das ações geradas por
+equipamentos.
 ```
 
-## Peso específico dos materiais — slide 3
+### 2.1 Peso específico aparente dos materiais
 
 O peso específico aparente, representado por $\gamma_{ap}$, expressa o peso do
-material por unidade de volume. Sua unidade usual é $\mathrm{kN/m^3}$.
+material por unidade de volume. Sua unidade usual é $\mathrm{kN/m^3}$. Neste
+caso, são utilizados os valores do item 5.3, Tabela 1, da ABNT NBR 6120:2019
+[[1]](#ref-1), parcialmente reproduzidos na Tabela 1.
 
-[[1]](#ref-1) [[2]](#ref-2)
+**Tabela 1 — Peso específico aparente dos materiais de construção. adaptada da ABNT NBR 6120, Tabela 1 [[1]](#ref-1).**
 
 | Grupo | Material | $\gamma_{ap}$ ($\mathrm{kN/m^3}$) |
 |---|---|---:|
@@ -56,7 +66,11 @@ material por unidade de volume. Sua unidade usual é $\mathrm{kN/m^3}$.
 | Revestimentos e concretos | Concreto simples | 24 |
 | Revestimentos e concretos | Concreto armado | 25 |
 
+```{admonition} Atenção
+:class: destaque-vermelho
+
 Os valores entre parênteses são valores médios indicados na tabela de origem.
+```
 
 ## Cargas de utilização e de cobertura — slide 4
 
