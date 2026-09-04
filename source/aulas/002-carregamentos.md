@@ -1,18 +1,16 @@
-# Aula 02 — Determinação das ações na estrutura
+# Aula 02 — Ações na estrutura
 
-Esta aula apresenta os critérios iniciais para determinar as ações que atuam em
-uma estrutura de concreto armado. O objetivo é transformar o peso dos materiais,
-as cargas de utilização e as cargas de elementos construtivos em carregamentos
-compatíveis com o modelo estrutural de lajes, vigas e pilares.
+Esta aula apresenta os critérios iniciais para determinar as ações que atuam em uma estrutura de concreto armado. O objetivo é transformar o peso dos materiais, as cargas de utilização e as cargas de elementos construtivos em carregamentos compatíveis com o modelo estrutural de lajes, vigas e pilares. Nesse caso vamos empregar a normativa NBR 6120 [[1]](#ref-1).
 
 ```{admonition} Objetivos da aula
 :class: destaque-azul
 
+- compreender o caminho das cargas entre lajes, vigas e pilares.
 - identificar as principais fontes de carregamento de uma edificação;
 - distinguir cargas por unidade de volume, área e comprimento;
 - calcular o peso próprio de lajes maciças;
 - distribuir cargas de alvenaria sobre lajes;
-- compreender o caminho das cargas entre lajes, vigas e pilares.
+- revisão sobre a carga de vento no edifício.
 ```
 
 ## Referência normativa — slide 2
@@ -20,6 +18,8 @@ compatíveis com o modelo estrutural de lajes, vigas e pilares.
 Os valores de peso específico aparente dos materiais e de cargas de utilização
 devem ser obtidos na **ABNT NBR 6120 — Ações para o cálculo de estruturas de
 edificações**.
+
+[[1]](#ref-1) 
 
 ```{admonition} Atenção
 :class: destaque-vermelho
@@ -33,6 +33,8 @@ ser confirmados para uso profissional.
 
 O peso específico aparente, representado por $\gamma_{ap}$, expressa o peso do
 material por unidade de volume. Sua unidade usual é $\mathrm{kN/m^3}$.
+
+[[1]](#ref-1) [[2]](#ref-2)
 
 | Grupo | Material | $\gamma_{ap}$ ($\mathrm{kN/m^3}$) |
 |---|---|---:|
@@ -60,6 +62,8 @@ Os valores entre parênteses são valores médios indicados na tabela de origem.
 
 As cargas de utilização dependem da finalidade do ambiente. Alguns valores
 apresentados no slide são:
+
+[[1]](#ref-1) [[2]](#ref-2)
 
 | Ocupação | Local | Carga uniformemente distribuída ($\mathrm{kN/m^2}$) |
 |---|---|---:|
@@ -100,11 +104,15 @@ $$
 \tag{4.2}
 $$
 
+[[1]](#ref-1)
+
 ## Pesos de elementos construtivos — slide 5
 
 Além do peso próprio da estrutura, devem ser considerados os pesos de
 alvenarias, telhas, impermeabilizações, contrapisos e revestimentos. As tabelas
 do slide foram mantidas como imagens provisórias para posterior redesenho.
+
+[[1]](#ref-1) [[2]](#ref-2)
 
 ```{figure} ../_static/aulas/carregamentos/tabela-alvenaria-estrutural.png
 :alt: Tabela de pesos de alvenaria estrutural
@@ -115,6 +123,8 @@ Pesos de alvenaria estrutural em função do tipo de bloco, da espessura e do
 revestimento.
 ```
 
+[[1]](#ref-1)
+
 ```{figure} ../_static/aulas/carregamentos/tabela-alvenaria-vedacao.png
 :alt: Tabela de pesos de alvenaria de vedação
 :width: 75%
@@ -124,6 +134,8 @@ Pesos de alvenaria de vedação em função do tipo de bloco, da espessura e do
 revestimento.
 ```
 
+[[1]](#ref-1)
+
 ```{figure} ../_static/aulas/carregamentos/tabela-coberturas-revestimentos.png
 :alt: Tabelas de pesos de coberturas, impermeabilizações e revestimentos
 :width: 75%
@@ -132,10 +144,14 @@ revestimento.
 Pesos de telhas, impermeabilizações, pisos elevados e revestimentos.
 ```
 
+[[1]](#ref-1)
+
 ## Representação das cargas — slide 6
 
 No modelo estrutural, a forma de representar a ação depende da geometria do
 elemento que a recebe:
+
+[[1]](#ref-1)
 
 | Elemento | Representação usual | Unidade típica |
 |---|---|---|
@@ -151,6 +167,8 @@ elemento que a recebe:
 :align: center
 ```
 
+[[1]](#ref-1)
+
 ### Vigas
 
 ```{image} ../_static/aulas/carregamentos/carga-em-viga.png
@@ -159,6 +177,8 @@ elemento que a recebe:
 :align: center
 ```
 
+[[1]](#ref-1)
+
 ### Pilares
 
 ```{image} ../_static/aulas/carregamentos/carga-em-pilar.png
@@ -166,6 +186,8 @@ elemento que a recebe:
 :width: 14%
 :align: center
 ```
+
+[[1]](#ref-1)
 
 ## Peso próprio das lajes — slide 7
 
@@ -178,6 +200,8 @@ $$
 G_{pp}^{\mathrm{laje}} = h_{\mathrm{laje}}\,\gamma_c
 \tag{7.1}
 $$
+
+[[1]](#ref-1)
 
 em que:
 
@@ -200,6 +224,8 @@ concreto e os elementos de enchimento ou as fôrmas incorporadas. Os catálogos
 dos fabricantes fornecem dimensões, volume de vazio, consumo de concreto e peso
 por unidade de área.
 
+[[1]](#ref-1) [[3]](#ref-3)
+
 ```{figure} ../_static/aulas/carregamentos/laje-nervurada-atex.png
 :alt: Dados geométricos de fôrmas Atex para laje nervurada
 :width: 100%
@@ -209,11 +235,15 @@ Exemplo de dados de catálogo usados para determinar o peso próprio de uma laje
 nervurada. Fonte indicada no slide: catálogo Atex 600.
 ```
 
+[[1]](#ref-1) [[3]](#ref-3)
+
 ## Carga de alvenaria sobre lajes — slide 8
 
 Considere uma parede com altura $H_{alv}$, espessura $e_{alv}$, comprimento
 $l_{alv}$ e peso específico $\gamma_{alv}$. A forma de distribuir sua carga
 depende da relação entre os vãos da laje:
+
+[[1]](#ref-1)
 
 $$
 \lambda = \frac{l_y}{l_x}, \qquad l_y \geq l_x.
@@ -242,6 +272,8 @@ pavimento.
 Distribuição equivalente da alvenaria em uma laje com $\lambda\leq2$.
 ```
 
+[[1]](#ref-1)
+
 ### Laje armada em uma direção: $\lambda > 2$
 
 Para a faixa de influência indicada no slide:
@@ -268,6 +300,8 @@ G_{EC}^{alv} = H_{alv}\,e_{alv}\,\gamma_{alv}.
 \tag{8.5}
 $$
 
+[[1]](#ref-1)
+
 ```{figure} ../_static/aulas/carregamentos/alvenaria-laje-unidirecional.png
 :alt: Distribuição de carga de alvenaria em laje armada em uma direção
 :width: 28%
@@ -275,6 +309,8 @@ $$
 
 Representação da parede e da carga aplicada na faixa de influência.
 ```
+
+[[1]](#ref-1)
 
 ```{admonition} Verificação de unidades
 :class: destaque-vermelho
@@ -294,6 +330,8 @@ G_{EC}^{alv} = \left(H_{alv}\,e_{alv}\right)\gamma_{alv}.
 \tag{9.1}
 $$
 
+[[1]](#ref-1)
+
 O resultado é expresso em $\mathrm{kN/m}$. Se houver aberturas, revestimentos ou
 variações de altura, esses efeitos devem ser incorporados ao cálculo do trecho
 correspondente.
@@ -306,6 +344,8 @@ correspondente.
 Caminho das cargas: as lajes recebem ações superficiais, transferem-nas às
 vigas e estas as conduzem aos pilares.
 ```
+
+[[1]](#ref-1)
 
 ## Síntese
 
@@ -320,3 +360,15 @@ vigas e estas as conduzem aos pilares.
 5. Distribuir as cargas de alvenaria conforme o sistema resistente da laje.
 6. Transferir as ações das lajes para as vigas e, em seguida, para os pilares.
 ```
+
+## Referências
+
+(ref-2)=
+(ref-1)=
+**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6120:2019**:
+*Ações para o cálculo de estruturas de edificações*. Rio de Janeiro: ABNT,
+2019.
+
+(ref-3)=
+**[3]** ATEX. *Catálogo Atex 600: fôrmas para lajes nervuradas*. Catálogo
+técnico do fabricante.
