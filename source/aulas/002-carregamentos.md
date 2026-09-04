@@ -25,7 +25,7 @@ Inicialmente, serão tratadas as ações que ocorrem no subsistema horizontal,
 formado por lajes e vigas. Essas ações podem ter naturezas diversas, desde o peso
 de um piano na sala de um edifício até o carregamento produzido por um elemento
 construtivo, como uma parede revestida de uma sala de raios X. Na maioria dos
-casos, essas cargas podem ser avaliadas com base na ABNT NBR 6120:2019
+casos, essas cargas podem ser avaliadas com base na ABNT NBR 6120
 [[1]](#ref-1).
 
 ```{admonition} Atenção
@@ -41,10 +41,10 @@ equipamentos.
 
 O peso específico aparente, representado por $\gamma_{ap}$, expressa o peso do
 material por unidade de volume. Sua unidade usual é $\mathrm{kN/m^3}$. Neste
-caso, são utilizados os valores do item 5.3, Tabela 1, da ABNT NBR 6120:2019
+caso, são utilizados os valores do item 5.3 da ABNT NBR 6120
 [[1]](#ref-1), parcialmente reproduzidos na Tabela 1.
 
-**Tabela 1 — Peso específico aparente dos materiais de construção. adaptada da ABNT NBR 6120, Tabela 1 [[1]](#ref-1).**
+**Tabela 1 — Peso específico aparente dos materiais de construção. Adaptado da ABNT NBR 6120, Tabela 1 [[1]](#ref-1).**
 
 | Grupo | Material | $\gamma_{ap}$ ($\mathrm{kN/m^3}$) |
 |---|---|---:|
@@ -72,12 +72,15 @@ caso, são utilizados os valores do item 5.3, Tabela 1, da ABNT NBR 6120:2019
 Os valores entre parênteses são valores médios indicados na tabela de origem.
 ```
 
-## Cargas de utilização e de cobertura — slide 4
+### 2.2 Cargas de utilização e de cobertura
 
-As cargas de utilização dependem da finalidade do ambiente. Alguns valores
-apresentados no slide são:
+As cargas de utilização estão relacionadas ao uso previsto para cada ambiente
+da edificação. Por esse motivo, seus valores variam de acordo com a ocupação e
+com as atividades desenvolvidas no local. A Tabela 2 apresenta alguns valores
+de cargas uniformemente distribuídas estabelecidos pela ABNT NBR 6120 [[1]](#ref-1).
 
-[[1]](#ref-1) [[2]](#ref-2)
+**Tabela 2 — Cargas uniformemente distribuídas em função da ocupação do
+ambiente.**
 
 | Ocupação | Local | Carga uniformemente distribuída ($\mathrm{kN/m^2}$) |
 |---|---|---:|
@@ -98,15 +101,19 @@ apresentados no slide são:
 | Comercial | Corredor de uso comum | 3,00 |
 | Comercial | Corredor dentro de unidade autônoma | 2,50 |
 
-Para a carga de cobertura indicada no slide, emprega-se:
+**Fonte:** adaptada da ABNT NBR 6120:2019 [[1]](#ref-1).
+
+No caso das coberturas, a carga uniformemente distribuída $q$ pode ser
+determinada pela Equação (4.1):
 
 $$
 q = 0{,}50\,\alpha
 \tag{4.1}
 $$
 
-em que $q$ é a carga, em $\mathrm{kN/m^2}$, e $\alpha$ depende da inclinação
-$i$ do telhado:
+em que $q$ é a carga de cobertura, expressa em $\mathrm{kN/m^2}$, e $\alpha$ é
+um coeficiente que depende da inclinação $i$ do telhado, conforme a Equação
+(4.2):
 
 $$
 \alpha =
@@ -118,7 +125,7 @@ $$
 \tag{4.2}
 $$
 
-[[1]](#ref-1)
+**Fonte:** ABNT NBR 6120:2019 [[1]](#ref-1).
 
 ## Pesos de elementos construtivos — slide 5
 
