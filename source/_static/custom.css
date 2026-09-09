@@ -23,3 +23,12 @@
 .destaque-vermelho > .admonition-title {
   background-color: #ffd9d9 !important;
 }
+
+.destaque-verde {
+  border-left-color: #3b9660 !important;
+  background-color: #effaf2 !important;
+}
+
+.destaque-verde > .admonition-title {
+  background-color: #d5efdd !important;
+}

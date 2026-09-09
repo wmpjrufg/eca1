@@ -6,6 +6,9 @@ Repositório das aulas e materiais da disciplina de Estruturas de Concreto Armad
 :maxdepth: 2
 :caption: Aulas
 
+aulas/000-plano-ensino
+aulas/000-provas-anteriores
+aulas/000-trabalho-pratico
 aulas/001-introducao
 aulas/002-carregamentos
 ```
