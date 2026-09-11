@@ -59,24 +59,24 @@ a) Laje armada em duas direções:
 
 $$
 h = 2\%\cdot\frac{l_y+l_x}{2}
-\tag{2.1}
+\tag{3}
 $$
 
 b) Laje armada em uma direção:
 
 $$
 h = 2\%\cdot l_x
-\tag{2.2}
+\tag{4}
 $$
 
 c) Lajes em balanço:
 
 $$
 h = 4\%\cdot l_x
-\tag{2.3}
+\tag{5}
 $$
 
-### 2.2 Lajes nervuradas moldadas *in loco*
+#### Lajes nervuradas moldadas *in loco*
 
 Como as lajes nervuradas se dividem em diversos grupos, adotam-se critérios
 distintos para as lajes unidirecionais e para as lajes em grelha (bidirecionais).
@@ -117,15 +117,7 @@ original (Rebello [[2]](#ref-2)). Preciso conferir o texto do livro para
 inserir a expressão correta aqui.
 ```
 
-Em qualquer caso, devem sempre ser respeitados os limites mínimos
-estabelecidos pela ABNT NBR 6118 [[1]](#ref-1).
-
-**Lajes bidirecionais (em grelha)**
-
-Para as lajes em grelha, ou armadas em duas direções, dentro da ótica das
-lajes nervuradas, Rebello [[2]](#ref-2) prescreve:
-
-a) Laje armada em duas direções, moldada *in loco* e nervurada:
+b) Lajes bidirecionais (em grelha):
 
 $$
 h = 4\%\cdot\frac{l_y+l_x}{2}
@@ -151,7 +143,7 @@ a = 1{,}5\cdot h \text{ a } 2{,}0\cdot h
 \tag{2.11}
 $$
 
-### 2.3 Coeficiente adicional de segurança para lajes em balanço
+### Coeficiente adicional de segurança para lajes em balanço
 
 Além dos critérios de pré-dimensionamento apresentados, as lajes em balanço
 estão sujeitas a um coeficiente adicional de segurança $\gamma_n$, prescrito
