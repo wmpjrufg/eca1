@@ -6,23 +6,23 @@ critérios práticos de pré-dimensionamento. Essas estimativas permitem montar
 um modelo estrutural coerente, evitar retrabalho na modelagem e servem como
 ponto de partida para o dimensionamento final em concreto armado.
 
-## 1. Pré-dimensionamento de vigas
+## Pré-dimensionamento de vigas
 
 A ABNT NBR 6118 [[1]](#ref-1) faz uma ressalva quanto à largura de vigas de
 concreto armado ou protendido no item 15.10, que trata da segurança à
 instabilidade lateral. Segundo a norma, essa segurança deve ser garantida por
 meio de procedimentos apropriados; para tanto, são estabelecidos critérios que
 definem uma largura mínima para a viga em função das condições de
-contraventamento lateral, expressos pelas Equações (1.1) e (1.2):
+contraventamento lateral, expressos pelas Equações (1) e (2):
 
 $$
 b \geq \frac{l_0}{50}
-\tag{1.1}
+\tag{1}
 $$
 
 $$
 b \geq \beta_{fl}\,h
-\tag{1.2}
+\tag{2}
 $$
 
 em que:
@@ -32,38 +32,24 @@ em que:
 - $l_0$ é o comprimento do flange comprimido, medido entre os suportes que
   garantem o contraventamento lateral;
 - $\beta_{fl}$ é um coeficiente que depende da forma da seção transversal da
-  viga, conforme o Quadro 1.1.
+  viga presente na Figura [1](#figura1).
 
-(quadro-1-1)=
-```{figure} ../_static/aulas/pre-dimensionamento/quadro-beta-fl-vigas.svg
+(figura1)=
+```{figure} ../_static/aulas/pre-dimensionamento/quadro-beta-fl-vigas.png
 :alt: Coeficiente beta_fl para seções de viga, em função da tipologia da seção transversal
 :width: 75%
 :align: center
-
-**Quadro 1.1** — Coeficiente $\beta_{fl}$ para seções de viga. Seções
-isoladas (retangular, T ou I), sem travamento lateral por lajes adjacentes,
-resultam em $\beta_{fl}=0{,}40$. Seções com múltiplas almas ou com mesa
-contínua travada por lajes em ambos os lados resultam em
-$\beta_{fl}=0{,}20$. Adaptado da ABNT NBR 6118 [[1]](#ref-1).
 ```
+**Figura 1** — Coeficiente $\beta_{fl}$ para seções de viga.
 
-```{admonition} Atenção
-:class: destaque-vermelho
 
-É muito comum que os sistemas de vigas sejam contornados em toda a sua
-extensão por sistemas de lajes, o que dispensa essa verificação de
-instabilidade lateral. Porém, em situações em que a viga não possuir esse
-travamento lateral, a largura deve ser verificada pelas Equações (1.1) e
-(1.2).
-```
-
-## 2. Pré-dimensionamento de lajes
+## Pré-dimensionamento de lajes
 
 Diversos autores apresentam procedimentos para a determinação da geometria da
 forma em lajes maciças e nervuradas. Nesta aula, o foco adotado é o trabalho
 de Rebello [[2]](#ref-2).
 
-### 2.1 Lajes maciças
+#### Lajes maciças
 
 Para lajes maciças em concreto armado, Rebello [[2]](#ref-2) estabelece
 critérios de pré-dimensionamento da altura $h$ em função do menor vão
@@ -307,8 +293,8 @@ considerados nessa etapa.
 estruturas de concreto. Rio de Janeiro: ABNT, 2023.
 
 (ref-2)=
-**[2]** REBELLO, Yopanan Vitor de Assumpção. **A concepção estrutural e a
-arquitetura**. São Paulo: Zigurate Editora, 2000.
+**[2]** REBELLO, Yopanan Conrado Pereira. **Bases para projeto estrutural
+na arquitetura**. 2. ed. São Paulo: Zigurate Editora, 2007.
 
 (ref-3)=
 **[3]** BACARJI, Eli. *[referência incompleta — confirmar título, editora e
