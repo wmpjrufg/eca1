@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="#ffffff"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#000000" stroke-width="2"/>
+    </pattern>
+    <marker id="arrow-start" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 10 1 L 1 5 L 10 9 z" fill="#000000"/>
+    </marker>
+    <marker id="arrow-end" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="420" fill="#ffffff"/>
+
+  <!-- table frame -->
+  <g stroke="#000000" stroke-width="2.5" fill="none">
+    <rect x="20" y="20" width="860" height="340"/>
+    <line x1="520" y1="20" x2="520" y2="360"/>
+    <line x1="20" y1="80" x2="880" y2="80"/>
+    <line x1="20" y1="220" x2="880" y2="220"/>
+  </g>
+
+  <!-- headers -->
+  <g font-weight="bold" font-size="22" text-anchor="middle" fill="#000000">
+    <text x="270" y="55">Tipologia da viga</text>
+    <text x="700" y="55">Valores de <tspan font-style="italic">&#946;</tspan><tspan baseline-shift="sub" font-size="14">fl</tspan></text>
+  </g>
+
+  <!-- row 1: isolated sections, beta_fl = 0.40 -->
+  <g stroke="#000000" stroke-width="2" fill="none">
+    <!-- (a) retangular -->
+    <rect x="118" y="125" width="24" height="70"/>
+    <!-- (b) T -->
+    <rect x="235" y="125" width="70" height="14" fill="url(#hatch)"/>
+    <rect x="262" y="139" width="16" height="56"/>
+    <!-- (c) I / bulbo -->
+    <rect x="370" y="125" width="80" height="12" fill="url(#hatch)"/>
+    <path d="M 402 137 L 418 137 L 424 195 L 396 195 Z"/>
+  </g>
+
+  <!-- row 1 dimension lines "b" -->
+  <g stroke="#000000" stroke-width="1.5" font-size="16" font-style="italic" text-anchor="middle" fill="#000000">
+    <line x1="118" y1="110" x2="142" y2="110" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+    <text x="130" y="102">b</text>
+
+    <line x1="235" y1="110" x2="305" y2="110" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+    <text x="270" y="102">b</text>
+
+    <line x1="370" y1="110" x2="450" y2="110" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+    <text x="410" y="102">b</text>
+  </g>
+
+  <text x="700" y="162" font-size="26" text-anchor="middle" fill="#000000">0,40</text>
+
+  <!-- row 2: multi-web / bilaterally braced sections, beta_fl = 0.20 -->
+  <g stroke="#000000" stroke-width="2" fill="none">
+    <!-- (a) multi-rib -->
+    <rect x="210" y="321" width="140" height="14" fill="url(#hatch)"/>
+    <rect x="232" y="251" width="16" height="70"/>
+    <rect x="272" y="251" width="16" height="70"/>
+    <rect x="312" y="251" width="16" height="70"/>
+    <!-- (b) T continuous, braced on both sides -->
+    <rect x="340" y="251" width="140" height="14" fill="url(#hatch)"/>
+    <rect x="402" y="265" width="16" height="70"/>
+  </g>
+
+  <!-- row 2 dimension lines "b" -->
+  <g stroke="#000000" stroke-width="1.5" font-size="16" font-style="italic" text-anchor="middle" fill="#000000">
+    <line x1="232" y1="236" x2="248" y2="236" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+    <text x="240" y="228">b</text>
+
+    <line x1="402" y1="236" x2="418" y2="236" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+    <text x="410" y="228">b</text>
+  </g>
+
+  <text x="700" y="297" font-size="26" text-anchor="middle" fill="#000000">0,20</text>
+
+  <!-- legend -->
+  <g font-size="17" fill="#000000">
+    <text x="20" y="378">onde</text>
+    <rect x="20" y="388" width="26" height="16" fill="url(#hatch)" stroke="#000000" stroke-width="1.5"/>
+    <text x="54" y="401">Zona comprimida</text>
+  </g>
+</svg>

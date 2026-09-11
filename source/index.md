@@ -4,11 +4,18 @@ Repositório das aulas e materiais da disciplina de Estruturas de Concreto Armad
 
 ```{toctree}
 :maxdepth: 2
+:caption: Estruturas de Concreto Armado 1
+
+disciplina/000-plano-ensino
+disciplina/000-provas-anteriores
+disciplina/000-trabalho-pratico
+```
+
+```{toctree}
+:maxdepth: 2
 :caption: Aulas
 
-aulas/000-plano-ensino
-aulas/000-provas-anteriores
-aulas/000-trabalho-pratico
 aulas/001-introducao
-aulas/002-carregamentos
+aulas/002-pre-dimensionamento
+aulas/003-carregamentos
 ```
