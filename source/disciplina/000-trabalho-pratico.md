@@ -106,7 +106,7 @@ conforme a Tabela 2 da
 [Aula 03 — Ações na estrutura](../aulas/003-carregamentos.md).
 
 Para a laje de cobertura, considere uma inclinação $i=2\%$, o que resulta,
-pelas Equações (4.1) e (4.2) da
+pelas Equações (2.1) e (2.2) da
 [Aula 03 — Ações na estrutura](../aulas/003-carregamentos.md), em:
 
 $$
@@ -126,21 +126,26 @@ dos pesos específicos apresentados na Tabela 1 da
 
 - **Vedações:** alvenaria em bloco cerâmico vazado com $11{,}5\text{ cm}$ de
   espessura, com reboco (argamassa de cimento e areia) de $2\text{ cm}$ em
-  cada face.
-- **Impermeabilização:** manta asfáltica com $10\text{ cm}$ de espessura,
-  revestida com argamassa de cimento e areia de $2{,}5\text{ cm}$ de
-  espessura.
+  cada face, conforme a Tabela 3 da
+  [Aula 03 — Ações na estrutura](../aulas/003-carregamentos.md).
+- **Impermeabilização:** manta asfáltica, revestida com argamassa de cimento
+  e areia de $2{,}5\text{ cm}$ de espessura, conforme a Tabela 5 da
+  [Aula 03 — Ações na estrutura](../aulas/003-carregamentos.md).
 - **Forro:** forro de gesso em placas, incluindo a estrutura de suporte, e
   argamassa de cimento e areia com $2{,}5\text{ cm}$ de espessura na face
-  inferior da laje.
+  inferior da laje, conforme a Tabela 8 e a Tabela 1 da
+  [Aula 03 — Ações na estrutura](../aulas/003-carregamentos.md).
 - **Revestimento de piso:** espessura de $5\text{ cm}$, conforme pesos
-  específicos apresentados na Tabela 3.
+  específicos apresentados na Tabela 5 da
+  [Aula 03 — Ações na estrutura](../aulas/003-carregamentos.md).
 
 ```{admonition} Pendente
 :class: destaque-azul
 
-A Tabela 3, referente aos pesos específicos do revestimento de piso, será
-disponibilizada na Aula 03 — Ações na estrutura.
+A espessura de $10\text{ cm}$ indicada para a manta asfáltica não corresponde
+a nenhuma opção da Tabela 5 da Aula 03 (que vai até $0{,}5\text{ cm}$) —
+confirme se a espessura pretendida é essa mesma ou se é um erro de digitação
+(por exemplo, $1{,}0\text{ cm}$).
 ```
 
 ## Referências

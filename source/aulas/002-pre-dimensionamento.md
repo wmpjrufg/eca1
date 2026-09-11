@@ -6,23 +6,23 @@ critérios práticos de pré-dimensionamento. Essas estimativas permitem montar
 um modelo estrutural coerente, evitar retrabalho na modelagem e servem como
 ponto de partida para o dimensionamento final em concreto armado.
 
-## 2. Pré-dimensionamento de vigas
+## 1. Pré-dimensionamento de vigas
 
 A ABNT NBR 6118 [[1]](#ref-1) faz uma ressalva quanto à largura de vigas de
 concreto armado ou protendido no item 15.10, que trata da segurança à
 instabilidade lateral. Segundo a norma, essa segurança deve ser garantida por
 meio de procedimentos apropriados; para tanto, são estabelecidos critérios que
 definem uma largura mínima para a viga em função das condições de
-contraventamento lateral, expressos pelas Equações (2.1) e (2.2):
+contraventamento lateral, expressos pelas Equações (1.1) e (1.2):
 
 $$
 b \geq \frac{l_0}{50}
-\tag{2.1}
+\tag{1.1}
 $$
 
 $$
 b \geq \beta_{fl}\,h
-\tag{2.2}
+\tag{1.2}
 $$
 
 em que:
@@ -32,15 +32,15 @@ em que:
 - $l_0$ é o comprimento do flange comprimido, medido entre os suportes que
   garantem o contraventamento lateral;
 - $\beta_{fl}$ é um coeficiente que depende da forma da seção transversal da
-  viga, conforme o Quadro 2.1.
+  viga, conforme o Quadro 1.1.
 
-(quadro-2-1)=
+(quadro-1-1)=
 ```{figure} ../_static/aulas/pre-dimensionamento/quadro-beta-fl-vigas.svg
 :alt: Coeficiente beta_fl para seções de viga, em função da tipologia da seção transversal
 :width: 75%
 :align: center
 
-**Quadro 2.1** — Coeficiente $\beta_{fl}$ para seções de viga. Seções
+**Quadro 1.1** — Coeficiente $\beta_{fl}$ para seções de viga. Seções
 isoladas (retangular, T ou I), sem travamento lateral por lajes adjacentes,
 resultam em $\beta_{fl}=0{,}40$. Seções com múltiplas almas ou com mesa
 contínua travada por lajes em ambos os lados resultam em
@@ -53,17 +53,17 @@ $\beta_{fl}=0{,}20$. Adaptado da ABNT NBR 6118 [[1]](#ref-1).
 É muito comum que os sistemas de vigas sejam contornados em toda a sua
 extensão por sistemas de lajes, o que dispensa essa verificação de
 instabilidade lateral. Porém, em situações em que a viga não possuir esse
-travamento lateral, a largura deve ser verificada pelas Equações (2.1) e
-(2.2).
+travamento lateral, a largura deve ser verificada pelas Equações (1.1) e
+(1.2).
 ```
 
-## 3. Pré-dimensionamento de lajes
+## 2. Pré-dimensionamento de lajes
 
 Diversos autores apresentam procedimentos para a determinação da geometria da
 forma em lajes maciças e nervuradas. Nesta aula, o foco adotado é o trabalho
 de Rebello [[2]](#ref-2).
 
-### 3.1 Lajes maciças
+### 2.1 Lajes maciças
 
 Para lajes maciças em concreto armado, Rebello [[2]](#ref-2) estabelece
 critérios de pré-dimensionamento da altura $h$ em função do menor vão
@@ -73,24 +73,24 @@ a) Laje armada em duas direções:
 
 $$
 h = 2\%\cdot\frac{l_y+l_x}{2}
-\tag{3.1}
+\tag{2.1}
 $$
 
 b) Laje armada em uma direção:
 
 $$
 h = 2\%\cdot l_x
-\tag{3.2}
+\tag{2.2}
 $$
 
 c) Lajes em balanço:
 
 $$
 h = 4\%\cdot l_x
-\tag{3.3}
+\tag{2.3}
 $$
 
-### 3.2 Lajes nervuradas moldadas *in loco*
+### 2.2 Lajes nervuradas moldadas *in loco*
 
 Como as lajes nervuradas se dividem em diversos grupos, adotam-se critérios
 distintos para as lajes unidirecionais e para as lajes em grelha (bidirecionais).
@@ -101,19 +101,19 @@ a) Laje armada em uma direção, moldada *in loco* e nervurada:
 
 $$
 h = 4\%\cdot l_x \text{, para espaçamento de 100 cm entre nervuras}
-\tag{3.4}
+\tag{2.4}
 $$
 
 $$
 h = 3\%\cdot l_x \text{, para espaçamento de 50 cm entre nervuras}
-\tag{3.5}
+\tag{2.5}
 $$
 
 b) Largura da nervura ($b_w$):
 
 $$
 b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
-\tag{3.6}
+\tag{2.6}
 $$
 
 c) Altura da capa ($h_f$):
@@ -125,7 +125,7 @@ inicial em função de $a$ — a distância entre nervuras.
 ```{admonition} Pendente
 :class: destaque-azul
 
-A equação (3.7) — altura da capa $h_f$ para lajes nervuradas unidirecionais,
+A equação (2.7) — altura da capa $h_f$ para lajes nervuradas unidirecionais,
 em função do espaçamento $a$ entre nervuras — não ficou legível na fonte
 original (Rebello [[2]](#ref-2)). Preciso conferir o texto do livro para
 inserir a expressão correta aqui.
@@ -143,36 +143,36 @@ a) Laje armada em duas direções, moldada *in loco* e nervurada:
 
 $$
 h = 4\%\cdot\frac{l_y+l_x}{2}
-\tag{3.8}
+\tag{2.8}
 $$
 
 b) Largura da nervura ($b_w$):
 
 $$
 b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
-\tag{3.9}
+\tag{2.9}
 $$
 
 c) Altura da capa ($h_f$):
 
 $$
 h_f = \frac{a-b_w}{12}
-\tag{3.10}
+\tag{2.10}
 $$
 
 $$
 a = 1{,}5\cdot h \text{ a } 2{,}0\cdot h
-\tag{3.11}
+\tag{2.11}
 $$
 
-### 3.3 Coeficiente adicional de segurança para lajes em balanço
+### 2.3 Coeficiente adicional de segurança para lajes em balanço
 
 Além dos critérios de pré-dimensionamento apresentados, as lajes em balanço
 estão sujeitas a um coeficiente adicional de segurança $\gamma_n$, prescrito
 pela ABNT NBR 6118 [[1]](#ref-1) em função da altura da laje, conforme o
-Quadro 3.1.
+Quadro 2.1.
 
-**Quadro 3.1 — Valores do coeficiente adicional $\gamma_n$ para lajes em
+**Quadro 2.1 — Valores do coeficiente adicional $\gamma_n$ para lajes em
 balanço.**
 
 | $h$ (cm) | ≥ 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 | 11 | 10 |
@@ -181,20 +181,20 @@ balanço.**
 
 **Fonte:** adaptado da ABNT NBR 6118 [[1]](#ref-1), Tabela 13.2.
 
-O quadro pode ser expresso pela Equação (3.12), em que $h$ é a altura da
+O quadro pode ser expresso pela Equação (2.12), em que $h$ é a altura da
 laje em centímetros:
 
 $$
 \gamma_n = 1{,}95 - 0{,}05\,h
-\tag{3.12}
+\tag{2.12}
 $$
 
 O coeficiente $\gamma_n$ deve majorar os esforços solicitantes finais de
 cálculo nas lajes em balanço, quando de seu dimensionamento.
 
-## 4. Pré-dimensionamento de pilares
+## 3. Pré-dimensionamento de pilares
 
-### 4.1 Área de influência
+### 3.1 Área de influência
 
 Bacarji [[3]](#ref-3) orienta a divisão da área de influência dos pilares em
 faixas proporcionais ao vão, de acordo com a posição do pilar na planta:
@@ -225,14 +225,14 @@ substitua este aviso pelo bloco:
     ```
 ```
 
-### 4.2 Carga estimada e seção transversal do pilar
+### 3.2 Carga estimada e seção transversal do pilar
 
 Após a determinação da área de influência e do carregamento estimado no
-pavimento, a seção transversal do pilar pode ser obtida pela Equação (4.1):
+pavimento, a seção transversal do pilar pode ser obtida pela Equação (3.1):
 
 $$
 A_c = \frac{N_d^{*}}{0{,}85\,f_{cd} + \rho\,\sigma_{s,\varepsilon=0,2\%}}
-\tag{4.1}
+\tag{3.1}
 $$
 
 em que:
@@ -244,25 +244,25 @@ em que:
 - $\sigma_{s,\varepsilon=0,2\%}$ é a tensão no aço correspondente a uma
   deformação de $0{,}20\%$, que para o aço CA-50 vale $420\ \mathrm{MPa}$;
 - $\rho$ é a taxa de armadura do pilar; da Costa [[4]](#ref-4) recomenda,
-  como valor intermediário, $\rho = 2\%$ (inserido na Equação (4.1) como
+  como valor intermediário, $\rho = 2\%$ (inserido na Equação (3.1) como
   $\rho = 2/100$, e não em taxa percentual).
 
 Para determinar a carga atuante de pré-dimensionamento, utilizam-se as
-Equações (4.2) a (4.5):
+Equações (3.2) a (3.5):
 
 $$
 N_k^{*} = Q_{tot}\cdot A_i
-\tag{4.2}
+\tag{3.2}
 $$
 
 $$
 N_k^{*} = n_{tipo}\cdot N_k^{tipo} + n_{cob}\cdot N_k^{cob}
-\tag{4.3}
+\tag{3.3}
 $$
 
 $$
 N_d^{*} = \alpha\cdot N_k^{*}
-\tag{4.4}
+\tag{3.4}
 $$
 
 $$
@@ -272,7 +272,7 @@ $$
 2{,}2, & \text{pilares de extremidade} \\
 2{,}5, & \text{pilares de canto}
 \end{cases}
-\tag{4.5}
+\tag{3.5}
 $$
 
 em que $N_k^{*}$ é a carga característica para pré-dimensionamento; $Q_{tot}$
@@ -290,14 +290,14 @@ considerados nessa etapa.
 :class: destaque-azul
 
 1. Verificar, para vigas sem travamento lateral por lajes, a largura mínima
-   dada pelas Equações (2.1) e (2.2).
+   dada pelas Equações (1.1) e (1.2).
 2. Estimar a altura das lajes maciças ou nervuradas com base nos vãos $l_x$
    e $l_y$ do painel.
 3. Majorar os esforços de lajes em balanço pelo coeficiente $\gamma_n$.
 4. Definir a área de influência de cada pilar a partir das faixas de
    Bacarji.
 5. Estimar a carga característica e de cálculo do pilar e obter a área da
-   seção transversal pela Equação (4.1).
+   seção transversal pela Equação (3.1).
 ```
 
 ## Referências

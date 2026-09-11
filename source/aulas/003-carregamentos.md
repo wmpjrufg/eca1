@@ -14,6 +14,8 @@ edificações** [[1]](#ref-1).
 
 - identificar as principais fontes de carregamento de uma edificação;
 - distinguir cargas por unidade de volume, área e comprimento;
+- consultar valores de referência de pesos de alvenarias, revestimentos,
+  coberturas e forros;
 - calcular o peso próprio de lajes maciças;
 - distribuir cargas de alvenaria sobre lajes;
 - revisar a ação do vento no edifício.
@@ -104,16 +106,16 @@ ambiente.**
 **Fonte:** adaptada da ABNT NBR 6120:2019 [[1]](#ref-1).
 
 No caso das coberturas, a carga uniformemente distribuída $q$ pode ser
-determinada pela Equação (4.1):
+determinada pela Equação (2.1):
 
 $$
 q = 0{,}50\,\alpha
-\tag{4.1}
+\tag{2.1}
 $$
 
 em que $q$ é a carga de cobertura, expressa em $\mathrm{kN/m^2}$, e $\alpha$ é
 um coeficiente que depende da inclinação $i$ do telhado, conforme a Equação
-(4.2):
+(2.2):
 
 $$
 \alpha =
@@ -122,18 +124,23 @@ $$
 2{,}00 - 0{,}50i, & 2\% < i < 3\%,\\
 0{,}50, & i \geq 3\%.
 \end{cases}
-\tag{4.2}
+\tag{2.2}
 $$
 
 **Fonte:** ABNT NBR 6120:2019 [[1]](#ref-1).
 
-## Pesos de elementos construtivos — slide 5
+### 2.3 Pesos de elementos construtivos
 
-Além do peso próprio da estrutura, devem ser considerados os pesos de
-alvenarias, telhas, impermeabilizações, contrapisos e revestimentos. As tabelas
-do slide foram mantidas como imagens provisórias para posterior redesenho.
+Além do peso próprio da estrutura, devem ser consideradas as cargas de
+alvenarias, divisórias, caixilhos, revestimentos, impermeabilizações, telhas,
+telhados e forros, entre outros elementos construtivos, conforme a ABNT NBR
+6120 [[1]](#ref-1) [[2]](#ref-2). As tabelas a seguir reúnem valores de
+referência para esses elementos. Na aplicação em projeto, devem ser
+identificadas as características reais dos materiais e dos componentes
+construtivos adotados.
 
-[[1]](#ref-1) [[2]](#ref-2)
+Para alvenaria estrutural (blocos portantes), os pesos de referência constam
+na figura a seguir.
 
 ```{figure} ../_static/aulas/carregamentos/tabela-alvenaria-estrutural.png
 :alt: Tabela de pesos de alvenaria estrutural
@@ -141,33 +148,128 @@ do slide foram mantidas como imagens provisórias para posterior redesenho.
 :align: center
 
 Pesos de alvenaria estrutural em função do tipo de bloco, da espessura e do
-revestimento.
+revestimento. [[1]](#ref-1)
 ```
 
-[[1]](#ref-1)
+A Tabela 3 apresenta os pesos de paredes de alvenaria de **vedação** em
+função da espessura e do revestimento. Os valores incluem o peso do bloco ou
+tijolo e, nas colunas correspondentes, o revestimento aplicado em cada face.
 
-```{figure} ../_static/aulas/carregamentos/tabela-alvenaria-vedacao.png
-:alt: Tabela de pesos de alvenaria de vedação
-:width: 75%
-:align: center
+**Tabela 3 — Peso de paredes de alvenaria de vedação em função da espessura e do revestimento.**
 
-Pesos de alvenaria de vedação em função do tipo de bloco, da espessura e do
-revestimento.
-```
+| Material | Espessura nominal do elemento (cm) | Sem revestimento (kN/m²) | Revestimento de 1 cm por face (kN/m²) | Revestimento de 2 cm por face (kN/m²) |
+|---|---:|---:|---:|---:|
+| Bloco de concreto vazado (Classe C — ABNT NBR 6136) | 6,5 | 1,0 | 1,4 | 1,8 |
+| Bloco de concreto vazado (Classe C — ABNT NBR 6136) | 9 | 1,1 | 1,5 | 1,9 |
+| Bloco de concreto vazado (Classe C — ABNT NBR 6136) | 11,5 | 1,3 | 1,7 | 2,1 |
+| Bloco de concreto vazado (Classe C — ABNT NBR 6136) | 14 | 1,4 | 1,8 | 2,2 |
+| Bloco de concreto vazado (Classe C — ABNT NBR 6136) | 19 | 1,8 | 2,2 | 2,6 |
+| Bloco cerâmico vazado, furo horizontal (ABNT NBR 15270-1) | 9 | 0,7 | 1,1 | 1,6 |
+| Bloco cerâmico vazado, furo horizontal (ABNT NBR 15270-1) | 11,5 | 0,9 | 1,3 | 1,7 |
+| Bloco cerâmico vazado, furo horizontal (ABNT NBR 15270-1) | 14 | 1,1 | 1,5 | 1,9 |
+| Bloco cerâmico vazado, furo horizontal (ABNT NBR 15270-1) | 19 | 1,4 | 1,8 | 2,3 |
+| Bloco de concreto celular autoclavado (Classe C25 — ABNT NBR 13438) | 7,5 | 0,5 | 0,9 | 1,3 |
+| Bloco de concreto celular autoclavado (Classe C25 — ABNT NBR 13438) | 10 | 0,6 | 1,0 | 1,4 |
+| Bloco de concreto celular autoclavado (Classe C25 — ABNT NBR 13438) | 12,5 | 0,8 | 1,2 | 1,6 |
+| Bloco de concreto celular autoclavado (Classe C25 — ABNT NBR 13438) | 15 | 0,9 | 1,3 | 1,7 |
+| Bloco de concreto celular autoclavado (Classe C25 — ABNT NBR 13438) | 17,5 | 1,1 | 1,5 | 1,9 |
+| Bloco de concreto celular autoclavado (Classe C25 — ABNT NBR 13438) | 20 | 1,2 | 1,6 | 2,0 |
+| Bloco de vidro (decorativo, sem resistência ao fogo) | 8 | 0,8 | — | — |
 
-[[1]](#ref-1)
+**Nota:** os valores das três últimas colunas são pesos por unidade de área da
+parede. A espessura do revestimento indicada é considerada em cada face da
+parede.
 
-```{figure} ../_static/aulas/carregamentos/tabela-coberturas-revestimentos.png
-:alt: Tabelas de pesos de coberturas, impermeabilizações e revestimentos
-:width: 75%
-:align: center
+**Tabela 4 — Divisórias e caixilhos.**
 
-Pesos de telhas, impermeabilizações, pisos elevados e revestimentos.
-```
+| Material | Espessura nominal do elemento (cm) | Peso (kN/m²) |
+|---|---:|---:|
+| *Drywall* (montantes metálicos, quatro chapas de 12,5 mm e isolamento acústico com lã de rocha ou lã de vidro de 50 mm) | 7 a 30 | 0,5 |
+| Divisórias retráteis, exceto divisórias com vidro | 7 a 12 | 0,6 |
+| Caixilhos de alumínio, incluindo vidro simples de 4 mm | — | 0,2 |
+| Caixilhos de ferro, incluindo vidro simples de 4 mm | — | 0,3 |
+| Caixilhos que vão de piso a piso, com $h \leq 4,0\ \mathrm{m}$ | — | 0,5 |
+| Fachadas com pele de vidro e fachadas unitizadas | Validar conforme o caso | — |
 
-[[1]](#ref-1)
+**Nota:** para fachadas com pele de vidro ou fachadas unitizadas, o peso deve
+ser determinado de acordo com a composição efetiva do sistema.
 
-## Representação das cargas — slide 6
+**Tabela 5 — Revestimentos de pisos e impermeabilizações.**
+
+| Material | Espessura (cm) | Peso (kN/m²) |
+|---|---:|---:|
+| Impermeabilização com manta asfáltica simples, sem camada de regularização nem proteção mecânica | 0,3 | 0,08 |
+| Impermeabilização com manta asfáltica simples, sem camada de regularização nem proteção mecânica | 0,4 | 0,10 |
+| Impermeabilização com manta asfáltica simples, sem camada de regularização nem proteção mecânica | 0,5 | 0,11 |
+| Piso elevado interno com placas de aço, sem revestimento, até 30 cm de altura | — | 0,5 |
+| Piso elevado interno com placas de polipropileno, sem revestimento, até 30 cm de altura | — | 0,15 |
+| Revestimentos de pisos de edifícios residenciais e comerciais ($\gamma_{ap-m} = 20\ \mathrm{kN/m^3}$) | 5 | 1,0 |
+| Revestimentos de pisos de edifícios residenciais e comerciais ($\gamma_{ap-m} = 20\ \mathrm{kN/m^3}$) | 7 | 1,4 |
+| Revestimentos de pisos de edifícios industriais ($\gamma_{ap-m} = 34\ \mathrm{kN/m^3}$) | 5 | 1,7 |
+| Revestimentos de pisos de edifícios industriais ($\gamma_{ap-m} = 34\ \mathrm{kN/m^3}$) | 7 | 2,4 |
+| Impermeabilização em cobertura com manta asfáltica e proteção mecânica, sem revestimento ($\gamma_{ap-m} = 18\ \mathrm{kN/m^3}$) | 10 | 1,8 |
+| Impermeabilização em cobertura com manta asfáltica e proteção mecânica, sem revestimento ($\gamma_{ap-m} = 18\ \mathrm{kN/m^3}$) | 15 | 2,7 |
+
+**Nota:** os pesos devem ser calculados caso a caso quando forem conhecidas as
+espessuras dos componentes e seus respectivos pesos específicos. Na ausência
+de informações mais precisas, podem ser utilizados os valores médios
+indicados.
+
+**Tabela 6 — Telhas, considerando o peso na superfície inclinada.**
+
+| Material | Peso na superfície inclinada (kN/m²) |
+|---|---:|
+| Telha cerâmica em geral, exceto tipo germânica e colonial | 0,45 |
+| Telha cerâmica tipo germânica ou colonial | 0,60 |
+| Telha de fibrocimento ondulada com espessura de 4 mm | 0,14 |
+| Telha de fibrocimento ondulada com espessura de 5 mm | 0,16 |
+| Telha de fibrocimento ondulada com espessura de 6 mm | 0,18 |
+| Telha de fibrocimento ondulada com espessura de 8 mm | 0,24 |
+| Telha de fibrocimento modulada com espessura de 8 mm | 0,26 |
+| Telha de fibrocimento tipo canalete com espessura de 8 mm | 0,25 |
+| Telha de alumínio com espessura de 0,6 mm | 0,025 |
+| Telha de alumínio com espessura de 0,8 mm | 0,035 |
+| Telha plástica em geral, exceto tipo colonial | 0,05 |
+| Telha plástica tipo colonial | 0,15 |
+| Telha de aço ondulada ou trapezoidal com espessura de 0,5 mm | 0,06 |
+| Telha de aço ondulada ou trapezoidal com espessura de 0,8 mm | 0,10 |
+| Telha de aço ondulada ou trapezoidal com espessura de 1,25 mm | 0,14 |
+| Telha de vidro | 0,45 |
+
+**Nota:** os valores correspondem ao peso por metro quadrado de telha na
+superfície inclinada, incluindo a sobreposição, os elementos de fixação e a
+absorção de água.
+
+**Tabela 7 — Telhados, considerando o peso na superfície horizontal, incluindo a estrutura de suporte.**
+
+| Composição | Peso na superfície horizontal (kN/m²) |
+|---|---:|
+| Telhas cerâmicas em geral, exceto tipo germânica e colonial, com estrutura de madeira e inclinação $\leq 40\%$ | 0,70 |
+| Telhas cerâmicas tipo germânica ou colonial, com estrutura de madeira e inclinação $\leq 40\%$ | 0,85 |
+| Telhas de fibrocimento onduladas, com espessura de até 5 mm, e estrutura de madeira | 0,40 |
+| Telhas de alumínio, com espessura de até 0,8 mm, e estrutura metálica de aço | 0,30 |
+| Telhas de alumínio, com espessura de até 0,8 mm, e estrutura metálica de alumínio | 0,20 |
+| Telhas de fibrocimento tipo canalete, com espessura de 8 mm, e estrutura de madeira | 0,35 |
+
+**Nota:** os valores correspondem ao peso por metro quadrado de telhado na
+superfície horizontal, incluindo a estrutura de suporte, como tesouras,
+terças, caibros e ripas.
+
+**Tabela 8 — Forros, dutos e redes de distribuição de chuveiros automáticos (*sprinklers*).**
+
+| Material | Peso (kN/m²) |
+|---|---:|
+| Forro de fibra mineral, incluindo estrutura de suporte | 0,10 |
+| Forro de gesso acartonado, incluindo estrutura de suporte | 0,25 |
+| Forro de gesso em placas, incluindo estrutura de suporte | 0,15 |
+| Forro de PVC, incluindo estrutura de suporte | 0,10 |
+| Forro de placas de alumínio, incluindo estrutura de suporte | 0,10 |
+| Dutos de ventilação, sem isolamento térmico | 0,20 |
+| Dutos de ar-condicionado, com isolamento térmico | 0,30 |
+| Rede de distribuição de chuveiros automáticos (*sprinkler*) com diâmetro nominal de até 65 mm | 0,10 |
+| Rede de distribuição de chuveiros automáticos (*sprinkler*) com diâmetro nominal de até 80 mm | 0,15 |
+
+## 3. Representação das cargas
 
 No modelo estrutural, a forma de representar a ação depende da geometria do
 elemento que a recebe:
@@ -210,16 +312,16 @@ elemento que a recebe:
 
 [[1]](#ref-1)
 
-## Peso próprio das lajes — slide 7
+## 4. Peso próprio das lajes
 
-### Laje maciça
+### 4.1 Laje maciça
 
 Para uma laje maciça de espessura constante, o peso próprio por unidade de área
 é dado por:
 
 $$
 G_{pp}^{\mathrm{laje}} = h_{\mathrm{laje}}\,\gamma_c
-\tag{7.1}
+\tag{4.1}
 $$
 
 [[1]](#ref-1)
@@ -238,7 +340,7 @@ $\gamma_c=25\,\mathrm{kN/m^3}$, resulta
 $G_{pp}=0{,}12\times25=3{,}00\,\mathrm{kN/m^2}$.
 ```
 
-### Laje nervurada
+### 4.2 Laje nervurada
 
 Nas lajes nervuradas, o peso próprio deve considerar o volume efetivo de
 concreto e os elementos de enchimento ou as fôrmas incorporadas. Os catálogos
@@ -253,82 +355,109 @@ por unidade de área.
 :align: center
 
 Exemplo de dados de catálogo usados para determinar o peso próprio de uma laje
-nervurada. Fonte indicada no slide: catálogo Atex 600.
+nervurada. Fonte: catálogo Atex 600 [[3]](#ref-3).
 ```
 
-[[1]](#ref-1) [[3]](#ref-3)
+## 5. Carga de alvenaria sobre lajes
 
-## Carga de alvenaria sobre lajes — slide 8
-
-Considere uma parede com altura $H_{alv}$, espessura $e_{alv}$, comprimento
-$l_{alv}$ e peso específico $\gamma_{alv}$. A forma de distribuir sua carga
-depende da relação entre os vãos da laje:
-
-[[1]](#ref-1)
+Quando uma parede de alvenaria se apoia diretamente sobre a laje, e não sobre
+vigas, o seu peso próprio deve ser convertido em uma ação equivalente, a ser
+somada às demais ações permanentes da laje. Considere uma parede com altura
+$H_{alv}$, espessura $e_{alv}$, comprimento $l_{alv}$ e peso específico
+$\gamma_{alv}$ (item 2.3). A forma de distribuir sua carga depende da relação
+entre os vãos do painel:
 
 $$
 \lambda = \frac{l_y}{l_x}, \qquad l_y \geq l_x.
-\tag{8.1}
+\tag{5.1}
 $$
 
-### Laje armada em duas direções: $\lambda \leq 2$
+[[1]](#ref-1)
 
-A carga total da parede é distribuída por toda a área da laje:
+### 5.1 Painéis armados em duas direções ($\lambda \leq 2$)
+
+O peso da parede é espraiado por toda a área do painel, resultando em uma
+carga equivalente uniformemente distribuída:
 
 $$
 G_{EC}^{alv} =
 \frac{(a+b)\,H_{alv}\,e_{alv}\,\gamma_{alv}}
 {l_x\,l_y}.
-\tag{8.2}
+\tag{5.2}
 $$
 
 Os comprimentos $a$ e $b$ representam os trechos de alvenaria considerados no
 pavimento.
 
-```{figure} ../_static/aulas/carregamentos/alvenaria-laje-bidirecional.png
-:alt: Distribuição de carga de alvenaria em laje armada em duas direções
-:width: 32%
-:align: center
+```{admonition} Pendente
+:class: destaque-azul
 
-Distribuição equivalente da alvenaria em uma laje com $\lambda\leq2$.
+Falta uma figura ilustrando o espraiamento do peso da parede por toda a área
+do painel armado em duas direções ($\lambda\leq2$). As duas figuras já
+disponíveis (`alvenaria-parede-paralela.png` e
+`alvenaria-parede-perpendicular.png`) ilustram os dois casos do painel armado
+em **uma** direção (Seção 5.2), não este caso.
 ```
 
-[[1]](#ref-1)
+### 5.2 Painéis armados em uma direção ($\lambda > 2$)
 
-### Laje armada em uma direção: $\lambda > 2$
+Para $\lambda>2$, o espraiamento do peso da parede por toda a área do painel
+deixa de ser uma aproximação razoável, pois a laje passa a trabalhar
+predominantemente em uma única direção. Nesse caso, o efeito da parede sobre
+a laje depende da orientação da parede em relação ao vão principal $l_x$.
 
-Para a faixa de influência indicada no slide:
+#### 5.2.1 Parede paralela ao vão principal
+
+A parede é considerada apenas na faixa da laje diretamente sob ela, de
+largura de influência:
+
+$$
+l_{inf} = e_{alv} + h_{\mathrm{laje}}.
+\tag{5.3}
+$$
+
+Essa faixa (identificada como B na figura a seguir) recebe uma carga
+adicional $g_{par}$, somada à carga de utilização $p=g+q$ que atua no
+restante do painel (faixas A):
 
 $$
 G_{EC}^{alv} =
 \frac{H_{alv}\,e_{alv}\,l_{alv}\,\gamma_{alv}}
 {l_x\,l_{inf}}.
-\tag{8.3}
+\tag{5.4}
 $$
 
-A largura de influência é:
+```{figure} ../_static/aulas/carregamentos/alvenaria-parede-paralela.png
+:alt: Distribuição de carga de parede paralela ao vão principal de uma laje armada em uma direção
+:width: 32%
+:align: center
 
-$$
-l_{inf} = e_{alv} + h_{\mathrm{laje}}.
-\tag{8.4}
-$$
-
-Quando a parede está orientada na direção de distribuição mostrada à direita do
-slide, sua carga linear é expressa por:
-
-$$
-G_{EC}^{alv} = H_{alv}\,e_{alv}\,\gamma_{alv}.
-\tag{8.5}
-$$
+Painel dividido nas faixas A (carga $p=g+q$) e B (faixa de influência
+$l_{inf}$, com carga adicional $g_{par}$) e diagramas de carregamento das
+faixas de laje analisadas como vigas.
+```
 
 [[1]](#ref-1)
 
-```{figure} ../_static/aulas/carregamentos/alvenaria-laje-unidirecional.png
-:alt: Distribuição de carga de alvenaria em laje armada em uma direção
+#### 5.2.2 Parede perpendicular ao vão principal
+
+O peso da parede não se distribui ao longo do vão: ele atua como uma carga
+concentrada $G$ na faixa de laje analisada como viga, aplicada na posição em
+que a parede cruza a laje:
+
+$$
+G_{EC}^{alv} = H_{alv}\,e_{alv}\,\gamma_{alv}.
+\tag{5.5}
+$$
+
+```{figure} ../_static/aulas/carregamentos/alvenaria-parede-perpendicular.png
+:alt: Distribuição de carga de parede perpendicular ao vão principal de uma laje armada em uma direção
 :width: 28%
 :align: center
 
-Representação da parede e da carga aplicada na faixa de influência.
+Painel com a faixa A (carga $p=g+q$) e a carga concentrada $G$ aplicada na
+posição da parede, e diagrama de carregamento da faixa de laje analisada
+como viga.
 ```
 
 [[1]](#ref-1)
@@ -336,19 +465,20 @@ Representação da parede e da carga aplicada na faixa de influência.
 ```{admonition} Verificação de unidades
 :class: destaque-vermelho
 
-As Equações (8.2) e (8.3) resultam em carga superficial
-($\mathrm{kN/m^2}$). A Equação (8.5) resulta em carga linear
-($\mathrm{kN/m}$).
+As Equações (5.2) e (5.4) resultam em carga superficial ($\mathrm{kN/m^2}$),
+somada a $p=g+q$. A Equação (5.5) resulta em uma carga linear
+($\mathrm{kN/m}$), tratada como concentrada na faixa de laje analisada como
+viga.
 ```
 
-## Carga de alvenaria sobre vigas — slide 9
+## 6. Carga de alvenaria sobre vigas
 
 Quando a parede está apoiada diretamente em uma viga, sua carga é tratada como
 uma ação linear:
 
 $$
 G_{EC}^{alv} = \left(H_{alv}\,e_{alv}\right)\gamma_{alv}.
-\tag{9.1}
+\tag{6.1}
 $$
 
 [[1]](#ref-1)
@@ -374,7 +504,8 @@ vigas e estas as conduzem aos pilares.
 :class: destaque-azul
 
 1. Identificar todos os materiais e elementos construtivos.
-2. Obter seus pesos específicos e cargas de utilização na norma aplicável.
+2. Obter seus pesos específicos e cargas de utilização na norma aplicável
+   (Seção 2.3 para alvenarias, revestimentos, telhas, telhados e forros).
 3. Calcular as cargas permanentes da estrutura e dos revestimentos.
 4. Converter as ações para a representação adequada: superficial, linear ou
    concentrada.
@@ -384,11 +515,14 @@ vigas e estas as conduzem aos pilares.
 
 ## Referências
 
-(ref-2)=
 (ref-1)=
 **[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6120:2019**:
 *Ações para o cálculo de estruturas de edificações*. Rio de Janeiro: ABNT,
 2019.
+
+(ref-2)=
+**[2]** *Fonte complementar dos pesos de elementos construtivos das Tabelas 3
+a 8 — referência completa a confirmar.*
 
 (ref-3)=
 **[3]** ATEX. *Catálogo Atex 600: fôrmas para lajes nervuradas*. Catálogo
