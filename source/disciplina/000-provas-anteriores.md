@@ -1,11 +1,5 @@
 # Provas Anteriores
 
-Aqui você pode ter acesso a provas anteriores da disciplina de Estruturas de
+Aqui você pode ter acesso a [Provas anteriores](https://drive.google.com/drive/folders/1J0mGnm6iNyEKFc-1eRbxw41X1HZ88otU?usp=sharing) da disciplina de Estruturas de
 Concreto Armado 1.
 
-```{admonition} Em breve
-:class: destaque-azul
-
-O material com provas de semestres anteriores ainda não está disponível e
-será disponibilizado nesta página assim que publicado.
-```
