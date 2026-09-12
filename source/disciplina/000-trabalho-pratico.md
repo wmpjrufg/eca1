@@ -26,7 +26,7 @@ V1 a V6.
 - Taxa de armadura para pré-dimensionamento dos pilares: $\rho = 2\%$;
 - Tensão correspondente a $0{,}20\%$ de deformação (aço CA-50): $420\text{ MPa}$;
 - Largura das vigas: critério de instabilidade lateral do item 15.10 da
-  ABNT NBR 6118 [[1]](#ref-1).
+  [[ABNT NBR 6118 1]](#ref-1).
 
 ## Roteiro de etapas e entregas do semestre
 
@@ -62,7 +62,7 @@ Para as lajes de cobertura, considere impermeabilização em manta asfáltica co
   inferior da laje;
 - **Revestimento de piso:** espessura de $5\text{ cm}$.
 
-Para a determinação dos carregamentos, consulte a ABNT NBR 6120 [[2]](#ref-2).
+Para a determinação dos carregamentos, consulte a [[ABNT NBR 6120 2]](#ref-2).
 
 ```{admonition} Entrega 1: Pré-dimensionamento, vãos efetivos e cargas nas lajes
 :class: destaque-verde
