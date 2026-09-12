@@ -51,10 +51,6 @@ de Rebello [[2]](#ref-2).
 
 #### Lajes maciças
 
-Para lajes maciças em concreto armado, Rebello [[2]](#ref-2) estabelece
-critérios de pré-dimensionamento da altura $h$ em função do menor vão
-($l_x$) e do maior vão ($l_y$) do painel:
-
 a) Laje armada em duas direções:
 
 $$
@@ -76,46 +72,35 @@ h = 4\%\cdot l_x
 \tag{5}
 $$
 
-#### Lajes nervuradas moldadas *in loco*
+#### Lajes nervuradas moldadas
 
 Como as lajes nervuradas se dividem em diversos grupos, adotam-se critérios
-distintos para as lajes unidirecionais e para as lajes em grelha (bidirecionais).
+distintos para as lajes unidirecionais e para as lajes bidirecionais.
 
-**Lajes unidirecionais**
-
-a) Laje armada em uma direção, moldada *in loco* e nervurada:
+a) Laje armada em uma direção:
 
 $$
 h = 4\%\cdot l_x \text{, para espaçamento de 100 cm entre nervuras}
-\tag{2.4}
+\tag{6}
 $$
 
 $$
 h = 3\%\cdot l_x \text{, para espaçamento de 50 cm entre nervuras}
-\tag{2.5}
+\tag{7}
 $$
-
-b) Largura da nervura ($b_w$):
 
 $$
 b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
-\tag{2.6}
+\tag{8}
 $$
 
-c) Altura da capa ($h_f$):
+Segundo Rebello [[2]](#ref-2), para estruturas usuais em concreto armado a altura da capa ($h_f$) esse
+pode variar de 4 a 7 cm. 
 
-Segundo Rebello [[2]](#ref-2), para estruturas usuais em concreto esse valor
-pode variar de 4 a 7 cm. Como estimativa prévia, o autor propõe uma equação
-inicial em função de $a$ — a distância entre nervuras.
-
-```{admonition} Pendente
-:class: destaque-azul
-
-A equação (2.7) — altura da capa $h_f$ para lajes nervuradas unidirecionais,
-em função do espaçamento $a$ entre nervuras — não ficou legível na fonte
-original (Rebello [[2]](#ref-2)). Preciso conferir o texto do livro para
-inserir a expressão correta aqui.
-```
+Já as distâncias intereixos em lajes nervuradas moldadas *in loco* não decorrem de uma
+formulação de pré-dimensionamento, mas sim do elemento de enchimento (EPS, cerâmica etc.)
+adotado pelo projetista, cujas dimensões comerciais definem a largura da nervura e o vão
+entre eixos. 
 
 b) Lajes bidirecionais (em grelha):
 
@@ -124,24 +109,13 @@ h = 4\%\cdot\frac{l_y+l_x}{2}
 \tag{2.8}
 $$
 
-b) Largura da nervura ($b_w$):
-
 $$
 b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
 \tag{2.9}
 $$
 
-c) Altura da capa ($h_f$):
-
-$$
-h_f = \frac{a-b_w}{12}
-\tag{2.10}
-$$
-
-$$
-a = 1{,}5\cdot h \text{ a } 2{,}0\cdot h
-\tag{2.11}
-$$
+Segundo Rebello [[2]](#ref-2), o espaçamento $a$ entre nervuras dessas lajes bidirecionais
+varia de $1{,}5\,h$ a $2{,}0\,h$.
 
 ### Coeficiente adicional de segurança para lajes em balanço
 
