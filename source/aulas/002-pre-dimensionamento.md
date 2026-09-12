@@ -35,13 +35,12 @@ em que:
   viga presente na Figura [1](#figura1).
 
 (figura1)=
+**Figura 1.** Coeficiente $\beta_{fl}$ para seções de viga.
 ```{figure} ../_static/aulas/pre-dimensionamento/quadro-beta-fl-vigas.png
 :alt: Coeficiente beta_fl para seções de viga, em função da tipologia da seção transversal
 :width: 75%
 :align: center
 ```
-**Figura 1** — Coeficiente $\beta_{fl}$ para seções de viga.
-
 
 ## Pré-dimensionamento de lajes
 
@@ -49,7 +48,7 @@ Diversos autores apresentam procedimentos para a determinação da geometria da
 forma em lajes maciças e nervuradas. Nesta aula, o foco adotado é o trabalho
 de Rebello [[2]](#ref-2).
 
-#### Lajes maciças
+### Lajes maciças
 
 a) Laje armada em duas direções:
 
@@ -72,7 +71,7 @@ h = 4\%\cdot l_x
 \tag{5}
 $$
 
-#### Lajes nervuradas moldadas
+### Lajes nervuradas moldadas
 
 Como as lajes nervuradas se dividem em diversos grupos, adotam-se critérios
 distintos para as lajes unidirecionais e para as lajes bidirecionais.
@@ -106,12 +105,12 @@ b) Lajes bidirecionais (em grelha):
 
 $$
 h = 4\%\cdot\frac{l_y+l_x}{2}
-\tag{2.8}
+\tag{9}
 $$
 
 $$
 b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
-\tag{2.9}
+\tag{10}
 $$
 
 Segundo Rebello [[2]](#ref-2), o espaçamento $a$ entre nervuras dessas lajes bidirecionais
@@ -122,31 +121,31 @@ varia de $1{,}5\,h$ a $2{,}0\,h$.
 Além dos critérios de pré-dimensionamento apresentados, as lajes em balanço
 estão sujeitas a um coeficiente adicional de segurança $\gamma_n$, prescrito
 pela ABNT NBR 6118 [[1]](#ref-1) em função da altura da laje, conforme o
-Quadro 2.1.
+[Quadro 1](#quadro1).
 
-**Quadro 2.1 — Valores do coeficiente adicional $\gamma_n$ para lajes em
+(quadro1)=
+**Quadro 1 — Valores do coeficiente adicional $\gamma_n$ para lajes em
 balanço.**
 
 | $h$ (cm) | ≥ 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 | 11 | 10 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | $\gamma_n$ | 1,00 | 1,05 | 1,10 | 1,15 | 1,20 | 1,25 | 1,30 | 1,35 | 1,40 | 1,45 |
 
-**Fonte:** adaptado da ABNT NBR 6118 [[1]](#ref-1), Tabela 13.2.
 
-O quadro pode ser expresso pela Equação (2.12), em que $h$ é a altura da
-laje em centímetros:
+O [Quadro 1](#quadro1) pode ser expresso pela Equação (11), em que $h$ é
+a altura da laje em centímetros:
 
 $$
 \gamma_n = 1{,}95 - 0{,}05\,h
-\tag{2.12}
+\tag{11}
 $$
 
 O coeficiente $\gamma_n$ deve majorar os esforços solicitantes finais de
 cálculo nas lajes em balanço, quando de seu dimensionamento.
 
-## 3. Pré-dimensionamento de pilares
+## Pré-dimensionamento de pilares
 
-### 3.1 Área de influência
+### Área de influência
 
 Bacarji [[3]](#ref-3) orienta a divisão da área de influência dos pilares em
 faixas proporcionais ao vão, de acordo com a posição do pilar na planta:
@@ -158,33 +157,22 @@ faixas proporcionais ao vão, de acordo com a posição do pilar na planta:
 - $0{,}55\cdot l$: complemento dos casos anteriores (demais faixas, incluindo
   pilares intermediários).
 
-```{admonition} Pendente
-:class: destaque-azul
-
-Inserir aqui a figura com a planta de área de influência dos pilares
-(faixas $0{,}45l_1$ / $0{,}55l_1$ / $0{,}55l_2$ / $0{,}45l_2$ e
-$0{,}5l_3$ / $0{,}5l_3$ / $0{,}5l_4$ / $0{,}5l_4$, com os pilares P1 nos
-nós). Salve a imagem em
-`source/_static/aulas/pre-dimensionamento/area-influencia-pilares.png` e
-substitua este aviso pelo bloco:
-
-    ```{figure} ../_static/aulas/pre-dimensionamento/area-influencia-pilares.png
-    :alt: Área de influência dos pilares em planta
-    :width: 70%
-    :align: center
-
-    Área de influência dos pilares, segundo os critérios de Bacarji [3].
-    ```
+(figura2)=
+**Figura 2.** Planta de estimativa da área de influência de um pilar de concreto armado.
+```{figure} ../_static/aulas/pre-dimensionamento/planta-carga-pilar.png
+:alt: planta de cargas
+:width: 75%
+:align: center
 ```
 
-### 3.2 Carga estimada e seção transversal do pilar
+### Carga estimada e seção transversal do pilar
 
 Após a determinação da área de influência e do carregamento estimado no
-pavimento, a seção transversal do pilar pode ser obtida pela Equação (3.1):
+pavimento, a seção transversal do pilar pode ser obtida pela Equação (12):
 
 $$
 A_c = \frac{N_d^{*}}{0{,}85\,f_{cd} + \rho\,\sigma_{s,\varepsilon=0,2\%}}
-\tag{3.1}
+\tag{12}
 $$
 
 em que:
@@ -196,25 +184,25 @@ em que:
 - $\sigma_{s,\varepsilon=0,2\%}$ é a tensão no aço correspondente a uma
   deformação de $0{,}20\%$, que para o aço CA-50 vale $420\ \mathrm{MPa}$;
 - $\rho$ é a taxa de armadura do pilar; da Costa [[4]](#ref-4) recomenda,
-  como valor intermediário, $\rho = 2\%$ (inserido na Equação (3.1) como
+  como valor intermediário, $\rho = 2\%$ (inserido na Equação (12) como
   $\rho = 2/100$, e não em taxa percentual).
 
 Para determinar a carga atuante de pré-dimensionamento, utilizam-se as
-Equações (3.2) a (3.5):
+Equações (13) a (16):
 
 $$
 N_k^{*} = Q_{tot}\cdot A_i
-\tag{3.2}
+\tag{13}
 $$
 
 $$
 N_k^{*} = n_{tipo}\cdot N_k^{tipo} + n_{cob}\cdot N_k^{cob}
-\tag{3.3}
+\tag{14}
 $$
 
 $$
 N_d^{*} = \alpha\cdot N_k^{*}
-\tag{3.4}
+\tag{15}
 $$
 
 $$
@@ -224,7 +212,7 @@ $$
 2{,}2, & \text{pilares de extremidade} \\
 2{,}5, & \text{pilares de canto}
 \end{cases}
-\tag{3.5}
+\tag{16}
 $$
 
 em que $N_k^{*}$ é a carga característica para pré-dimensionamento; $Q_{tot}$
@@ -242,29 +230,31 @@ considerados nessa etapa.
 :class: destaque-azul
 
 1. Verificar, para vigas sem travamento lateral por lajes, a largura mínima
-   dada pelas Equações (1.1) e (1.2).
+   dada pelas Equações (1) e (2).
 2. Estimar a altura das lajes maciças ou nervuradas com base nos vãos $l_x$
    e $l_y$ do painel.
-3. Majorar os esforços de lajes em balanço pelo coeficiente $\gamma_n$.
+3. Majorar os esforços de lajes em balanço pelo coeficiente $\gamma_n$,
+   conforme o [Quadro 1](#quadro1).
 4. Definir a área de influência de cada pilar a partir das faixas de
    Bacarji.
 5. Estimar a carga característica e de cálculo do pilar e obter a área da
-   seção transversal pela Equação (3.1).
+   seção transversal pela Equação (12).
 ```
 
 ## Referências
 
 (ref-1)=
-**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **NBR 6118**: Projeto de
-estruturas de concreto. Rio de Janeiro: ABNT, 2023.
+**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto de
+estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023.
 
 (ref-2)=
 **[2]** REBELLO, Yopanan Conrado Pereira. **Bases para projeto estrutural
 na arquitetura**. 2. ed. São Paulo: Zigurate Editora, 2007.
 
 (ref-3)=
-**[3]** BACARJI, Eli. *[referência incompleta — confirmar título, editora e
-ano da obra para completar a citação]*.
+**[3]** BACARJI, Edgar. **Análise de estruturas de edifícios: projeto de
+pilares**. 1993. Dissertação (Mestrado em Engenharia de Estruturas) — Escola
+de Engenharia de São Carlos, Universidade de São Paulo, São Carlos, 1993.
 
 (ref-4)=
 **[4]** COSTA, *[referência incompleta — confirmar nome completo, título,

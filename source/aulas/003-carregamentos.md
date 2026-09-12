@@ -1,6 +1,6 @@
 # Aula 03: Ações na estrutura
 
-## 1. Introdução
+## Introdução
 
 Esta aula apresenta os critérios iniciais para determinar as ações que atuam em
 uma estrutura de concreto armado. O objetivo é transformar o peso dos materiais,
@@ -21,7 +21,7 @@ edificações** [[1]](#ref-1).
 - revisar a ação do vento no edifício.
 ```
 
-## 2. As ações no subsistema horizontal
+## As ações no subsistema horizontal
 
 Inicialmente, serão tratadas as ações que ocorrem no subsistema horizontal,
 formado por lajes e vigas. Essas ações podem ter naturezas diversas, desde o peso
@@ -39,7 +39,7 @@ pontos de apoio. Essa é uma situação comum na avaliação das ações geradas
 equipamentos.
 ```
 
-### 2.1 Peso específico aparente dos materiais
+### Peso específico aparente dos materiais
 
 O peso específico aparente, representado por $\gamma_{ap}$, expressa o peso do
 material por unidade de volume. Sua unidade usual é $\mathrm{kN/m^3}$. Neste
@@ -74,7 +74,7 @@ caso, são utilizados os valores do item 5.3 da ABNT NBR 6120
 Os valores entre parênteses são valores médios indicados na tabela de origem.
 ```
 
-### 2.2 Cargas de utilização e de cobertura
+### Cargas de utilização e de cobertura
 
 As cargas de utilização estão relacionadas ao uso previsto para cada ambiente
 da edificação. Por esse motivo, seus valores variam de acordo com a ocupação e
@@ -106,16 +106,16 @@ ambiente.**
 **Fonte:** adaptada da ABNT NBR 6120:2019 [[1]](#ref-1).
 
 No caso das coberturas, a carga uniformemente distribuída $q$ pode ser
-determinada pela Equação (2.1):
+determinada pela Equação (1):
 
 $$
 q = 0{,}50\,\alpha
-\tag{2.1}
+\tag{1}
 $$
 
 em que $q$ é a carga de cobertura, expressa em $\mathrm{kN/m^2}$, e $\alpha$ é
 um coeficiente que depende da inclinação $i$ do telhado, conforme a Equação
-(2.2):
+(2):
 
 $$
 \alpha =
@@ -124,12 +124,13 @@ $$
 2{,}00 - 0{,}50i, & 2\% < i < 3\%,\\
 0{,}50, & i \geq 3\%.
 \end{cases}
-\tag{2.2}
+\tag{2}
 $$
 
 **Fonte:** ABNT NBR 6120:2019 [[1]](#ref-1).
 
-### 2.3 Pesos de elementos construtivos
+(sec-pesos-elementos)=
+### Pesos de elementos construtivos
 
 Além do peso próprio da estrutura, devem ser consideradas as cargas de
 alvenarias, divisórias, caixilhos, revestimentos, impermeabilizações, telhas,
@@ -269,7 +270,7 @@ terças, caibros e ripas.
 | Rede de distribuição de chuveiros automáticos (*sprinkler*) com diâmetro nominal de até 65 mm | 0,10 |
 | Rede de distribuição de chuveiros automáticos (*sprinkler*) com diâmetro nominal de até 80 mm | 0,15 |
 
-## 3. Representação das cargas
+## Representação das cargas
 
 No modelo estrutural, a forma de representar a ação depende da geometria do
 elemento que a recebe:
@@ -312,16 +313,16 @@ elemento que a recebe:
 
 [[1]](#ref-1)
 
-## 4. Peso próprio das lajes
+## Peso próprio das lajes
 
-### 4.1 Laje maciça
+### Laje maciça
 
 Para uma laje maciça de espessura constante, o peso próprio por unidade de área
 é dado por:
 
 $$
 G_{pp}^{\mathrm{laje}} = h_{\mathrm{laje}}\,\gamma_c
-\tag{4.1}
+\tag{3}
 $$
 
 [[1]](#ref-1)
@@ -340,7 +341,7 @@ $\gamma_c=25\,\mathrm{kN/m^3}$, resulta
 $G_{pp}=0{,}12\times25=3{,}00\,\mathrm{kN/m^2}$.
 ```
 
-### 4.2 Laje nervurada
+### Laje nervurada
 
 Nas lajes nervuradas, o peso próprio deve considerar o volume efetivo de
 concreto e os elementos de enchimento ou as fôrmas incorporadas. Os catálogos
@@ -358,23 +359,23 @@ Exemplo de dados de catálogo usados para determinar o peso próprio de uma laje
 nervurada. Fonte: catálogo Atex 600 [[3]](#ref-3).
 ```
 
-## 5. Carga de alvenaria sobre lajes
+## Carga de alvenaria sobre lajes
 
 Quando uma parede de alvenaria se apoia diretamente sobre a laje, e não sobre
 vigas, o seu peso próprio deve ser convertido em uma ação equivalente, a ser
 somada às demais ações permanentes da laje. Considere uma parede com altura
 $H_{alv}$, espessura $e_{alv}$, comprimento $l_{alv}$ e peso específico
-$\gamma_{alv}$ (item 2.3). A forma de distribuir sua carga depende da relação
-entre os vãos do painel:
+$\gamma_{alv}$ (ver [Pesos de elementos construtivos](#sec-pesos-elementos)).
+A forma de distribuir sua carga depende da relação entre os vãos do painel:
 
 $$
 \lambda = \frac{l_y}{l_x}, \qquad l_y \geq l_x.
-\tag{5.1}
+\tag{4}
 $$
 
 [[1]](#ref-1)
 
-### 5.1 Painéis armados em duas direções ($\lambda \leq 2$)
+### Painéis armados em duas direções ($\lambda \leq 2$)
 
 O peso da parede é espraiado por toda a área do painel, resultando em uma
 carga equivalente uniformemente distribuída:
@@ -383,7 +384,7 @@ $$
 G_{EC}^{alv} =
 \frac{(a+b)\,H_{alv}\,e_{alv}\,\gamma_{alv}}
 {l_x\,l_y}.
-\tag{5.2}
+\tag{5}
 $$
 
 Os comprimentos $a$ e $b$ representam os trechos de alvenaria considerados no
@@ -396,24 +397,25 @@ Falta uma figura ilustrando o espraiamento do peso da parede por toda a área
 do painel armado em duas direções ($\lambda\leq2$). As duas figuras já
 disponíveis (`alvenaria-parede-paralela.png` e
 `alvenaria-parede-perpendicular.png`) ilustram os dois casos do painel armado
-em **uma** direção (Seção 5.2), não este caso.
+em [**uma** direção](#sec-paineis-uma-direcao), não este caso.
 ```
 
-### 5.2 Painéis armados em uma direção ($\lambda > 2$)
+(sec-paineis-uma-direcao)=
+### Painéis armados em uma direção ($\lambda > 2$)
 
 Para $\lambda>2$, o espraiamento do peso da parede por toda a área do painel
 deixa de ser uma aproximação razoável, pois a laje passa a trabalhar
 predominantemente em uma única direção. Nesse caso, o efeito da parede sobre
 a laje depende da orientação da parede em relação ao vão principal $l_x$.
 
-#### 5.2.1 Parede paralela ao vão principal
+#### Parede paralela ao vão principal
 
 A parede é considerada apenas na faixa da laje diretamente sob ela, de
 largura de influência:
 
 $$
 l_{inf} = e_{alv} + h_{\mathrm{laje}}.
-\tag{5.3}
+\tag{6}
 $$
 
 Essa faixa (identificada como B na figura a seguir) recebe uma carga
@@ -424,7 +426,7 @@ $$
 G_{EC}^{alv} =
 \frac{H_{alv}\,e_{alv}\,l_{alv}\,\gamma_{alv}}
 {l_x\,l_{inf}}.
-\tag{5.4}
+\tag{7}
 $$
 
 ```{figure} ../_static/aulas/carregamentos/alvenaria-parede-paralela.png
@@ -439,7 +441,7 @@ faixas de laje analisadas como vigas.
 
 [[1]](#ref-1)
 
-#### 5.2.2 Parede perpendicular ao vão principal
+#### Parede perpendicular ao vão principal
 
 O peso da parede não se distribui ao longo do vão: ele atua como uma carga
 concentrada $G$ na faixa de laje analisada como viga, aplicada na posição em
@@ -447,7 +449,7 @@ que a parede cruza a laje:
 
 $$
 G_{EC}^{alv} = H_{alv}\,e_{alv}\,\gamma_{alv}.
-\tag{5.5}
+\tag{8}
 $$
 
 ```{figure} ../_static/aulas/carregamentos/alvenaria-parede-perpendicular.png
@@ -465,20 +467,20 @@ como viga.
 ```{admonition} Verificação de unidades
 :class: destaque-vermelho
 
-As Equações (5.2) e (5.4) resultam em carga superficial ($\mathrm{kN/m^2}$),
-somada a $p=g+q$. A Equação (5.5) resulta em uma carga linear
+As Equações (5) e (7) resultam em carga superficial ($\mathrm{kN/m^2}$),
+somada a $p=g+q$. A Equação (8) resulta em uma carga linear
 ($\mathrm{kN/m}$), tratada como concentrada na faixa de laje analisada como
 viga.
 ```
 
-## 6. Carga de alvenaria sobre vigas
+## Carga de alvenaria sobre vigas
 
 Quando a parede está apoiada diretamente em uma viga, sua carga é tratada como
 uma ação linear:
 
 $$
 G_{EC}^{alv} = \left(H_{alv}\,e_{alv}\right)\gamma_{alv}.
-\tag{6.1}
+\tag{9}
 $$
 
 [[1]](#ref-1)
@@ -505,7 +507,8 @@ vigas e estas as conduzem aos pilares.
 
 1. Identificar todos os materiais e elementos construtivos.
 2. Obter seus pesos específicos e cargas de utilização na norma aplicável
-   (Seção 2.3 para alvenarias, revestimentos, telhas, telhados e forros).
+   (ver [Pesos de elementos construtivos](#sec-pesos-elementos) para
+   alvenarias, revestimentos, telhas, telhados e forros).
 3. Calcular as cargas permanentes da estrutura e dos revestimentos.
 4. Converter as ações para a representação adequada: superficial, linear ou
    concentrada.
