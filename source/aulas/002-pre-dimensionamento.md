@@ -224,6 +224,33 @@ cobertura acima do nível calculado; e $\alpha$ é um coeficiente de majoração
 da carga de pré-dimensionamento, que leva em conta os esforços de flexão não
 considerados nessa etapa.
 
+### Dimensão mínima da seção do pilar
+
+Além dos critérios de pré-dimensionamento apresentados, os pilares com menor
+dimensão da seção transversal ($b$) inferior a $19\text{ cm}$ também estão
+sujeitos ao coeficiente adicional de segurança $\gamma_n$ prescrito pela ABNT
+NBR 6118 [[1]](#ref-1), agora em função da menor dimensão da seção, conforme
+da Costa [[4]](#ref-4) e o [Quadro 2](#quadro2).
+
+(quadro2)=
+**Quadro 2 — Coeficiente adicional $\gamma_n$ em função da menor dimensão da
+seção do pilar ($b$).**
+
+| $b$ (cm) | ≥ 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| $\gamma_n$ | 1,00 | 1,05 | 1,10 | 1,15 | 1,20 | 1,25 | 1,30 | 1,35 |
+
+O [Quadro 2](#quadro2) pode ser expresso pela Equação (17), em que $b$ é a
+menor dimensão da seção do pilar em centímetros:
+
+$$
+\gamma_n = 1{,}95 - 0{,}05\,b
+\tag{17}
+$$
+
+O coeficiente $\gamma_n$ deve majorar os esforços solicitantes finais de
+cálculo nos pilares, quando de seu dimensionamento.
+
 ## Síntese
 
 ```{admonition} Caminho básico para o pré-dimensionamento
@@ -239,6 +266,9 @@ considerados nessa etapa.
    Bacarji.
 5. Estimar a carga característica e de cálculo do pilar e obter a área da
    seção transversal pela Equação (12).
+6. Verificar se a menor dimensão da seção do pilar é inferior a
+   $19\text{ cm}$ e, se for o caso, majorar os esforços pelo coeficiente
+   $\gamma_n$ do [Quadro 2](#quadro2).
 ```
 
 ## Referências
@@ -257,5 +287,5 @@ pilares**. 1993. Dissertação (Mestrado em Engenharia de Estruturas) — Escola
 de Engenharia de São Carlos, Universidade de São Paulo, São Carlos, 1993.
 
 (ref-4)=
-**[4]** COSTA, *[referência incompleta — confirmar nome completo, título,
-editora e ano da obra para completar a citação]*.
+**[4]** COSTA, João Bosco da. **Estruturas de concreto armado II**. Goiânia:
+[s.n.], [s.d.]. E-book.
