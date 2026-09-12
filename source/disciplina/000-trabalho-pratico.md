@@ -8,7 +8,7 @@ como referência o pavimento padrão apresentado na [Figura 1](#fig-1), com a
 identificação das vigas (V1 a V6) e dos vãos entre eixos de pilares.
 
 (fig-1)=
-**Figura 1** – Planta de fôrma do pavimento padrão de referência, com vigas
+**Figura 1.** Planta de fôrma do pavimento padrão de referência, com vigas
 V1 a V6.
 ```{figure} ../_static/aulas/trabalho-pratico/pavimento-padrao.png
 :alt: Planta de fôrma do pavimento padrão, com vigas V1 a V6 e vãos entre pilares
@@ -21,12 +21,12 @@ V1 a V6.
 - Pavimentos: 7 (térreo + 1º + 2º + 3º + 4º + 5º + cobertura);
 - Pé-esquerdo: $3{,}10\text{ m}$;
 - Carga por área de influência para pré-dimensionamento dos pilares:
-  - Piso (pavimento-tipo): $10\text{ kN/m}^2$;
+  - Pavimento-tipo: $10\text{ kN/m}^2$;
   - Cobertura: $7\text{ kN/m}^2$.
 - Taxa de armadura para pré-dimensionamento dos pilares: $\rho = 2\%$;
 - Tensão correspondente a $0{,}20\%$ de deformação (aço CA-50): $420\text{ MPa}$;
 - Largura das vigas: critério de instabilidade lateral do item 15.10 da
-  [[ABNT NBR 6118 1]](#ref-1).
+  [ABNT NBR 6118 [1]](#ref-1).
 
 ## Roteiro de etapas e entregas do semestre
 
@@ -52,17 +52,9 @@ dormitório.
 
 Para as lajes de cobertura, considere impermeabilização em manta asfáltica com proteção mecânica de $15\text{ cm}$, sem revestimento de piso, e contrapiso em argamassa de cimento e areia de $4\text{ cm}$. A inclinação da cobertura é de $1\%$.
 
-- **Vedações:** alvenaria em bloco cerâmico vazado com $11{,}5\text{ cm}$ de
-  espessura, com reboco (argamassa de cimento e areia) de $2\text{ cm}$ em
-  cada face;
-- **Impermeabilização:** manta asfáltica, revestida com argamassa de cimento
-  e areia de $2{,}5\text{ cm}$ de espessura;
-- **Forro:** forro de gesso em placas, incluindo a estrutura de suporte, e
-  argamassa de cimento e areia com $2{,}5\text{ cm}$ de espessura na face
-  inferior da laje;
-- **Revestimento de piso:** espessura de $5\text{ cm}$.
+Para as vedações, considere alvenaria em bloco cerâmico vazado com $11{,}5\text{ cm}$ de espessura, com reboco (argamassa de cimento e areia) de $2\text{ cm}$ em cada face. Para o forro, considere forro de gesso em placas, incluindo a estrutura de suporte, e argamassa de cimento e areia com $2{,}5\text{ cm}$ de espessura na face inferior da laje. Para o revestimento de piso, considere revestimentos de pisos de edifícios residenciais e comerciais, com espessura de $5\text{ cm}$.
 
-Para a determinação dos carregamentos, consulte a [[ABNT NBR 6120 2]](#ref-2).
+Para a determinação dos carregamentos, consulte a [ABNT NBR 6120  [2]](#ref-2).
 
 ```{admonition} Entrega 1: Pré-dimensionamento, vãos efetivos e cargas nas lajes
 :class: destaque-verde
@@ -77,7 +69,7 @@ A **Entrega 1** contempla as etapas de pré-dimensionamento dos elementos estrut
 
 **Apresentação e arquivos obrigatórios:**
 
-- Entregar a **memória de cálculo em PDF**, apresentando o pré-dimensionamento de todas as vigas (V1 a V6), lajes e pilares do pavimento padrão, com as equações utilizadas, os valores adotados e a seção final ($b \times h$) de cada elemento.
+- Entregar a **memória de cálculo em Mardkdown (extensão .md)**, apresentando o pré-dimensionamento de todas as vigas (V1 a V6), lajes e pilares do pavimento padrão, com as equações utilizadas, os valores adotados e a seção final ($b \times h$) de cada elemento.
 - Entregar uma **planta do pavimento padrão** (baseada na Figura 1) com a identificação das seções finais adotadas para vigas e pilares e a numeração de todas as lajes.
 - Incluir na memória de cálculo uma **tabela com os vãos efetivos** ($l_x$ e $l_y$) de cada laje, indicando a direção de armação (uma ou duas direções) e, quando for o caso, a condição de balanço.
 - Incluir na memória de cálculo o **levantamento das cargas variáveis e permanentes** de cada laje, com a memória de cálculo do carregamento total considerado.

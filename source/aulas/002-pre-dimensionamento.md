@@ -8,7 +8,7 @@ ponto de partida para o dimensionamento final em concreto armado.
 
 ## Pré-dimensionamento de vigas
 
-A ABNT NBR 6118 [[1]](#ref-1) faz uma ressalva quanto à largura de vigas de
+A [ABNT NBR 6118 [1]](#ref-1) faz uma ressalva quanto à largura de vigas de
 concreto armado ou protendido no item 15.10, que trata da segurança à
 instabilidade lateral. Segundo a norma, essa segurança deve ser garantida por
 meio de procedimentos apropriados; para tanto, são estabelecidos critérios que
@@ -46,7 +46,7 @@ em que:
 
 Diversos autores apresentam procedimentos para a determinação da geometria da
 forma em lajes maciças e nervuradas. Nesta aula, o foco adotado é o trabalho
-de Rebello [[2]](#ref-2).
+de [Rebello [2]](#ref-2).
 
 ### Lajes maciças
 
@@ -93,7 +93,7 @@ b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
 \tag{8}
 $$
 
-Segundo Rebello [[2]](#ref-2), para estruturas usuais em concreto armado a altura da capa ($h_f$) esse
+Segundo [Rebello [2]](#ref-2), para estruturas usuais em concreto armado a altura da capa ($h_f$) esse
 pode variar de 4 a 7 cm. 
 
 Já as distâncias intereixos em lajes nervuradas moldadas *in loco* não decorrem de uma
@@ -113,14 +113,14 @@ b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
 \tag{10}
 $$
 
-Segundo Rebello [[2]](#ref-2), o espaçamento $a$ entre nervuras dessas lajes bidirecionais
+Segundo [Rebello [2]](#ref-2), o espaçamento $a$ entre nervuras dessas lajes bidirecionais
 varia de $1{,}5\,h$ a $2{,}0\,h$.
 
 ### Coeficiente adicional de segurança para lajes em balanço
 
 Além dos critérios de pré-dimensionamento apresentados, as lajes em balanço
 estão sujeitas a um coeficiente adicional de segurança $\gamma_n$, prescrito
-pela ABNT NBR 6118 [[1]](#ref-1) em função da altura da laje, conforme o
+pela [ABNT NBR 6118 [1]](#ref-1) em função da altura da laje, conforme o
 [Quadro 1](#quadro1).
 
 (quadro1)=
@@ -147,7 +147,7 @@ cálculo nas lajes em balanço, quando de seu dimensionamento.
 
 ### Área de influência
 
-Bacarji [[3]](#ref-3) orienta a divisão da área de influência dos pilares em
+[Bacarji  [3]](#ref-3) orienta a divisão da área de influência dos pilares em
 faixas proporcionais ao vão, de acordo com a posição do pilar na planta:
 
 - $0{,}45\cdot l$: pilar de extremidade ou de canto, na direção da menor
@@ -183,7 +183,7 @@ em que:
   concreto, em $\mathrm{kN/cm^2}$;
 - $\sigma_{s,\varepsilon=0,2\%}$ é a tensão no aço correspondente a uma
   deformação de $0{,}20\%$, que para o aço CA-50 vale $420\ \mathrm{MPa}$;
-- $\rho$ é a taxa de armadura do pilar; da Costa [[4]](#ref-4) recomenda,
+- $\rho$ é a taxa de armadura do pilar; da [Costa [4]](#ref-4) recomenda,
   como valor intermediário, $\rho = 2\%$ (inserido na Equação (12) como
   $\rho = 2/100$, e não em taxa percentual).
 
@@ -228,12 +228,12 @@ considerados nessa etapa.
 
 Além dos critérios de pré-dimensionamento apresentados, os pilares com menor
 dimensão da seção transversal ($b$) inferior a $19\text{ cm}$ também estão
-sujeitos ao coeficiente adicional de segurança $\gamma_n$ prescrito pela ABNT
-NBR 6118 [[1]](#ref-1), agora em função da menor dimensão da seção, conforme
-da Costa [[4]](#ref-4) e o [Quadro 2](#quadro2).
+sujeitos ao coeficiente adicional de segurança $\gamma_n$ prescrito pela [ABNT
+NBR 6118 [1]](#ref-1), agora em função da menor dimensão da seção, conforme
+da [Costa [4]](#ref-4) e o [Quadro 2](#quadro2).
 
 (quadro2)=
-**Quadro 2 — Coeficiente adicional $\gamma_n$ em função da menor dimensão da
+**Quadro 2.** Coeficiente adicional $\gamma_n$ em função da menor dimensão da
 seção do pilar ($b$).**
 
 | $b$ (cm) | ≥ 19 | 18 | 17 | 16 | 15 | 14 | 13 | 12 |

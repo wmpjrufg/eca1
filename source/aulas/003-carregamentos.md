@@ -519,14 +519,4 @@ vigas e estas as conduzem aos pilares.
 ## Referências
 
 (ref-1)=
-**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6120:2019**:
-*Ações para o cálculo de estruturas de edificações*. Rio de Janeiro: ABNT,
-2019.
-
-(ref-2)=
-**[2]** *Fonte complementar dos pesos de elementos construtivos das Tabelas 3
-a 8 — referência completa a confirmar.*
-
-(ref-3)=
-**[3]** ATEX. *Catálogo Atex 600: fôrmas para lajes nervuradas*. Catálogo
-técnico do fabricante.
+**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6120**: Ações para o cálculo de estruturas de edificações. 2. ed. Rio de Janeiro: ABNT, 2019.
