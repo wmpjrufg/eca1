@@ -5,6 +5,8 @@ Repositório das aulas e materiais da disciplina de Estruturas de Concreto Armad
 ```{toctree}
 :maxdepth: 2
 
+disciplina/000-software
+disciplina/000-markdown
 disciplina/000-plano-ensino
 disciplina/000-provas-anteriores
 disciplina/000-trabalho-pratico
@@ -14,7 +16,7 @@ disciplina/000-trabalho-pratico
 :maxdepth: 2
 :caption: Aulas
 
-aulas/001-introducao
-aulas/002-pre-dimensionamento
+aulas/001-hist-prop
+aulas/002-lanc-pre-dim
 aulas/003-carregamentos
 ```

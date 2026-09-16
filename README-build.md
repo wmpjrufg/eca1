@@ -9,7 +9,7 @@ source/
   conf.py           # configuração do Sphinx
   index.md          # página inicial / índice (toctree)
   aulas/            # arquivos .md de cada aula
-    001-introducao.md
+    001-hist-prop.md
 ```
 
 ## Adicionando uma nova aula

@@ -35,7 +35,7 @@ V1 a V6.
 A primeira etapa consiste no pré-dimensionamento de vigas, lajes e pilares do
 pavimento padrão apresentado na [Figura 1](#fig-1), considerando os
 parâmetros informados anteriormente. Os critérios de pré-dimensionamento constam na
-[Aula 02: Pré-dimensionamento dos elementos estruturais](../aulas/002-pre-dimensionamento.md).
+[Aula 02: Lançamento e pré-dimensionamento estrutural](../aulas/002-lanc-pre-dim.md).
 
 ### Definição dos vãos efetivos
 
