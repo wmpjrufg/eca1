@@ -138,15 +138,21 @@ Esses limites não definem a altura necessária da viga. A seção inicial tamb�
 
 A [ABNT NBR 6118 [1]](#ref-1) faz uma ressalva quanto à largura de vigas de concreto armado ou protendido no item 15.10, que trata da segurança à instabilidade lateral. Segundo a norma, essa segurança deve ser garantida por meio de procedimentos apropriados; para tanto, são estabelecidos critérios que definem uma largura mínima para a viga em função das condições de contraventamento lateral, expressos pelas Equações (1) e (2):
 
-$$
-b \geq \frac{l_0}{50}
-\tag{1}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-b \geq \beta_{fl}\,h
-\tag{2}
-$$
+* - $\displaystyle b \geq \frac{l_0}{50}$
+  - (1)
+```
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle b \geq \beta_{fl}\,h$
+  - (2)
+```
 
 em que:
 
@@ -171,24 +177,33 @@ Diversos autores apresentam procedimentos para a determinação da geometria da 
 
 a) Laje armada em duas direções:
 
-$$
-h = 2\%\cdot\frac{l_y+l_x}{2}
-\tag{3}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle h = 2\%\cdot\frac{l_y+l_x}{2}$
+  - (3)
+```
 
 b) Laje armada em uma direção:
 
-$$
-h = 2\%\cdot l_x
-\tag{4}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle h = 2\%\cdot l_x$
+  - (4)
+```
 
 c) Lajes em balanço:
 
-$$
-h = 4\%\cdot l_x
-\tag{5}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle h = 4\%\cdot l_x$
+  - (5)
+```
 
 ### Lajes nervuradas moldadas
 
@@ -196,20 +211,29 @@ Como as lajes nervuradas se dividem em diversos grupos, adotam-se critérios dis
 
 a) Laje armada em uma direção:
 
-$$
-h = 4\%\cdot l_x \text{, para espaçamento de 100 cm entre nervuras}
-\tag{6}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-h = 3\%\cdot l_x \text{, para espaçamento de 50 cm entre nervuras}
-\tag{7}
-$$
+* - $\displaystyle h = 4\%\cdot l_x \text{, para espaçamento de 100 cm entre nervuras}$
+  - (6)
+```
 
-$$
-b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
-\tag{8}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle h = 3\%\cdot l_x \text{, para espaçamento de 50 cm entre nervuras}$
+  - (7)
+```
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h$
+  - (8)
+```
 
 Segundo [Rebello [2]](#ref-2), para estruturas usuais em concreto armado a altura da capa ($h_f$) esse pode variar de 4 a 7 cm.
 
@@ -217,15 +241,21 @@ Já as distâncias intereixos em lajes nervuradas moldadas *in loco* não decorr
 
 b) Lajes bidirecionais (em grelha):
 
-$$
-h = 4\%\cdot\frac{l_y+l_x}{2}
-\tag{9}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h
-\tag{10}
-$$
+* - $\displaystyle h = 4\%\cdot\frac{l_y+l_x}{2}$
+  - (9)
+```
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h$
+  - (10)
+```
 
 Segundo [Rebello [2]](#ref-2), o espaçamento $a$ entre nervuras dessas lajes bidirecionais varia de $1{,}5\,h$ a $2{,}0\,h$.
 
@@ -263,10 +293,13 @@ Além dos critérios de pré-dimensionamento apresentados, as lajes em balanço 
 
 O [Quadro 1](#quadro1) pode ser expresso pela Equação (11), em que $h$ é a altura da laje em centímetros:
 
-$$
-\gamma_n = 1{,}95 - 0{,}05\,h
-\tag{11}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \gamma_n = 1{,}95 - 0{,}05\,h$
+  - (11)
+```
 
 O coeficiente $\gamma_n$ deve majorar os esforços solicitantes finais de cálculo nas lajes em balanço, quando de seu dimensionamento.
 
@@ -294,10 +327,13 @@ A Equação (11) aplica-se ao intervalo $10\leq h<19\text{ cm}$; para $h\geq19\t
 
 Após a determinação da área de influência e do carregamento estimado no pavimento, a seção transversal do pilar pode ser obtida pela Equação (12):
 
-$$
-A_c = \frac{N_d^{*}}{0{,}85\,f_{cd} + \rho\,\sigma_{s,\varepsilon=0,2\%}}
-\tag{12}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle A_c = \frac{N_d^{*}}{0{,}85\,f_{cd} + \rho\,\sigma_{s,\varepsilon=0,2\%}}$
+  - (12)
+```
 
 em que:
 
@@ -309,30 +345,37 @@ em que:
 
 Para determinar a carga atuante de pré-dimensionamento, utilizam-se as Equações (13) a (16):
 
-$$
-N_k^{*} = Q_{tot}\cdot A_i
-\tag{13}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-N_k^{*} = n_{tipo}\cdot N_k^{tipo} + n_{cob}\cdot N_k^{cob}
-\tag{14}
-$$
+* - $\displaystyle N_k^{*} = Q_{tot}\cdot A_i$
+  - (13)
+```
 
-$$
-N_d^{*} = \alpha\cdot N_k^{*}
-\tag{15}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-\alpha =
-\begin{cases}
-1{,}8, & \text{pilares intermediários} \\
-2{,}2, & \text{pilares de extremidade} \\
-2{,}5, & \text{pilares de canto}
-\end{cases}
-\tag{16}
-$$
+* - $\displaystyle N_k^{*} = n_{tipo}\cdot N_k^{tipo} + n_{cob}\cdot N_k^{cob}$
+  - (14)
+```
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle N_d^{*} = \alpha\cdot N_k^{*}$
+  - (15)
+```
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \alpha = \begin{cases} 1{,}8, & \text{pilares intermediários} \\ 2{,}2, & \text{pilares de extremidade} \\ 2{,}5, & \text{pilares de canto} \end{cases}$
+  - (16)
+```
 
 em que $N_k^{*}$ é a carga característica para pré-dimensionamento; $Q_{tot}$ é a carga total no pavimento; $A_i$ é a área de influência do pilar $i$ analisado; $N_k^{tipo}$ é a carga em um pilar do pavimento tipo; $n_{tipo}$ é o número de pavimentos tipo acima do nível calculado; $N_k^{cob}$ é a carga em um pilar do pavimento de cobertura; $n_{cob}$ é o número de pavimentos de cobertura acima do nível calculado; e $\alpha$ é um coeficiente de majoração da carga de pré-dimensionamento, que leva em conta os esforços de flexão não considerados nessa etapa.
 
@@ -351,10 +394,13 @@ Além dos critérios de pré-dimensionamento apresentados, os pilares com menor 
 
 O [Quadro 2](#quadro2) pode ser expresso pela Equação (17), em que $b$ é a menor dimensão da seção do pilar em centímetros:
 
-$$
-\gamma_n = 1{,}95 - 0{,}05\,b
-\tag{17}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \gamma_n = 1{,}95 - 0{,}05\,b$
+  - (17)
+```
 
 O coeficiente $\gamma_n$ deve majorar os esforços solicitantes finais de cálculo nos pilares, quando de seu dimensionamento.
 

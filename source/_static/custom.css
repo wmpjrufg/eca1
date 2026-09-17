@@ -32,3 +32,37 @@
 .destaque-verde > .admonition-title {
   background-color: #d5efdd !important;
 }
+
+table.eq-table {
+  border: none !important;
+  width: 100%;
+  margin: 1.6em 0;
+}
+
+table.eq-table tr {
+  background: transparent !important;
+}
+
+table.eq-table td,
+table.eq-table th {
+  border: none !important;
+  background: transparent !important;
+  padding: 0.35em 0.5em;
+  vertical-align: middle;
+}
+
+table.eq-table td p {
+  margin: 0;
+}
+
+table.eq-table td:first-child,
+table.eq-table td:first-child p {
+  text-align: center !important;
+}
+
+table.eq-table td:last-child,
+table.eq-table td:last-child p {
+  text-align: right !important;
+  white-space: nowrap;
+  width: 3em;
+}

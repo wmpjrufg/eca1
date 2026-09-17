@@ -86,22 +86,23 @@ As cargas de utilização estão relacionadas ao uso previsto para cada ambiente
 
 No caso das coberturas, a carga uniformemente distribuída $q$ pode ser determinada pela Equação (1):
 
-$$
-q = 0{,}50\,\alpha
-\tag{1}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle q = 0{,}50\,\alpha$
+  - (1)
+```
 
 em que $q$ é a carga de cobertura, expressa em $\mathrm{kN/m^2}$, e $\alpha$ é um coeficiente que depende da inclinação $i$ do telhado, conforme a Equação (2):
 
-$$
-\alpha =
-\begin{cases}
-1{,}00, & 1\% < i \leq 2\%,\\
-2{,}00 - 0{,}50i, & 2\% < i < 3\%,\\
-0{,}50, & i \geq 3\%.
-\end{cases}
-\tag{2}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \alpha = \begin{cases} 1{,}00, & 1\% < i \leq 2\%,\\ 2{,}00 - 0{,}50i, & 2\% < i < 3\%,\\ 0{,}50, & i \geq 3\%. \end{cases}$
+  - (2)
+```
 
 **Fonte:** ABNT NBR 6120:2019 [[1]](#ref-1).
 
@@ -274,10 +275,13 @@ No modelo estrutural, a forma de representar a ação depende da geometria do el
 
 Para uma laje maciça de espessura constante, o peso próprio por unidade de área é dado por:
 
-$$
-G_{pp}^{\mathrm{laje}} = h_{\mathrm{laje}}\,\gamma_c
-\tag{3}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle G_{pp}^{\mathrm{laje}} = h_{\mathrm{laje}}\,\gamma_c$
+  - (3)
+```
 
 [[1]](#ref-1)
 
@@ -311,10 +315,13 @@ Exemplo de dados de catálogo usados para determinar o peso próprio de uma laje
 
 Quando uma parede de alvenaria se apoia diretamente sobre a laje, e não sobre vigas, o seu peso próprio deve ser convertido em uma ação equivalente, a ser somada às demais ações permanentes da laje. Considere uma parede com altura $H_{alv}$, espessura $e_{alv}$, comprimento $l_{alv}$ e peso específico $\gamma_{alv}$ (ver [Pesos de elementos construtivos](#sec-pesos-elementos)). A forma de distribuir sua carga depende da relação entre os vãos do painel:
 
-$$
-\lambda = \frac{l_y}{l_x}, \qquad l_y \geq l_x.
-\tag{4}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \lambda = \frac{l_y}{l_x}, \qquad l_y \geq l_x$
+  - (4)
+```
 
 [[1]](#ref-1)
 
@@ -322,12 +329,13 @@ $$
 
 O peso da parede é espraiado por toda a área do painel, resultando em uma carga equivalente uniformemente distribuída:
 
-$$
-G_{EC}^{alv} =
-\frac{(a+b)\,H_{alv}\,e_{alv}\,\gamma_{alv}}
-{l_x\,l_y}.
-\tag{5}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle G_{EC}^{alv} = \frac{(a+b)\,H_{alv}\,e_{alv}\,\gamma_{alv}}{l_x\,l_y}$
+  - (5)
+```
 
 Os comprimentos $a$ e $b$ representam os trechos de alvenaria considerados no pavimento.
 
@@ -346,19 +354,23 @@ Para $\lambda>2$, o espraiamento do peso da parede por toda a área do painel de
 
 A parede é considerada apenas na faixa da laje diretamente sob ela, de largura de influência:
 
-$$
-l_{inf} = e_{alv} + h_{\mathrm{laje}}.
-\tag{6}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle l_{inf} = e_{alv} + h_{\mathrm{laje}}$
+  - (6)
+```
 
 Essa faixa (identificada como B na figura a seguir) recebe uma carga adicional $g_{par}$, somada à carga de utilização $p=g+q$ que atua no restante do painel (faixas A):
 
-$$
-G_{EC}^{alv} =
-\frac{H_{alv}\,e_{alv}\,l_{alv}\,\gamma_{alv}}
-{l_x\,l_{inf}}.
-\tag{7}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle G_{EC}^{alv} = \frac{H_{alv}\,e_{alv}\,l_{alv}\,\gamma_{alv}}{l_x\,l_{inf}}$
+  - (7)
+```
 
 ```{figure} ../_static/aulas/carregamentos/alvenaria-parede-paralela.png
 :alt: Distribuição de carga de parede paralela ao vão principal de uma laje armada em uma direção
@@ -374,10 +386,13 @@ Painel dividido nas faixas A (carga $p=g+q$) e B (faixa de influência $l_{inf}$
 
 O peso da parede não se distribui ao longo do vão: ele atua como uma carga concentrada $G$ na faixa de laje analisada como viga, aplicada na posição em que a parede cruza a laje:
 
-$$
-G_{EC}^{alv} = H_{alv}\,e_{alv}\,\gamma_{alv}.
-\tag{8}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle G_{EC}^{alv} = H_{alv}\,e_{alv}\,\gamma_{alv}$
+  - (8)
+```
 
 ```{figure} ../_static/aulas/carregamentos/alvenaria-parede-perpendicular.png
 :alt: Distribuição de carga de parede perpendicular ao vão principal de uma laje armada em uma direção
@@ -399,10 +414,13 @@ As Equações (5) e (7) resultam em carga superficial ($\mathrm{kN/m^2}$), somad
 
 Quando a parede está apoiada diretamente em uma viga, sua carga é tratada como uma ação linear:
 
-$$
-G_{EC}^{alv} = \left(H_{alv}\,e_{alv}\right)\gamma_{alv}.
-\tag{9}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle G_{EC}^{alv} = \left(H_{alv}\,e_{alv}\right)\gamma_{alv}$
+  - (9)
+```
 
 [[1]](#ref-1)
 

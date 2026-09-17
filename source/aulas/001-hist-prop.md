@@ -90,15 +90,21 @@ Entre as propriedades mecânicas do concreto, a resistência à compressão é a
 
 Como a hidratação do cimento é um processo contínuo, a resistência do concreto continua a evoluir muito além do momento da concretagem. O item 12.3.3 da [ABNT NBR 6118 [1]](#ref-1) permite estimar essa resistência em qualquer idade $t$ (em dias) a partir do valor de referência aos 28 dias, por meio de
 
-$$
-f_{ck,j} = \beta_t(t)\cdot f_{ck}
-\tag{1}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-\beta_t(t) = e^{\,s\left(1-\sqrt{28/t}\right)}
-\tag{2}
-$$
+* - $\displaystyle f_{ck,j} = \beta_t(t)\cdot f_{ck}$
+  - (1)
+```
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \beta_t(t) = e^{\,s\left(1-\sqrt{28/t}\right)}$
+  - (2)
+```
 
 com:
 
@@ -116,25 +122,31 @@ Uma fábrica de pré-moldados utiliza cimento CPV-ARI na produção de suas peç
 
 A rigidez do concreto também é estimada a partir de $f_{ck}$, distinguindo-se dois módulos de elasticidade: o módulo tangente na origem ($E_{ci}$) e o módulo secante ($E_{cs}$), este mais próximo do comportamento real da estrutura em serviço e, por isso, mais utilizado na análise estrutural. O item 8.2.8 da [ABNT NBR 6118 [1]](#ref-1) fornece, para a idade de 28 dias, as seguintes estimativas:
 
-$$
-E_{ci} = \alpha_E\cdot 5600\cdot\sqrt{f_{ck}} \quad \text{, para concretos de classe C20 a C50}
-\tag{3a}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-E_{ci} = 21{,}5\times10^{3}\cdot\alpha_E\cdot\left(\frac{f_{ck}}{10}+1{,}25\right)^{1/3} \quad \text{, para concretos de classe C55 a C90}
-\tag{3b}
-$$
+* - $\displaystyle E_{ci} = \alpha_E\cdot 5600\cdot\sqrt{f_{ck}} \quad \text{, para concretos de classe C20 a C50}$
+  - (3a)
+* - $\displaystyle E_{ci} = 21{,}5\times10^{3}\cdot\alpha_E\cdot\left(\frac{f_{ck}}{10}+1{,}25\right)^{1/3} \quad \text{, para concretos de classe C55 a C90}$
+  - (3b)
+```
 
-$$
-E_{cs} = \alpha_i\cdot E_{ci}
-\tag{4}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-\alpha_i = 0{,}8+0{,}2\cdot\frac{f_{ck}}{80}\leq 1{,}0
-\tag{5}
-$$
+* - $\displaystyle E_{cs} = \alpha_i\cdot E_{ci}$
+  - (4)
+```
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \alpha_i = 0{,}8+0{,}2\cdot\frac{f_{ck}}{80}\leq 1{,}0$
+  - (5)
+```
 
 em que $f_{ck}$ é dado em MPa e $\alpha_E$ é um coeficiente que depende do agregado graúdo utilizado: $\alpha_E=1{,}2$ para basalto e diabásio; $\alpha_E=1{,}0$ para granito e gnaisse; $\alpha_E=0{,}9$ para calcário; e $\alpha_E=0{,}7$ para arenito. A [Tabela 1](#tab-1) apresenta valores estimados e arredondados desses módulos para as classes usuais de resistência.
 
@@ -149,15 +161,15 @@ em que $f_{ck}$ é dado em MPa e $\alpha_E$ é um coeficiente que depende do agr
 
 O módulo de elasticidade acompanha a mesma lógica de evolução no tempo já vista para a resistência. Entre 7 e 28 dias, na ausência de ensaios específicos, seu valor pode ser projetado a partir do módulo obtido aos 28 dias, por meio de
 
-$$
-E_{ci}(t) = E_{ci}\cdot\left(\frac{f_{ckj}}{f_{ck}}\right)^{0{,}5} \quad \text{, para concretos até a classe C50}
-\tag{6a}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-E_{ci}(t) = E_{ci}\cdot\left(\frac{f_{ckj}}{f_{ck}}\right)^{0{,}3} \quad \text{, para concretos de classe C55 a C90}
-\tag{6b}
-$$
+* - $\displaystyle E_{ci}(t) = E_{ci}\cdot\left(\frac{f_{ckj}}{f_{ck}}\right)^{0{,}5} \quad \text{, para concretos até a classe C50}$
+  - (6a)
+* - $\displaystyle E_{ci}(t) = E_{ci}\cdot\left(\frac{f_{ckj}}{f_{ck}}\right)^{0{,}3} \quad \text{, para concretos de classe C55 a C90}$
+  - (6b)
+```
 
 em que $E_{ci}(t)$ é a estimativa do módulo de elasticidade na idade $t$ e $f_{ckj}$ é a resistência característica à compressão na idade $j$ em que se deseja estimar o módulo.
 
@@ -171,16 +183,13 @@ Durante a troca dos aparelhos de apoio de uma ponte de concreto armado, a supere
 
 Sob compressão, o concreto se comporta de maneira não linear, mantendo-se praticamente constante apenas o coeficiente de Poisson, com valor médio $\nu=0{,}2$ prescrito pela norma. Para simplificar o dimensionamento, o item 8.2.10.1 da [ABNT NBR 6118 [1]](#ref-1) substitui essa curva real por um diagrama idealizado, do tipo parábola-retângulo:
 
-$$
-\sigma_c =
-\left\{
-\begin{array}{ll}
-0{,}85\,\eta_c\,f_{cd}\left[1-\left(1-\dfrac{\varepsilon_c}{\varepsilon_{c2}}\right)^{n}\right], & 0\leq\varepsilon_c\leq\varepsilon_{c2} \\[8pt]
-0{,}85\,\eta_c\,f_{cd}, & \varepsilon_{c2}\leq\varepsilon_c\leq\varepsilon_{cu}
-\end{array}
-\right.
-\tag{7}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \sigma_c = \begin{cases} 0{,}85\,\eta_c\,f_{cd}\left[1-\left(1-\dfrac{\varepsilon_c}{\varepsilon_{c2}}\right)^{n}\right], & 0\leq\varepsilon_c\leq\varepsilon_{c2} \\[8pt] 0{,}85\,\eta_c\,f_{cd}, & \varepsilon_{c2}\leq\varepsilon_c\leq\varepsilon_{cu} \end{cases}$
+  - (7)
+```
 
 em que $f_{cd}$ é a resistência de cálculo à compressão do concreto e $\eta_c$ é um redutor da resistência à compressão para concretos de classes mais elevadas, definido pela [Tabela 2](#tab-2). Já $\varepsilon_{c2}$, a deformação específica no início do patamar plástico, $\varepsilon_{cu}$, a deformação específica de ruptura do concreto, e o expoente $n$ dependem da classe de resistência, conforme a [Tabela 3](#tab-3).
 
@@ -215,27 +224,33 @@ A [Figura 4](#fig-4) apresenta detalhes do diagrama tensão-deformação do conc
 
 Em ordem de grandeza bem menor que a compressão, a resistência à tração do concreto também pode ser estimada em função de $f_{ck}$, na falta de ensaios diretos. É o que permite o item 8.2.5 da [ABNT NBR 6118 [1]](#ref-1), ao definir a resistência à tração direta média ($f_{ct,m}$) por
 
-$$
-f_{ct,m} = 0{,}3\cdot f_{ck}^{2/3} \quad \text{, para concretos de classe até C50}
-\tag{8a}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-f_{ct,m} = 2{,}12\cdot\ln\left(1+0{,}11\,f_{ck}\right) \quad \text{, para concretos de classe C55 a C90}
-\tag{8b}
-$$
+* - $\displaystyle f_{ct,m} = 0{,}3\cdot f_{ck}^{2/3} \quad \text{, para concretos de classe até C50}$
+  - (8a)
+* - $\displaystyle f_{ct,m} = 2{,}12\cdot\ln\left(1+0{,}11\,f_{ck}\right) \quad \text{, para concretos de classe C55 a C90}$
+  - (8b)
+```
 
 com $f_{ck}$ e $f_{ct,m}$ em MPa. Os valores característicos inferior e superior da resistência à tração são dados por
 
-$$
-f_{ctk,inf} = 0{,}7\cdot f_{ct,m}
-\tag{9}
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-$$
-f_{ctk,sup} = 1{,}3\cdot f_{ct,m}
-\tag{10}
-$$
+* - $\displaystyle f_{ctk,inf} = 0{,}7\cdot f_{ct,m}$
+  - (9)
+```
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle f_{ctk,sup} = 1{,}3\cdot f_{ct,m}$
+  - (10)
+```
 
 Enquanto a peça permanece sem fissuras, seu comportamento à tração é representado por um diagrama bilinear simplificado, adotando-se o mesmo módulo de deformação inicial já estimado para a compressão.
 
