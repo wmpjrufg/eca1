@@ -173,10 +173,12 @@ Sob compressão, o concreto se comporta de maneira não linear, mantendo-se prat
 
 $$
 \sigma_c =
-\begin{cases}
+\left\{
+\begin{array}{ll}
 0{,}85\,\eta_c\,f_{cd}\left[1-\left(1-\dfrac{\varepsilon_c}{\varepsilon_{c2}}\right)^{n}\right], & 0\leq\varepsilon_c\leq\varepsilon_{c2} \\[8pt]
 0{,}85\,\eta_c\,f_{cd}, & \varepsilon_{c2}\leq\varepsilon_c\leq\varepsilon_{cu}
-\end{cases}
+\end{array}
+\right.
 \tag{7}
 $$
 
