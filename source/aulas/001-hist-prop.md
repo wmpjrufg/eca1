@@ -2,9 +2,9 @@
 
 Esta aula apresenta um panorama sobre o concreto armado: um breve histórico de sua evolução, desde as primeiras construções em pedra e argamassa até a normalização moderna, e uma síntese das propriedades dos materiais (concreto e aço) que serão utilizadas ao longo da disciplina.
 
-## 1. Breve histórico do concreto armado
+## Breve histórico do concreto armado
 
-### 1.1 Da pedra ao concreto romano
+### Da pedra ao concreto romano
 
 A humanidade recorreu, inicialmente, a blocos de pedra sobrepostos para erguer suas construções mais duráveis, como templos, câmaras funerárias e abrigos. Onde pedra e madeira eram escassas, no entanto, os povos antigos passaram a queimar barro para fabricar tijolos, técnica já presente na Mesopotâmia por volta de 3.500 a.C. e nas pirâmides egípcias, que empregavam argamassas à base de gipsita e cal.
 
@@ -18,7 +18,7 @@ O concreto, tal como o conhecemos, tem origem na pozolana: uma cinza de origem v
 :align: center
 ```
 
-### 1.2 O surgimento do concreto armado
+### O surgimento do concreto armado
 
 Registros arqueológicos das termas de Caracalla, em Roma, revelam o caso mais antigo conhecido de reforço metálico em construções: barras de bronze embutidas em argamassa de pozolana, encontradas justamente nos trechos de vão mais largo. Esse conhecimento praticamente se perdeu durante a Idade Média, e só foi retomado com força no século XVIII, quando Smeaton e Vicat conduziram os primeiros estudos sistemáticos sobre aglomerantes hidráulicos, trabalho que culminou, em 1824, na patente do cimento Portland por Joseph Aspdin.
 
@@ -26,17 +26,17 @@ Foi Thaddeus Hyatt, em 1877, quem sistematizou pela primeira vez as razões que 
 
 Coube ao engenheiro alemão [Emil Mörsch](#nota-2), da Universidade de Stuttgart, formular em 1908 a primeira teoria consistente para o dimensionamento de peças de concreto armado, cujos princípios básicos seguem válidos até os dias de hoje.
 
-### 1.3 O concreto armado no Brasil
+### O concreto armado no Brasil
 
 No Brasil, os primeiros registros do uso do então chamado "cimento armado" remontam a 1904, em residências de Copacabana, no Rio de Janeiro. Sua disseminação, contudo, está diretamente ligada à imigração alemã do início do século XX, episódio que trouxe ao país o engenheiro Lambert Riedlinger e a empresa Wayss & Freytag. Foi nesse contexto que Emilio Baumgart despontou como um dos grandes nomes da engenharia nacional, assinando obras como o edifício do Jornal *A Noite* (1930), com seus recordistas 104,75 m de altura, e a ponte sobre o Rio do Peixe (SC, 1930), então a maior ponte em viga reta construída em balanços sucessivos no mundo [Vasconcelos [3]](#ref-3).
 
-### 1.4 Ensino e normalização
+### Ensino e normalização
 
 O ensino sistemático do dimensionamento em concreto armado só ganhou espaço nos currículos de engenharia em 1897. A regulamentação técnica seguiu ritmo semelhante: a Alemanha abriu caminho em 1904, seguida de perto pela França (1906), pela Inglaterra (1915) e pelos Estados Unidos (1917). O Brasil chegaria à sua primeira norma apenas em 1940, batizada de NB-1; passou por revisões em 1960 e 1978 até assumir, em 1980, o nome que mantém até hoje, [ABNT NBR 6118 [1]](#ref-1), atualmente em sua edição de 2023.
 
-## 2. Propriedades do concreto armado
+## Propriedades do concreto armado
 
-### 2.1 Viabilidade do compósito concreto-aço
+### Viabilidade do compósito concreto-aço
 
 Em sua forma simples, o concreto reúne cimento, água e agregados miúdos e graúdos, resultando em um material com ótimo desempenho à compressão, mas capaz de resistir a apenas cerca de 10% desse valor quando tracionado. É justamente para suprir essa fragilidade que se posicionam barras de aço na região tracionada da peça: o concreto passa a responder pela compressão, enquanto o aço assume, depois que essa região fissura, a função de equilibrar os esforços de tração.
 
@@ -66,7 +66,7 @@ A [Figura 4](#fig-4) apresenta uma viga de concreto armado em perspectiva, com t
 :align: center
 ```
 
-### 2.2 Fissuração, vantagens e desvantagens
+### Fissuração, vantagens e desvantagens
 
 Fissuras são, na prática, inseparáveis do concreto armado: bastam pequenas deformações de tração para que o material rache. Evitá-las por completo exigiria armaduras tão conservadoras que o custo da estrutura se tornaria proibitivo. Por isso, a estratégia de projeto não é impedir a fissuração, e sim manter a abertura das fissuras dentro de limites que preservem a durabilidade da peça em serviço.
 
@@ -84,9 +84,9 @@ Como principais desvantagens, destacam-se:
 - dificuldades para reformas e demolições futuras;
 - baixo grau de proteção térmica que a estrutura oferece.
 
-### 2.3 Propriedades mecânicas do concreto
+### Propriedades mecânicas do concreto
 
-#### 2.3.1 Resistência à compressão
+#### Resistência à compressão
 
 Entre as propriedades mecânicas do concreto, a resistência à compressão é a mais relevante para o projeto estrutural, sendo obtida por ensaios padronizados em corpos de prova cilíndricos. Por se tratar de uma grandeza sujeita a dispersão estatística, adota-se em projeto não a média dos resultados, mas a resistência característica ($f_{ck}$): o valor abaixo do qual ficam apenas 5% dos ensaios de um lote, o que equivale a uma garantia de 95% de que a resistência real supere a de projeto.
 
@@ -114,7 +114,7 @@ com:
 Uma fábrica de pré-moldados utiliza cimento CPV-ARI na produção de suas peças. Para liberar o transporte dos elementos, é necessário garantir $f_{ck}$ superior a $21\text{ MPa}$ já aos 2 dias de idade. Qual classe de resistência do concreto deve ser especificada para atender a essa exigência?
 ```
 
-#### 2.3.2 Módulo de elasticidade
+#### Módulo de elasticidade
 
 A rigidez do concreto também é estimada a partir de $f_{ck}$, distinguindo-se dois módulos: o de elasticidade, tangente na origem ($E_{ci}$), e o secante ($E_{cs}$), este mais próximo do comportamento real da estrutura em serviço e, por isso, mais utilizado na análise estrutural. O item 8.2.8 da [ABNT NBR 6118 [1]](#ref-1) fornece, para a idade de 28 dias, as seguintes estimativas:
 
@@ -169,7 +169,7 @@ em que $E_{ci}(t)$ é a estimativa do módulo de elasticidade na idade $t$ e $f_
 Durante a troca dos aparelhos de apoio de uma ponte de concreto armado, a superestrutura é temporariamente levantada por atuadores hidráulicos, e um bloco de concreto é posicionado entre a superestrutura e a mesoestrutura para mantê-las afastadas com segurança, sem fissurar por compressão. Esse bloco tem classe de resistência C30, seção $14\times30\text{ cm}$, altura de $100\text{ cm}$ e é armado com 4 barras longitudinais de $10\text{ mm}$ (aço com $E_s=210\text{ GPa}$). O manômetro dos atuadores indica uma força de $1600\text{ kN}$, correspondente ao peso da superestrutura apoiado sobre o bloco. Esse elemento atende ao limite de encurtamento de $2\text{ mm}$ exigido pela empresa responsável pela obra?
 ```
 
-#### 2.3.3 Diagrama tensão-deformação
+#### Diagrama tensão-deformação
 
 Sob compressão, o concreto se comporta de maneira não linear, mantendo-se praticamente constante apenas o coeficiente de Poisson, com valor médio $\nu=0{,}2$ prescrito pela norma. Para simplificar o dimensionamento, o item 8.2.10.1 da [ABNT NBR 6118 [1]](#ref-1) substitui essa curva real por um diagrama idealizado, do tipo parábola-retângulo:
 
@@ -195,7 +195,7 @@ em que $f_{cd}$ é a resistência de cálculo à compressão do concreto, $\vare
 
 > **Figura 5 — Diagrama tensão–deformação simplificado do concreto em compressão.** Ilustrar o diagrama parábola-retângulo, com o trecho curvo até $\varepsilon_{c2}$ e o patamar plástico até $\varepsilon_{cu}$, indicando as curvas de tensões características e de tensões de cálculo.
 
-#### 2.3.4 Comportamento em tração
+#### Comportamento em tração
 
 Em ordem de grandeza bem menor que a compressão, a resistência à tração do concreto também pode ser estimada em função de $f_{ck}$, na falta de ensaios diretos. É o que permite o item 8.2.5 da [ABNT NBR 6118 [1]](#ref-1), ao definir a resistência à tração direta média ($f_{ct,m}$) por
 
@@ -229,7 +229,7 @@ Enquanto a peça permanece sem fissuras, seu comportamento à tração é repres
 Um prisma de concreto com seção $15\times15\text{ cm}$ e vão de $45\text{ cm}$ será submetido a um ensaio de flexão em três pontos. Admitindo comportamento elástico linear e que a tensão na face inferior do prisma não deve superar a resistência à tração direta do concreto (com $f_{ck}=40\text{ MPa}$), qual é a força máxima que a peça suporta antes de fissurar?
 ```
 
-### 2.4 Propriedades reológicas do concreto
+### Propriedades reológicas do concreto
 
 Além das deformações imediatas, o concreto acumula, ao longo do tempo, dois outros tipos de deformação:
 
@@ -238,7 +238,7 @@ Além das deformações imediatas, o concreto acumula, ao longo do tempo, dois o
 
 Na prática, esses efeitos se traduzem em flechas maiores em vigas e lajes e em esforços adicionais que surgem quando a estrutura é hiperestática. A variação uniforme de temperatura segue lógica parecida: em estruturas isostáticas, provoca apenas deslocamentos; em hiperestáticas, gera esforços que também precisam ser considerados no projeto.
 
-### 2.5 Aço para concreto armado
+### Aço para concreto armado
 
 A nomenclatura do aço para concreto armado combina as letras **CA** com o valor característico da tensão de escoamento em MPa; um **CA-50**, por exemplo, escoa a $f_{yk}=500\text{ MPa}$. A [ABNT NBR 7480 [2]](#ref-2) reconhece três categorias: as barras CA-25 e CA-50, laminadas a quente, e os fios CA-60, obtidos por trefilação ou laminação a frio.
 

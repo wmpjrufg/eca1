@@ -9,10 +9,10 @@ versão.
 ```{admonition} Vídeo de instalação
 :class: destaque-azul
 
-Um vídeo com o passo a passo completo de instalação do VS Code e da extensão
-de Markdown será disponibilizado neste espaço em breve.
+Assista ao passo a passo completo de instalação do VS Code e da extensão de
+Markdown.
 
-**Link do vídeo:** *(a ser adicionado)*
+**Link do vídeo:** [https://youtu.be/z5VdoWYLPuU](https://youtu.be/z5VdoWYLPuU)
 ```
 
 ## Instalação do VS Code

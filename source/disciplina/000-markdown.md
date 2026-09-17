@@ -15,6 +15,12 @@ título.
 ### Título de subseção (nível 3)
 ````
 
+**Assim fica:**
+
+> # Título principal (nível 1)
+> ## Título de seção (nível 2)
+> ### Título de subseção (nível 3)
+
 ## Ênfase e listas
 
 ````
@@ -29,6 +35,19 @@ título.
 2. segundo passo;
 3. terceiro passo.
 ````
+
+**Assim fica:**
+
+> **texto em negrito**
+> *texto em itálico*
+>
+> - item 1;
+> - item 2;
+> - item 3.
+>
+> 1. primeiro passo;
+> 2. segundo passo;
+> 3. terceiro passo.
 
 ## Equações
 
@@ -45,19 +64,28 @@ f_{ck,j} = \beta_{1(t,s)} \cdot f_{ck,28}
 $$
 ````
 
+**Assim fica:**
+
+> Equação inline: $f_{ck}$
+>
+> Equação em bloco:
+>
+> $$
+> f_{ck,j} = \beta_{1(t,s)} \cdot f_{ck,28}
+> $$
+
 ## Figuras
 
-Para inserir uma figura com legenda numerada e permitir que ela seja
-referenciada no texto, use a sintaxe abaixo. O rótulo entre parênteses (por
-exemplo, `fig-1`) é usado depois para criar o link de referência.
+Para inserir uma figura, use a sintaxe tradicional de imagem do Markdown,
+`![texto alternativo](caminho da imagem)`. Para poder referenciá-la depois
+no texto, adicione uma âncora HTML (`<a id="fig-1"></a>`) antes da legenda —
+o nome entre aspas (por exemplo, `fig-1`) é o rótulo usado no link de
+referência.
 
 ````
-(fig-1)=
-**Figura 1.** Legenda descritiva da figura.
-```{figure} ../_static/aulas/pasta-da-aula/nome-da-imagem.png
-:alt: Texto alternativo da imagem
-:width: 85%
-```
+![Texto alternativo da imagem](../_static/aulas/pasta-da-aula/nome-da-imagem.png)
+
+<a id="fig-1"></a>**Figura 1.** Legenda descritiva da figura.
 ````
 
 Para referenciar a figura no texto, use:
@@ -65,6 +93,14 @@ Para referenciar a figura no texto, use:
 ````
 Conforme mostrado na [Figura 1](#fig-1)...
 ````
+
+**Assim fica:**
+
+> ![Exemplo de figura: caminho das cargas em uma estrutura de lajes, vigas e pilares](../_static/aulas/carregamentos/caminho-das-cargas.png)
+>
+> <a id="fig-1"></a>**Figura 1.** Caminho das cargas: as lajes recebem ações superficiais, transferem-nas às vigas e estas as conduzem aos pilares.
+>
+> Conforme mostrado na [Figura 1](#fig-1)...
 
 ## Tabelas
 
@@ -80,40 +116,51 @@ coluna (`---:` alinha à direita).
 | **Total** | | **3,0** |
 ````
 
+**Assim fica:**
+
+> | Critério | O que será avaliado | Pontuação |
+> |---|---|---:|
+> | Item 1 | Descrição do item 1 | 1,0 |
+> | Item 2 | Descrição do item 2 | 2,0 |
+> | **Total** | | **3,0** |
+
 ## Citações e referências bibliográficas
 
-As referências seguem o mesmo esquema de rótulo e link usado nas figuras. No
-texto, a citação é um link para o rótulo definido na seção de Referências.
+As referências seguem o mesmo esquema de âncora e link usado nas figuras. No
+texto, a citação é um link para a âncora definida na seção de Referências.
 
 ````
 Conforme a [ABNT NBR 6118 [1]](#ref-1)...
 
 ## Referências
 
-(ref-1)=
-**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto
+<a id="ref-1"></a>**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto
 de estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023.
 ````
 
-## Destaques (admonitions)
+**Assim fica:**
+
+> Conforme a [ABNT NBR 6118 [1]](#ref-1)...
+>
+> ### Referências
+>
+> <a id="ref-1"></a>**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto de estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023.
+
+## Destaques
 
 Para chamar atenção para um trecho do texto (avisos, dicas, entregas etc.),
-use um bloco de destaque com uma das classes de cor disponíveis:
-`destaque-azul`, `destaque-verde` ou `destaque-vermelho`.
+use uma citação em bloco (`>`), com o título do destaque em negrito na
+primeira linha.
 
 ````
-```{admonition} Título do destaque
-:class: destaque-azul
-
-Texto do destaque.
-```
+> **Título do destaque**
+>
+> Texto do destaque.
 ````
 
-```{admonition} Dica
-:class: destaque-verde
+**Assim fica:**
 
-Use o preview do VS Code (`Ctrl+Shift+V`) para conferir se equações,
-tabelas, figuras e citações estão sendo exibidas corretamente antes de
-entregar o arquivo. Veja as instruções de instalação em
-[Software](000-software.md).
-```
+> **Título do destaque**
+>
+> Texto do destaque.
+
