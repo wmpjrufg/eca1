@@ -19,4 +19,6 @@ disciplina/000-trabalho-pratico
 aulas/001-hist-prop
 aulas/002-lanc-pre-dim
 aulas/003-carregamentos
+aulas/004-introducao-lajes
+aulas/005-esforcos-lajes
 ```

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="440" viewBox="0 0 820 440" role="img" aria-labelledby="title desc">
+<title id="title">Analogia de grelha de um pavimento</title>
+<desc id="desc">Barras de laje em duas direções, unidas nos nós, com vigas no contorno e pilares nos quatro cantos.</desc>
+<rect width="820" height="440" fill="white"/>
+<g stroke="#4282a8" stroke-width="3">
+<path d="M170 80V330"/>
+<path d="M250 80V330"/>
+<path d="M330 80V330"/>
+<path d="M410 80V330"/>
+<path d="M490 80V330"/>
+<path d="M570 80V330"/>
+<path d="M90 130H650"/>
+<path d="M90 180H650"/>
+<path d="M90 230H650"/>
+<path d="M90 280H650"/>
+</g><rect x="90" y="80" width="560" height="250" fill="none" stroke="#253c52" stroke-width="10"/>
+<circle cx="170" cy="130" r="4.5" fill="#253c52"/>
+<circle cx="170" cy="180" r="4.5" fill="#253c52"/>
+<circle cx="170" cy="230" r="4.5" fill="#253c52"/>
+<circle cx="170" cy="280" r="4.5" fill="#253c52"/>
+<circle cx="250" cy="130" r="4.5" fill="#253c52"/>
+<circle cx="250" cy="180" r="4.5" fill="#253c52"/>
+<circle cx="250" cy="230" r="4.5" fill="#253c52"/>
+<circle cx="250" cy="280" r="4.5" fill="#253c52"/>
+<circle cx="330" cy="130" r="4.5" fill="#253c52"/>
+<circle cx="330" cy="180" r="4.5" fill="#253c52"/>
+<circle cx="330" cy="230" r="4.5" fill="#253c52"/>
+<circle cx="330" cy="280" r="4.5" fill="#253c52"/>
+<circle cx="410" cy="130" r="4.5" fill="#253c52"/>
+<circle cx="410" cy="180" r="4.5" fill="#253c52"/>
+<circle cx="410" cy="230" r="4.5" fill="#253c52"/>
+<circle cx="410" cy="280" r="4.5" fill="#253c52"/>
+<circle cx="490" cy="130" r="4.5" fill="#253c52"/>
+<circle cx="490" cy="180" r="4.5" fill="#253c52"/>
+<circle cx="490" cy="230" r="4.5" fill="#253c52"/>
+<circle cx="490" cy="280" r="4.5" fill="#253c52"/>
+<circle cx="570" cy="130" r="4.5" fill="#253c52"/>
+<circle cx="570" cy="180" r="4.5" fill="#253c52"/>
+<circle cx="570" cy="230" r="4.5" fill="#253c52"/>
+<circle cx="570" cy="280" r="4.5" fill="#253c52"/>
+<rect x="78" y="68" width="24" height="24" fill="#253c52"/>
+<rect x="638" y="68" width="24" height="24" fill="#253c52"/>
+<rect x="78" y="318" width="24" height="24" fill="#253c52"/>
+<rect x="638" y="318" width="24" height="24" fill="#253c52"/>
+<g font-family="sans-serif" font-size="18" fill="#253c52">
+<text x="90" y="38">Barras que representam faixas da laje</text>
+<text x="690" y="185">Nó</text>
+<path d="M680 180H570" stroke="#253c52" fill="none"/>
+<text x="225" y="380">Viga de contorno</text>
+<path d="M300 360V336" stroke="#253c52" fill="none"/>
+<text x="595" y="402">Pilar</text>
+<path d="M625 383L647 345" stroke="#253c52" fill="none"/>
+<text x="28" y="265">y</text>
+<path d="M45 315V275M45 315H70" stroke="#253c52" stroke-width="2" fill="none"/>
+<text x="54" y="348">x</text>
+</g></svg>

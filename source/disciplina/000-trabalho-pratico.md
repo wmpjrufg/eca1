@@ -23,6 +23,7 @@ V1 a V6.
 - Carga por área de influência para pré-dimensionamento dos pilares:
   - Pavimento-tipo: $10\text{ kN/m}^2$;
   - Cobertura: $7\text{ kN/m}^2$.
+- Largura das vigas de 14 cm;
 - Taxa de armadura para pré-dimensionamento dos pilares: $\rho = 2\%$;
 - Tensão correspondente a $0{,}20\%$ de deformação (aço CA-50): $420\text{ MPa}$;
 - Largura das vigas: critério de instabilidade lateral do item 15.10 da
@@ -97,8 +98,7 @@ A **Entrega 1** contempla as etapas de pré-dimensionamento dos elementos estrut
 ## Referências
 
 (ref-1)=
-**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto de
-estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023.
+[1] ABNT — ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. *NBR 6118: Projeto de estruturas de concreto*. 4. ed. Rio de Janeiro, 2023.
 
 (ref-2)=
-**[2]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6120**: Ações para o cálculo de estruturas de edificações. 2. ed. Rio de Janeiro: ABNT, 2019.
+[2] ABNT — ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. *NBR 6120: Ações para cálculo de estruturas de edificações*. 2. ed. Rio de Janeiro, 2019.
