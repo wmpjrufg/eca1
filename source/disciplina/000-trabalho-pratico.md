@@ -7,12 +7,19 @@ pavimento padrão de um edifício residencial de concreto armado. Será tomado
 como referência o pavimento padrão apresentado na [Figura 1](#fig-1), com a
 identificação das vigas (V1 a V6) e dos vãos entre eixos de pilares.
 
+**Unidades da Figura 1:** as cotas são dadas em **centímetros**: 585 cm e
+620 cm na horizontal; 510 cm e 485 cm na vertical. Nos cálculos, correspondem
+a 5,85 m, 6,20 m, 5,10 m e 4,85 m, respectivamente. Esta indicação prevalece
+sobre a unidade impressa junto às cotas da imagem.
+
 (fig-1)=
 **Figura 1.** Planta de fôrma do pavimento padrão de referência, com vigas
 V1 a V6.
 ```{figure} ../_static/aulas/trabalho-pratico/pavimento-padrao.png
 :alt: Planta de fôrma do pavimento padrão, com vigas V1 a V6 e vãos entre pilares
 :width: 85%
+:align: center
+:class: planta-trabalho
 ```
 
 ### Parâmetros base do projeto
@@ -23,7 +30,7 @@ V1 a V6.
 - Carga por área de influência para pré-dimensionamento dos pilares:
   - Pavimento-tipo: $10\text{ kN/m}^2$;
   - Cobertura: $7\text{ kN/m}^2$.
-- Largura das vigas: $14\text{ cm}$;
+- Largura das vigas (V1 a V6): $b_w=15\text{ cm}$;
 - Taxa de armadura para pré-dimensionamento dos pilares: $\rho = 2\%$;
 - Tensão correspondente a $0{,}20\%$ de deformação (aço CA-50): $420\text{ MPa}$;
 - Verificação da largura das vigas quanto à segurança à instabilidade lateral,
@@ -37,6 +44,10 @@ V1 a V6.
   (combinação quase permanente), adotados para edificações residenciais.
 
 ## Roteiro de etapas e entregas do semestre
+
+A [Solução do trabalho](000-solucao-trabalho.md) será disponibilizada por
+entrega, ao longo do semestre, para conferência dos cálculos e discussão
+dos erros mais frequentes.
 
 O trabalho é desenvolvido em cinco entregas sequenciais. Cada entrega usa os
 resultados da anterior; se uma verificação posterior exigir alterar uma seção

@@ -6,6 +6,12 @@
   hyphens: auto;
 }
 
+/* A planta original tem traços pretos sobre fundo transparente. */
+img.planta-trabalho {
+  background-color: #fff;
+  padding: 0.75rem;
+}
+
 .destaque-azul {
   border-left-color: #42a5d5 !important;
   background-color: #eaf7fd !important;

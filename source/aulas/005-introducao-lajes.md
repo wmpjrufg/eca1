@@ -7,35 +7,15 @@ Esta aula retoma os conceitos do capítulo *Introdução ao projeto de lajes*, d
 ```{admonition} Objetivos da aula
 :class: destaque-azul
 
-- Reconhecer os sistemas de laje e sua participação na estrutura.
+- Reconhecer os sistemas de laje e os tipos de seção transversal.
 - Representar os apoios e determinar os vãos efetivos de cada painel.
 - Identificar a direção resistente e estimar a espessura da laje.
 - Preparar os dados para o cálculo dos esforços da [Aula 06](006-esforcos-lajes.md).
 ```
 
-## A laje no sistema estrutural
+## A laje como placa
 
-Uma laje tem duas dimensões em planta muito maiores que sua espessura. Quando recebe ações perpendiculares ao seu plano, trabalha como uma **placa**: apresenta flexão e pode distribuir esforços nas duas direções da superfície.
-
-```{figure} ../_static/aulas/introducao-lajes/placa-casca-chapa.png
-:alt: Representações de placa, casca e chapa para comparação de geometria e direção das ações
-:width: 80%
-:align: center
-
-Elementos de superfície. Figura do material do professor.
-```
-
-Em um edifício com vigamento, os apoios das lajes são, em geral, as vigas que contornam os painéis. Em uma laje lisa, a ligação ocorre diretamente com os pilares. A mudança de sistema altera o comportamento: o apoio pontual exige examinar, entre outras questões, a punção na região do pilar.
-
-A função da laje também aparece na estabilidade do conjunto. Quando possui rigidez no próprio plano e ligações adequadas, o pavimento atua como **diafragma**, vinculando os deslocamentos horizontais dos elementos verticais. Na flexão das vigas, uma parcela da laje pode ainda participar da mesa comprimida de uma seção T. Essa largura colaborante pertence à análise da viga e não deve ser confundida com o vão da laje.
-
-```{figure} ../_static/aulas/introducao-lajes/efeito-difragama-rigido.png
-:alt: Comparação do comportamento de uma estrutura sob ação lateral, destacando a ligação proporcionada pelo pavimento
-:width: 75%
-:align: center
-
-Participação do pavimento como diafragma. Figura do material do professor.
-```
+Uma laje tem duas dimensões em planta muito maiores que sua espessura. Quando recebe ações perpendiculares ao seu plano, trabalha como uma **placa**: apresenta flexão e pode distribuir esforços nas duas direções da superfície. O papel da laje no sistema estrutural do edifício (apoio em vigas ou em pilares, efeito de diafragma e largura colaborante) foi discutido na [Aula 04](004-modelos-estruturais.md).
 
 O mesmo conceito de placa aparece em tabuleiros de pontes, reservatórios e outras estruturas. Nesta sequência de aulas, os exemplos serão de pavimentos de edifícios, com atenção às lajes retangulares apoiadas em vigas.
 

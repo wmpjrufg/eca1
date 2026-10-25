@@ -10,6 +10,7 @@ A aula começa pelos tipos de análise estrutural previstos na norma, passa pelo
 - Distinguir análise linear e não linear e reconhecer as três fontes de não linearidade.
 - Explicar, com um exemplo, a diferença entre análise de 1ª e de 2ª ordem.
 - Aplicar os coeficientes de rigidez reduzida da NBR 6118 em uma análise global.
+- Reconhecer o papel das lajes no sistema estrutural, inclusive como diafragma.
 - Comparar os modelos de caminho das cargas, pórtico plano e pórtico espacial.
 - Extrair um pórtico plano de um edifício tridimensional e montá-lo no Ftool.
 - Montar o modelo de viga contínua e aplicar as correções previstas na NBR 6118.
@@ -104,6 +105,30 @@ Com $0{,}80$: $(EI)_{sec}\approx51\,120\text{ kN}\cdot\text{m}^2$.
 ## Do edifício ao modelo
 
 O edifício é uma estrutura espacial formada por lajes, vigas e pilares ligados entre si. Para analisá-lo, podemos adotar modelos com graus diferentes de refinamento.
+
+### As lajes no sistema estrutural
+
+Vigas e pilares são representados como barras. As lajes são **elementos de superfície**: têm duas dimensões muito maiores que a espessura. Quando recebem ações perpendiculares ao seu plano, trabalham como **placas**. Quando as ações estão contidas no próprio plano, trabalham como **chapas**. Se a superfície for curva, temos uma **casca**.
+
+```{figure} ../_static/aulas/introducao-lajes/placa-casca-chapa.png
+:alt: Representações de placa, casca e chapa para comparação de geometria e direção das ações
+:width: 80%
+:align: center
+
+Elementos de superfície. Figura do material do professor.
+```
+
+Em um edifício com vigamento, os apoios das lajes são, em geral, as vigas que contornam os painéis. Em uma laje lisa, a ligação ocorre diretamente com os pilares. A mudança de sistema altera o comportamento: o apoio pontual exige examinar, entre outras questões, a punção na região do pilar.
+
+A laje também participa da estabilidade do conjunto. Quando possui rigidez no próprio plano e ligações adequadas, o pavimento atua como **diafragma**, vinculando os deslocamentos horizontais dos elementos verticais. É essa hipótese que o pórtico espacial adota, como se verá adiante. Na flexão das vigas, uma parcela da laje pode ainda participar da mesa comprimida de uma seção T. Essa largura colaborante pertence à análise da viga e não deve ser confundida com o vão da laje.
+
+```{figure} ../_static/aulas/introducao-lajes/efeito-difragama-rigido.png
+:alt: Comparação do comportamento de uma estrutura sob ação lateral, destacando a ligação proporcionada pelo pavimento
+:width: 75%
+:align: center
+
+Participação do pavimento como diafragma. Figura do material do professor.
+```
 
 ### Caminho das cargas
 
@@ -442,5 +467,6 @@ Os esforços das vigas do trabalho prático, assim como as reações das lajes q
 ## Referências
 
 - PEREIRA JUNIOR, Wanderlei Malaquias. *Introdução à análise estrutural do edifício* e *Análise estrutural de vigas e pilares*. Material do professor (Estruturas de Concreto Armado 1, aulas 17 e 19). Base para a organização dos tipos de análise, dos modelos de viga e de pilar e das expressões do nó extremo.
+- PEREIRA JUNIOR, Wanderlei Malaquias. *Introdução ao projeto de lajes*. Material do professor, capítulo 1. Origem das figuras sobre elementos de superfície e efeito de diafragma.
 - ABNT. *NBR 6118: Projeto de estruturas de concreto*. Rio de Janeiro, 2023. Itens 14.5 (tipos de análise estrutural), 14.6.2.4 (vão efetivo de vigas), 14.6.6 (aproximações permitidas em estruturas usuais de edifícios), 15.4 (efeitos de 2ª ordem) e 15.7.3 (não linearidade física, rigidez secante).
 - MARTHA, Luiz Fernando. *Ftool: Two-dimensional Frame Analysis Tool*. Grupo de Tecnologia em Computação Gráfica, PUC-Rio. Disponível em: <https://www.tecgraf.puc-rio.br/ftool>.
