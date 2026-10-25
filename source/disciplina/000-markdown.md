@@ -17,9 +17,9 @@ título.
 
 **Assim fica:**
 
-> # Título principal (nível 1)
-> ## Título de seção (nível 2)
-> ### Título de subseção (nível 3)
+# Título principal (nível 1)
+## Título de seção (nível 2)
+### Título de subseção (nível 3)
 
 ## Ênfase e listas
 
@@ -38,16 +38,16 @@ título.
 
 **Assim fica:**
 
-> **texto em negrito**
-> *texto em itálico*
->
-> - item 1;
-> - item 2;
-> - item 3.
->
-> 1. primeiro passo;
-> 2. segundo passo;
-> 3. terceiro passo.
+**texto em negrito**
+*texto em itálico*
+
+- item 1;
+- item 2;
+- item 3.
+
+1. primeiro passo;
+2. segundo passo;
+3. terceiro passo.
 
 ## Equações
 
@@ -66,13 +66,13 @@ $$
 
 **Assim fica:**
 
-> Equação inline: $f_{ck}$
->
-> Equação em bloco:
->
-> $$
-> f_{ck,j} = \beta_{1(t,s)} \cdot f_{ck,28}
-> $$
+Equação inline: $f_{ck}$
+
+Equação em bloco:
+
+$$
+f_{ck,j} = \beta_{1(t,s)} \cdot f_{ck,28}
+$$
 
 ## Figuras
 
@@ -96,11 +96,11 @@ Conforme mostrado na [Figura 1](#fig-1)...
 
 **Assim fica:**
 
-> ![Exemplo de figura: caminho das cargas em uma estrutura de lajes, vigas e pilares](../_static/aulas/carregamentos/caminho-das-cargas.png)
->
-> <a id="fig-1"></a>**Figura 1.** Caminho das cargas: as lajes recebem ações superficiais, transferem-nas às vigas e estas as conduzem aos pilares.
->
-> Conforme mostrado na [Figura 1](#fig-1)...
+![Exemplo de figura: caminho das cargas em uma estrutura de lajes, vigas e pilares](../_static/aulas/carregamentos/caminho-das-cargas.png)
+
+<a id="fig-1"></a>**Figura 1.** Caminho das cargas: as lajes recebem ações superficiais, transferem-nas às vigas e estas as conduzem aos pilares.
+
+Conforme mostrado na [Figura 1](#fig-1)...
 
 ## Tabelas
 
@@ -118,11 +118,11 @@ coluna (`---:` alinha à direita).
 
 **Assim fica:**
 
-> | Critério | O que será avaliado | Pontuação |
-> |---|---|---:|
-> | Item 1 | Descrição do item 1 | 1,0 |
-> | Item 2 | Descrição do item 2 | 2,0 |
-> | **Total** | | **3,0** |
+| Critério | O que será avaliado | Pontuação |
+|---|---|---:|
+| Item 1 | Descrição do item 1 | 1,0 |
+| Item 2 | Descrição do item 2 | 2,0 |
+| **Total** | | **3,0** |
 
 ## Citações e referências bibliográficas
 
@@ -140,11 +140,11 @@ de estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023.
 
 **Assim fica:**
 
-> Conforme a [ABNT NBR 6118 [1]](#ref-1)...
->
-> ### Referências
->
-> <a id="ref-1"></a>**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto de estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023.
+Conforme a [ABNT NBR 6118 [1]](#ref-1)...
+
+### Referências
+
+<a id="ref-1"></a>**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto de estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023.
 
 ## Destaques
 
@@ -156,11 +156,11 @@ primeira linha.
 > **Título do destaque**
 >
 > Texto do destaque.
+
 ````
 
 **Assim fica:**
 
-> **Título do destaque**
->
-> Texto do destaque.
+**Título do destaque**
 
+Texto do destaque.
