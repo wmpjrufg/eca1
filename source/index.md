@@ -10,7 +10,7 @@ disciplina/000-markdown
 disciplina/000-plano-ensino
 disciplina/000-provas-anteriores
 disciplina/000-trabalho-pratico
-disciplina/000-planilhas
+disciplina/000-tabelas-bares
 disciplina/000-solucao-trabalho
 ```
 

@@ -86,12 +86,12 @@ No procedimento desta aula, consideram-se painéis retangulares, espessura const
 
 A família adotada no material do professor é a de **Bares, adaptada por Libânio Pinheiro**. Para consulta, utilizaremos as tabelas A-8 a A-10 do material de [Bastos, *Lajes de concreto armado*](https://wwwp.feb.unesp.br/pbastos/concreto1/Lajes.pdf#page=94), nas páginas impressas 90 a 92. O pequeno recorte numérico usado adiante corresponde à tabela A-8.
 
-```{admonition} Planilha de esforços da disciplina
+```{admonition} Tabelas de Bares da disciplina
 :class: destaque-azul
 
-{download}`Baixar a planilha de tabelas de lajes (Excel) <../_static/aulas/esforcos-lajes/Tabelas_lajes.xlsx>`
+{download}`Baixar as tabelas de Bares (Excel) <../_static/aulas/esforcos-lajes/Tabelas_lajes.xlsx>`
 
-Gerada pela solução de placa da disciplina, com $\nu=0{,}20$, para os nove tipos de vinculação e $\lambda$ de 1,00 a 2,00, a cada 0,05. As abas **Bares** trazem uma tabela por coeficiente, com os tipos lado a lado: momentos ($\mu_x$, $\mu_y$, $\mu'_x$, $\mu'_y$), momento volvente ($\mu_{xy}$), flecha ($\alpha_w$) e reações ($k_x$, $k'_x$, $k_y$, $k'_y$). As abas **Tipo** reúnem os resultados de cada vinculação. Os valores podem diferir ligeiramente dos de Bares e Pinheiro, que usam outro coeficiente de Poisson.
+Geradas pela solução de placa da disciplina, com $\nu=0{,}20$, para os nove tipos de vinculação e $\lambda$ de 1,00 a 2,00, a cada 0,05. As abas **Bares** trazem uma tabela por coeficiente, com os tipos lado a lado: momentos ($\mu_x$, $\mu_y$, $\mu'_x$, $\mu'_y$), momento volvente ($\mu_{xy}$), flecha ($\alpha_w$) e reações ($k_x$, $k'_x$, $k_y$, $k'_y$). As abas **Tipo** reúnem os resultados de cada vinculação. Os valores podem diferir ligeiramente dos de Bares e Pinheiro, que usam outro coeficiente de Poisson.
 ```
 
 ### Primeiro: desenhar e orientar o painel
