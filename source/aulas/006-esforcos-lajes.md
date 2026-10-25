@@ -1,6 +1,6 @@
-# Aula 05: Esforços em lajes
+# Aula 06: Esforços em lajes
 
-Na [Aula 04](004-introducao-lajes.md), cada painel recebeu uma geometria, uma espessura inicial e uma representação de seus apoios. Agora vamos transformar esses dados em momentos fletores. A pergunta central é: **quais esforços precisam ser resistidos no vão e junto às bordas de cada laje?**
+Na [Aula 05](005-introducao-lajes.md), cada painel recebeu uma geometria, uma espessura inicial e uma representação de seus apoios. Agora vamos transformar esses dados em momentos fletores. A pergunta central é: **quais esforços precisam ser resistidos no vão e junto às bordas de cada laje?**
 
 A aula começa com a interpretação dos esforços e uma apresentação da analogia de grelha. Em seguida, o trabalho se concentra nas tabelas de lajes: escolher o caso, localizar os coeficientes, calcular os momentos e tratar a continuidade entre painéis. A carga por área será um dado dos exemplos; sua composição foi estudada na [Aula 03](003-carregamentos.md).
 
@@ -103,7 +103,7 @@ $$
 \lambda=\frac{l_y}{l_x},\qquad l_y\geq l_x.
 $$
 
-Use os vãos efetivos obtidos na Aula 04. A linha de $\lambda$ pertence ao caso de apoio escolhido; não se deve misturar coeficientes de casos diferentes.
+Use os vãos efetivos obtidos na Aula 05. A linha de $\lambda$ pertence ao caso de apoio escolhido; não se deve misturar coeficientes de casos diferentes.
 
 ### Terceiro: identificar as colunas e a expressão do cabeçalho
 

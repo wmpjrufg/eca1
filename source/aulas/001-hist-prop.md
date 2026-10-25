@@ -319,6 +319,18 @@ A [Figura 5](#fig-5) apresenta detalhes do diagrama tensão-deformação do aço
 :align: center
 ```
 
+## Qualidade e durabilidade no projeto estrutural
+
+A durabilidade de uma estrutura de concreto não depende apenas das propriedades do concreto e do aço. Decisões tomadas nas etapas de projeto, execução e utilização também influenciam seu desempenho ao longo da vida útil. Segundo [Souza e Ripper [4]](#ref-4), ainda na fase de projeto, as principais falhas que podem comprometer a qualidade e a durabilidade são:
+
+- falta de compatibilização entre os projetos arquitetônico, estrutural e de instalações;
+- especificação inadequada dos materiais;
+- detalhamento incorreto ou insuficiente;
+- erros no dimensionamento dos elementos estruturais;
+- definição inadequada da concepção estrutural ou das ações atuantes.
+
+Esses aspectos mostram que o projeto estrutural deve combinar as verificações de resistência e estabilidade com decisões coerentes sobre materiais, detalhes construtivos, condições de exposição e interfaces com as demais disciplinas do empreendimento.
+
 
 ## Notas
 
@@ -338,3 +350,6 @@ A [Figura 5](#fig-5) apresenta detalhes do diagrama tensão-deformação do aço
 
 (ref-3)=
 [3] VASCONCELOS, Augusto Carlos. *O concreto no Brasil: pré-fabricação, monumentos, fundações*. São Paulo: Studio Nobel, 2002.
+
+(ref-4)=
+[4] SOUZA, Vicente Custódio Moreira de; RIPPER, Thomaz. *Patologia, recuperação e reforço de estruturas de concreto*. São Paulo: Pini, 1998.

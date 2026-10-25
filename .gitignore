@@ -10,3 +10,15 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Local Claude and Codex configuration and instructions
+.claude/
+.codex/
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+AGENTS.override.md
+
+# Local assistant outputs (keep course content under source/ tracked)
+/[Cc]laude outputs/
+/[Cc]odex outputs/

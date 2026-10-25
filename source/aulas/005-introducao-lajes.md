@@ -1,4 +1,4 @@
-# Aula 04: Introdução ao projeto de lajes
+# Aula 05: Introdução ao projeto de lajes
 
 Ao receber uma planta de arquitetura, uma das primeiras decisões é definir como cada trecho de piso será sustentado. Onde haverá vigas? Alguma borda ficará livre? Os painéis terão continuidade? Qual espessura permite iniciar o estudo? Essas perguntas orientam o projeto de lajes e precisam ser respondidas antes do cálculo das armaduras.
 
@@ -10,7 +10,7 @@ Esta aula retoma os conceitos do capítulo *Introdução ao projeto de lajes*, d
 - Reconhecer os sistemas de laje e sua participação na estrutura.
 - Representar os apoios e determinar os vãos efetivos de cada painel.
 - Identificar a direção resistente e estimar a espessura da laje.
-- Preparar os dados para o cálculo dos esforços da [Aula 05](005-esforcos-lajes.md).
+- Preparar os dados para o cálculo dos esforços da [Aula 06](006-esforcos-lajes.md).
 ```
 
 ## A laje no sistema estrutural
