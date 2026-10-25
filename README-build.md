@@ -24,7 +24,16 @@ source/
    $$
    ```
 
-## Build local
+## Gerador de tabelas de placas para o Colab
+
+O [gerador de coeficientes de placas](ferramentas/placas/README.md) resolve
+a equação de Kirchhoff–Love com Poisson de 0,20 e exporta um Excel único,
+com capa ilustrada e abas por tipo de laje, incluindo reações. Exporta também
+CSV, LaTeX e desenhos em PDF/SVG/PNG para as aulas. As funções ficam em
+`ferramentas/placas/placas.py`; o notebook `Gerar_tabelas_placas.ipynb`
+contém apenas a preparação, a seleção e a produção dos resultados.
+
+## Build local do site
 
 ```bash
 pip install -r requirements.txt

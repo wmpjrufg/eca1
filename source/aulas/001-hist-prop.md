@@ -56,13 +56,35 @@ Segundo [Hyatt](#nota-1), o concreto armado só é viável devido a três fatore
 - **Coeficientes de dilatação térmica compatíveis:** ambos os materiais têm coeficiente da ordem de $1{,}0\times10^{-5}\text{/°C}$, evitando variações volumétricas diferenciais para níveis usuais de temperatura;
 - **Proteção contra a oxidação da armadura:** o concreto é um material alcalino, devido ao hidróxido de cálcio formado na hidratação do cimento, que cria um ambiente desfavorável à corrosão do aço.
 
-A [Figura 3](#fig-3) apresenta uma viga de concreto armado em perspectiva, com trechos de concreto omitidos para visualizar as barras longitudinais e os estribos que compõem a armadura.
+As figuras a seguir mostram as armaduras típicas dos três elementos de um edifício usual, na ordem em que as cargas percorrem a estrutura: laje, viga e pilar.
+
+Na laje maciça, a armadura positiva forma uma malha junto à face inferior, com barras nas duas direções do painel. Sobre os apoios internos, onde a continuidade com a laje vizinha gera momentos negativos, há barras junto à face superior, acompanhadas de uma armadura de distribuição, como mostra a [Figura 3](#fig-3).
 
 (fig-3)=
-**Figura 3.** Armaduras típicas de uma viga de concreto armado, em perspectiva.
+**Figura 3.** Armaduras típicas de uma laje maciça de concreto armado, em perspectiva.
+```{figure} ../_static/aulas/historico_props/laje-armaduras-perspectiva.png
+:alt: Laje maciça em perspectiva sobre vigas de apoio, com malha de armadura positiva nas duas direções, armadura negativa sobre o apoio interno e armadura de distribuição.
+:width: 100%
+:align: center
+```
+
+A [Figura 4](#fig-4) apresenta uma viga de concreto armado em perspectiva, com trechos de concreto omitidos para visualizar as barras longitudinais e os estribos que compõem a armadura.
+
+(fig-4)=
+**Figura 4.** Armaduras típicas de uma viga de concreto armado, em perspectiva.
 ```{figure} ../_static/aulas/historico_props/viga-armaduras-perspectiva.png
 :alt: Viga de concreto armado em perspectiva, com trechos nas extremidades revelando as barras longitudinais e os estribos.
 :width: 100%
+:align: center
+```
+
+Nos pilares, a lógica se repete com outra orientação. As barras longitudinais acompanham a altura do lance e resistem, junto com o concreto, à compressão e à flexão. Os estribos envolvem essas barras e impedem sua flambagem, com grampos suplementares nas barras intermediárias. Na base, a armadura arranca do bloco de fundação. No topo, ela deixa esperas para a emenda com o lance seguinte, conforme a [Figura 5](#fig-5).
+
+(fig-5)=
+**Figura 5.** Armaduras típicas de um pilar de concreto armado, em perspectiva.
+```{figure} ../_static/aulas/historico_props/pilar-armaduras-perspectiva.png
+:alt: Pilar de concreto armado em perspectiva, com barras longitudinais, estribos e grampos suplementares, arranque no bloco de fundação e esperas acima da viga do pavimento.
+:width: 75%
 :align: center
 ```
 
@@ -210,10 +232,10 @@ em que $f_{cd}$ é a resistência de cálculo à compressão do concreto e $\eta
 | $\varepsilon_{cu}$ | $3{,}5\text{‰}$ | $2{,}6\text{‰}+35\text{‰}\left[\dfrac{90-f_{ck}}{100}\right]^{4}$ |
 | $n$ | $2$ | $1{,}4+23{,}4\left[\dfrac{90-f_{ck}}{100}\right]^{4}$ |
 
-A [Figura 4](#fig-4) apresenta detalhes do diagrama tensão-deformação do concreto.
+A [Figura 6](#fig-6) apresenta detalhes do diagrama tensão-deformação do concreto.
 
-(fig-4)=
-**Figura 4.** Diagrama idealizado para tensão-deformação do concreto.
+(fig-6)=
+**Figura 6.** Diagrama idealizado para tensão-deformação do concreto.
 ```{figure} ../_static/aulas/historico_props/tensao-def.png
 :alt: Diagrama Tensão - deformação
 :width: 90%
@@ -309,10 +331,10 @@ As barras de aço CA-50 são fornecidas em diâmetros nominais padronizados, com
 
 O aço também é representado, em projeto, por um diagrama tensão–deformação simplificado: um trecho inicial elástico linear, seguido de um patamar de escoamento a tensão constante. Na ausência de ensaios, adota-se $E_s = 210\text{ GPa}$ para o módulo de elasticidade, e a deformação máxima considerada nas estruturas de concreto armado é limitada a $10\text{‰}$.
 
-A [Figura 5](#fig-5) apresenta detalhes do diagrama tensão-deformação do aço.
+A [Figura 7](#fig-7) apresenta detalhes do diagrama tensão-deformação do aço.
 
-(fig-5)=
-**Figura 5.** Diagrama idealizado para tensão-deformação do aço.
+(fig-7)=
+**Figura 7.** Diagrama idealizado para tensão-deformação do aço.
 ```{figure} ../_static/aulas/historico_props/tensao-def-aco.png
 :alt: Diagrama Tensão - deformação
 :width: 90%
@@ -330,6 +352,17 @@ A durabilidade de uma estrutura de concreto não depende apenas das propriedades
 - definição inadequada da concepção estrutural ou das ações atuantes.
 
 Esses aspectos mostram que o projeto estrutural deve combinar as verificações de resistência e estabilidade com decisões coerentes sobre materiais, detalhes construtivos, condições de exposição e interfaces com as demais disciplinas do empreendimento.
+
+## Cobrimento nominal
+
+O cobrimento nominal é $c_{nom}=c_{min}+\Delta c$, com tolerância de execução $\Delta c=10$ mm (pode ser reduzida a 5 mm com controle de qualidade rigoroso). A NBR 6118 (Tabela 7.2) fixa $c_{nom}$ conforme a classe de agressividade ambiental (CAA):
+
+| Elemento | CAA I | CAA II | CAA III | CAA IV |
+|---|---:|---:|---:|---:|
+| Laje | 20 mm | 25 mm | 35 mm | 45 mm |
+| Viga e pilar | 25 mm | 30 mm | 40 mm | 50 mm |
+
+Além disso, $c_{nom}\geq\phi$ da barra (ou do feixe) e a dimensão máxima característica do agregado deve atender a $d_{máx}\leq1{,}2\,c_{nom}$. Nas vigas, o cobrimento é medido até a face do **estribo**, que é a barra mais próxima da superfície.
 
 
 ## Notas

@@ -158,7 +158,17 @@ Carvalho e Figueiredo Filho observam que a recomendação explícita de armadura
 
 ## Armadura de canto
 
-Nos cantos de lajes retangulares formados por **duas bordas simplesmente apoiadas**, os momentos volventes (momentos torçores) tendem a levantar o canto. Quando não se calcula uma armadura específica para esses momentos, deve-se dispor uma **armadura de canto**:
+Nos cantos formados por **duas bordas simplesmente apoiadas**, o momento volvente $m_{xy}$ é máximo e o canto tende a levantar. O momento final de cálculo, obtido por Wood–Armer na {ref}`Aula 06 <wood-armer>`, vale $|m_{xy}|$ **em $x$ e em $y$, nas duas faces**.
+
+```{admonition} O momento final entra nas barras positivas e negativas
+:class: destaque-vermelho
+
+O momento final do canto não é uma armadura isolada: ele deve ser **somado ao detalhamento das barras positivas (face inferior) e das barras negativas (face superior)** na região do canto, nas duas direções. Na planta positiva, as barras que chegam ao canto precisam atingir a área correspondente ao momento final; na planta negativa, o mesmo vale para a armadura negativa de borda ou para as barras de canto. Onde as barras existentes não forem suficientes, complementa-se a diferença em uma faixa de $l_x/5$ a partir das faces dos apoios.
+```
+
+### Regra prática de detalhamento
+
+Quando não se calcula uma armadura específica para os momentos volventes, deve-se dispor uma **armadura de canto**:
 
 - **superior**: barras paralelas à bissetriz do ângulo do canto;
 - **inferior**: barras perpendiculares à bissetriz, ou, em substituição, uma malha de duas armaduras perpendiculares;
@@ -174,6 +184,14 @@ Armadura de canto em um canto formado por duas bordas simplesmente apoiadas (ada
 ```
 
 Na prática, a armadura negativa de borda das duas vigas que formam o canto já forma uma malha superior. Se essa malha tiver, em cada direção, área de pelo menos $a_{sc}$ e se estender até $l_x/5$, ela pode substituir a armadura superior de canto.
+
+```{admonition} A regra da metade é suficiente?
+:class: destaque-vermelho
+
+As recomendações da literatura variam: metade da maior armadura do vão (NB1/1982), 75% (Jiménez Montoya) e 100% (CEB-1990; Leonhardt e Mönnig). Parsekian (1996) calculou por elementos finitos lajes de $4\times4$ e $4\times8\,\mathrm{m}$ apoiadas em bordas rígidas, armando o canto por Wood. Mesmo descontando uma parcela de volvente resistida pelo concreto, a armadura de canto chegou a **62% da armadura do vão** nas lajes quadradas. Sem esse desconto, a relação de momentos chega a 84% na laje quadrada apoiada ({ref}`Aula 06 <wood-armer>`).
+
+Conclusão do autor: a regra de 50% **não é segura para todas as lajes**. Na falta de um cálculo pelo momento volvente, recomenda-se **75% da maior armadura do vão**. Sempre que a tabela de volventes estiver disponível, prefira dimensionar a malha de canto com $|m_{xy}|$.
+```
 
 ## Desenho e tabela de aço
 
@@ -333,4 +351,5 @@ Aplique o roteiro desta aula às lajes do pavimento-tipo do trabalho prático, u
 
 - CARVALHO, Roberto Chust; FIGUEIREDO FILHO, Jasson Rodrigues de. *Cálculo e detalhamento de estruturas usuais de concreto armado*. São Carlos: EdUFSCar. Capítulo de lajes maciças, item 7.4.11 (detalhamento das armaduras: espaçamento, armaduras mínimas e máximas, armadura secundária, espaçamento e diâmetro máximos e armadura sobre os apoios).
 - PINHEIRO, Libânio Miranda; MUZARDO, Cassiane D.; SANTOS, Sandro P. *Fundamentos do concreto e projeto de edifícios*. São Carlos: EESC-USP. Capítulo 11, *Lajes maciças*, itens 11.8 (barras sobre os apoios), 11.9 (barras inferiores) e 11.10 (armadura de canto).
+- PARSEKIAN, Guilherme Aris. *Cálculo e armação de lajes de concreto armado com a consideração do momento volvente*. Dissertação (Mestrado em Engenharia de Estruturas) – Escola de Engenharia de São Carlos, Universidade de São Paulo, São Carlos, 1996. Capítulo 2 (métodos de Wood e de Leonhardt & Mönnig) e item 5.7 (armadura de canto em lajes apoiadas nos quatro lados).
 - ABNT. *NBR 6118: Projeto de estruturas de concreto*. Rio de Janeiro, 2023. Itens 9.4 (ancoragem), 17.3.5 (armaduras mínima e máxima), 19.3.3 (armaduras longitudinais de lajes) e 20.1 (detalhamento de lajes); Tabelas 17.3 e 19.1.

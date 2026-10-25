@@ -11,6 +11,7 @@ A aula começa com a interpretação dos esforços e uma apresentação da analo
 - Compreender o que uma grelha representa no pavimento.
 - Usar uma tabela de momentos com eixos, vínculos e unidades coerentes.
 - Compatibilizar os momentos de painéis vizinhos no cálculo simplificado.
+- Converter manualmente o momento volvente em momentos para armaduras ortogonais, pelo procedimento de Wood–Armer.
 ```
 
 ## O que vamos calcular?
@@ -84,6 +85,14 @@ O comportamento de uma placa depende de sua forma, dos apoios e da distribuiçã
 No procedimento desta aula, consideram-se painéis retangulares, espessura constante, comportamento elástico linear e carga uniforme por área. A validade do caso depende ainda dos vínculos e da condição dos cantos prevista na referência.
 
 A família adotada no material do professor é a de **Bares, adaptada por Libânio Pinheiro**. Para consulta, utilizaremos as tabelas A-8 a A-10 do material de [Bastos, *Lajes de concreto armado*](https://wwwp.feb.unesp.br/pbastos/concreto1/Lajes.pdf#page=94), nas páginas impressas 90 a 92. O pequeno recorte numérico usado adiante corresponde à tabela A-8.
+
+```{admonition} Planilha de esforços da disciplina
+:class: destaque-azul
+
+{download}`Baixar a planilha de tabelas de lajes (Excel) <../_static/aulas/esforcos-lajes/Tabelas_lajes.xlsx>`
+
+Gerada pela solução de placa da disciplina, com $\nu=0{,}20$, para os nove tipos de vinculação e $\lambda$ de 1,00 a 2,00, a cada 0,05. As abas **Bares** trazem uma tabela por coeficiente, com os tipos lado a lado: momentos ($\mu_x$, $\mu_y$, $\mu'_x$, $\mu'_y$), momento volvente ($\mu_{xy}$), flecha ($\alpha_w$) e reações ($k_x$, $k'_x$, $k_y$, $k'_y$). As abas **Tipo** reúnem os resultados de cada vinculação. Os valores podem diferir ligeiramente dos de Bares e Pinheiro, que usam outro coeficiente de Poisson.
+```
 
 ### Primeiro: desenhar e orientar o painel
 
@@ -240,15 +249,158 @@ Em L1, o positivo passa a $4+(10-8)/2=5{,}0\,\mathrm{kN\,m/m}$. Em L2, permanece
 Uma análise conjunta por grelha ou placa contínua já considera a interação entre os elementos. A regra de compatibilização dos painéis isolados não deve ser aplicada automaticamente uma segunda vez aos resultados desse modelo.
 ```
 
-## O que conferir além dos momentos tabelados?
-
-### Momentos volventes e cantos
+## Momento volvente: da tabela ao cálculo manual
 
 A placa também pode sofrer torção, representada por $m_{xy}$. Perto dos cantos, esse efeito pode ser relevante mesmo que os momentos $m_x$ e $m_y$ sejam pequenos. Um apoio que impede o levantamento do canto precisa transmitir a ação de retenção correspondente.
 
 Se o canto puder perder contato com o suporte, a condição de contorno muda. Por isso, a escolha da tabela deve ser coerente com a ligação e com o detalhamento previsto. A armadura de distribuição, por si só, não comprova a resistência aos esforços de canto.
 
-### Alcance do cálculo por tabelas
+### Por que o canto concentra o volvente?
+
+O momento que atua em uma direção qualquer $n$, girada de $\theta$ em relação ao eixo $x$, é obtido pela transformação
+
+$$
+m_n(\theta)=m_x\cos^2\theta+m_y\sin^2\theta+2\,m_{xy}\sin\theta\cos\theta .
+$$
+
+No vértice formado por duas bordas simplesmente apoiadas, $m_x=m_y=0$, mas $m_{xy}$ atinge seu **maior valor** na laje. A expressão fica $m_n=m_{xy}\sin2\theta$: o canto está em **torção pura**. Os momentos principais valem $\pm|m_{xy}|$ e atuam nas duas diagonais, a $45^\circ$ das bordas. Uma diagonal traciona a face superior e a outra traciona a face inferior. Por isso o canto fissura nas duas faces: na face superior, perpendicularmente à bissetriz do canto; na face inferior, paralelamente a ela. **O canto precisa de armadura nas duas faces.**
+
+### O que a tabela de volventes fornece?
+
+O gerador da disciplina resolve a placa com **Poisson $\nu=0{,}20$** e fornece o momento volvente com sinal em cada vértice:
+
+$$
+m_{xy}=\mu_{xy}\frac{p l_x^2}{100}.
+$$
+
+Os índices 00, 10, 11 e 01 representam, respectivamente, os pontos $(0,0)$, $(l_x,0)$, $(l_x,l_y)$ e $(0,l_y)$. O resultado está em $\mathrm{kN\,m/m}$ quando $p$ está em $\mathrm{kN/m^2}$ e $l_x$ em metros. A tabela termina nessa etapa: **a conversão para os momentos de armadura será feita à mão**.
+
+No **tipo 3**, as bordas $x=0$ e $y=0$ são engastadas; $x=l_x$ e $y=l_y$ são simplesmente apoiadas. O canto 11 é o encontro dos dois apoios simples. Um recorte dos coeficientes calculados é:
+
+| $\lambda$ | $\mu_{xy,00}$ | $\mu_{xy,10}$ | $\mu_{xy,11}$ | $\mu_{xy,01}$ |
+|---:|---:|---:|---:|---:|
+| 1,00 | 0,0000 | 0,0000 | −2,6899 | 0,0000 |
+| 1,50 | 0,0000 | 0,0000 | −3,4270 | 0,0000 |
+| 2,00 | 0,0000 | 0,0000 | −3,5549 | 0,0000 |
+
+Fonte: solução de Rayleigh–Ritz do gerador da disciplina, carga uniforme e cantos impedidos de levantar. Os zeros decorrem dos vínculos no vértice; não indicam ausência de esforços na região vizinha. Estes coeficientes pertencem à solução com $\nu=0{,}20$ e não devem ser misturados aos de outra tabela sem conferir suas hipóteses.
+
+{download}`Baixar a tabela completa de volventes do tipo 3 em PDF <../../ferramentas/placas/exemplos/tipo_3_nu_0p20_volventes_tabela_1.pdf>`.
+
+```{admonition} Momento volvente e força de canto
+:class: destaque-azul
+
+$m_{xy}$ é um momento por unidade de largura. A força concentrada de canto associada tem módulo $|C|=2|m_{xy}|$ e entra no equilíbrio das reações. Para calcular a armadura, partimos de $m_{xy}$, não tratamos $C$ como momento.
+```
+
+(wood-armer)=
+## Wood–Armer: momentos finais nas direções das barras
+
+O procedimento transforma o conjunto $(m_x,m_y,m_{xy})$ em momentos equivalentes para barras ortogonais, separando as faces inferior e superior. Usaremos momentos finais **em módulo**, sempre não negativos, e a convenção da aula: $m_x$ e $m_y$ positivos tracionam a face inferior.
+
+Os três esforços devem vir do **mesmo ponto e da mesma combinação de ações**. Não se devem somar o máximo de $m_x$ no vão e o máximo de $m_{xy}$ em outro ponto como se fossem um estado local de esforços.
+
+### De onde vêm as expressões: o critério de Wood
+
+As barras da laje são dispostas em $x$ e $y$, e não nas direções principais, que mudam de ponto para ponto. O problema é escolher momentos resistentes $m_x^*$ e $m_y^*$ para essas duas camadas de modo que, em **qualquer** direção $\theta$, o momento normal resistente não seja menor que o solicitante:
+
+$$
+m_x^*\cos^2\theta+m_y^*\sin^2\theta\;\geq\;m_n(\theta)\qquad\text{para todo }\theta .
+$$
+
+Esse é o critério de Johansen, usado por Wood (1968). Impondo que a folga seja nula na direção crítica e mínima em torno dela, chega-se a
+
+$$
+m_x^*=m_x+K|m_{xy}|,\qquad m_y^*=m_y+\frac{|m_{xy}|}{K},
+$$
+
+em que $K$ é a tangente da direção crítica. Qualquer $K>0$ é seguro. A soma $m_x^*+m_y^*$, proporcional ao consumo de aço, é mínima para $K=1$, isto é, para a direção crítica a $45^\circ$:
+
+$$
+m_x^*=m_x+|m_{xy}|,\qquad m_y^*=m_y+|m_{xy}| .
+$$
+
+Para a face superior, o raciocínio é o mesmo com $-m_x$ e $-m_y$. Quando uma das tentativas resulta negativa, ela é anulada e a outra é recalculada com a direção crítica correspondente, o que gera o termo $t^2/|a|$ ou $t^2/|b|$ do roteiro a seguir. Leonhardt e Mönnig chegam às mesmas expressões pelo equilíbrio de uma chapa fissurada, com a mesma inclinação econômica de $45^\circ$ para as fissuras (PARSEKIAN, 1996).
+
+### Roteiro de cálculo por face
+
+Defina $t=|m_{xy}|$. Para calcular a face inferior, tome $a=m_x$ e $b=m_y$; para a face superior, tome $a=-m_x$ e $b=-m_y$. Em seguida, calcule as tentativas $u=a+t$ e $v=b+t$:
+
+| Situação das tentativas | Momento final em x, $m_{x,\mathrm{arm}}$ | Momento final em y, $m_{y,\mathrm{arm}}$ |
+|---|---:|---:|
+| $u\geq0$ e $v\geq0$ | $u$ | $v$ |
+| $u\leq0$ e $v\leq0$ | $0$ | $0$ |
+| $u<0$ e $v>0$ | $0$ | $\max(0,b+t^2/\lvert a\rvert)$ |
+| $v<0$ e $u>0$ | $\max(0,a+t^2/\lvert b\rvert)$ | $0$ |
+
+Quando $u=v=0$, as duas primeiras linhas dão o mesmo resultado. Nos casos com divisão, o denominador é diferente de zero pela condição da própria linha. Repita o roteiro para as duas faces. As expressões são uma reescrita das [equações de Wood–Armer apresentadas pela Autodesk](https://help.autodesk.com/cloudhelp/2020/CHS/RSAPRO-UsersGuide/files/GUID-80FE7814-C14D-4A89-A6DF-68EB9E7E4815.htm), na convenção de sinais desta aula.
+
+Usar apenas $\max(0,a+t)$ e $\max(0,b+t)$ é uma **envoltória conservadora sem as reduções** das duas últimas linhas. No canto em torção pura, os dois procedimentos coincidem.
+
+### Exemplo 1: da tabela de canto ao momento final
+
+Considere o tipo 3, $l_x=4{,}00\,\mathrm{m}$, $l_y=6{,}00\,\mathrm{m}$ e carga uniforme **já de cálculo** $p_d=8{,}40\,\mathrm{kN/m^2}$. Os cantos estão impedidos de levantar.
+
+**1. Consultar o coeficiente.** Como $\lambda=6/4=1{,}50$, a tabela fornece $\mu_{xy,11}=-3{,}4270$.
+
+**2. Calcular o volvente de cálculo.**
+
+$$
+m_{xy,d}=-3{,}4270\frac{8{,}40\times4{,}00^2}{100}
+=-4{,}605888\approx-4{,}61\,\mathrm{kN\,m/m}.
+$$
+
+Não se aplica outra vez a ponderação das ações: $p_d$ já é carga de cálculo.
+
+**3. Aplicar Wood–Armer no vértice.** No vértice exato deste modelo, $m_{x,d}=m_{y,d}=0$. Logo, $a=b=0$ nas duas faces e $u=v=t=4{,}605888$:
+
+| Face | Momento final em x ($\mathrm{kN\,m/m}$) | Momento final em y ($\mathrm{kN\,m/m}$) |
+|---|---:|---:|
+| Inferior | 4,61 | 4,61 |
+| Superior | 4,61 | 4,61 |
+
+**Cada direção de cada face recebe o módulo completo $|m_{xy,d}|$; não se divide por dois.** Esses são os momentos para o dimensionamento à flexão das respectivas faixas de largura unitária. Uma malha ortogonal com esse momento, nas duas faces, cobre a torção do canto e substitui as barras diagonais da regra prática.
+
+```{admonition} Quanto o canto pede em relação ao vão?
+:class: destaque-azul
+
+Neste exemplo, o momento positivo do vão é $m_{x,d}=5{,}303\times1{,}344=7{,}13\,\mathrm{kN\,m/m}$: o canto pede **65%** dele, em cada direção e em cada face. Na laje tipo 1 quadrada, a relação $\mu_{xy}/\mu_x=3{,}712/4{,}420$ chega a **84%**; para $\lambda=2$, cai para cerca de 53%. Por isso a regra prática de "metade da armadura do vão" nem sempre é suficiente, como se discute na [Aula 10](010-detalhamento-lajes.md).
+```
+
+### Exemplo 2: flexão e torção no mesmo ponto
+
+Para exercitar as reduções, suponha que uma análise forneça, em um mesmo ponto e combinação, $m_{x,d}=4$, $m_{y,d}=-8$ e $m_{xy,d}=3\,\mathrm{kN\,m/m}$. São dados didáticos independentes do vértice do exemplo anterior.
+
+**Face inferior:** $a=4$, $b=-8$, $t=3$. As tentativas são $u=7$ e $v=-5$. Pela última linha do roteiro:
+
+$$
+m_{x,d,\inf}=4+\frac{3^2}{8}=5{,}125,\qquad m_{y,d,\inf}=0.
+$$
+
+**Face superior:** $a=-4$, $b=8$, $t=3$. As tentativas são $u=-1$ e $v=11$. Pela terceira linha:
+
+$$
+m_{x,d,\sup}=0,\qquad m_{y,d,\sup}=8+\frac{3^2}{4}=10{,}25.
+$$
+
+Os momentos finais, em $\mathrm{kN\,m/m}$, são:
+
+| Face | Direção x | Direção y | Se for adotado um único momento nas duas direções |
+|---|---:|---:|---:|
+| Inferior | 5,125 | 0 | 5,125 |
+| Superior | 0 | 10,25 | 10,25 |
+
+Para uniformizar por face, adota-se $\max(m_{x,d,\mathrm{arm}},m_{y,d,\mathrm{arm}})$, **não a média**. A envoltória sem reduções daria 7 na direção x inferior e 11 na direção y superior.
+
+### Do momento final à malha
+
+O passo seguinte é dimensionar a área de aço para cada momento final e altura útil. Momentos iguais não garantem áreas iguais, porque as camadas ortogonais podem ter alturas úteis diferentes. Se for escolhida a mesma malha nas duas direções, ela deve atender às duas verificações e aos mínimos aplicáveis.
+
+Os resultados do exemplo 1 são **locais no vértice**. Ao dimensionar uma região, também se avaliam os esforços ao longo dela. A extensão de $l_x/5$ e a regra simplificada de área apresentadas na [Aula 10](010-detalhamento-lajes.md) são critérios de detalhamento; não são deduzidas da multiplicação do coeficiente da tabela.
+
+**Para fazer em sala:** repita o exemplo 1 para $\lambda=2{,}00$, mantendo $l_x$ e $p_d$. Calcule primeiro $m_{xy,d}$ e só depois os quatro momentos finais. Conferência: $m_{xy,d}\approx-4{,}78\,\mathrm{kN\,m/m}$ e momento final local de $4{,}78\,\mathrm{kN\,m/m}$ em cada direção de cada face.
+
+## Alcance do cálculo por tabelas
 
 Grandes aberturas, apoios muito deformáveis, pilares diretamente sob a laje ou ações localizadas importantes podem exigir outro modelo. Não se deve substituir essas situações por um caso tabelado apenas por semelhança visual.
 
@@ -271,3 +423,6 @@ No trabalho da disciplina, registre para cada painel: croqui, vãos efetivos, ca
 
 - PEREIRA JUNIOR, Wanderlei Malaquias. *Determinação dos esforços em lajes*. Material do professor, capítulo 2. Base para a discussão dos modelos, convenções e compatibilização.
 - BASTOS, Paulo Sérgio dos Santos. *Lajes de concreto armado*. UNESP, Bauru, 2023. [Material de consulta](https://wwwp.feb.unesp.br/pbastos/concreto1/Lajes.pdf). Tabela A-8, p. 90: coeficientes utilizados nos exemplos, extraídos de Bares e adaptados por Pinheiro (1994).
+- PARSEKIAN, Guilherme Aris. *Cálculo e armação de lajes de concreto armado com a consideração do momento volvente*. Dissertação (Mestrado em Engenharia de Estruturas) – Escola de Engenharia de São Carlos, Universidade de São Paulo, São Carlos, 1996. Capítulo 2: dedução dos métodos de Wood e de Leonhardt & Mönnig.
+- WOOD, R. H. The reinforcement of slabs in accordance with a pre-determined field of moments. *Concrete*, London, Feb. 1968. Critério do momento normal.
+- AUTODESK. *Method of calculating plate and shell reinforcement — Wood & Armer*. [Documentação técnica](https://help.autodesk.com/cloudhelp/2020/CHS/RSAPRO-UsersGuide/files/GUID-80FE7814-C14D-4A89-A6DF-68EB9E7E4815.htm). Equações usadas no roteiro de conversão manual.

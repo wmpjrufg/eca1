@@ -42,16 +42,7 @@ $$n=\left\lceil\frac{A_{s,nec}}{A_\phi}\right\rceil,\qquad A_{s,ef}=n\,A_\phi\ge
 
 Não existe uma única resposta correta. Bitolas finas distribuem melhor as fissuras e ancoram em comprimentos menores, mas exigem mais barras, mais camadas e mais mão de obra. Bitolas grossas ocupam menos espaço, mas aumentam o comprimento de ancoragem e a abertura de fissuras. Na prática, procuram-se arranjos com **poucas camadas** (de preferência uma ou duas), **poucas bitolas diferentes** na mesma peça e, no mínimo, **duas barras** por face tracionada, uma em cada canto do estribo.
 
-## Cobrimento nominal
-
-O cobrimento nominal é $c_{nom}=c_{min}+\Delta c$, com tolerância de execução $\Delta c=10$ mm (pode ser reduzida a 5 mm com controle de qualidade rigoroso). A NBR 6118 (Tabela 7.2) fixa $c_{nom}$ conforme a classe de agressividade ambiental (CAA):
-
-| Elemento | CAA I | CAA II | CAA III | CAA IV |
-|---|---:|---:|---:|---:|
-| Laje | 20 mm | 25 mm | 35 mm | 45 mm |
-| Viga e pilar | 25 mm | 30 mm | 40 mm | 50 mm |
-
-Além disso, $c_{nom}\geq\phi$ da barra (ou do feixe) e a dimensão máxima característica do agregado deve atender a $d_{máx}\leq1{,}2\,c_{nom}$. Nas vigas, o cobrimento é medido até a face do **estribo**, que é a barra mais próxima da superfície.
+Para definir $c_{nom}$, consulte [Cobrimento nominal na Aula 01](001-hist-prop.md#cobrimento-nominal). Nas vigas, o cobrimento é medido até a face do **estribo**, que é a barra mais próxima da superfície.
 
 ## Espaçamento livre entre barras
 
