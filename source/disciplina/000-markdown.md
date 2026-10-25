@@ -161,6 +161,6 @@ primeira linha.
 
 **Assim fica:**
 
-**Título do destaque**
-
-Texto do destaque.
+> **Título do destaque**
+>
+> Texto do destaque.
