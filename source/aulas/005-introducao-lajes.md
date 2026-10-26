@@ -1,9 +1,5 @@
 # Aula 05: Introdução ao projeto de lajes
 
-Ao receber uma planta de arquitetura, uma das primeiras decisões é definir como cada trecho de piso será sustentado. Onde haverá vigas? Alguma borda ficará livre? Os painéis terão continuidade? Qual espessura permite iniciar o estudo? Essas perguntas orientam o projeto de lajes e precisam ser respondidas antes do cálculo das armaduras.
-
-Esta aula retoma os conceitos do capítulo *Introdução ao projeto de lajes*, do material do professor, em uma sequência voltada à leitura da planta de fôrma e ao pré-dimensionamento. O levantamento das ações está na [Aula 03](003-carregamentos.md). Aqui, o resultado esperado é um conjunto de painéis com geometria, apoios e espessuras iniciais definidos.
-
 ```{admonition} Objetivos da aula
 :class: destaque-azul
 
@@ -13,90 +9,45 @@ Esta aula retoma os conceitos do capítulo *Introdução ao projeto de lajes*, d
 - Preparar os dados para o cálculo dos esforços da [Aula 06](006-esforcos-lajes.md).
 ```
 
-## A laje como placa
+## Aplicações
 
-Uma laje tem duas dimensões em planta muito maiores que sua espessura. Quando recebe ações perpendiculares ao seu plano, trabalha como uma **placa**: apresenta flexão e pode distribuir esforços nas duas direções da superfície. O papel da laje no sistema estrutural do edifício (apoio em vigas ou em pilares, efeito de diafragma e largura colaborante) foi discutido na [Aula 04](004-modelos-estruturais.md).
-
-O mesmo conceito de placa aparece em tabuleiros de pontes, reservatórios e outras estruturas. Nesta sequência de aulas, os exemplos serão de pavimentos de edifícios, com atenção às lajes retangulares apoiadas em vigas.
-
-## Que tipo de laje está sendo projetado?
-
-É útil separar duas perguntas: **como é a seção transversal?** e **onde estão os apoios?** Uma laje maciça pode apoiar-se em vigas ou diretamente em pilares; portanto, as classificações não são mutuamente excludentes.
-
-| Característica | Sistema | O que observar no estudo inicial |
-|---|---|---|
-| Seção preenchida por concreto | Maciça | Espessura, vãos, aberturas e continuidade dos painéis. |
-| Nervuras associadas a uma mesa | Nervurada | Direção e espaçamento das nervuras, espessura da mesa e modulação das fôrmas. |
-| Apoio direto nos pilares | Lisa | Distribuição dos pilares, deformações e regiões de punção. |
-| Apoio direto com capitéis | Cogumelo | Geometria dos capitéis e ligação entre laje e pilares. |
-| Componentes produzidos previamente | Pré-fabricada ou parcialmente pré-fabricada | Geometria dos componentes, ligações e etapas de montagem e concretagem. |
-
+(fig-1)=
+**Figura 1.** Aplicações do conceito de lajes em edifícios de múltiplos pavimentos.
 ```{figure} ../_static/aulas/introducao-lajes/exemplos-lajes-abc.png
 :alt: Exemplos de laje maciça, laje lisa e laje nervurada
 :width: 90%
 :align: center
-
-Exemplos de sistemas de laje. Figura do material do professor.
-```
-
-A escolha deve caber na arquitetura e no processo de execução. Aberturas para instalações, rebaixos, pé-direito e repetição das fôrmas podem ser tão decisivos quanto o vão. Um painel muito irregular também pode exigir um modelo de análise diferente das tabelas para retângulos.
-
-## Transformando as bordas em vínculos
-
-Para analisar um painel isolado, precisamos representar o que acontece ao longo de seu contorno. Em um modelo com apoios sem deslocamento vertical, usamos três idealizações:
-
-| Bordo | Movimento representado | Consequência para a flexão |
-|---|---|---|
-| Simplesmente apoiado | Impede o deslocamento vertical e permite a rotação normal à borda. | O momento normal à borda é nulo no vínculo ideal. |
-| Engastado | Impede o deslocamento vertical e a rotação normal à borda. | Pode desenvolver momento negativo junto ao apoio. |
-| Livre | Não há apoio distribuído nessa extremidade. | As condições de borda diferem das de um apoio; o caso precisa estar previsto no modelo. |
-
-```{figure} ../_static/aulas/introducao-lajes/condicoes-contorno-lajes.png
-:alt: Combinações de bordos apoiados, engastados e livres em painéis de laje
-:width: 85%
-:align: center
-
-Esquemas de vinculação para painéis isolados. Figura do material do professor.
-```
-
-### Continuidade entre painéis
-
-Uma borda interna, compartilhada por lajes concretadas de forma monolítica, pode transmitir momentos entre os painéis. No cálculo manual, painéis de vãos e rigidezes próximos costumam ter essa continuidade representada por um engaste. A ligação real, porém, admite rotações que dependem da resposta de todo o pavimento.
-
-Na borda externa, a simples presença de uma viga não comprova um engaste perfeito. É preciso avaliar a restrição à rotação oferecida pela ligação. Já em um balanço, a ligação à estrutura deve transmitir o momento necessário para sustentar o trecho projetado para fora dos apoios.
-
-Desníveis, diferenças importantes de espessura e continuidade em apenas parte do bordo exigem uma leitura em corte. Antes de escolher um caso de tabela, marque o trecho efetivamente conectado e verifique se é razoável representar todo o lado por um único vínculo. Se essa simplificação não representar o painel, deve-se analisar a geometria com outro modelo.
-
-```{admonition} Discussão em planta
-:class: destaque-azul
-
-Escolha uma borda interna e justifique sua vinculação: qual painel está do outro lado, como ocorre a ligação e o que restringe sua rotação? O símbolo de engaste deve registrar uma hipótese de comportamento.
 ```
 
 ## Vão livre, distância entre eixos e vão efetivo
 
-As cotas da arquitetura ou da planta de fôrma podem estar entre eixos, enquanto o cálculo utiliza o **vão efetivo**. Para cada direção do painel, identifique primeiro a distância livre entre as faces dos apoios.
+As cotas da arquitetura ou da planta de fôrma podem estar entre eixos, enquanto o cálculo utiliza o conceito de **vão efetivo**. Para cada direção do painel, identifique primeiro a distância livre entre as faces dos apoios. A [Figura 1](#fig-1) apresenta o modelo de idealização do vão efeitvo de uma laje que é semelehante ao de uma viga. O procedimento está conforme o item item 14.6.2.4 da [ABNT NBR 6118 [1]](#ref-1).
 
+(fig-1)=
+**Figura 1.** Geometria para determinação do vão efetivo.
 ```{figure} ../_static/aulas/introducao-lajes/vao-efetivo.png
 :alt: Vão livre de uma laje e parcelas de apoio utilizadas para obter seu vão efetivo
 :width: 70%
 :align: center
-
-Geometria para determinação do vão efetivo. Figura do material do professor.
 ```
 
-No procedimento apresentado no material-base, conforme a NBR 6118:2023, item 14.6.2.4:
+A Equação (1) apresenta a metodologia de obtenção do vão efetivo:
 
-$$
-l_{ef}=l_0+a_1+a_2,
-\qquad a_i=\min\left(\frac{t_i}{2};\,0{,}3h\right).
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle l_{ef}=l_0+a_1+a_2, \qquad a_i=\min\left(\frac{t_i}{2};\,0{,}3h\right)$
+  - (1)
+```
 
 $l_0$ é o vão livre, $t_i$ é a largura de cada apoio medida na direção estudada e $h$ é a espessura da laje. Todas as dimensões devem estar na mesma unidade. O procedimento é repetido na outra direção.
 
-### Exemplo: das cotas de eixo ao vão de cálculo
+```{admonition} Exemplo 1
+:class: destaque-verde
 
 Considere um painel com distâncias entre eixos de $4{,}00\times5{,}00\,\mathrm{m}$, vigas de $20\,\mathrm{cm}$ em todo o contorno e espessura inicial de $10\,\mathrm{cm}$.
+```
 
 Em cada apoio, $a_i=\min(0{,}10;0{,}03)=0{,}03\,\mathrm{m}$. Assim:
 
@@ -218,6 +169,5 @@ Para cada laje do trabalho, entregue uma linha com identificação, tipo, vãos,
 
 ## Referências
 
-- PEREIRA JUNIOR, Wanderlei Malaquias. *Introdução ao projeto de lajes*. Material do professor, capítulo 1. Base conceitual e origem das figuras desta aula.
-- REBELLO, Yopanan Conrado Pereira. *Bases para projeto estrutural na arquitetura*. 2. ed. São Paulo: Zigurate, 2007. Critérios de pré-dimensionamento adotados no material-base.
-- ABNT. *NBR 6118: Projeto de estruturas de concreto*. Rio de Janeiro, 2023. Edição adotada no material-base para os vãos e limites geométricos apresentados.
+(ref-1)=
+[1] ABNT — ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. *NBR 6118: Projeto de estruturas de concreto*. 4. ed. Rio de Janeiro, 2023.
