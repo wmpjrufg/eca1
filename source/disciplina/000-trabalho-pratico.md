@@ -7,13 +7,8 @@ pavimento padrão de um edifício residencial de concreto armado. Será tomado
 como referência o pavimento padrão apresentado na [Figura 1](#fig-1), com a
 identificação das vigas (V1 a V6) e dos vãos entre eixos de pilares.
 
-**Unidades da Figura 1:** as cotas são dadas em **centímetros**: 585 cm e
-620 cm na horizontal; 510 cm e 485 cm na vertical. Nos cálculos, correspondem
-a 5,85 m, 6,20 m, 5,10 m e 4,85 m, respectivamente. Esta indicação prevalece
-sobre a unidade impressa junto às cotas da imagem.
-
 (fig-1)=
-**Figura 1.** Planta de fôrma do pavimento padrão de referência, com vigas
+**Figura 1.** Planta de fôrma do pavimento padrão de referência, com vigas.
 V1 a V6.
 ```{figure} ../_static/aulas/trabalho-pratico/pavimento-padrao.png
 :alt: Planta de fôrma do pavimento padrão, com vigas V1 a V6 e vãos entre pilares
@@ -21,8 +16,8 @@ V1 a V6.
 :align: center
 :class: planta-trabalho
 ```
-
-### Parâmetros base do projeto
+(parametros-projeto)=
+### Parâmetros do projeto
 
 - Uso: residencial;
 - Pavimentos: 7 (térreo + 1º + 2º + 3º + 4º + 5º + cobertura);
@@ -30,22 +25,38 @@ V1 a V6.
 - Carga por área de influência para pré-dimensionamento dos pilares:
   - Pavimento-tipo: $10\text{ kN/m}^2$;
   - Cobertura: $7\text{ kN/m}^2$.
-- Largura das vigas (V1 a V6): $b_w=15\text{ cm}$;
+- Largura das vigas (V1 a V6): $b_w=15\text{ cm}$. Verificar largura das vigas quanto à segurança à instabilidade lateral;
+  conforme o item 15.10 da [ABNT NBR 6118 [1]](#ref-1);
 - Taxa de armadura para pré-dimensionamento dos pilares: $\rho = 2\%$;
 - Tensão correspondente a $0{,}20\%$ de deformação (aço CA-50): $420\text{ MPa}$;
-- Verificação da largura das vigas quanto à segurança à instabilidade lateral,
-  conforme o item 15.10 da [ABNT NBR 6118 [1]](#ref-1);
-- Materiais e durabilidade (a partir da Entrega 3): concreto C30
+- Materiais e durabilidade: concreto C30
   ($f_{ck}=30\text{ MPa}$), aço CA-50, classe de agressividade ambiental II e
   cobrimento nominal das lajes de $2{,}5\text{ cm}$, conforme a
   [ABNT NBR 6118 [1]](#ref-1);
-- Combinações de ações (a partir da Entrega 2): ELU com $\gamma_f=1{,}4$;
+- Combinações de ações: ELU com $\gamma_f=1{,}4$;
   ELS com os fatores $\psi_1=0{,}4$ (combinação frequente) e $\psi_2=0{,}3$
-  (combinação quase permanente), adotados para edificações residenciais.
+  (combinação quase permanente), adotados para edificações residenciais;
+- Ocupação das lajes dos pavimentos-tipo: residencial, dormitório;
+- Lajes de cobertura: impermeabilização em manta asfáltica com proteção
+  mecânica de $15\text{ cm}$, sem revestimento de piso, e contrapiso em
+  argamassa de cimento e areia de $4\text{ cm}$. A inclinação da cobertura é de
+  $1\%$;
+- Vedações: alvenaria em bloco cerâmico vazado com $11{,}5\text{ cm}$ de
+  espessura, com reboco (argamassa de cimento e areia) de $2\text{ cm}$ em cada
+  face;
+- Alvenaria sobre a laje L1: considere um perímetro de alvenaria apoiado
+  diretamente na laje, em todo o seu contorno, com altura de $3{,}00\text{ m}$;
+- Alvenaria sobre as vigas: considere que todas as vigas (V1 a V6) recebem
+  carga de alvenaria, com altura de $2{,}80\text{ m}$;
+- Forro: forro de gesso em placas, incluindo a estrutura de suporte, e
+  argamassa de cimento e areia com $2{,}5\text{ cm}$ de espessura na face
+  inferior da laje;
+- Revestimento de piso: revestimentos de pisos de edifícios residenciais e
+  comerciais, com espessura de $5\text{ cm}$.
 
 ## Roteiro de etapas e entregas do semestre
 
-A [Solução do trabalho](000-solucao-trabalho.md) será disponibilizada por
+A [solução do trabalho](000-solucao-trabalho.md) será disponibilizada por
 entrega, ao longo do semestre, para conferência dos cálculos e discussão
 dos erros mais frequentes.
 
@@ -54,9 +65,11 @@ resultados da anterior; se uma verificação posterior exigir alterar uma seçã
 (por exemplo, a espessura de uma laje), os cálculos das entregas anteriores
 afetados devem ser refeitos e reapresentados.
 
+(tabela-1)=
+**Tabela 1.** Etapas de entrega do trabalho.
 | Entrega | Conteúdo | Arquivos principais |
 |---|---|---|
-| 1 | Pré-dimensionamento, vãos efetivos e cargas nas lajes | Memória (`.md`) e planta |
+| 1 | Pré-dimensionamento, vãos efetivos e cargas nas lajes | Memória de cálculo (`.md`) e planta de fôrma (`.dwg` e `.pdf`) |
 | 2 | Esforços nas lajes e descarregamento nas vigas | Memória (`.md`) e plantas de esforços (`.pdf` e `.dwg`) |
 | 3 | Checagens iniciais: cisalhamento, fissuração e flecha com armadura mínima | Memória (`.md`) |
 | 4 | Dimensionamento à flexão das lajes, armaduras e flecha final | Memória (`.md`) |
@@ -69,35 +82,16 @@ pavimento padrão apresentado na [Figura 1](#fig-1), considerando os
 parâmetros informados anteriormente. Os critérios de pré-dimensionamento constam na
 [Aula 02: Lançamento e pré-dimensionamento estrutural](../aulas/002-lanc-pre-dim.md).
 
-### Definição dos vãos efetivos
-
-A partir das seções de lajes, vigas e pilares obtidas no pré-dimensionamento, devem ser definidos os vãos efetivos de cada uma das lajes do
-pavimento padrão.
-
-### Cargas nas lajes
-
-Definidos os vãos efetivos, o próximo passo é o levantamento das cargas
-variáveis e permanentes atuantes nas lajes do pavimento padrão.
-
-Para as lajes dos pavimentos-tipo, considere a ocupação residencial de
-dormitório.
-
-Para as lajes de cobertura, considere impermeabilização em manta asfáltica com proteção mecânica de $15\text{ cm}$, sem revestimento de piso, e contrapiso em argamassa de cimento e areia de $4\text{ cm}$. A inclinação da cobertura é de $1\%$.
-
-Para as vedações, considere alvenaria em bloco cerâmico vazado com $11{,}5\text{ cm}$ de espessura, com reboco (argamassa de cimento e areia) de $2\text{ cm}$ em cada face. Para o forro, considere forro de gesso em placas, incluindo a estrutura de suporte, e argamassa de cimento e areia com $2{,}5\text{ cm}$ de espessura na face inferior da laje. Para o revestimento de piso, considere revestimentos de pisos de edifícios residenciais e comerciais, com espessura de $5\text{ cm}$.
-
-Para a determinação dos carregamentos, consulte a [ABNT NBR 6120  [2]](#ref-2).
-
 ```{admonition} Entrega 1: Pré-dimensionamento, vãos efetivos e cargas nas lajes
 :class: destaque-verde
 
 A **Entrega 1** contempla as etapas de pré-dimensionamento dos elementos estruturais, definição dos vãos efetivos e levantamento das cargas nas lajes, apresentadas no roteiro de projeto.
 
-**Pré-dimensionamento dos elementos estruturais:** pré-dimensionar as seções de vigas (V1 a V6), lajes e pilares do pavimento padrão, aplicando os critérios apresentados na Aula 02.
+**Pré-dimensionamento dos elementos estruturais:** pré-dimensionar as seções de vigas (V1 a V6), lajes e pilares do pavimento padrão, aplicando os critérios apresentados na [Aula 02: Lançamento e pré-dimensionamento estrutural](../aulas/002-lanc-pre-dim.md).
 
 **Definição dos vãos efetivos:** a partir das seções obtidas no pré-dimensionamento, determinar os vãos efetivos ($l_x$ e $l_y$) de cada laje do pavimento padrão.
 
-**Cargas nas lajes:** levantar as cargas variáveis e permanentes atuantes em cada laje do pavimento padrão (pavimentos-tipo e cobertura), conforme a ABNT NBR 6120.
+**Cargas nas lajes:** levantar as cargas variáveis e permanentes atuantes em cada laje do pavimento padrão (pavimentos-tipo e cobertura), conforme a [ABNT NBR 6120 [2]](#ref-2).
 
 **Apresentação e arquivos obrigatórios:**
 
