@@ -3,19 +3,21 @@
 ### Distâncias entre eixos
 
 As cotas do desenho (510, 585, 620 e 485 cm) são medidas entre faces das
-vigas. Como as vigas têm $b_w=15\text{ cm}$, somam-se $7{,}5\text{ cm}$
-a cada cota para obter a distância entre eixos, usada na
-[Tabela 1](#tabela-eixos). Por exemplo, para a cota de $510\text{ cm}$:
-$5{,}10+0{,}075=5{,}175\text{ m}$.
+vigas. Como as vigas que contornam os painéis têm $b_w=15\text{ cm}$, cada
+cota recebe $7{,}5\text{ cm}$ de cada lado, isto é, somam-se $15\text{ cm}$
+para obter a distância entre eixos, usada na [Tabela 1](#tabela-eixos). Por
+exemplo, para a cota de $510\text{ cm}$:
+$5{,}10+2\times0{,}075=5{,}25\text{ m}$.
 
 (tabela-eixos)=
 **Tabela 1.** Distâncias entre eixos das lajes do pavimento padrão.
+
 | Laje | Posição | Vigas de contorno | Dimensões entre eixos (m) |
 |---|---|---|---|
-| L1 | Superior esquerda | V1, V2, V4 e V5 | 5,175 × 5,925 |
-| L2 | Superior direita | V1, V2, V5 e V6 | 5,175 × 6,275 |
-| L3 | Inferior esquerda | V2, V3, V4 e V5 | 4,925 × 5,925 |
-| L4 | Inferior direita | V2, V3, V5 e V6 | 4,925 × 6,275 |
+| L1 | Superior esquerda | V1, V2, V4 e V5 | 5,250 × 6,000 |
+| L2 | Superior direita | V1, V2, V5 e V6 | 5,250 × 6,350 |
+| L3 | Inferior esquerda | V2, V3, V4 e V5 | 5,000 × 6,000 |
+| L4 | Inferior direita | V2, V3, V5 e V6 | 5,000 × 6,350 |
 
 ### Pré-dimensionamento dos pilares
 
@@ -24,20 +26,20 @@ cima para baixo. Toma-se como referência o nível do térreo, em que cada pilar
 sustenta todos os pavimentos acima: cinco pavimentos-tipo e a cobertura, logo
 $n_{tipo}=5$ e $n_{cob}=1$. Para cada pilar, a área de influência $A_i$ segue as
 faixas de Bacarji da Figura 4 da [Aula 02](../aulas/002-lanc-pre-dim.md), com os
-vãos entre eixos da [Tabela 1](#tabela-eixos): $l_1=5{,}925\text{ m}$ e
-$l_2=6{,}275\text{ m}$ na direção horizontal; $l_3=5{,}175\text{ m}$ e
-$l_4=4{,}925\text{ m}$ na direção vertical. Na direção horizontal as faixas são
+vãos entre eixos da [Tabela 1](#tabela-eixos): $l_1=6{,}000\text{ m}$ e
+$l_2=6{,}350\text{ m}$ na direção horizontal; $l_3=5{,}250\text{ m}$ e
+$l_4=5{,}000\text{ m}$ na direção vertical. Na direção horizontal as faixas são
 $0{,}45\,l$ (lado externo) e $0{,}55\,l$ (lado interno); na vertical, $0{,}5\,l$
 para cada lado do pilar.
 
 Por exemplo, para o pilar de canto P1 e para o pilar intermediário P5:
 
 $$
-A_{P1}=(0{,}45\times5{,}925)(0{,}5\times5{,}175)=2{,}666\times2{,}588=6{,}899\text{ m}^2,
+A_{P1}=(0{,}45\times6{,}000)(0{,}5\times5{,}250)=2{,}700\times2{,}625=7{,}088\text{ m}^2,
 $$
 
 $$
-A_{P5}=0{,}55(5{,}925+6{,}275)\times0{,}5(5{,}175+4{,}925)=6{,}710\times5{,}050=33{,}886\text{ m}^2.
+A_{P5}=0{,}55(6{,}000+6{,}350)\times0{,}5(5{,}250+5{,}000)=6{,}793\times5{,}125=34{,}812\text{ m}^2.
 $$
 
 (tabela-pilares-areas)=
@@ -45,15 +47,15 @@ $$
 
 | Pilar | Posição | Faixa horizontal (m) | Faixa vertical (m) | $A_i$ (m²) |
 |---|---|---:|---:|---:|
-| P1 | Canto | 2,666 | 2,588 | 6,899 |
-| P2 | Extremidade | 6,710 | 2,588 | 17,362 |
-| P3 | Canto | 2,824 | 2,588 | 7,306 |
-| P4 | Extremidade | 2,666 | 5,050 | 13,465 |
-| P5 | Intermediário | 6,710 | 5,050 | 33,886 |
-| P6 | Extremidade | 2,824 | 5,050 | 14,260 |
-| P7 | Canto | 2,666 | 2,463 | 6,566 |
-| P8 | Extremidade | 6,710 | 2,463 | 16,523 |
-| P9 | Canto | 2,824 | 2,463 | 6,953 |
+| P1 | Canto | 2,700 | 2,625 | 7,088 |
+| P2 | Extremidade | 6,793 | 2,625 | 17,830 |
+| P3 | Canto | 2,858 | 2,625 | 7,501 |
+| P4 | Extremidade | 2,700 | 5,125 | 13,838 |
+| P5 | Intermediário | 6,793 | 5,125 | 34,812 |
+| P6 | Extremidade | 2,858 | 5,125 | 14,645 |
+| P7 | Canto | 2,700 | 2,500 | 6,750 |
+| P8 | Extremidade | 6,793 | 2,500 | 16,981 |
+| P9 | Canto | 2,858 | 2,500 | 7,144 |
 
 Com as cargas de 10 e 7 kN/m² do enunciado, a carga característica e a carga de
 cálculo (Equações (17) e (18) da Aula 02) são:
@@ -74,21 +76,21 @@ $$
 Para P1 e P5:
 
 $$
-N_{d,P1}^*=2{,}5\times57\times6{,}899=983{,}1\text{ kN},
+N_{d,P1}^*=2{,}5\times57\times7{,}088=1010{,}0\text{ kN},
 \qquad
-A_{c,P1}=\frac{983{,}1}{2{,}661}=369{,}4\text{ cm}^2,
+A_{c,P1}=\frac{1010{,}0}{2{,}661}=379{,}5\text{ cm}^2,
 $$
 
 $$
-N_{d,P5}^*=1{,}8\times57\times33{,}886=3476{,}7\text{ kN},
+N_{d,P5}^*=1{,}8\times57\times34{,}812=3571{,}7\text{ kN},
 \qquad
-A_{c,P5}=\frac{3476{,}7}{2{,}661}=1306{,}3\text{ cm}^2.
+A_{c,P5}=\frac{3571{,}7}{2{,}661}=1342{,}0\text{ cm}^2.
 $$
 
 Adota-se a menor dimensão $b=19\text{ cm}$, a menor dimensão usual da NBR 6118,
 na direção horizontal da planta, e a maior dimensão $h$ na direção vertical,
 múltipla de 5 cm, de modo que $19h\geq A_c$ e $19h\geq360\text{ cm}^2$. Para P1,
-$h=369{,}4/19=19{,}4\to20\text{ cm}$; para P5, $h=1306{,}3/19=68{,}8\to70\text{ cm}$.
+$h=379{,}5/19=20{,}0\to20\text{ cm}$; para P5, $h=1342{,}0/19=70{,}6\to75\text{ cm}$.
 Como $b\geq19\text{ cm}$, $\gamma_n=1{,}00$ em todos os pilares.
 
 (tabela-pilares-secao)=
@@ -96,15 +98,15 @@ Como $b\geq19\text{ cm}$, $\gamma_n=1{,}00$ em todos os pilares.
 
 | Pilar | $N_k^*$ (kN) | $\alpha$ | $N_d^*$ (kN) | $A_c$ (cm²) | Seção $b\times h$ (cm) | $\gamma_n$ |
 |---|---:|---:|---:|---:|---|---:|
-| P1 | 393,2 | 2,5 | 983,1 | 369,4 | 19 × 20 | 1,00 |
-| P2 | 989,6 | 2,2 | 2177,2 | 818,1 | 19 × 45 | 1,00 |
-| P3 | 416,5 | 2,5 | 1041,2 | 391,2 | 19 × 25 | 1,00 |
-| P4 | 767,5 | 2,2 | 1688,5 | 634,4 | 19 × 35 | 1,00 |
-| P5 | 1931,5 | 1,8 | 3476,7 | 1306,3 | 19 × 70 | 1,00 |
-| P6 | 812,8 | 2,2 | 1788,2 | 671,9 | 19 × 40 | 1,00 |
-| P7 | 374,2 | 2,5 | 935,6 | 351,5 | 19 × 20 | 1,00 |
-| P8 | 941,8 | 2,2 | 2072,0 | 778,5 | 19 × 45 | 1,00 |
-| P9 | 396,3 | 2,5 | 990,9 | 372,3 | 19 × 20 | 1,00 |
+| P1 | 404,0 | 2,5 | 1010,0 | 379,5 | 19 × 20 | 1,00 |
+| P2 | 1016,3 | 2,2 | 2235,9 | 840,1 | 19 × 45 | 1,00 |
+| P3 | 427,6 | 2,5 | 1068,9 | 401,6 | 19 × 25 | 1,00 |
+| P4 | 788,7 | 2,2 | 1735,2 | 652,0 | 19 × 35 | 1,00 |
+| P5 | 1984,3 | 1,8 | 3571,7 | 1342,0 | 19 × 75 | 1,00 |
+| P6 | 834,7 | 2,2 | 1836,4 | 690,0 | 19 × 40 | 1,00 |
+| P7 | 384,8 | 2,5 | 961,9 | 361,4 | 19 × 20 | 1,00 |
+| P8 | 967,9 | 2,2 | 2129,4 | 800,1 | 19 × 45 | 1,00 |
+| P9 | 407,2 | 2,5 | 1018,0 | 382,5 | 19 × 25 | 1,00 |
 
 ### Espessura inicial das lajes
 
@@ -112,31 +114,32 @@ Pelo critério de pré-dimensionamento de lajes maciças bidirecionais, dado pel
 Equação (5) da [Aula 02](../aulas/002-lanc-pre-dim.md), e usando inicialmente as distâncias entre eixos da [Tabela 1](#tabela-eixos):
 
 $$
-h_{est,L1}=0{,}02\frac{5{,}175+5{,}925}{2}=0{,}1110\text{ m}=11{,}10\text{ cm},
+h_{est,L1}=0{,}02\frac{5{,}250+6{,}000}{2}=0{,}1125\text{ m}=11{,}25\text{ cm},
 $$
 
 $$
-h_{est,L2}=0{,}02\frac{5{,}175+6{,}275}{2}=0{,}1145\text{ m}=11{,}45\text{ cm},
+h_{est,L2}=0{,}02\frac{5{,}250+6{,}350}{2}=0{,}1160\text{ m}=11{,}60\text{ cm},
 $$
 
 $$
-h_{est,L3}=0{,}02\frac{4{,}925+5{,}925}{2}=0{,}1085\text{ m}=10{,}85\text{ cm},
+h_{est,L3}=0{,}02\frac{5{,}000+6{,}000}{2}=0{,}1100\text{ m}=11{,}00\text{ cm},
 $$
 
 $$
-h_{est,L4}=0{,}02\frac{4{,}925+6{,}275}{2}=0{,}1120\text{ m}=11{,}20\text{ cm}.
+h_{est,L4}=0{,}02\frac{5{,}000+6{,}350}{2}=0{,}1135\text{ m}=11{,}35\text{ cm}.
 $$
 
 A [Tabela 4](#tabela-espessura) resume os resultados.
 
 (tabela-espessura)=
 **Tabela 4.** Pré-dimensionamento da espessura das lajes maciças bidirecionais.
+
 | Laje | $h_{est}$ (cm) | $h$ inicial adotado (cm) | $\gamma_n$ |
 |---|---:|---:|---:|
-| L1 | 11,10 | 12 | 1,00 |
-| L2 | 11,45 | 12 | 1,00 |
-| L3 | 10,85 | 12 | 1,00 |
-| L4 | 11,20 | 12 | 1,00 |
+| L1 | 11,25 | 12 | 1,00 |
+| L2 | 11,60 | 12 | 1,00 |
+| L3 | 11,00 | 12 | 1,00 |
+| L4 | 11,35 | 12 | 1,00 |
 
 Padroniza-se inicialmente $h=12\text{ cm}$ nos pisos e na cobertura. A
 escolha atende aos mínimos geométricos apresentados na Aula 02 para lajes
@@ -146,16 +149,16 @@ todas as lajes.
 
 ### Pré-dimensionamento da altura das vigas
 
-As vigas V1, V2 e V3 são horizontais, com tramos entre eixos de $5{,}925\text{ m}$
-e $6{,}275\text{ m}$; as vigas V4, V5 e V6 são verticais, com tramos de
-$5{,}175\text{ m}$ e $4{,}925\text{ m}$. Adota-se $h_v=l/12$, com $l$ igual ao maior
+As vigas V1, V2 e V3 são horizontais, com tramos entre eixos de $6{,}000\text{ m}$
+e $6{,}350\text{ m}$; as vigas V4, V5 e V6 são verticais, com tramos de
+$5{,}250\text{ m}$ e $5{,}000\text{ m}$. Adota-se $h_v=l/12$, com $l$ igual ao maior
 tramo entre eixos da viga, e uma única altura por viga, arredondada para
 múltiplo de 5 cm:
 
 $$
-h_{v,V1-V3}=\frac{6{,}275}{12}=0{,}523\text{ m}\to55\text{ cm},
+h_{v,V1-V3}=\frac{6{,}350}{12}=0{,}529\text{ m}\to55\text{ cm},
 \qquad
-h_{v,V4-V6}=\frac{5{,}175}{12}=0{,}431\text{ m}\to45\text{ cm}.
+h_{v,V4-V6}=\frac{5{,}250}{12}=0{,}438\text{ m}\to45\text{ cm}.
 $$
 
 **Estabilidade lateral.** A largura mínima das vigas segue as Equações (1) e (2)
@@ -164,13 +167,13 @@ seção retangular ou T. Tomando de forma conservadora $l_0$ igual ao maior tram
 entre eixos:
 
 $$
-V1\text{ a }V3:\quad b_{w,min}=\max\left(\frac{6{,}275}{50};\,0{,}40\times0{,}55\right)
-=\max(0{,}126;\,0{,}220)=22{,}0\text{ cm},
+V1\text{ a }V3:\quad b_{w,min}=\max\left(\frac{6{,}350}{50};\,0{,}40\times0{,}55\right)
+=\max(0{,}127;\,0{,}220)=22{,}0\text{ cm},
 $$
 
 $$
-V4\text{ a }V6:\quad b_{w,min}=\max\left(\frac{5{,}175}{50};\,0{,}40\times0{,}45\right)
-=\max(0{,}104;\,0{,}180)=18{,}0\text{ cm}.
+V4\text{ a }V6:\quad b_{w,min}=\max\left(\frac{5{,}250}{50};\,0{,}40\times0{,}45\right)
+=\max(0{,}105;\,0{,}180)=18{,}0\text{ cm}.
 $$
 
 A condição $b_w\geq l_0/50$ é atendida com $b_w=15\text{ cm}$, mas a condição
@@ -184,8 +187,8 @@ preciso aumentar $b_w$ ou reduzir $h_v$ e justificar a escolha.
 
 | Viga | Direção | Maior tramo (m) | $l/12$ (cm) | Seção $b_w\times h_v$ (cm) | $b_{w,min}$ (cm) | $b_w\geq b_{w,min}$ |
 |---|---|---:|---:|---|---:|---|
-| V1, V2 e V3 | Horizontal | 6,275 | 52,3 | 15 × 55 | 22,0 | Não |
-| V4, V5 e V6 | Vertical | 5,175 | 43,1 | 15 × 45 | 18,0 | Não |
+| V1, V2 e V3 | Horizontal | 6,350 | 52,9 | 15 × 55 | 22,0 | Não |
+| V4, V5 e V6 | Vertical | 5,250 | 43,8 | 15 × 45 | 18,0 | Não |
 
 ### Vãos efetivos das lajes
 
@@ -206,9 +209,9 @@ $$
 Por exemplo, para L1:
 
 $$
-l_x=5{,}175-0{,}15+2(0{,}036)=5{,}097\text{ m},
+l_x=5{,}250-0{,}15+2(0{,}036)=5{,}172\text{ m},
 \qquad
-l_y=5{,}925-0{,}15+2(0{,}036)=5{,}847\text{ m}.
+l_y=6{,}000-0{,}15+2(0{,}036)=5{,}922\text{ m}.
 $$
 
 (tabela-vaos)=
@@ -216,10 +219,10 @@ $$
 
 | Laje | $l_x$ (m) | $l_y$ (m) | $\lambda=l_y/l_x$ | Comportamento |
 |---|---:|---:|---:|---|
-| L1 | 5,097 | 5,847 | 1,1471 | Duas direções |
-| L2 | 5,097 | 6,197 | 1,2158 | Duas direções |
-| L3 | 4,847 | 5,847 | 1,2063 | Duas direções |
-| L4 | 4,847 | 6,197 | 1,2785 | Duas direções |
+| L1 | 5,172 | 5,922 | 1,1450 | Duas direções |
+| L2 | 5,172 | 6,272 | 1,2127 | Duas direções |
+| L3 | 4,922 | 5,922 | 1,2032 | Duas direções |
+| L4 | 4,922 | 6,272 | 1,2743 | Duas direções |
 
 O eixo $x$ é vertical na planta e o eixo $y$ é horizontal. As quatro lajes
 possuem apoio nos quatro lados e $\lambda<2$; não há balanço no desenho.
@@ -234,7 +237,7 @@ $h_v=45\text{ cm}$. Por exemplo, para o tramo 1 de V4, entre P1
 ($t_1=20\text{ cm}$) e P4 ($t_2=35\text{ cm}$):
 
 $$
-l_0=5{,}175-\frac{0{,}20}{2}-\frac{0{,}35}{2}=4{,}900\text{ m},
+l_0=5{,}250-\frac{0{,}20}{2}-\frac{0{,}35}{2}=4{,}975\text{ m},
 $$
 
 $$
@@ -244,7 +247,7 @@ a_2=\min(0{,}175;\,0{,}135)=0{,}135\text{ m},
 $$
 
 $$
-l_{ef}=4{,}900+0{,}100+0{,}135=5{,}135\text{ m}.
+l_{ef}=4{,}975+0{,}100+0{,}135=5{,}210\text{ m}.
 $$
 
 (tabela-vigas-vaos)=
@@ -252,14 +255,14 @@ $$
 
 | Viga | Tramo | Entre eixos (m) | $t_1$ / $t_2$ (cm) | $l_0$ (m) | $a_1$ / $a_2$ (m) | $l_{ef}$ (m) |
 |---|---:|---:|---|---:|---|---:|
-| V1, V2 e V3 | 1 | 5,925 | 19 / 19 | 5,735 | 0,095 / 0,095 | 5,925 |
-| V1, V2 e V3 | 2 | 6,275 | 19 / 19 | 6,085 | 0,095 / 0,095 | 6,275 |
-| V4 | 1 | 5,175 | 20 / 35 | 4,900 | 0,100 / 0,135 | 5,135 |
-| V4 | 2 | 4,925 | 35 / 20 | 4,650 | 0,135 / 0,100 | 4,885 |
-| V5 | 1 | 5,175 | 45 / 70 | 4,600 | 0,135 / 0,135 | 4,870 |
-| V5 | 2 | 4,925 | 70 / 45 | 4,350 | 0,135 / 0,135 | 4,620 |
-| V6 | 1 | 5,175 | 25 / 40 | 4,850 | 0,125 / 0,135 | 5,110 |
-| V6 | 2 | 4,925 | 40 / 20 | 4,625 | 0,135 / 0,100 | 4,860 |
+| V1, V2 e V3 | 1 | 6,000 | 19 / 19 | 5,810 | 0,095 / 0,095 | 6,000 |
+| V1, V2 e V3 | 2 | 6,350 | 19 / 19 | 6,160 | 0,095 / 0,095 | 6,350 |
+| V4 | 1 | 5,250 | 20 / 35 | 4,975 | 0,100 / 0,135 | 5,210 |
+| V4 | 2 | 5,000 | 35 / 20 | 4,725 | 0,135 / 0,100 | 4,960 |
+| V5 | 1 | 5,250 | 45 / 75 | 4,650 | 0,135 / 0,135 | 4,920 |
+| V5 | 2 | 5,000 | 75 / 45 | 4,400 | 0,135 / 0,135 | 4,670 |
+| V6 | 1 | 5,250 | 25 / 40 | 4,925 | 0,125 / 0,135 | 5,185 |
+| V6 | 2 | 5,000 | 40 / 25 | 4,675 | 0,135 / 0,125 | 4,935 |
 
 Nas vigas horizontais, como $t/2<0{,}3h_v$ nos dois apoios, $l_{ef}$ coincide
 com a distância entre eixos.

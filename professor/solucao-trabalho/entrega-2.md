@@ -166,8 +166,8 @@ Caso o modelo use áreas de lajes livres, excluindo integralmente a faixa
 das vigas, contabilize a seção completa da viga, com a geometria coerente.
 Acrescente as cargas concentradas de outras vigas, quando existirem.
 
-V1, V2 e V3 têm tramos horizontais entre eixos de 5,925 m e 6,275 m; V4, V5 e
-V6 têm tramos verticais de 5,175 m e 4,925 m. A posição dos pilares, as
+V1, V2 e V3 têm tramos horizontais entre eixos de 6,00 m e 6,35 m; V4, V5 e
+V6 têm tramos verticais de 5,25 m e 5,00 m. A posição dos pilares, as
 seções e a rigidez das ligações definem o modelo de análise da Aula 04.
 Não aplique $wl^2/8$ a todos os tramos de uma viga contínua.
 
