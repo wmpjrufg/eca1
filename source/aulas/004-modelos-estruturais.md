@@ -272,7 +272,7 @@ Os três momentos satisfazem o equilíbrio do nó: $M_{viga}=M_{sup}+M_{inf}$. N
 
 ### Vão efetivo da viga
 
-O vão de cálculo da viga é o vão efetivo, definido como na [Aula 05](005-introducao-lajes.md) para as lajes: $l_{ef}=l_0+a_1+a_2$, em que $l_0$ é a distância entre as faces dos apoios e cada $a_i$ é o menor valor entre $t_i/2$ e $0{,}3h$, com $t_i$ a largura do apoio na direção da viga (item 14.6.2.4 da norma). Nos exemplos desta aula, usam-se os vãos entre eixos fornecidos.
+O vão de cálculo da viga é o vão efetivo, definido como na [Aula 02](002-lanc-pre-dim.md) para as lajes: $l_{ef}=l_0+a_1+a_2$, em que $l_0$ é a distância entre as faces dos apoios e cada $a_i$ é o menor valor entre $t_i/2$ e $0{,}3h$, com $t_i$ a largura do apoio na direção da viga (item 14.6.2.4 da norma). Nos exemplos desta aula, usam-se os vãos entre eixos fornecidos.
 
 ### Pórtico H
 

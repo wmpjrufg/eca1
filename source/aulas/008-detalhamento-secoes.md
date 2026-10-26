@@ -1,8 +1,8 @@
-# Aula 09: Detalhamento de seções retangulares
+# Aula 08: Detalhamento de seções retangulares
 
-Na [Aula 08](008-armadura-simples.md), o dimensionamento forneceu uma **área de aço** $A_s$. Uma área, porém, não se constrói: o que vai para a obra são **barras** de diâmetros comerciais, dispostas em camadas, envolvidas por estribos, com cobrimento suficiente e espaço para o concreto passar. A pergunta desta aula é: **como transformar $A_s$ em um arranjo de barras que possa ser executado e que não invalide as hipóteses usadas no cálculo?**
+Na [Aula 07](007-armadura-simples.md), o dimensionamento forneceu uma **área de aço** $A_s$. Uma área, porém, não se constrói: o que vai para a obra são **barras** de diâmetros comerciais, dispostas em camadas, envolvidas por estribos, com cobrimento suficiente e espaço para o concreto passar. A pergunta desta aula é: **como transformar $A_s$ em um arranjo de barras que possa ser executado e que não invalide as hipóteses usadas no cálculo?**
 
-O detalhamento não é uma etapa "de desenho" separada do cálculo. Ao escolher as barras, o projetista define a posição real do centroide da armadura e, portanto, a altura útil $d$ efetiva da seção. Se o arranjo ficar diferente do previsto, o cálculo precisa ser refeito. A aula percorre essa sequência e termina com o exemplo da viga de seção $25\times90$ cm, uma atividade em sala e uma introdução à ancoragem, que será usada no detalhamento das lajes na [Aula 10](010-detalhamento-lajes.md).
+O detalhamento não é uma etapa "de desenho" separada do cálculo. Ao escolher as barras, o projetista define a posição real do centroide da armadura e, portanto, a altura útil $d$ efetiva da seção. Se o arranjo ficar diferente do previsto, o cálculo precisa ser refeito. A aula percorre essa sequência e termina com o exemplo da viga de seção $25\times90$ cm, uma atividade em sala e uma introdução à ancoragem, que será usada no detalhamento das lajes na [Aula 9](009-detalhamento-lajes.md).
 
 ```{admonition} Objetivos da aula
 :class: destaque-azul
@@ -81,7 +81,7 @@ $$y_{cg}=\frac{\sum A_i\,y_i}{\sum A_i},\qquad d_{real}=h-y_{cg}$$
 ```{admonition} Confira sempre o d
 :class: destaque-vermelho
 
-O dimensionamento da Aula 08 partiu de um $d$ estimado (em geral $d\approx0{,}9h$ ou $h$ menos 5 a 10 cm). Depois do arranjo:
+O dimensionamento da Aula 07 partiu de um $d$ estimado (em geral $d\approx0{,}9h$ ou $h$ menos 5 a 10 cm). Depois do arranjo:
 
 - se $d_{real}\geq d_{adotado}$, o cálculo está do lado da segurança;
 - se $d_{real}<d_{adotado}$, **recalcule $A_s$ com $d_{real}$** e refaça o arranjo. Uma ou duas iterações bastam.
@@ -107,7 +107,7 @@ Se o critério não for atendido, as camadas mais próximas da linha neutra têm
 
 ## Ancoragem: quanto a barra precisa avançar
 
-Uma barra só desenvolve a tensão $f_{yd}$ se estiver **ancorada**, isto é, se tiver um comprimento suficiente para transferir a força ao concreto por aderência. Esse conceito define os comprimentos das barras nos desenhos, e será usado na Aula 10.
+Uma barra só desenvolve a tensão $f_{yd}$ se estiver **ancorada**, isto é, se tiver um comprimento suficiente para transferir a força ao concreto por aderência. Esse conceito define os comprimentos das barras nos desenhos, e será usado na Aula 9.
 
 ### Zonas de boa e de má aderência
 

@@ -1,4 +1,4 @@
-# Gabarito e notas do professor: Aula 08
+# Gabarito e notas do professor: Aula 07
 
 Material de uso do professor. Este arquivo fica fora de `source/` e não integra o site.
 

@@ -1,6 +1,6 @@
 ## Entrega 2: Esforços nas lajes e descarregamento nas vigas
 
-Referências: [Aula 06](../aulas/006-esforcos-lajes.md),
+Referências: [Aula 05](../aulas/005-esforcos-lajes.md),
 [Aula 03](../aulas/003-carregamentos.md) e
 [Aula 04](../aulas/004-modelos-estruturais.md).
 
@@ -34,7 +34,7 @@ X_x=\mu'_x F,\quad X_y=\mu'_y F,
 $$
 
 Os coeficientes são os do caso de **duas bordas adjacentes engastadas**, nas
-[tabelas indicadas na Aula 06](../aulas/006-esforcos-lajes.md).
+[tabelas indicadas na Aula 05](../aulas/005-esforcos-lajes.md).
 Não se podem usar os coeficientes do exemplo de quatro bordas apoiadas.
 Entre duas linhas do mesmo caso, interpole cada coluna:
 
@@ -70,7 +70,7 @@ O caso corresponde ao **tipo 3 da tabela A-9**. A interpolação resulta em:
 | L4 | 3,9916 | 9,2537 | 2,5205 | 7,7792 |
 
 Fonte dos coeficientes: Bastos, tabela A-9, conforme a família de tabelas
-adotada na Aula 06; [cópia do material do autor na PUC Goiás](https://professor.pucgoias.edu.br/SiteDocente/admin/arquivosUpload/3922/material/Paulo%20Bastos_Lajes%20de%20Concreto_2015.pdf#page=100).
+adotada na Aula 05; [cópia do material do autor na PUC Goiás](https://professor.pucgoias.edu.br/SiteDocente/admin/arquivosUpload/3922/material/Paulo%20Bastos_Lajes%20de%20Concreto_2015.pdf#page=100).
 Consultam-se aqui os coeficientes elásticos; os critérios de dimensionamento
 seguem as aulas e a edição normativa adotada no curso.
 
@@ -113,7 +113,7 @@ $$
 **Exemplo apenas do procedimento:** se uma borda tiver módulos 10 e
 6 kN m/m, $X_c=8\text{ kN m/m}$. O positivo do lado com negativo inicial 10
 aumenta 1 kN m/m; o outro positivo permanece igual. Esses valores ilustram
-a regra da Aula 06 e não substituem os momentos calculados da planta.
+a regra da Aula 05 e não substituem os momentos calculados da planta.
 
 Aplicando a regra à planta, os módulos comuns sobre V2 são 17,638 kN m/m
 no trecho esquerdo e 18,723 kN m/m no direito. Sobre V5, são 16,529 kN m/m

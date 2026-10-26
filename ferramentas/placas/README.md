@@ -149,7 +149,7 @@ $$
 No vértice, $m_x=m_y=0$; portanto, a demanda local é $|m_{xy}|$ em x e em y,
 nas faces inferior e superior. **Não se divide $|m_{xy}|$ por dois.** Essa
 conversão e a uniformização da malha de canto são feitas à mão, na
-[aula 06](../../source/aulas/006-esforcos-lajes.md), a partir da tabela de
+[aula 05](../../source/aulas/005-esforcos-lajes.md), a partir da tabela de
 $\mu_{xy}$. A conversão segue a composição de momentos descrita na
 [documentação de Wood–Armer](https://help.autodesk.com/cloudhelp/2020/CHS/RSAPRO-UsersGuide/files/GUID-80FE7814-C14D-4A89-A6DF-68EB9E7E4815.htm),
 com a convenção deste módulo: positivo traciona a face inferior.

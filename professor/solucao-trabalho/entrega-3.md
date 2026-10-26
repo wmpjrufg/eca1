@@ -1,6 +1,6 @@
 ## Entrega 3: Checagens iniciais com armadura mínima
 
-Referência principal: [Aula 07](../aulas/007-verificacoes-preliminares-lajes.md).
+Referência principal: [Aula 06](../aulas/006-verificacoes-preliminares-lajes.md).
 Usam-se os esforços da Entrega 2 e a espessura inicial de 12 cm. Uma
 verificação que não atenda deve produzir uma providência e o recálculo das
 etapas afetadas, antes de se declarar aprovada a laje.
@@ -23,7 +23,7 @@ f_{ctk,inf}=0{,}7f_{ctm}=2{,}028\text{ MPa},
 \qquad f_{ctd}=\frac{2{,}028}{1{,}4}=1{,}448\text{ MPa}.
 $$
 
-Na hipótese de agregado com $\alpha_E=1{,}0$, usada nos exemplos da Aula 07:
+Na hipótese de agregado com $\alpha_E=1{,}0$, usada nos exemplos da Aula 06:
 
 $$
 E_{ci}=5600\sqrt{30}=30{,}67\text{ GPa},
@@ -104,7 +104,7 @@ I_c=\frac{1000\times120^3}{12}=144\times10^6\text{ mm}^4,
 \qquad y_t=60\text{ mm}.
 $$
 
-A Aula 07 usa, na estimativa da rigidez e da flecha:
+A Aula 06 usa, na estimativa da rigidez e da flecha:
 
 $$
 M_r=1{,}5\frac{f_{ctm}I_c}{y_t}
@@ -159,7 +159,7 @@ $$
 
 Determine a flecha imediata por um modelo de **placa com os vínculos da
 Entrega 2**, ou por um modelo estrutural equivalente justificado. O fator
-$5/384$ da faixa simplesmente apoiada da Aula 07 não é o coeficiente desta
+$5/384$ da faixa simplesmente apoiada da Aula 06 não é o coeficiente desta
 placa com duas bordas contínuas.
 
 Para $t_0=1$ mês, longo prazo e $\rho'=0$:

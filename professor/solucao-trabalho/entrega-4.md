@@ -1,8 +1,8 @@
 ## Entrega 4: Dimensionamento à flexão e verificações finais
 
-Referências: [Aula 08](../aulas/008-armadura-simples.md),
-[Aula 07](../aulas/007-verificacoes-preliminares-lajes.md) e
-[Aula 09](../aulas/009-detalhamento-secoes.md).
+Referências: [Aula 07](../aulas/007-armadura-simples.md),
+[Aula 06](../aulas/006-verificacoes-preliminares-lajes.md) e
+[Aula 08](../aulas/008-detalhamento-secoes.md).
 
 ### Dimensionamento de cada direção e região
 
@@ -20,7 +20,7 @@ $$
 
 Para o C30 desta solução, verifique $\xi\leq0{,}45$ e o domínio da seção.
 Quando o domínio 2 for aplicável, siga a limitação do método simplificado
-ensinado na Aula 08:
+ensinado na Aula 07:
 
 $$
 \varphi_{adot}=\min(\varphi;0{,}930864),\qquad
@@ -89,7 +89,7 @@ cobertura:
 
 No encontro de V2 e V5 há sobreposição das negativas. Confira as alturas
 úteis e o alojamento das duas direções. Complete as armaduras de borda e de
-canto pelo caso efetivo e pelos critérios apresentados na Aula 10.
+canto pelo caso efetivo e pelos critérios apresentados na Aula 09.
 
 ### Resultado de flexão do pavimento-tipo
 
@@ -107,7 +107,7 @@ Entrega 2, as áreas necessárias são:
 | L4 | 2,134 | 5,084 | 1,496 | 4,520 |
 
 Unidades: $\mathrm{cm^2/m}$. Todas essas regiões se enquadram no domínio 2,
-com $x/d<0{,}45$, usando o procedimento da Aula 08. Uma primeira escolha
+com $x/d<0{,}45$, usando o procedimento da Aula 07. Uma primeira escolha
 padronizada de barras para o pavimento-tipo é:
 
 | Regiões | Armadura escolhida | $A_{s,ef}$ (cm²/m) |

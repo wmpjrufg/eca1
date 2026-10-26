@@ -48,5 +48,5 @@ devem ser interpretadas como um projeto executivo fechado de todos os painéis.
 Os momentos e as áreas de aço do pavimento-tipo foram calculados para o caso
 de duas bordas adjacentes contínuas. Complete as reações e os dados do modelo
 das vigas, as verificações de serviço e o caso da cobertura antes de liberar
-o fechamento numérico final. As aulas 02, 03, 05, 06, 07, 08,
-09 e 10 são as referências; mantém-se a edição normativa adotada no curso.
+o fechamento numérico final. As aulas 02, 03, 05, 06, 07, 08
+e 09 são as referências; mantém-se a edição normativa adotada no curso.

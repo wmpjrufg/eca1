@@ -1,4 +1,4 @@
-# Gabarito do professor: Aula 09 (detalhamento de seções retangulares)
+# Gabarito do professor: Aula 08 (detalhamento de seções retangulares)
 
 Material **somente do professor**. Fica fora de `source/` e não é publicado.
 
@@ -10,7 +10,7 @@ Material **somente do professor**. Fica fora de `source/` e não é publicado.
 4. Slide 6: a distância entre eixos de camadas foi tomada como $3{,}5$ cm (anotado como "$a_v=3{,}5$ cm"). O mínimo seria $\phi+a_v=1{,}25+2{,}0=3{,}25$ cm; $3{,}5$ é um arredondamento a favor da execução. No mesmo slide, "$4\phi16=A_s=4\cdot1{,}227$" deve ser $4\phi12{,}5$.
 5. Slide 9: $2{,}25/0{,}32=7{,}03\approx7$ barras de pele. Com $A_\phi=0{,}312$ cm², são $7{,}2$, logo 8 barras de $\phi6{,}3$ por face (7 barras dão $2{,}18$ cm², 3% abaixo). A aula adota 8.
 6. Slides 10 e 11: a pele foi concentrada entre a armadura tracionada e a linha neutra. A aula mantém essa leitura e comenta que, em viga contínua, é comum distribuí-la em toda a altura.
-7. $x=35{,}83$ cm corresponde a $\xi=x/d=0{,}448$, praticamente no limite de ductilidade $0{,}45$ usado na Aula 08. Vale comentar com a turma.
+7. $x=35{,}83$ cm corresponde a $\xi=x/d=0{,}448$, praticamente no limite de ductilidade $0{,}45$ usado na Aula 07. Vale comentar com a turma.
 
 ## Exercício 1: outras bitolas ($A_{s,nec}=19{,}51$ cm², $b_{disp}=17{,}74$ cm, $a_h=3{,}0$, $a_v=2{,}0$)
 

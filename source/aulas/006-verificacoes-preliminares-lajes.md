@@ -1,6 +1,6 @@
-# Aula 07: Verificações preliminares em lajes
+# Aula 06: Verificações preliminares em lajes
 
-Na [Aula 06](006-esforcos-lajes.md), foram determinados os momentos fletores e as reações das lajes. Antes de dimensionar e detalhar as armaduras, convém verificar se a espessura adotada conduz a uma solução viável. Nesta etapa, a armadura de flexão ainda não foi calculada; por isso, as verificações são feitas com a **armadura mínima** prevista para a laje.
+Na [Aula 05](005-esforcos-lajes.md), foram determinados os momentos fletores e as reações das lajes. Antes de dimensionar e detalhar as armaduras, convém verificar se a espessura adotada conduz a uma solução viável. Nesta etapa, a armadura de flexão ainda não foi calculada; por isso, as verificações são feitas com a **armadura mínima** prevista para a laje.
 
 Esta aula trata de duas verificações preliminares:
 

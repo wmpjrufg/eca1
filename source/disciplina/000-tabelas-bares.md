@@ -18,7 +18,7 @@ no formato de Bares, calculados pela solução de placa da disciplina com
 **coeficiente de Poisson $\nu=0{,}20$**. Elas cobrem os nove tipos de
 vinculação (bordas apoiadas ou engastadas), com $\lambda=l_y/l_x$ de 1,00 a
 2,00, a cada 0,05. O uso dos coeficientes está explicado na
-[Aula 06](../aulas/006-esforcos-lajes.md).
+[Aula 05](../aulas/005-esforcos-lajes.md).
 
 | Aba | Conteúdo |
 |---|---|

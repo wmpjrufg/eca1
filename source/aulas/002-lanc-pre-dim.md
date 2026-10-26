@@ -2,7 +2,7 @@
 
 O projeto de uma estrutura começa pela definição de como a edificação será sustentada. Antes de calcular armaduras, é necessário escolher o sistema estrutural, posicionar seus elementos e compreender como as ações chegarão às fundações. Essas decisões constituem a **concepção estrutural** e orientam o lançamento de lajes, vigas e pilares na planta de arquitetura.
 
-Nesta aula, a discussão parte do sistema estrutural e do caminho das cargas, passa pelas observações de lançamento e chega às estimativas iniciais das seções e às dimensões mínimas. A introdução foi adaptada do capítulo *Análise e concepção do sistema estrutural*, do material do professor [Pereira Junior [5]](#ref-5).
+Nesta aula, a discussão parte do sistema estrutural e do caminho das cargas, passa pelas observações de lançamento, introduz o projeto de lajes (vão efetivo e relação entre vãos) e chega às estimativas iniciais das seções e às dimensões mínimas. A introdução foi adaptada do capítulo *Análise e concepção do sistema estrutural*, do material do professor [Pereira Junior [5]](#ref-5).
 
 ## Sistemas estruturais e função dos elementos
 
@@ -169,9 +169,96 @@ em que:
 :align: center
 ```
 
+## Introdução ao projeto de lajes
+
+### Aplicações
+
+A [Figura 2](#figura2) mostra três tipos de laje usuais em edifícios de múltiplos pavimentos: maciça, lisa e nervurada.
+
+(figura2)=
+**Figura 2.** Aplicações do conceito de lajes em edifícios de múltiplos pavimentos.
+```{figure} ../_static/aulas/introducao-lajes/exemplos-lajes-abc.png
+:alt: Exemplos de laje maciça, laje lisa e laje nervurada
+:width: 90%
+:align: center
+```
+
+### Vão livre, distância entre eixos e vão efetivo
+
+A análise de uma laje começa pela determinação do **vão efetivo**. Para cada direção do painel, identifique primeiro a distância livre entre as faces dos apoios. A [Figura 3](#figura3) apresenta a idealização do vão efetivo de uma laje, análoga à de uma viga. O procedimento segue o item 14.6.2.4 da [ABNT NBR 6118 [1]](#ref-1).
+
+(figura3)=
+**Figura 3.** Geometria para determinação do vão efetivo.
+```{figure} ../_static/aulas/introducao-lajes/vao-efetivo.png
+:alt: Vão livre de uma laje e parcelas de apoio utilizadas para obter seu vão efetivo
+:width: 70%
+:align: center
+```
+
+A Equação (3) apresenta o cálculo do vão efetivo:
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle l_{ef}=l_0+a_1+a_2, \qquad a_i=\min\left(\frac{t_i}{2};\,0{,}3h\right)$
+  - (3)
+```
+
+$l_0$ é o vão livre, medido entre as faces dos apoios; $t_i$ é a largura do apoio $i$, medida na direção estudada; e $h$ é a espessura da laje. Calcula-se uma parcela $a_i$ para cada extremidade do vão, usando a largura do respectivo apoio. Todas as dimensões devem estar na mesma unidade.
+
+```{admonition} Exemplo 1
+:class: destaque-verde
+
+**Enunciado:** considere um painel com distâncias entre eixos de $4{,}00\times5{,}00\,\mathrm{m}$, vigas de $20\,\mathrm{cm}$ em todo o contorno e espessura inicial de $10\,\mathrm{cm}$. Determine os vãos efetivos $l_x$ e $l_y$.
+
+**Resolução:** como as vigas têm a mesma largura nos dois lados de cada direção, o vão livre é a distância entre eixos menos $20\,\mathrm{cm}$:
+
+$$
+l_{0x}=4{,}00-0{,}20=3{,}80\,\mathrm{m},
+\qquad
+l_{0y}=5{,}00-0{,}20=4{,}80\,\mathrm{m}.
+$$
+
+Em cada apoio, $t_i=0{,}20\,\mathrm{m}$; portanto, metade da largura do apoio é $t_i/2=0{,}10\,\mathrm{m}$. O outro valor do mínimo vem da espessura da laje: $0{,}3h=0{,}3\times0{,}10=0{,}03\,\mathrm{m}$. Logo, em cada extremidade:
+
+$$
+a_i=\min\left(\frac{0{,}20}{2};\,0{,}3\times0{,}10\right)
+=\min(0{,}10;\,0{,}03)=0{,}03\,\mathrm{m}.
+$$
+
+Somando ao vão livre as parcelas dos dois apoios:
+
+$$
+l_x=l_{0x}+2a_i=3{,}80+2(0{,}03)=3{,}86\,\mathrm{m},
+$$
+
+$$
+l_y=l_{0y}+2a_i=4{,}80+2(0{,}03)=4{,}86\,\mathrm{m}.
+$$
+
+Neste exemplo, $l_x$ é o menor vão efetivo e $l_y$, o maior. Se a espessura adotada mudar, as parcelas $a_i$ devem ser recalculadas.
+```
+
+### Uma ou duas direções principais?
+
+Para um painel retangular apoiado nos quatro lados, a relação entre os vãos ajuda a escolher a aproximação de cálculo, conforme a Equação (4):
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle \lambda=\frac{l_y}{l_x},\qquad l_x\leq l_y$
+  - (4)
+```
+
+Se $\lambda\leq2$, a laje tem comportamento bidirecional, e os momentos devem ser determinados nas duas direções. Se $\lambda>2$, o comportamento é predominantemente unidirecional, e a análise é feita em faixas na direção do menor vão.
+
+No painel do Exemplo 1, $\lambda=4{,}86/3{,}86\approx1{,}26$, conduzindo ao estudo em duas direções.
+
 ## Pré-dimensionamento de lajes
 
-Diversos autores apresentam procedimentos para a determinação da geometria da forma em lajes maciças e nervuradas. Nesta aula, o foco adotado é o trabalho de [Rebello [2]](#ref-2).
+Diversos autores apresentam procedimentos para a determinação da geometria da forma em lajes maciças e nervuradas. Nesta aula, o foco adotado é o trabalho de [Rebello [2]](#ref-2). Os vãos $l_x$ e $l_y$ das equações a seguir são os vãos efetivos da Equação (3), com $l_x\leq l_y$. O pré-dimensionamento fornece uma seção para iniciar a análise; depois, resistência, deformações, fissuração e disposição das armaduras podem exigir sua revisão.
 
 ### Lajes maciças
 
@@ -182,7 +269,7 @@ a) Laje armada em duas direções:
 :widths: 90 10
 
 * - $\displaystyle h = 2\%\cdot\frac{l_y+l_x}{2}$
-  - (3)
+  - (5)
 ```
 
 b) Laje armada em uma direção:
@@ -192,7 +279,7 @@ b) Laje armada em uma direção:
 :widths: 90 10
 
 * - $\displaystyle h = 2\%\cdot l_x$
-  - (4)
+  - (6)
 ```
 
 c) Lajes em balanço:
@@ -202,7 +289,24 @@ c) Lajes em balanço:
 :widths: 90 10
 
 * - $\displaystyle h = 4\%\cdot l_x$
-  - (5)
+  - (7)
+```
+
+Nas Equações (5) a (7), use a mesma unidade para os vãos e para $h$; em (7), $l_x$ é o comprimento do balanço.
+
+```{admonition} Exemplo 2
+:class: destaque-verde
+
+**Enunciado:** estime a espessura da laje maciça do Exemplo 1, armada em duas direções, e compare com o mínimo da NBR 6118 para piso sem balanço.
+
+**Resolução:** com $l_x=3{,}86\,\mathrm{m}$ e $l_y=4{,}86\,\mathrm{m}$, a Equação (5) fornece:
+
+$$
+h_{est}=0{,}02\cdot\frac{3{,}86+4{,}86}{2}
+=0{,}0872\,\mathrm{m}=8{,}72\,\mathrm{cm}.
+$$
+
+Esse valor atende ao mínimo de $8\,\mathrm{cm}$ para piso sem balanço. Pode-se manter $h=10\,\mathrm{cm}$ como escolha inicial para organizar o pavimento e prosseguir com as verificações; a estimativa de $8{,}72\,\mathrm{cm}$ não justifica, sozinha, reduzir a espessura.
 ```
 
 ### Lajes nervuradas moldadas
@@ -216,7 +320,7 @@ a) Laje armada em uma direção:
 :widths: 90 10
 
 * - $\displaystyle h = 4\%\cdot l_x \text{, para espaçamento de 100 cm entre nervuras}$
-  - (6)
+  - (8)
 ```
 
 ```{list-table}
@@ -224,7 +328,7 @@ a) Laje armada em uma direção:
 :widths: 90 10
 
 * - $\displaystyle h = 3\%\cdot l_x \text{, para espaçamento de 50 cm entre nervuras}$
-  - (7)
+  - (9)
 ```
 
 ```{list-table}
@@ -232,7 +336,7 @@ a) Laje armada em uma direção:
 :widths: 90 10
 
 * - $\displaystyle b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h$
-  - (8)
+  - (10)
 ```
 
 Segundo [Rebello [2]](#ref-2), para estruturas usuais em concreto armado a altura da capa ($h_f$) esse pode variar de 4 a 7 cm.
@@ -246,7 +350,7 @@ b) Lajes bidirecionais (em grelha):
 :widths: 90 10
 
 * - $\displaystyle h = 4\%\cdot\frac{l_y+l_x}{2}$
-  - (9)
+  - (11)
 ```
 
 ```{list-table}
@@ -254,7 +358,7 @@ b) Lajes bidirecionais (em grelha):
 :widths: 90 10
 
 * - $\displaystyle b_w = \frac{1}{4}h \text{ a } \frac{1}{3}h$
-  - (10)
+  - (12)
 ```
 
 Segundo [Rebello [2]](#ref-2), o espaçamento $a$ entre nervuras dessas lajes bidirecionais varia de $1{,}5\,h$ a $2{,}0\,h$.
@@ -279,6 +383,30 @@ Com tubulações embutidas de diâmetro até 10 mm, o mínimo absoluto da mesa �
 
 A escolha final deve satisfazer simultaneamente as condições aplicáveis. Por exemplo, uma estimativa de 7 cm para uma laje de piso sem balanço precisa ser elevada a pelo menos 8 cm, e ainda depende das verificações de resistência e de serviço. Os valores práticos atribuídos a Rebello não dispensam essas verificações.
 
+### Espessura total e altura útil
+
+```{figure} ../_static/aulas/introducao-lajes/secao-trans-laje.png
+:alt: Seção de laje maciça indicando espessura total, altura útil, cobrimento e posição da armadura
+:width: 70%
+:align: center
+
+Posição da armadura na seção. Figura do material do professor.
+```
+
+A altura útil $d$ é medida da face comprimida até o centro da armadura tracionada. Para uma camada junto à face oposta, vale a Equação (13):
+
+```{list-table}
+:class: eq-table
+:widths: 90 10
+
+* - $\displaystyle d=h-c-\frac{\phi}{2}$
+  - (13)
+```
+
+em que $c$ é o cobrimento e $\phi$ é o diâmetro da barra. Com $h=10\,\mathrm{cm}$, cobrimento adotado no exemplo de $2{,}5\,\mathrm{cm}$ e barra de $8\,\mathrm{mm}$, obtém-se $d=10-2{,}5-0{,}8/2=7{,}1\,\mathrm{cm}$. O cobrimento deste exemplo é um dado, cuja escolha no projeto depende das condições de exposição e execução.
+
+Em uma laje bidirecional, as barras se cruzam em alturas diferentes. Por isso, as duas direções podem apresentar alturas úteis distintas, mesmo com uma única espessura de laje.
+
 ### Coeficiente adicional de segurança para lajes em balanço
 
 Além dos critérios de pré-dimensionamento apresentados, as lajes em balanço estão sujeitas a um coeficiente adicional de segurança $\gamma_n$, prescrito pela [ABNT NBR 6118 [1]](#ref-1) em função da altura da laje, conforme o [Quadro 1](#quadro1).
@@ -291,19 +419,33 @@ Além dos critérios de pré-dimensionamento apresentados, as lajes em balanço 
 | $\gamma_n$ | 1,00 | 1,05 | 1,10 | 1,15 | 1,20 | 1,25 | 1,30 | 1,35 | 1,40 | 1,45 |
 
 
-O [Quadro 1](#quadro1) pode ser expresso pela Equação (11), em que $h$ é a altura da laje em centímetros:
+O [Quadro 1](#quadro1) pode ser expresso pela Equação (14), em que $h$ é a altura da laje em centímetros:
 
 ```{list-table}
 :class: eq-table
 :widths: 90 10
 
 * - $\displaystyle \gamma_n = 1{,}95 - 0{,}05\,h$
-  - (11)
+  - (14)
 ```
 
 O coeficiente $\gamma_n$ deve majorar os esforços solicitantes finais de cálculo nas lajes em balanço, quando de seu dimensionamento.
 
-A Equação (11) aplica-se ao intervalo $10\leq h<19\text{ cm}$; para $h\geq19\text{ cm}$, adota-se $\gamma_n=1{,}00$, conforme o quadro.
+A Equação (14) aplica-se ao intervalo $10\leq h<19\text{ cm}$; para $h\geq19\text{ cm}$, adota-se $\gamma_n=1{,}00$, conforme o quadro.
+
+### Atividade: preparar o painel para a análise
+
+Considere uma laje de piso maciça, com quatro bordos apoiados em vigas de $20\,\mathrm{cm}$, dimensões entre eixos de $4{,}20\times5{,}40\,\mathrm{m}$ e espessura inicial de $12\,\mathrm{cm}$. Há continuidade monolítica com um painel semelhante ao longo de um dos bordos de maior comprimento; os demais bordos são externos e serão idealizados como simplesmente apoiados.
+
+1. Desenhe os vínculos e indique a hipótese adotada para o bordo interno.
+2. Calcule os dois vãos efetivos e a relação $\lambda$.
+3. Escolha a aproximação de uma ou duas direções.
+4. Estime a espessura e compare-a com o mínimo de piso da NBR 6118.
+5. Registre quais verificações ainda faltam para confirmar a espessura.
+
+**Conferência:** com $a_i=3{,}6\,\mathrm{cm}$, os vãos são $4{,}072\,\mathrm{m}$ e $5{,}272\,\mathrm{m}$; $\lambda\approx1{,}295$ e $h_{est}\approx9{,}34\,\mathrm{cm}$. O painel será estudado em duas direções. A espessura de $12\,\mathrm{cm}$ permanece como hipótese inicial até as verificações posteriores.
+
+Para cada laje do trabalho, entregue uma linha com identificação, tipo, vãos, vínculos, relação $\lambda$ e espessura adotada, acompanhada de um croqui. Esses dados serão a entrada do cálculo dos esforços da [Aula 05](005-esforcos-lajes.md).
 
 ## Pré-dimensionamento de pilares
 
@@ -315,8 +457,8 @@ A Equação (11) aplica-se ao intervalo $10\leq h<19\text{ cm}$; para $h\geq19\t
 - $0{,}50\cdot l$: pilar de extremidade ou de canto, na direção da maior dimensão do pilar ($h$);
 - $0{,}55\cdot l$: complemento dos casos anteriores (demais faixas, incluindo pilares intermediários).
 
-(figura2)=
-**Figura 2.** Planta de estimativa da área de influência de um pilar de concreto armado.
+(figura4)=
+**Figura 4.** Planta de estimativa da área de influência de um pilar de concreto armado.
 ```{figure} ../_static/aulas/pre-dimensionamento/planta-carga-pilar.png
 :alt: planta de cargas
 :width: 75%
@@ -325,14 +467,14 @@ A Equação (11) aplica-se ao intervalo $10\leq h<19\text{ cm}$; para $h\geq19\t
 
 ### Carga estimada e seção transversal do pilar
 
-Após a determinação da área de influência e do carregamento estimado no pavimento, a seção transversal do pilar pode ser obtida pela Equação (12):
+Após a determinação da área de influência e do carregamento estimado no pavimento, a seção transversal do pilar pode ser obtida pela Equação (15):
 
 ```{list-table}
 :class: eq-table
 :widths: 90 10
 
 * - $\displaystyle A_c = \frac{N_d^{*}}{0{,}85\,f_{cd} + \rho\,\sigma_{s,\varepsilon=0,2\%}}$
-  - (12)
+  - (15)
 ```
 
 em que:
@@ -341,16 +483,16 @@ em que:
 - $N_d^{*}$ é a força normal de cálculo para pré-dimensionamento, em $\mathrm{kN}$;
 - $f_{cd} = f_{ck}/1{,}40$ é a resistência à compressão de cálculo do concreto, em $\mathrm{kN/cm^2}$;
 - $\sigma_{s,\varepsilon=0,2\%}$ é a tensão no aço correspondente a uma deformação de $0{,}20\%$, que para o aço CA-50 vale $420\ \mathrm{MPa}$;
-- $\rho$ é a taxa de armadura do pilar; da [Costa [4]](#ref-4) recomenda, como valor intermediário, $\rho = 2\%$ (inserido na Equação (12) como $\rho = 2/100$, e não em taxa percentual).
+- $\rho$ é a taxa de armadura do pilar; da [Costa [4]](#ref-4) recomenda, como valor intermediário, $\rho = 2\%$ (inserido na Equação (15) como $\rho = 2/100$, e não em taxa percentual).
 
-Para determinar a carga atuante de pré-dimensionamento, utilizam-se as Equações (13) a (16):
+Para determinar a carga atuante de pré-dimensionamento, utilizam-se as Equações (16) a (19):
 
 ```{list-table}
 :class: eq-table
 :widths: 90 10
 
 * - $\displaystyle N_k^{*} = Q_{tot}\cdot A_i$
-  - (13)
+  - (16)
 ```
 
 ```{list-table}
@@ -358,7 +500,7 @@ Para determinar a carga atuante de pré-dimensionamento, utilizam-se as Equaçõ
 :widths: 90 10
 
 * - $\displaystyle N_k^{*} = n_{tipo}\cdot N_k^{tipo} + n_{cob}\cdot N_k^{cob}$
-  - (14)
+  - (17)
 ```
 
 ```{list-table}
@@ -366,7 +508,7 @@ Para determinar a carga atuante de pré-dimensionamento, utilizam-se as Equaçõ
 :widths: 90 10
 
 * - $\displaystyle N_d^{*} = \alpha\cdot N_k^{*}$
-  - (15)
+  - (18)
 ```
 
 ```{list-table}
@@ -374,7 +516,7 @@ Para determinar a carga atuante de pré-dimensionamento, utilizam-se as Equaçõ
 :widths: 90 10
 
 * - $\displaystyle \alpha = \begin{cases} 1{,}8, & \text{pilares intermediários} \\ 2{,}2, & \text{pilares de extremidade} \\ 2{,}5, & \text{pilares de canto} \end{cases}$
-  - (16)
+  - (19)
 ```
 
 em que $N_k^{*}$ é a carga característica para pré-dimensionamento; $Q_{tot}$ é a carga total no pavimento; $A_i$ é a área de influência do pilar $i$ analisado; $N_k^{tipo}$ é a carga em um pilar do pavimento tipo; $n_{tipo}$ é o número de pavimentos tipo acima do nível calculado; $N_k^{cob}$ é a carga em um pilar do pavimento de cobertura; $n_{cob}$ é o número de pavimentos de cobertura acima do nível calculado; e $\alpha$ é um coeficiente de majoração da carga de pré-dimensionamento, que leva em conta os esforços de flexão não considerados nessa etapa.
@@ -392,19 +534,19 @@ Além dos critérios de pré-dimensionamento apresentados, os pilares com menor 
 | --- | --- | --- | --- | --- | --- | --- |
 | $\gamma_n$ | 1,00 | 1,05 | 1,10 | 1,15 | 1,20 | 1,25 |
 
-O [Quadro 2](#quadro2) pode ser expresso pela Equação (17), em que $b$ é a menor dimensão da seção do pilar em centímetros:
+O [Quadro 2](#quadro2) pode ser expresso pela Equação (20), em que $b$ é a menor dimensão da seção do pilar em centímetros:
 
 ```{list-table}
 :class: eq-table
 :widths: 90 10
 
 * - $\displaystyle \gamma_n = 1{,}95 - 0{,}05\,b$
-  - (17)
+  - (20)
 ```
 
 O coeficiente $\gamma_n$ deve majorar os esforços solicitantes finais de cálculo nos pilares, quando de seu dimensionamento.
 
-A Equação (17) aplica-se a $14\leq b<19\text{ cm}$; para $b\geq19\text{ cm}$, adota-se $\gamma_n=1{,}00$. Sua extrapolação não autoriza seções com dimensão inferior a 14 cm.
+A Equação (20) aplica-se a $14\leq b<19\text{ cm}$; para $b\geq19\text{ cm}$, adota-se $\gamma_n=1{,}00$. Sua extrapolação não autoriza seções com dimensão inferior a 14 cm.
 
 ## Síntese
 
@@ -414,10 +556,10 @@ A Equação (17) aplica-se a $14\leq b<19\text{ cm}$; para $b\geq19\text{ cm}$, 
 Antes dos cálculos, definir o sistema estrutural, acompanhar o caminho das cargas até as fundações e compatibilizar lajes, vigas e pilares com os pavimentos e as instalações. Com esse arranjo inicial:
 
 1. Verificar, para vigas sem travamento lateral por lajes, a largura mínima dada pelas Equações (1) e (2).
-2. Estimar a altura das lajes maciças ou nervuradas com base nos vãos $l_x$ e $l_y$ do painel e conferir as dimensões mínimas aplicáveis.
+2. Determinar os vãos efetivos $l_x$ e $l_y$ pela Equação (3), classificar o painel pela relação $\lambda$ (Equação 4), estimar a altura das lajes maciças ou nervuradas e conferir as dimensões mínimas aplicáveis.
 3. Majorar os esforços de lajes em balanço pelo coeficiente $\gamma_n$, conforme o [Quadro 1](#quadro1).
 4. Definir a área de influência de cada pilar a partir das faixas de Bacarji.
-5. Estimar a carga característica e de cálculo do pilar e obter a área da seção transversal pela Equação (12).
+5. Estimar a carga característica e de cálculo do pilar e obter a área da seção transversal pela Equação (15).
 6. Conferir a área e a menor dimensão da seção do pilar; nos casos especiais entre 14 e 19 cm, majorar os esforços pelo coeficiente $\gamma_n$ do [Quadro 2](#quadro2).
 
 Após a análise estrutural, revisar as dimensões e o lançamento conforme os esforços, os deslocamentos e a estabilidade do conjunto.
@@ -426,7 +568,7 @@ Após a análise estrutural, revisar as dimensões e o lançamento conforme os e
 ## Referências
 
 (ref-1)=
-**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto de estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023. Itens 13.2.2 a 13.2.4 e 15.10.
+**[1]** ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. **ABNT NBR 6118**: Projeto de estruturas de concreto. 4. ed. Rio de Janeiro: ABNT, 2023. Itens 13.2.2 a 13.2.4, 14.6.2.4 e 15.10.
 
 (ref-2)=
 **[2]** REBELLO, Yopanan Conrado Pereira. **Bases para projeto estrutural na arquitetura**. 2. ed. São Paulo: Zigurate Editora, 2007.

@@ -2,9 +2,8 @@
 
 ### Geometria e hipóteses da solução
 
-Referências: [Aula 02](../aulas/002-lanc-pre-dim.md),
-[Aula 03](../aulas/003-carregamentos.md) e
-[Aula 05](../aulas/005-introducao-lajes.md).
+Referências: [Aula 02](../aulas/002-lanc-pre-dim.md) e
+[Aula 03](../aulas/003-carregamentos.md).
 
 As cotas da {ref}`Figura 1 do enunciado <fig-1>` estão em
 **centímetros**. Adotam-se lajes maciças, vigas com largura de **15 cm** e a
@@ -39,7 +38,7 @@ Usando inicialmente as distâncias entre eixos:
 | L4 | 11,05 | 12 |
 
 Padroniza-se inicialmente $h=12\text{ cm}$ nos pisos e na cobertura. A
-escolha atende aos mínimos geométricos apresentados na Aula 05 para lajes
+escolha atende aos mínimos geométricos apresentados na Aula 02 para lajes
 sem balanço. A aprovação da espessura depende das verificações posteriores.
 
 ### Vãos efetivos

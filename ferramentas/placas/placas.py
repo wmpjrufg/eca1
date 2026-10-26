@@ -260,7 +260,7 @@ def _negativo_borda(solucao, borda):
 def extrair_coeficientes(solucao):
     """Momentos/flecha extremos e volventes assinados nos quatro vértices.
 
-    A conversão em momentos de armadura fica para o cálculo manual da aula 06.
+    A conversão em momentos de armadura fica para o cálculo manual da aula 05.
     """
     coef, pontos = {}, []
     for nome, coluna, fator in (("mx", "mu_x", 100), ("my", "mu_y", 100),
@@ -652,7 +652,7 @@ def _metadados(item):
         "normalizacao_momentos": "m = mu * p * lx^2 / 100; mu_neg é módulo no engaste",
         "normalizacao_flecha": "w_max = alpha_w * p * lx^4 / (100 * E * h^3)",
         "normalizacao_volventes": "mxy_canto = mu_xy*p*lx^2/100; momento por unidade de largura",
-        "uso_volventes": "momentos locais assinados; conversao Wood-Armer e uniformizacao realizadas manualmente na aula 06",
+        "uso_volventes": "momentos locais assinados; conversao Wood-Armer e uniformizacao realizadas manualmente na aula 05",
         "normalizacao_reacoes": "r_media = k*p*lx/10; R e c normalizados por p*lx^2",
         "sinal_reacoes": "positivo para cima sobre a placa; cantos negativos impedem levantamento",
         "equilibrio": "sum(R_bordas)+sum(C_cantos)=p*lx*ly; sem reescala artificial",

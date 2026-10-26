@@ -1,7 +1,7 @@
 ## Entrega 5: Detalhamento das lajes e consolidação
 
-Referências: [Aula 10](../aulas/010-detalhamento-lajes.md) e
-[Aula 09](../aulas/009-detalhamento-secoes.md).
+Referências: [Aula 09](../aulas/009-detalhamento-lajes.md) e
+[Aula 08](../aulas/008-detalhamento-secoes.md).
 
 ### Transferir o dimensionamento para as plantas
 
@@ -23,7 +23,7 @@ a posição das camadas.
 ### Ancoragem e comprimentos
 
 Calcule a resistência de aderência e o comprimento básico pela sequência
-da Aula 09:
+da Aula 08:
 
 $$
 f_{bd}=\eta_1\eta_2\eta_3f_{ctd},
@@ -37,7 +37,7 @@ Não suponha que metade da largura de uma viga de 15 cm já forneça a
 ancoragem necessária.
 
 Defina a extensão das barras pelas regiões de momento e pelas regras de
-detalhamento da Aula 10. As barras positivas precisam de ancoragem nos
+detalhamento da Aula 09. As barras positivas precisam de ancoragem nos
 apoios; as negativas sobre V2 e V5 precisam cobrir os trechos necessários
 em ambas as lajes. Ganchos, emendas, decalagem e interferências devem ser
 representados quando aplicáveis, com comprimentos identificáveis no desenho.

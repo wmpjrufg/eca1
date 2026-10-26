@@ -1,6 +1,6 @@
-# Aula 08: Dimensionamento de seções retangulares com armadura simples
+# Aula 07: Dimensionamento de seções retangulares com armadura simples
 
-Na [Aula 07](007-verificacoes-preliminares-lajes.md), a armadura mínima permitiu avaliar preliminarmente as lajes. Agora vamos determinar a armadura longitudinal necessária para resistir ao momento fletor de cálculo. O mesmo equilíbrio de uma seção retangular serve para uma viga e para uma faixa de laje, desde que a largura e as unidades sejam coerentes.
+Na [Aula 06](006-verificacoes-preliminares-lajes.md), a armadura mínima permitiu avaliar preliminarmente as lajes. Agora vamos determinar a armadura longitudinal necessária para resistir ao momento fletor de cálculo. O mesmo equilíbrio de uma seção retangular serve para uma viga e para uma faixa de laje, desde que a largura e as unidades sejam coerentes.
 
 Esta aula sintetiza o capítulo 4, *Dimensionamento de seções retangulares com armadura simples*, do material fornecido pelo professor. A dedução concentra-se nas equações gerais. Os limites entre domínios, as expressões de verificação e as disposições construtivas aparecem em sua forma final. As referências normativas correspondem à NBR 6118:2023, versão corrigida de 2024, adotada no capítulo.
 
@@ -301,7 +301,7 @@ A_{s,min}=\max\left[A_s(M_{d,min});\,0{,}0015b_wh\right],
 A_{s,nec}=\max(A_s;A_{s,min}).
 $$
 
-Como alternativa, a Tabela 17.3 da edição adotada fornece taxas para CA-50, com as hipóteses de cálculo indicadas no capítulo. Para outras hipóteses, utiliza-se o procedimento do momento mínimo. Em lajes, aplicam-se os mínimos específicos de cada direção e região da Tabela 19.1, retomados na Aula 07.
+Como alternativa, a Tabela 17.3 da edição adotada fornece taxas para CA-50, com as hipóteses de cálculo indicadas no capítulo. Para outras hipóteses, utiliza-se o procedimento do momento mínimo. Em lajes, aplicam-se os mínimos específicos de cada direção e região da Tabela 19.1, retomados na Aula 06.
 
 A seleção das barras começa pelas expressões finais
 
@@ -425,7 +425,7 @@ $$
 
 Adotando **$\phi8$ a cada $17\text{ cm}$**, obtêm-se $2{,}96\text{ cm}^2/\text{m}$. O espaçamento também é inferior a $\min(2h;20\text{ cm})=20\text{ cm}$ e a bitola é inferior a $h/8=20\text{ mm}$. A outra direção deve ser calculada com seu momento e sua própria altura útil.
 
-Após selecionar as armaduras, refazem-se as verificações de serviço da Aula 07 com a área efetiva. O dimensionamento no ELU, isoladamente, não verifica a flecha.
+Após selecionar as armaduras, refazem-se as verificações de serviço da Aula 06 com a área efetiva. O dimensionamento no ELU, isoladamente, não verifica a flecha.
 
 ## Exemplo 3: seção no domínio 3 que excede a ductilidade
 

@@ -16,7 +16,7 @@
   "normalizacao_momentos": "m = mu * p * lx^2 / 100; mu_neg é módulo no engaste",
   "normalizacao_flecha": "w_max = alpha_w * p * lx^4 / (100 * E * h^3)",
   "normalizacao_volventes": "mxy_canto = mu_xy*p*lx^2/100; momento por unidade de largura",
-  "uso_volventes": "momentos locais assinados; conversao Wood-Armer e uniformizacao realizadas manualmente na aula 06",
+  "uso_volventes": "momentos locais assinados; conversao Wood-Armer e uniformizacao realizadas manualmente na aula 05",
   "normalizacao_reacoes": "r_media = k*p*lx/10; R e c normalizados por p*lx^2",
   "sinal_reacoes": "positivo para cima sobre a placa; cantos negativos impedem levantamento",
   "equilibrio": "sum(R_bordas)+sum(C_cantos)=p*lx*ly; sem reescala artificial",

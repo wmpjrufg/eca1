@@ -130,7 +130,7 @@ A **Entrega 1** contempla as etapas de pré-dimensionamento dos elementos estrut
 
 Com as cargas definidas, o próximo passo é obter os esforços que cada laje
 precisa resistir e conduzir as ações das lajes até as vigas. Os critérios
-constam na [Aula 06: Esforços em lajes](../aulas/006-esforcos-lajes.md) e, para o
+constam na [Aula 05: Esforços em lajes](../aulas/005-esforcos-lajes.md) e, para o
 caminho das cargas, na [Aula 03: Ações na estrutura](../aulas/003-carregamentos.md). Os modelos de
 viga e de rigidez dos pilares usados para obter os esforços das vigas constam na
 [Aula 04: Modelos estruturais](../aulas/004-modelos-estruturais.md).
@@ -331,7 +331,7 @@ A etapa final transforma o dimensionamento em desenhos executivos. As
 armaduras definidas na Entrega 4 são posicionadas e numeradas, e seus comprimentos
 são definidos considerando ancoragem e decalagem (itens 9.4 e 18.3 da
 [ABNT NBR 6118 [1]](#ref-1)), e os quantitativos de materiais são levantados. Os critérios de detalhamento das barras positivas, negativas, de borda e de canto, e a
-montagem da tabela de aço, constam na [Aula 10: Detalhamento de lajes maciças](../aulas/010-detalhamento-lajes.md).
+montagem da tabela de aço, constam na [Aula 09: Detalhamento de lajes maciças](../aulas/009-detalhamento-lajes.md).
 
 ```{admonition} Entrega 5: Detalhamento das lajes e pranchas finais
 :class: destaque-verde
