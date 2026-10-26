@@ -5,7 +5,7 @@
 
 - Reconhecer os sistemas de laje e os tipos de seção transversal.
 - Representar os apoios e determinar os vãos efetivos de cada painel.
-- Identificar a direção resistente e estimar a espessura da laje.
+- Estimar a espessura da laje.
 - Preparar os dados para o cálculo dos esforços da [Aula 06](006-esforcos-lajes.md).
 ```
 
@@ -21,17 +21,17 @@
 
 ## Vão livre, distância entre eixos e vão efetivo
 
-As cotas da arquitetura ou da planta de fôrma podem estar entre eixos, enquanto o cálculo utiliza o conceito de **vão efetivo**. Para cada direção do painel, identifique primeiro a distância livre entre as faces dos apoios. A [Figura 1](#fig-1) apresenta o modelo de idealização do vão efeitvo de uma laje que é semelehante ao de uma viga. O procedimento está conforme o item item 14.6.2.4 da [ABNT NBR 6118 [1]](#ref-1).
+O dimensionamento estrutural inicia-se pela determinação do **vão efetivo**. Para cada direção do painel, identifique primeiro a distância livre entre as faces dos apoios. A [Figura 2](#fig-2) apresenta a idealização do vão efetivo de uma laje, análoga à de uma viga. O procedimento segue o item 14.6.2.4 da [ABNT NBR 6118 [1]](#ref-1).
 
-(fig-1)=
-**Figura 1.** Geometria para determinação do vão efetivo.
+(fig-2)=
+**Figura 2.** Geometria para determinação do vão efetivo.
 ```{figure} ../_static/aulas/introducao-lajes/vao-efetivo.png
 :alt: Vão livre de uma laje e parcelas de apoio utilizadas para obter seu vão efetivo
 :width: 70%
 :align: center
 ```
 
-A Equação (1) apresenta a metodologia de obtenção do vão efetivo:
+A Equação (1) apresenta o cálculo do vão efetivo:
 
 ```{list-table}
 :class: eq-table
@@ -41,44 +41,56 @@ A Equação (1) apresenta a metodologia de obtenção do vão efetivo:
   - (1)
 ```
 
-$l_0$ é o vão livre, $t_i$ é a largura de cada apoio medida na direção estudada e $h$ é a espessura da laje. Todas as dimensões devem estar na mesma unidade. O procedimento é repetido na outra direção.
+$l_0$ é o vão livre, medido entre as faces dos apoios; $t_i$ é a largura do apoio $i$, medida na direção estudada; e $h$ é a espessura da laje. Calcula-se uma parcela $a_i$ para cada extremidade do vão, usando a largura do respectivo apoio. Todas as dimensões devem estar na mesma unidade.
 
 ```{admonition} Exemplo 1
 :class: destaque-verde
 
-Considere um painel com distâncias entre eixos de $4{,}00\times5{,}00\,\mathrm{m}$, vigas de $20\,\mathrm{cm}$ em todo o contorno e espessura inicial de $10\,\mathrm{cm}$.
+Considere um painel com distâncias entre eixos de $4{,}00\times5{,}00\,\mathrm{m}$, vigas de $20\,\mathrm{cm}$ em todo o contorno e espessura inicial de $10\,\mathrm{cm}$. Como as vigas têm a mesma largura nos dois lados de cada direção, o vão livre é a distância entre eixos menos $20\,\mathrm{cm}$:
+
+$$
+l_{0x}=4{,}00-0{,}20=3{,}80\,\mathrm{m},
+\qquad
+l_{0y}=5{,}00-0{,}20=4{,}80\,\mathrm{m}.
+$$
+
+Em cada apoio, $t_i=0{,}20\,\mathrm{m}$; portanto, metade da largura do apoio é $t_i/2=0{,}10\,\mathrm{m}$. O outro valor do mínimo vem da espessura da laje: $0{,}3h=0{,}3\times0{,}10=0{,}03\,\mathrm{m}$. Logo, em cada extremidade:
+
+$$
+a_i=\min\left(\frac{0{,}20}{2};\,0{,}3\times0{,}10\right)
+=\min(0{,}10;\,0{,}03)=0{,}03\,\mathrm{m}.
+$$
+
+Somando ao vão livre as parcelas dos dois apoios:
+
+$$
+l_x=l_{0x}+2a_i=3{,}80+2(0{,}03)=3{,}86\,\mathrm{m},
+$$
+
+$$
+l_y=l_{0y}+2a_i=4{,}80+2(0{,}03)=4{,}86\,\mathrm{m}.
+$$
+
+Neste exemplo, $l_x$ é o menor vão efetivo e $l_y$, o maior. Se a espessura adotada mudar, as parcelas $a_i$ devem ser recalculadas.
 ```
 
-Em cada apoio, $a_i=\min(0{,}10;0{,}03)=0{,}03\,\mathrm{m}$. Assim:
+## Uma ou duas direções principais?
 
-$$
-l_x=(4{,}00-0{,}10-0{,}10)+2(0{,}03)=3{,}86\,\mathrm{m},
-$$
+Para um painel retangular apoiado nos quatro lados, a relação entre os vãos ajuda a escolher a aproximação de cálculo, conforme a Equação (2):
 
-$$
-l_y=(5{,}00-0{,}10-0{,}10)+2(0{,}03)=4{,}86\,\mathrm{m}.
-$$
+```{list-table}
+:class: eq-table
+:widths: 90 10
 
-Neste exemplo, $l_x$ identifica o menor vão efetivo e $l_y$, o maior. Se a espessura adotada mudar, as parcelas $a_i$ devem ser revistas.
+* - $\displaystyle \lambda=\frac{l_y}{l_x},\qquad l_x\leq l_y$
+  - (2)
+```
 
-## Uma ou duas direções resistentes?
-
-Para um painel retangular apoiado nos quatro lados, a relação entre os vãos ajuda a escolher a aproximação de cálculo:
-
-$$
-\lambda=\frac{l_y}{l_x},\qquad l_x\leq l_y.
-$$
-
-| Relação entre os vãos | Aproximação usual |
-|---|---|
-| $\lambda\leq2$ | Comportamento bidirecional: determinar os momentos nas duas direções. |
-| $\lambda>2$ | Comportamento predominantemente unidirecional: analisar faixas na direção do menor vão. |
+Se $\lambda\leq2$, a laje tem comportamento bidirecional, e os momentos devem ser determinados nas duas direções. Se $\lambda>2$, o comportamento é predominantemente unidirecional, e a análise é feita em faixas na direção do menor vão.
 
 No painel do exemplo, $\lambda=4{,}86/3{,}86\approx1{,}26$, conduzindo ao estudo em duas direções.
 
 Os apoios precisam ser verificados antes dessa classificação. Um painel sustentado apenas em dois lados opostos vence o vão entre esses apoios, mesmo que sua planta seja quadrada. Um balanço também depende da posição da ligação resistente e da borda livre.
-
-**Laje armada em uma direção também possui barras na direção transversal.** A expressão identifica a direção do cálculo principal da flexão; a armadura transversal tem funções de distribuição e deve atender aos critérios de dimensionamento e detalhamento.
 
 ## Estimativa inicial da espessura
 
