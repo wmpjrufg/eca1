@@ -1,47 +1,51 @@
-# Gabarito do professor: Aula 09 (detalhamento de seções retangulares)
+# Gabarito do professor: Aula 10 (detalhamento de lajes maciças)
 
 Material **somente do professor**. Fica fora de `source/` e não é publicado.
 
-## Notas sobre os slides da aula 35
+## Pontos a conferir
 
-1. Os cálculos manuscritos dos slides estão gravados como tinta digital (InkML) e não aparecem na conversão para Markdown nem no LibreOffice. Para lê-los, foi preciso substituir a tinta pela imagem de reserva de cada traço.
-2. Slide 4: o número de barras por camada foi calculado com $a_h=4$ cm (circulado em vermelho), enquanto o mínimo normativo é $3{,}0$ cm. A aula explica a escolha como folga para o vibrador e mostra que, com $3{,}0$ cm, o resultado também é 4 barras ($4{,}9$).
-3. Slide 5: $y_1=3+0{,}63+1{,}3/2=4{,}28$ cm arredonda $\phi$ para $1{,}3$ cm; o valor exato é $4{,}26$ cm. A aula mantém $4{,}28$ para coincidir com os slides.
-4. Slide 6: a distância entre eixos de camadas foi tomada como $3{,}5$ cm (anotado como "$a_v=3{,}5$ cm"). O mínimo seria $\phi+a_v=1{,}25+2{,}0=3{,}25$ cm; $3{,}5$ é um arredondamento a favor da execução. No mesmo slide, "$4\phi16=A_s=4\cdot1{,}227$" deve ser $4\phi12{,}5$.
-5. Slide 9: $2{,}25/0{,}32=7{,}03\approx7$ barras de pele. Com $A_\phi=0{,}312$ cm², são $7{,}2$, logo 8 barras de $\phi6{,}3$ por face (7 barras dão $2{,}18$ cm², 3% abaixo). A aula adota 8.
-6. Slides 10 e 11: a pele foi concentrada entre a armadura tracionada e a linha neutra. A aula mantém essa leitura e comenta que, em viga contínua, é comum distribuí-la em toda a altura.
-7. $x=35{,}83$ cm corresponde a $\xi=x/d=0{,}448$, praticamente no limite de ductilidade $0{,}45$ usado na Aula 08. Vale comentar com a turma.
+1. **Armadura negativa de borda.** As fotos (Carvalho e Figueiredo Filho, item 7.4.11.6) dizem que a recomendação não foi mantida na versão final da NBR 6118:2023. A aula adota $\rho_s\geq0{,}67\rho_{min}$ (valor da Tabela 19.1 da edição de 2014) e extensão de $0{,}15\,l_x$ a partir da face do apoio, que é a prática usual que conheço, mas **não está nas fotos**. Confirme ou troque o critério no quadro vermelho da aula (por exemplo, $0{,}25\,l_x$, mais conservador).
+2. **Fórmula de $a_1$.** O texto da apostila da EESC-USP diz "com $a_1$ igual ao menor valor entre", mas a expressão traz "$\geq$" e "em geral, maior valor". A aula usa o maior dos dois valores, coerente com o diagrama (a barra precisa cobrir a base do trapézio mais $10\phi$ e ter $\ell_b$ além do ponto de tensão máxima).
+3. **Barras inferiores alternadas** ($0{,}85l$ e $0{,}70l$): transcritas da Figura 8 da apostila; a aula as apresenta só como opção.
+4. **Malha de canto inferior.** Na Figura 9 da apostila, a malha que substitui a armadura inferior de canto está indicada como "$2a_{sc}$". A aula descreve a substituição sem fixar esse valor; no exemplo, a malha positiva atende mesmo na interpretação mais exigente.
+5. **Momentos do exemplo.** São dados do enunciado (ordem de grandeza obtida com $p_d\approx9{,}1\ \text{kN/m}^2$ e coeficientes de tabela como na Aula 06), não um resultado a conferir.
+6. As áreas de aço usam o procedimento simplificado da Aula 08 ($\varphi_{adot}=\min(\varphi;0{,}931)$). Se a outra versão da Aula 08 mudar esse procedimento, as áreas do exemplo mudam um pouco (menos de $5\%$), sem alterar as bitolas adotadas.
 
-## Exercício 1: outras bitolas ($A_{s,nec}=19{,}51$ cm², $b_{disp}=17{,}74$ cm, $a_h=3{,}0$, $a_v=2{,}0$)
+## Exercício 1: completar o exemplo
 
-| Bitola | $n$ | $A_{s,ef}$ (cm²) | Barras por camada | Camadas | $y_{cg}$ (cm) | $d_{real}$ (cm) | $a=y_{cg}-y_1$ (cm) |
-|---|---:|---:|---:|---|---:|---:|---:|
-| $\phi12{,}5$ (slides) | 16 | 19,63 | 4 ($4{,}88$) | 4+4+4+4 | 9,53 | 80,47 | 5,25 |
-| $\phi16$ | 10 | 20,11 | 4 ($4{,}51$) | 4+4+2 | 7,31 | 82,69 | 2,88 |
-| $\phi20$ | 7 | 21,99 | 4 ($4{,}15$) | 4+3 | 6,34 | 83,66 | 1,71 |
+**Negativas de borda.** $A_s\geq0{,}67\cdot0{,}150\%\cdot100\cdot12=1{,}21\ \text{cm}^2/\text{m}$: $\phi6{,}3$ c/20 ($1{,}56$).
 
-Posições: $\phi16$: $y=4{,}43$; $8{,}03$; $11{,}63$ cm (eixos a $3{,}6$ cm). $\phi20$: $y=4{,}63$; $8{,}63$ cm (eixos a $4{,}0$ cm). Todos atendem ao critério de $0{,}10h=9{,}0$ cm.
+| Borda | Laje | Extensão $0{,}15l_x$ | Reto ($11{,}5+$ext., arred.) | $C$ com ganchos de 7 cm | Distribuição | Quantidade |
+|---|---|---:|---:|---:|---|---:|
+| V1 | L1 | 60 | 75 | 89 | 486 cm | 25 |
+| V4 e V5 | L1 | 60 | 75 | 89 | 386 cm (cada) | 20 + 20 |
+| V3 | L2 | 54 | 70 | 84 | 486 cm | 25 |
+| V4 e V5 | L2 | 54 | 70 | 84 | 346 cm (cada) | 18 + 18 |
 
-Discussão: $\phi20$ tem menos barras e o maior $d$, mas $13\%$ de área em excesso, espaço livre de só $3{,}25$ cm na camada de 4 (sem folga para vibrador) e ancoragem $60\%$ maior que a de $\phi12{,}5$. $\phi16$ é um bom compromisso: 3 camadas, $3\%$ de excesso, espaço livre de $3{,}78$ cm.
+Comprimento total: L1, $65\cdot0{,}89=57{,}85$ m; L2, $61\cdot0{,}84=51{,}24$ m; soma $109{,}1$ m de $\phi6{,}3$.
 
-## Exercício 2: seção de vão ($A_{s,nec}=11{,}0$ cm², $\phi16$)
+**Cantos.** Os quatro cantos externos (V1-V4, V1-V5, V3-V4, V3-V5) têm duas bordas simplesmente apoiadas.
 
-$n=6$ ($12{,}06$ cm²); 4 barras na 1ª camada e 2 na 2ª (alinhadas com as barras de canto). $y_1=4{,}43$ cm; $y_2=8{,}03$ cm; $y_{cg}=(4\cdot4{,}43+2\cdot8{,}03)/6=5{,}63$ cm; $d_{real}=84{,}37$ cm $\geq80$ cm. $a=1{,}20$ cm $\leq9{,}0$ cm. Pele: igual ao exemplo, $2{,}25$ cm² por face (8 $\phi6{,}3$ ou 5 $\phi8$). Porta-estribos: 2 barras de $8$ a $10$ mm no topo (que, na região do apoio, serão complementadas pela armadura negativa).
+- L1: $a_{sc}\geq2{,}08/2=1{,}04\ \text{cm}^2/\text{m}$, região de $l_x/5=80$ cm.
+- L2: $a_{sc}\geq1{,}64/2=0{,}82\ \text{cm}^2/\text{m}$, região de $72$ cm ($75$ cm).
+- Superior: a malha das negativas de borda tem $1{,}56\ \text{cm}^2/\text{m}$ em cada direção (atende à área), mas só se estende $60$ cm (L1) e $54$ cm (L2), menos que $l_x/5$. Solução: nas faixas de $80$ cm (L1) e $75$ cm (L2) junto aos cantos, alongar as barras de borda para $11{,}5+80\to95$ cm retos ($C=109$ cm) em L1 e $11{,}5+72\to85$ cm ($C=99$ cm) em L2; são 4 barras por borda em cada canto. Acréscimo: L1, $2\cdot8\cdot0{,}20=3{,}2$ m; L2, $2\cdot8\cdot0{,}15=2{,}4$ m.
+- Inferior: a malha positiva (L1: $2{,}08$ e $1{,}56$; L2: $1{,}64$ e $1{,}56\ \text{cm}^2/\text{m}$) já atende, em cada direção, a $a_{sc}$ (e também a $2a_{sc}$ na soma), em toda a laje.
 
-## Exercício 3: viga $14\times50$ ($b_{disp}=14-2(3{,}0+0{,}5)=7{,}0$ cm; $a_h=\max(2;\phi;2{,}28)=2{,}28$ cm; $a_v=2{,}0$ cm)
+**Tabela atualizada.** $\phi6{,}3$: $460{,}85+109{,}1+5{,}6=575{,}5$ m, $141{,}0$ kg; $\phi8$: $28{,}4$ kg. Total $\approx169{,}4$ kg ($+28$ kg, cerca de $20\%$).
 
-| Bitola | $n$ | $A_{s,ef}$ | Por camada | Camadas | $y_{cg}$ | $d_{real}$ | $d_{real}\geq44$? |
-|---|---:|---:|---:|---|---:|---:|---|
-| $\phi10$ | 6 | 4,71 | 2 ($2{,}83$) | 2+2+2 | 7,00 | 43,00 | Não |
-| $\phi12{,}5$ | 4 | 4,91 | 2 ($2{,}63$) | 2+2 | 5,75 | 44,25 | Sim |
-| $\phi16$ | 3 | 6,03 | 2 ($2{,}39$) | 2+1 | 5,50 | 44,50 | Sim |
+## Exercício 2: laje armada em uma direção
 
-Com $\phi10$, $d_{real}<d$: recalcula-se $A_s$ com $d=43$ cm (aproximadamente $4{,}20\cdot44/43=4{,}30$ cm², ainda atendido pelas 6 barras, $4{,}71$ cm²); o arranjo continua válido, mas com três camadas em uma viga de $14$ cm. Melhor solução: $4\phi12{,}5$. $\phi16$ tem $44\%$ de excesso. Critério de concentração: $\phi10$: $a=3{,}0$ cm $\leq5{,}0$ cm, OK; os demais também.
+$\lambda=7{,}50/3{,}00=2{,}5>2$: **armada em uma direção**.
 
-## Exercício 4: ancoragem (C25, $\phi12{,}5$)
+| Opção | $d$ (cm) | $A_{s,calc}$ | $s_{max}$ pela área | Limite $\min(20;2h=20)$ | Adotado | $A_{s,ef}$ |
+|---|---:|---:|---:|---:|---|---:|
+| $\phi6{,}3$ | 7,19 | 2,06 | 15,1 | 20 | c/15 | 2,08 |
+| $\phi8$ | 7,10 | 2,09 | 24,1 | 20 | c/20 | 2,52 |
 
-$f_{ctd}=0{,}7\cdot0{,}3\cdot25^{2/3}/1{,}4=1{,}282$ MPa. Boa aderência: $f_{bd}=2{,}25\cdot1{,}282=2{,}886$ MPa, $\ell_b=(12{,}5/4)\cdot(434{,}8/2{,}886)=471$ mm. Má aderência: $f_{bd}=2{,}020$ MPa, $\ell_b=673$ mm.
+$A_{s,min}=0{,}150\%\cdot100\cdot10=1{,}50\ \text{cm}^2/\text{m}$ (principal de laje unidirecional): atendida. Melhor: $\phi6{,}3$ c/15 (menos aço).
 
-As barras superiores da viga de $90$ cm estão nos $30$ cm superiores: **má aderência**. As inferiores (mais de $30$ cm abaixo do topo): boa aderência.
+Distribuição: $\max(0{,}2\cdot2{,}08=0{,}42;\ 0{,}9;\ 0{,}5\cdot1{,}50=0{,}75)=0{,}90\ \text{cm}^2/\text{m}$: $\phi5{,}0$ c/20 ($0{,}98$) ou $\phi6{,}3$ c/33 ($0{,}94$); $s\leq33$ cm.
 
-$\ell_{b,nec}=0{,}7\cdot673\cdot19{,}51/19{,}63=468$ mm; $\ell_{b,min}=\max(0{,}3\cdot673=202;\ 125;\ 100)=202$ mm. Adota-se cerca de $47$ cm (arredondando, $50$ cm).
+Comprimentos e quantidades: principal $C=286+23=309\to305$ cm, $\lceil736/15\rceil=50$ barras; distribuição $C=736+23=759\to755$ cm, $\lceil286/20\rceil=15$ barras ($\phi5{,}0$ c/20) ou $\lceil286/33\rceil=9$ ($\phi6{,}3$ c/33).
+
+Item 4: o critério de $20\%$ da principal governa quando a principal passa de $4{,}5\ \text{cm}^2/\text{m}$; o de $0{,}5\rho_{min}$, quando $0{,}5\rho_{min}bh>0{,}9$ (lajes mais espessas, $h>12$ cm para $\rho_{min}=0{,}150\%$).

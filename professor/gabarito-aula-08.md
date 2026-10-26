@@ -1,77 +1,47 @@
-# Gabarito e notas do professor: Aula 08
+# Gabarito do professor: Aula 09 (detalhamento de seções retangulares)
 
-Material de uso do professor. Este arquivo fica fora de `source/` e não integra o site.
+Material **somente do professor**. Fica fora de `source/` e não é publicado.
 
-## Recorte didático do capítulo 4
+## Notas sobre os slides da aula 35
 
-A aula desenvolve a dedução de compatibilidade e equilíbrio até as expressões de $\xi$ e $A_s$. As fronteiras dos domínios, os limites de ductilidade, o método simplificado do domínio 2 e as verificações construtivas aparecem sem novas deduções. Foram omitidos o processo iterativo de redução da tensão no domínio 2, as extensas tabelas adimensionais, os furos e as aberturas em vigas, além dos exemplos repetidos do capítulo.
+1. Os cálculos manuscritos dos slides estão gravados como tinta digital (InkML) e não aparecem na conversão para Markdown nem no LibreOffice. Para lê-los, foi preciso substituir a tinta pela imagem de reserva de cada traço.
+2. Slide 4: o número de barras por camada foi calculado com $a_h=4$ cm (circulado em vermelho), enquanto o mínimo normativo é $3{,}0$ cm. A aula explica a escolha como folga para o vibrador e mostra que, com $3{,}0$ cm, o resultado também é 4 barras ($4{,}9$).
+3. Slide 5: $y_1=3+0{,}63+1{,}3/2=4{,}28$ cm arredonda $\phi$ para $1{,}3$ cm; o valor exato é $4{,}26$ cm. A aula mantém $4{,}28$ para coincidir com os slides.
+4. Slide 6: a distância entre eixos de camadas foi tomada como $3{,}5$ cm (anotado como "$a_v=3{,}5$ cm"). O mínimo seria $\phi+a_v=1{,}25+2{,}0=3{,}25$ cm; $3{,}5$ é um arredondamento a favor da execução. No mesmo slide, "$4\phi16=A_s=4\cdot1{,}227$" deve ser $4\phi12{,}5$.
+5. Slide 9: $2{,}25/0{,}32=7{,}03\approx7$ barras de pele. Com $A_\phi=0{,}312$ cm², são $7{,}2$, logo 8 barras de $\phi6{,}3$ por face (7 barras dão $2{,}18$ cm², 3% abaixo). A aula adota 8.
+6. Slides 10 e 11: a pele foi concentrada entre a armadura tracionada e a linha neutra. A aula mantém essa leitura e comenta que, em viga contínua, é comum distribuí-la em toda a altura.
+7. $x=35{,}83$ cm corresponde a $\xi=x/d=0{,}448$, praticamente no limite de ductilidade $0{,}45$ usado na Aula 08. Vale comentar com a turma.
 
-As equações da conversão Markdown estavam como marcadores de imagens. As expressões gerais de $\xi$ e $A_s$ e a expressão de $\varphi_{max}$ foram conferidas nas imagens incorporadas ao DOCX original. A ilustração usada na aula é a Figura 4.9 desse arquivo.
+## Exercício 1: outras bitolas ($A_{s,nec}=19{,}51$ cm², $b_{disp}=17{,}74$ cm, $a_h=3{,}0$, $a_v=2{,}0$)
 
-O capítulo restringe a aplicação do critério de ductilidade em vários exemplos às seções sobre apoios. Para oferecer um roteiro inicial uniforme, a aula declara explicitamente a adoção do limite em todas as seções dos exercícios, sem redistribuição. Não se reproduzem aqui as discussões sobre redistribuição ou rotação plástica do capítulo.
+| Bitola | $n$ | $A_{s,ef}$ (cm²) | Barras por camada | Camadas | $y_{cg}$ (cm) | $d_{real}$ (cm) | $a=y_{cg}-y_1$ (cm) |
+|---|---:|---:|---:|---|---:|---:|---:|
+| $\phi12{,}5$ (slides) | 16 | 19,63 | 4 ($4{,}88$) | 4+4+4+4 | 9,53 | 80,47 | 5,25 |
+| $\phi16$ | 10 | 20,11 | 4 ($4{,}51$) | 4+4+2 | 7,31 | 82,69 | 2,88 |
+| $\phi20$ | 7 | 21,99 | 4 ($4{,}15$) | 4+3 | 6,34 | 83,66 | 1,71 |
 
-No domínio 2, a aula adota o método simplificado dos autores. Com a limitação de $\varphi$, o equilíbrio de momentos determina a área. A linha neutra obtida antes dessa limitação é auxiliar e não deve ser usada para afirmar que o equilíbrio do bloco original permanece exato.
+Posições: $\phi16$: $y=4{,}43$; $8{,}03$; $11{,}63$ cm (eixos a $3{,}6$ cm). $\phi20$: $y=4{,}63$; $8{,}63$ cm (eixos a $4{,}0$ cm). Todos atendem ao critério de $0{,}10h=9{,}0$ cm.
 
-## Exercício 1
+Discussão: $\phi20$ tem menos barras e o maior $d$, mas $13\%$ de área em excesso, espaço livre de só $3{,}25$ cm na camada de 4 (sem folga para vibrador) e ancoragem $60\%$ maior que a de $\phi12{,}5$. $\phi16$ é um bom compromisso: 3 camadas, $3\%$ de excesso, espaço livre de $3{,}78$ cm.
 
-Dados: $b_w=200$ mm, $h=500$ mm, $d=450$ mm, C30, CA-50 e $M_d=120$ kN m.
+## Exercício 2: seção de vão ($A_{s,nec}=11{,}0$ cm², $\phi16$)
 
-| Grandeza | Resultado |
-|---|---:|
-| $f_{cd}$ | 21,4286 MPa |
-| $f_{yd}$ | 434,7826 MPa |
-| $\mu$ | 0,138272 |
-| $\xi$ pelo bloco retangular | 0,223283 |
-| Enquadramento pelo método simplificado | Domínio 2b |
-| $\varphi$ | 0,910687 |
-| $\varphi_{adot}$ | 0,910687, inferior a 0,930864 |
-| $z$ | 409,809 mm |
-| $A_s$ | 673,484 mm² = 6,735 cm² |
-| $A_{s,min}$ | 1,50 cm² |
-| $A_{s,nec}$ | 6,735 cm² |
+$n=6$ ($12{,}06$ cm²); 4 barras na 1ª camada e 2 na 2ª (alinhadas com as barras de canto). $y_1=4{,}43$ cm; $y_2=8{,}03$ cm; $y_{cg}=(4\cdot4{,}43+2\cdot8{,}03)/6=5{,}63$ cm; $d_{real}=84{,}37$ cm $\geq80$ cm. $a=1{,}20$ cm $\leq9{,}0$ cm. Pele: igual ao exemplo, $2{,}25$ cm² por face (8 $\phi6{,}3$ ou 5 $\phi8$). Porta-estribos: 2 barras de $8$ a $10$ mm no topo (que, na região do apoio, serão complementadas pela armadura negativa).
 
-A seção atende ao limite adotado $\xi\leq0,45$. O limitador de braço de alavanca não atua neste exemplo. Não usar $\varepsilon_c=3,5$‰ para inferir a deformação final do aço no domínio 2: neste domínio, o limite convencional é $\varepsilon_s=10$‰ e a deformação do concreto é menor que $\varepsilon_{cu}$.
+## Exercício 3: viga $14\times50$ ($b_{disp}=14-2(3{,}0+0{,}5)=7{,}0$ cm; $a_h=\max(2;\phi;2{,}28)=2{,}28$ cm; $a_v=2{,}0$ cm)
 
-## Exercício 2
+| Bitola | $n$ | $A_{s,ef}$ | Por camada | Camadas | $y_{cg}$ | $d_{real}$ | $d_{real}\geq44$? |
+|---|---:|---:|---:|---|---:|---:|---|
+| $\phi10$ | 6 | 4,71 | 2 ($2{,}83$) | 2+2+2 | 7,00 | 43,00 | Não |
+| $\phi12{,}5$ | 4 | 4,91 | 2 ($2{,}63$) | 2+2 | 5,75 | 44,25 | Sim |
+| $\phi16$ | 3 | 6,03 | 2 ($2{,}39$) | 2+1 | 5,50 | 44,50 | Sim |
 
-Dados do Exemplo 2, com $M_d=3$ kN m na faixa de 1 m.
+Com $\phi10$, $d_{real}<d$: recalcula-se $A_s$ com $d=43$ cm (aproximadamente $4{,}20\cdot44/43=4{,}30$ cm², ainda atendido pelas 6 barras, $4{,}71$ cm²); o arranjo continua válido, mas com três camadas em uma viga de $14$ cm. Melhor solução: $4\phi12{,}5$. $\phi16$ tem $44\%$ de excesso. Critério de concentração: $\phi10$: $a=3{,}0$ cm $\leq5{,}0$ cm, OK; os demais também.
 
-| Grandeza | Resultado |
-|---|---:|
-| $d$ | 131 mm |
-| $\mu$ | 0,00815803 |
-| $\xi$ pelo bloco retangular | 0,0120552 |
-| $\varphi$ inicial | 0,995178 |
-| $\varphi_{adot}$ | 0,930864 |
-| $A_s$ calculado | 56,584 mm²/m = 0,566 cm²/m |
-| $A_{s,min}$ positivo bidirecional | 160,8 mm²/m = 1,608 cm²/m |
-| $A_{s,nec}$ | 1,608 cm²/m |
+## Exercício 4: ancoragem (C25, $\phi12{,}5$)
 
-Por área, barras de 8 mm poderiam ter espaçamento de aproximadamente 312,6 mm. O limite de espaçamento da armadura principal, $\min(2h;200\text{ mm})$, reduz esse valor a 200 mm. Uma escolha é **$\phi8$ a cada 20 cm**, que fornece 251,33 mm²/m = 2,513 cm²/m.
+$f_{ctd}=0{,}7\cdot0{,}3\cdot25^{2/3}/1{,}4=1{,}282$ MPa. Boa aderência: $f_{bd}=2{,}25\cdot1{,}282=2{,}886$ MPa, $\ell_b=(12{,}5/4)\cdot(434{,}8/2{,}886)=471$ mm. Má aderência: $f_{bd}=2{,}020$ MPa, $\ell_b=673$ mm.
 
-Ponto para discussão: a armadura mínima governa a área necessária, mas o espaçamento máximo governa a área efetivamente fornecida com a bitola escolhida.
+As barras superiores da viga de $90$ cm estão nos $30$ cm superiores: **má aderência**. As inferiores (mais de $30$ cm abaixo do topo): boa aderência.
 
-## Exercício 3
-
-Dados do Exemplo 1, alterando apenas o concreto para C50.
-
-| Grandeza | Resultado |
-|---|---:|
-| $f_{cd}$ | 35,7143 MPa |
-| $\eta_c=(40/50)^{1/3}$ | 0,928318 |
-| $\alpha_c$ e $\lambda$ | 0,85 e 0,80 |
-| $\mu$ | 0,124444 |
-| $\xi$ pelo bloco retangular | 0,215759 |
-| Enquadramento pelo método simplificado | Domínio 2b |
-| $\varphi$ | 0,913697 |
-| $\varphi_{adot}$ | 0,913697 |
-| $A_s$ | 1006,899 mm² = 10,069 cm² |
-
-A seção atende a $\xi\leq0,45$, e a área de flexão governa sobre o mínimo. A área cai de 10,726 cm² para 10,069 cm², redução de aproximadamente 6,1%. Com $M_d$, $d$ e $f_{yd}$ fixos, o ganho vem do aumento do braço de alavanca, que é limitado pela própria altura útil. A área de aço não varia inversamente com $f_{ck}$.
-
-## Perguntas de fechamento
-
-- Por que é necessário verificar o limite de ductilidade mesmo quando a equação de segundo grau tem raiz real?
-- Por que mudar a bitola ou o número de camadas pode exigir novo dimensionamento?
-- No cálculo de lajes, em que momento se converte o momento por metro em momento de uma faixa?
-- Por que a aprovação no ELU não substitui a verificação de flecha com a armadura escolhida?
+$\ell_{b,nec}=0{,}7\cdot673\cdot19{,}51/19{,}63=468$ mm; $\ell_{b,min}=\max(0{,}3\cdot673=202;\ 125;\ 100)=202$ mm. Adota-se cerca de $47$ cm (arredondando, $50$ cm).
