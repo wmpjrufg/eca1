@@ -80,7 +80,9 @@ afetados devem ser refeitos e reapresentados.
 A primeira etapa consiste no pré-dimensionamento de vigas, lajes e pilares do
 pavimento padrão apresentado na [Figura 1](#fig-1), considerando os
 parâmetros informados anteriormente. Os critérios de pré-dimensionamento constam na
-[Aula 02: Lançamento e pré-dimensionamento estrutural](../aulas/002-lanc-pre-dim.md).
+[Aula 02: Lançamento e pré-dimensionamento estrutural](../aulas/002-lanc-pre-dim.md)
+e as cargas a considerar constam na
+[Aula 03: Ações na estrutura](../aulas/003-carregamentos.md).
 
 ```{admonition} Entrega 1: Pré-dimensionamento, vãos efetivos e cargas nas lajes
 :class: destaque-verde

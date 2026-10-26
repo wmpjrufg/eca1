@@ -22,7 +22,6 @@ aulas/001-hist-prop
 aulas/002-lanc-pre-dim
 aulas/003-carregamentos
 aulas/004-modelos-estruturais
-aulas/002-lanc-pre-dim
 aulas/005-esforcos-lajes
 aulas/006-verificacoes-preliminares-lajes
 aulas/007-armadura-simples
