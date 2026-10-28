@@ -46,11 +46,13 @@ V1 a V6.
   face;
 - Alvenaria sobre a laje L1: considere um perímetro de alvenaria apoiado
   diretamente na laje, em todo o seu contorno, com altura de $3{,}00\text{ m}$;
-- Alvenaria sobre as vigas: considere que todas as vigas (V1 a V6) recebem
-  carga de alvenaria, com altura de $2{,}80\text{ m}$;
-- Forro: forro de gesso em placas, incluindo a estrutura de suporte, e
-  argamassa de cimento e areia com $2{,}5\text{ cm}$ de espessura na face
-  inferior da laje;
+- Alvenaria sobre as vigas dos pavimentos-tipo: considere que todas as vigas
+  (V1 a V6) recebem carga de alvenaria, com altura de $2{,}80\text{ m}$;
+- Platibanda da cobertura: as vigas de contorno da cobertura (V1, V3, V4 e V6)
+  recebem platibanda de $1{,}10\text{ m}$ de altura, em bloco cerâmico vazado
+  de $14\text{ cm}$ de espessura, com reboco de $2\text{ cm}$ em cada face. As
+  vigas V2 e V5 da cobertura não recebem alvenaria;
+- Forro: forro de gesso em placas, incluindo a estrutura de suporte;
 - Revestimento de piso: revestimentos de pisos de edifícios residenciais e
   comerciais, com espessura de $5\text{ cm}$.
 

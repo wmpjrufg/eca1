@@ -100,7 +100,7 @@ em que $q$ é a carga de cobertura, expressa em $\mathrm{kN/m^2}$, e $\alpha$ é
 :class: eq-table
 :widths: 90 10
 
-* - $\displaystyle \alpha = \begin{cases} 1{,}00, & 1\% < i \leq 2\%,\\ 2{,}00 - 0{,}50i, & 2\% < i < 3\%,\\ 0{,}50, & i \geq 3\%. \end{cases}$
+* - $\displaystyle \alpha = \begin{cases} 1{,}00, & i \leq 2\%,\\ 2{,}00 - 0{,}50i, & 2\% < i < 3\%,\\ 0{,}50, & i \geq 3\%. \end{cases}$
   - (2)
 ```
 
