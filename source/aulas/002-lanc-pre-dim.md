@@ -479,10 +479,10 @@ Após a determinação da área de influência e do carregamento estimado no pav
 
 em que:
 
-- $A_c$ é a área da seção transversal do pilar, em $\mathrm{cm^2}$;
+- $A_c$ é a área da seção transversal do pilar, em $\mathrm{m^2}$;
 - $N_d^{*}$ é a força normal de cálculo para pré-dimensionamento, em $\mathrm{kN}$;
-- $f_{cd} = f_{ck}/1{,}40$ é a resistência à compressão de cálculo do concreto, em $\mathrm{kN/cm^2}$;
-- $\sigma_{s,\varepsilon=0,2\%}$ é a tensão no aço correspondente a uma deformação de $0{,}20\%$, que para o aço CA-50 vale $420\ \mathrm{MPa}$;
+- $f_{cd} = f_{ck}/1{,}40$ é a resistência à compressão de cálculo do concreto, em $\mathrm{kN/m^2}$ (isto é, $f_{ck}$ em $\mathrm{kN/m^2}$ dividido por $1{,}40$);
+- $\sigma_{s,\varepsilon=0,2\%}$ é a tensão no aço correspondente a uma deformação de $0{,}20\%$, que para o aço CA-50 vale $420\ \mathrm{MPa}$ ($420\,000\ \mathrm{kN/m^2}$);
 - $\rho$ é a taxa de armadura do pilar; da [Costa [4]](#ref-4) recomenda, como valor intermediário, $\rho = 2\%$ (inserido na Equação (15) como $\rho = 2/100$, e não em taxa percentual).
 
 Para determinar a carga atuante de pré-dimensionamento, utilizam-se as Equações (16) a (19):
@@ -523,7 +523,7 @@ em que $N_k^{*}$ é a carga característica para pré-dimensionamento; $Q_{tot}$
 
 ### Dimensão mínima da seção do pilar
 
-O item 13.2.3 da [ABNT NBR 6118 [1]](#ref-1) estabelece 19 cm como menor dimensão usual. Em casos especiais, permite dimensões entre 14 e 19 cm com a majoração adicional indicada abaixo. A área da seção deve ser de pelo menos $360\text{ cm}^2$.
+O item 13.2.3 da [ABNT NBR 6118 [1]](#ref-1) estabelece 19 cm como menor dimensão usual. Em casos especiais, permite dimensões entre 14 e 19 cm com a majoração adicional indicada abaixo. A área da seção deve ser de pelo menos $0{,}036\text{ m}^2$ ($360\text{ cm}^2$).
 
 Além dos critérios de pré-dimensionamento apresentados, os pilares com menor dimensão da seção transversal ($b$) inferior a $19\text{ cm}$ também estão sujeitos ao coeficiente adicional de segurança $\gamma_n$ prescrito pela [ABNT NBR 6118 [1]](#ref-1), agora em função da menor dimensão da seção, conforme da [Costa [4]](#ref-4) e o [Quadro 2](#quadro2).
 

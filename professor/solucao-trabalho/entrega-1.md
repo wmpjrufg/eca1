@@ -6,7 +6,7 @@ As cotas do desenho (510, 585, 620 e 485 cm) são medidas entre faces das
 vigas. Como as vigas que contornam os painéis têm $b_w=15\text{ cm}$, cada
 cota recebe $7{,}5\text{ cm}$ de cada lado, isto é, somam-se $15\text{ cm}$
 para obter a distância entre eixos, usada na [Tabela 1](#tabela-eixos). Por
-exemplo, para a cota de $510\text{ cm}$:
+exemplo, para a cota de $510\text{ cm}$ transforma-se em:
 $5{,}10+2\times0{,}075=5{,}25\text{ m}$.
 
 (tabela-eixos)=
@@ -21,56 +21,66 @@ $5{,}10+2\times0{,}075=5{,}25\text{ m}$.
 
 ### Pré-dimensionamento dos pilares
 
-A planta tem nove pilares, numerados de P1 a P9 da esquerda para a direita e de
-cima para baixo. Toma-se como referência o nível do térreo, em que cada pilar
+Toma-se como referência o nível do térreo, em que cada pilar
 sustenta todos os pavimentos acima: cinco pavimentos-tipo e a cobertura, logo
-$n_{tipo}=5$ e $n_{cob}=1$. Para cada pilar, a área de influência $A_i$ segue as
-faixas de Bacarji da Figura 4 da [Aula 02](../aulas/002-lanc-pre-dim.md), com os
-vãos entre eixos da [Tabela 1](#tabela-eixos): $l_1=6{,}000\text{ m}$ e
-$l_2=6{,}350\text{ m}$ na direção horizontal; $l_3=5{,}250\text{ m}$ e
-$l_4=5{,}000\text{ m}$ na direção vertical. Na direção horizontal as faixas são
-$0{,}45\,l$ (lado externo) e $0{,}55\,l$ (lado interno); na vertical, $0{,}5\,l$
-para cada lado do pilar.
+$n_{tipo}=5$ e $n_{cob}=1$. O pavimento térreo não entra na contabilidade pois ele não tem um subsistema horizontal de lajes. Para cada pilar, a área de influência $A_i$ segue as
+faixas descritas na [Figura 4](../aulas/002-lanc-pre-dim.md#figura4) da [Aula 02](../aulas/002-lanc-pre-dim.md), com os
+vãos entre eixos da [Tabela 1](#tabela-eixos). 
 
-Por exemplo, para o pilar de canto P1 e para o pilar intermediário P5:
+Em planta, todos os pilares estão deitados: a maior dimensão $h$ fica na
+direção horizontal e a menor dimensão $b$ na direção vertical. Pela [Aula 02](../aulas/002-lanc-pre-dim.md), a
+divisão das faixas de influência depende dessa orientação:
+
+- pilares de extremidade ou de canto: $0{,}45\,l$ na direção de $b$ (vertical) e
+  $0{,}50\,l$ na direção de $h$ (horizontal), tomando-se $l$ apenas do lado
+  interno, pois não há vão do lado externo;
+- pilares que têm vão dos dois lados em uma direção: usa-se o complemento de
+  cada faixa vizinha, isto é, $0{,}50\,l$ de cada lado na horizontal (complemento
+  de $0{,}50$) e $0{,}55\,l$ de cada lado na vertical (complemento de $0{,}45$).
+
+Assim, para P1 (canto) e P5 (intermediário):
 
 $$
-A_{P1}=(0{,}45\times6{,}000)(0{,}5\times5{,}250)=2{,}700\times2{,}625=7{,}088\text{ m}^2,
+A_{P1}=(0{,}50\times6{,}000)(0{,}45\times5{,}250)=3{,}000\times2{,}363=7{,}088\text{ m}^2,
 $$
 
 $$
-A_{P5}=0{,}55(6{,}000+6{,}350)\times0{,}5(5{,}250+5{,}000)=6{,}793\times5{,}125=34{,}812\text{ m}^2.
+A_{P5}=0{,}50(6{,}000+6{,}350)\times0{,}55(5{,}250+5{,}000)=6{,}175\times5{,}638=34{,}812\text{ m}^2.
 $$
+
+A [Tabela 2](#tabela-pilares-areas) apresenta os detalhes da área de influência de cada um dos pilares.
 
 (tabela-pilares-areas)=
 **Tabela 2.** Áreas de influência dos pilares.
 
 | Pilar | Posição | Faixa horizontal (m) | Faixa vertical (m) | $A_i$ (m²) |
 |---|---|---:|---:|---:|
-| P1 | Canto | 2,700 | 2,625 | 7,088 |
-| P2 | Extremidade | 6,793 | 2,625 | 17,830 |
-| P3 | Canto | 2,858 | 2,625 | 7,501 |
-| P4 | Extremidade | 2,700 | 5,125 | 13,838 |
-| P5 | Intermediário | 6,793 | 5,125 | 34,812 |
-| P6 | Extremidade | 2,858 | 5,125 | 14,645 |
-| P7 | Canto | 2,700 | 2,500 | 6,750 |
-| P8 | Extremidade | 6,793 | 2,500 | 16,981 |
-| P9 | Canto | 2,858 | 2,500 | 7,144 |
+| P1 | Canto | 3,000 | 2,363 | 7,088 |
+| P2 | Extremidade | 6,175 | 2,363 | 14,588 |
+| P3 | Canto | 3,175 | 2,363 | 7,501 |
+| P4 | Extremidade | 3,000 | 5,638 | 16,913 |
+| P5 | Intermediário | 6,175 | 5,638 | 34,812 |
+| P6 | Extremidade | 3,175 | 5,638 | 17,899 |
+| P7 | Canto | 3,000 | 2,250 | 6,750 |
+| P8 | Extremidade | 6,175 | 2,250 | 13,894 |
+| P9 | Canto | 3,175 | 2,250 | 7,144 |
 
 Com as cargas de 10 e 7 kN/m² do enunciado, a carga característica e a carga de
-cálculo (Equações (17) e (18) da Aula 02) são:
+cálculo (Equações (17) e (18) da [Aula 02](../aulas/002-lanc-pre-dim.md)) são:
 
 $$
 N_k^*=A_i(10\times5+7\times1)=57A_i,\qquad N_d^*=\alpha N_k^*,
 $$
 
 com $\alpha=2{,}5$ (canto), $2{,}2$ (extremidade) e $1{,}8$ (intermediário). Para
-o concreto C30 e o aço CA-50, $f_{cd}=3{,}0/1{,}4=2{,}143\text{ kN/cm}^2$ e, com
-$\rho=0{,}02$ e $\sigma_s=42\text{ kN/cm}^2$, a Equação (15) fica:
+o concreto C30 e o aço CA-50, com as unidades em kN e m,
+$f_{cd}=30000/1{,}4=21428{,}6\text{ kN/m}^2$, $\rho=0{,}02$ e
+$\sigma_s=420\,000\text{ kN/m}^2$ (420 MPa), a Equação (15) da
+[Aula 02](../aulas/002-lanc-pre-dim.md) fica:
 
 $$
-A_c=\frac{N_d^*}{0{,}85\times2{,}143+0{,}02\times42}
-=\frac{N_d^*}{2{,}661}\quad(\text{cm}^2,\ N_d^*\text{ em kN}).
+A_c=\frac{N_d^*}{0{,}85\times21428{,}6+0{,}02\times420000}
+=\frac{N_d^*}{26614{,}3}\quad(\text{m}^2,\ N_d^*\text{ em kN}).
 $$
 
 Para P1 e P5:
@@ -78,35 +88,39 @@ Para P1 e P5:
 $$
 N_{d,P1}^*=2{,}5\times57\times7{,}088=1010{,}0\text{ kN},
 \qquad
-A_{c,P1}=\frac{1010{,}0}{2{,}661}=379{,}5\text{ cm}^2,
+A_{c,P1}=\frac{1010{,}0}{26614{,}3}=0{,}0379\text{ m}^2,
 $$
 
 $$
 N_{d,P5}^*=1{,}8\times57\times34{,}812=3571{,}7\text{ kN},
 \qquad
-A_{c,P5}=\frac{3571{,}7}{2{,}661}=1342{,}0\text{ cm}^2.
+A_{c,P5}=\frac{3571{,}7}{26614{,}3}=0{,}1342\text{ m}^2.
 $$
 
-Adota-se a menor dimensão $b=19\text{ cm}$, a menor dimensão usual da NBR 6118,
-na direção horizontal da planta, e a maior dimensão $h$ na direção vertical,
-múltipla de 5 cm, de modo que $19h\geq A_c$ e $19h\geq360\text{ cm}^2$. Para P1,
-$h=379{,}5/19=20{,}0\to20\text{ cm}$; para P5, $h=1342{,}0/19=70{,}6\to75\text{ cm}$.
-Como $b\geq19\text{ cm}$, $\gamma_n=1{,}00$ em todos os pilares.
+Adota-se a menor dimensão $b=0{,}19\text{ m}$, a menor dimensão usual da NBR 6118,
+na direção vertical da planta, e a maior dimensão $h$ na direção horizontal,
+múltipla de $0{,}05\text{ m}$, de modo que $0{,}19h\geq A_c$ e
+$0{,}19h\geq0{,}036\text{ m}^2$. Para P1,
+$h=0{,}0379/0{,}19=0{,}199\to0{,}20\text{ m}$; para P5,
+$h=0{,}1342/0{,}19=0{,}706\to0{,}75\text{ m}$.
+Como $b\geq19\text{ cm}$, $\gamma_n=1{,}00$ em todos os pilares. A
+[Tabela 3](#tabela-pilares-secao) reúne as cargas, as áreas de concreto e as
+seções adotadas para os nove pilares.
 
 (tabela-pilares-secao)=
 **Tabela 3.** Cargas e seções pré-dimensionadas dos pilares.
 
-| Pilar | $N_k^*$ (kN) | $\alpha$ | $N_d^*$ (kN) | $A_c$ (cm²) | Seção $b\times h$ (cm) | $\gamma_n$ |
+| Pilar | $N_k^*$ (kN) | $\alpha$ | $N_d^*$ (kN) | $A_c$ (m²) | Seção $b\times h$ (cm) | $\gamma_n$ |
 |---|---:|---:|---:|---:|---|---:|
-| P1 | 404,0 | 2,5 | 1010,0 | 379,5 | 19 × 20 | 1,00 |
-| P2 | 1016,3 | 2,2 | 2235,9 | 840,1 | 19 × 45 | 1,00 |
-| P3 | 427,6 | 2,5 | 1068,9 | 401,6 | 19 × 25 | 1,00 |
-| P4 | 788,7 | 2,2 | 1735,2 | 652,0 | 19 × 35 | 1,00 |
-| P5 | 1984,3 | 1,8 | 3571,7 | 1342,0 | 19 × 75 | 1,00 |
-| P6 | 834,7 | 2,2 | 1836,4 | 690,0 | 19 × 40 | 1,00 |
-| P7 | 384,8 | 2,5 | 961,9 | 361,4 | 19 × 20 | 1,00 |
-| P8 | 967,9 | 2,2 | 2129,4 | 800,1 | 19 × 45 | 1,00 |
-| P9 | 407,2 | 2,5 | 1018,0 | 382,5 | 19 × 25 | 1,00 |
+| P1 | 404,0 | 2,5 | 1010,0 | 0,0379 | 19 × 20 | 1,00 |
+| P2 | 831,5 | 2,2 | 1829,4 | 0,0687 | 19 × 40 | 1,00 |
+| P3 | 427,6 | 2,5 | 1068,9 | 0,0402 | 19 × 25 | 1,00 |
+| P4 | 964,0 | 2,2 | 2120,8 | 0,0797 | 19 × 45 | 1,00 |
+| P5 | 1984,3 | 1,8 | 3571,7 | 0,1342 | 19 × 75 | 1,00 |
+| P6 | 1020,2 | 2,2 | 2244,5 | 0,0843 | 19 × 45 | 1,00 |
+| P7 | 384,8 | 2,5 | 961,9 | 0,0361 | 19 × 20 | 1,00 |
+| P8 | 791,9 | 2,2 | 1742,3 | 0,0655 | 19 × 35 | 1,00 |
+| P9 | 407,2 | 2,5 | 1018,0 | 0,0383 | 19 × 25 | 1,00 |
 
 ### Espessura inicial das lajes
 
@@ -142,7 +156,7 @@ A [Tabela 4](#tabela-espessura) resume os resultados.
 | L4 | 11,35 | 12 | 1,00 |
 
 Padroniza-se inicialmente $h=12\text{ cm}$ nos pisos e na cobertura. A
-escolha atende aos mínimos geométricos apresentados na Aula 02 para lajes
+escolha atende aos mínimos geométricos apresentados na [Aula 02](../aulas/002-lanc-pre-dim.md) para lajes
 sem balanço. A aprovação da espessura depende das verificações posteriores.
 Como não há lajes em balanço, o coeficiente adicional é $\gamma_n=1{,}00$ em
 todas as lajes.
@@ -161,34 +175,18 @@ h_{v,V1-V3}=\frac{6{,}350}{12}=0{,}529\text{ m}\to55\text{ cm},
 h_{v,V4-V6}=\frac{5{,}250}{12}=0{,}438\text{ m}\to45\text{ cm}.
 $$
 
-**Estabilidade lateral.** A largura mínima das vigas segue as Equações (1) e (2)
-da Aula 02: $b_{w,min}=\max(l_0/50;\,\beta_{fl}h_v)$, com $\beta_{fl}=0{,}40$ para
-seção retangular ou T. Tomando de forma conservadora $l_0$ igual ao maior tramo
-entre eixos:
-
-$$
-V1\text{ a }V3:\quad b_{w,min}=\max\left(\frac{6{,}350}{50};\,0{,}40\times0{,}55\right)
-=\max(0{,}127;\,0{,}220)=22{,}0\text{ cm},
-$$
-
-$$
-V4\text{ a }V6:\quad b_{w,min}=\max\left(\frac{5{,}250}{50};\,0{,}40\times0{,}45\right)
-=\max(0{,}105;\,0{,}180)=18{,}0\text{ cm}.
-$$
-
-A condição $b_w\geq l_0/50$ é atendida com $b_w=15\text{ cm}$, mas a condição
-$b_w\geq\beta_{fl}h_v$ **não é atendida**: $15\text{ cm}<22{,}0\text{ cm}$ e
-$15\text{ cm}<18{,}0\text{ cm}$. A largura de $15\text{ cm}$ só se mantém se a
-zona comprimida estiver travada lateralmente pelas lajes; caso contrário, é
-preciso aumentar $b_w$ ou reduzir $h_v$ e justificar a escolha.
+As vigas estão travadas lateralmente pelas lajes; por isso, nesta etapa não se
+verifica a estabilidade lateral e a largura permanece $b_w=15\text{ cm}$, sendo
+pré-dimensionada apenas a altura. A [Tabela 5](#tabela-vigas-altura) resume as
+seções adotadas.
 
 (tabela-vigas-altura)=
-**Tabela 5.** Seções pré-dimensionadas e verificação da largura mínima das vigas.
+**Tabela 5.** Seções pré-dimensionadas das vigas.
 
-| Viga | Direção | Maior tramo (m) | $l/12$ (cm) | Seção $b_w\times h_v$ (cm) | $b_{w,min}$ (cm) | $b_w\geq b_{w,min}$ |
-|---|---|---:|---:|---|---:|---|
-| V1, V2 e V3 | Horizontal | 6,350 | 52,9 | 15 × 55 | 22,0 | Não |
-| V4, V5 e V6 | Vertical | 5,250 | 43,8 | 15 × 45 | 18,0 | Não |
+| Viga | Direção | Maior tramo (m) | $l/12$ (cm) | Seção $b_w\times h_v$ (cm) |
+|---|---|---:|---:|---|
+| V1, V2 e V3 | Horizontal | 6,350 | 52,9 | 15 × 55 |
+| V4, V5 e V6 | Vertical | 5,250 | 43,8 | 15 × 45 |
 
 ### Vãos efetivos das lajes
 
@@ -214,6 +212,8 @@ l_x=5{,}250-0{,}15+2(0{,}036)=5{,}172\text{ m},
 l_y=6{,}000-0{,}15+2(0{,}036)=5{,}922\text{ m}.
 $$
 
+A [Tabela 6](#tabela-vaos) apresenta os vãos efetivos das quatro lajes e a relação entre eles.
+
 (tabela-vaos)=
 **Tabela 6.** Vãos efetivos e relação entre vãos das lajes.
 
@@ -229,47 +229,49 @@ possuem apoio nos quatro lados e $\lambda<2$; não há balanço no desenho.
 
 ### Vãos efetivos das vigas
 
-Aplica-se a mesma Equação (3) da Aula 02, com $t_i$ igual à dimensão do pilar
+Aplica-se a mesma Equação (3) da [Aula 02](../aulas/002-lanc-pre-dim.md), com $t_i$ igual à dimensão do pilar
 na direção da viga ([Tabela 3](#tabela-pilares-secao)) e
-$a_i=\min(t_i/2;\,0{,}3h_v)$. Nas vigas horizontais, $t=19\text{ cm}$ e
-$h_v=55\text{ cm}$; nas verticais, $t$ é a dimensão $h$ do pilar e
-$h_v=45\text{ cm}$. Por exemplo, para o tramo 1 de V4, entre P1
-($t_1=20\text{ cm}$) e P4 ($t_2=35\text{ cm}$):
+$a_i=\min(t_i/2;\,0{,}3h_v)$. Como os pilares estão deitados, nas vigas
+horizontais $t$ é a dimensão $h$ do pilar e $h_v=55\text{ cm}$; nas verticais,
+$t=19\text{ cm}$ e $h_v=45\text{ cm}$. Por exemplo, para o tramo 1 de V1, entre P1
+($t_1=20\text{ cm}$) e P2 ($t_2=40\text{ cm}$):
 
 $$
-l_0=5{,}250-\frac{0{,}20}{2}-\frac{0{,}35}{2}=4{,}975\text{ m},
+l_0=6{,}000-\frac{0{,}20}{2}-\frac{0{,}40}{2}=5{,}700\text{ m},
 $$
 
 $$
-a_1=\min(0{,}100;\,0{,}135)=0{,}100\text{ m},
+a_1=\min(0{,}100;\,0{,}165)=0{,}100\text{ m},
 \qquad
-a_2=\min(0{,}175;\,0{,}135)=0{,}135\text{ m},
+a_2=\min(0{,}200;\,0{,}165)=0{,}165\text{ m},
 $$
 
 $$
-l_{ef}=4{,}975+0{,}100+0{,}135=5{,}210\text{ m}.
+l_{ef}=5{,}700+0{,}100+0{,}165=5{,}965\text{ m}.
 $$
+
+A [Tabela 7](#tabela-vigas-vaos) apresenta os vãos efetivos de todos os tramos das vigas.
 
 (tabela-vigas-vaos)=
 **Tabela 7.** Vãos efetivos dos tramos das vigas.
 
 | Viga | Tramo | Entre eixos (m) | $t_1$ / $t_2$ (cm) | $l_0$ (m) | $a_1$ / $a_2$ (m) | $l_{ef}$ (m) |
 |---|---:|---:|---|---:|---|---:|
-| V1, V2 e V3 | 1 | 6,000 | 19 / 19 | 5,810 | 0,095 / 0,095 | 6,000 |
-| V1, V2 e V3 | 2 | 6,350 | 19 / 19 | 6,160 | 0,095 / 0,095 | 6,350 |
-| V4 | 1 | 5,250 | 20 / 35 | 4,975 | 0,100 / 0,135 | 5,210 |
-| V4 | 2 | 5,000 | 35 / 20 | 4,725 | 0,135 / 0,100 | 4,960 |
-| V5 | 1 | 5,250 | 45 / 75 | 4,650 | 0,135 / 0,135 | 4,920 |
-| V5 | 2 | 5,000 | 75 / 45 | 4,400 | 0,135 / 0,135 | 4,670 |
-| V6 | 1 | 5,250 | 25 / 40 | 4,925 | 0,125 / 0,135 | 5,185 |
-| V6 | 2 | 5,000 | 40 / 25 | 4,675 | 0,135 / 0,125 | 4,935 |
+| V1 | 1 | 6,000 | 20 / 40 | 5,700 | 0,100 / 0,165 | 5,965 |
+| V1 | 2 | 6,350 | 40 / 25 | 6,025 | 0,165 / 0,125 | 6,315 |
+| V2 | 1 | 6,000 | 45 / 75 | 5,400 | 0,165 / 0,165 | 5,730 |
+| V2 | 2 | 6,350 | 75 / 45 | 5,750 | 0,165 / 0,165 | 6,080 |
+| V3 | 1 | 6,000 | 20 / 35 | 5,725 | 0,100 / 0,165 | 5,990 |
+| V3 | 2 | 6,350 | 35 / 25 | 6,050 | 0,165 / 0,125 | 6,340 |
+| V4, V5 e V6 | 1 | 5,250 | 19 / 19 | 5,060 | 0,095 / 0,095 | 5,250 |
+| V4, V5 e V6 | 2 | 5,000 | 19 / 19 | 4,810 | 0,095 / 0,095 | 5,000 |
 
-Nas vigas horizontais, como $t/2<0{,}3h_v$ nos dois apoios, $l_{ef}$ coincide
+Nas vigas verticais, como $t/2<0{,}3h_v$ nos dois apoios, $l_{ef}$ coincide
 com a distância entre eixos.
 
 ### Cargas permanentes dos pavimentos-tipo
 
-Usando os valores das tabelas da Aula 03 e $h$ em metros, a
+Usando os valores das tabelas da [Aula 03](../aulas/003-carregamentos.md) e $h$ em metros, a
 [Tabela 8](#tabela-carga-tipo) reúne as cargas permanentes:
 
 (tabela-carga-tipo)=
@@ -319,14 +321,14 @@ não se acrescenta novamente o peso da manta isolada.
 
 Para a ação variável, mantenha $q_{k,cob}$ identificado até definir o caso
 normativo da cobertura. O enunciado informa **inclinação exatamente igual a
-1%**, enquanto a expressão transcrita na Aula 03 inicia em $1\%<i\leq2\%$.
+1%**, enquanto a expressão transcrita na [Aula 03](../aulas/003-carregamentos.md) inicia em $1\%<i\leq2\%$.
 Não se deve aplicar essa faixa ao limite de 1% sem verificar seu enquadramento
 e as condições de drenagem na referência adotada.
 
 ### Paredes: distinguir carga na laje e carga na viga
 
 Para bloco cerâmico vazado de 11,5 cm com reboco de 2 cm em cada face, a
-tabela de vedação da Aula 03 fornece $2{,}10\text{ kN/m}^2$ de **parede**.
+tabela de vedação da [Aula 03](../aulas/003-carregamentos.md) fornece $2{,}10\text{ kN/m}^2$ de **parede**.
 Esse valor já inclui os revestimentos. Para altura livre $H_p$:
 
 $$
@@ -367,12 +369,3 @@ $$
 Para a cobertura, empregam-se as mesmas expressões com $g_{k,cob}$ e
 $q_{k,cob}$. Os valores globais de 10 e 7 kN/m² do enunciado são estimativas
 para o pré-dimensionamento dos pilares; não substituem este levantamento.
-
-### Erros frequentes nesta entrega
-
-- Usar 585 como vão em metros ou empregar 14 cm para a largura das vigas.
-- Confundir distância entre eixos, vão livre e vão efetivo.
-- Usar $h$ em centímetros na expressão $25h$ que exige metros.
-- Contar duas vezes o reboco ou a manta, já incluídos nos valores tabelados.
-- Distribuir na laje uma parede que foi contabilizada diretamente na viga.
-- Tratar a espessura de pré-dimensionamento como resultado definitivo.
