@@ -394,13 +394,12 @@ $$
 
 Essa carga entra na composição das vigas na Entrega 2 e não é lançada nas lajes.
 
-**Alvenaria sobre a laje L1.** O enunciado indica um perímetro de alvenaria
-apoiado diretamente em L1, em todo o seu contorno, com $3{,}00\text{ m}$ de altura.
+**Alvenaria sobre a laje L1.** O enunciado indica um perímetro de 21,90 m de alvenaria apoiado diretamente em L1, com $3{,}00\text{ m}$ de altura.
 Tomando as dimensões entre faces das vigas ($5{,}10\text{ m}$ e $5{,}85\text{ m}$),
 o comprimento da parede, a carga linear e a carga total são
 
 $$
-L_p=2(5{,}10+5{,}85)=21{,}90\text{ m},
+L_p=21{,}90\text{ m},
 \qquad
 g_{parede,lin}=2{,}10\times3{,}00=6{,}30\text{ kN/m},
 $$
@@ -439,68 +438,23 @@ $$
 As vigas internas V2 e V5 não recebem alvenaria na cobertura. Essa carga entra
 na composição das vigas de cobertura na Entrega 2.
 
-### Combinações para as etapas seguintes
+### Resumo das cargas nas lajes
 
-Para as lajes L2, L3 e L4 dos pavimentos-tipo, sem paredes diretamente sobre a laje,
-com $g_{k,tipo}=4{,}150\text{ kN/m}^2$ e $q_{k,tipo}=1{,}50\text{ kN/m}^2$, resulta
+A [Tabela 11](#tabela-cargas-lajes) reúne as cargas características permanentes ($g_k$) e variáveis ($q_k$) por área que atuam nas lajes, já incluindo a alvenaria apoiada em L1 nos pavimentos-tipo.
 
-$$
-p_{k,tipo}=g_{k,tipo}+q_{k,tipo}=5{,}650\text{ kN/m}^2,
-\qquad
-p_{d,ELU,tipo}=1{,}4(g_{k,tipo}+q_{k,tipo})=7{,}910\text{ kN/m}^2,
-$$
-
-$$
-p_{d,freq,tipo}=g_{k,tipo}+0{,}4q_{k,tipo}=4{,}750\text{ kN/m}^2,
-\qquad
-p_{d,qp,tipo}=g_{k,tipo}+0{,}3q_{k,tipo}=4{,}600\text{ kN/m}^2.
-$$
-
-Para a laje L1 dos pavimentos-tipo, com $g_{k,tipo,L1}=8{,}774\text{ kN/m}^2$, resulta
-
-$$
-p_{k,tipo,L1}=10{,}274\text{ kN/m}^2,
-\qquad
-p_{d,ELU,tipo,L1}=1{,}4(g_{k,tipo,L1}+q_{k,tipo})=14{,}384\text{ kN/m}^2,
-$$
-
-$$
-p_{d,freq,tipo,L1}=g_{k,tipo,L1}+0{,}4q_{k,tipo}=9{,}374\text{ kN/m}^2,
-\qquad
-p_{d,qp,tipo,L1}=g_{k,tipo,L1}+0{,}3q_{k,tipo}=9{,}224\text{ kN/m}^2.
-$$
-
-Para a cobertura, com $g_{k,cob}=6{,}690\text{ kN/m}^2$ e
-$q_{k,cob}=0{,}50\text{ kN/m}^2$, resulta
-
-$$
-p_{k,cob}=7{,}190\text{ kN/m}^2,
-\qquad
-p_{d,ELU,cob}=1{,}4(g_{k,cob}+q_{k,cob})=10{,}066\text{ kN/m}^2,
-$$
-
-$$
-p_{d,freq,cob}=g_{k,cob}+0{,}4q_{k,cob}=6{,}890\text{ kN/m}^2,
-\qquad
-p_{d,qp,cob}=g_{k,cob}+0{,}3q_{k,cob}=6{,}840\text{ kN/m}^2.
-$$
+Nesta etapa (Entrega 1), não se realizam combinações de ações: as cargas $g_k$ e $q_k$ são mantidas separadas para que os esforços solicitantes devidos a cada ação possam ser determinados individualmente e combinados posteriormente nas etapas seguintes, conforme a necessidade de cada verificação (ELU e ELS).
 
 Os valores globais de 10 e 7 kN/m² do enunciado são estimativas
 para o pré-dimensionamento dos pilares e não substituem este levantamento.
 
-### Resumo das cargas nas lajes
-
-A [Tabela 11](#tabela-cargas-lajes) reúne as cargas por área que atuam nas lajes,
-já incluindo a alvenaria apoiada em L1 nos pavimentos-tipo.
-
 (tabela-cargas-lajes)=
-**Tabela 11.** Cargas por área nas lajes (kN/m²).
+**Tabela 11.** Cargas características nas lajes (kN/m²).
 
-| Laje | Pavimento | $g_k$ | $q_k$ | $p_k$ | $p_{d,ELU}$ | $p_{d,freq}$ | $p_{d,qp}$ |
-|---|---|---:|---:|---:|---:|---:|---:|
-| L1 | Tipo | 8,774 | 1,50 | 10,274 | 14,384 | 9,374 | 9,224 |
-| L2, L3 e L4 | Tipo | 4,150 | 1,50 | 5,650 | 7,910 | 4,750 | 4,600 |
-| L1, L2, L3 e L4 | Cobertura | 6,690 | 0,50 | 7,190 | 10,066 | 6,890 | 6,840 |
+| Laje | Pavimento | $g_k$ (kN/m²) | $q_k$ (kN/m²) |
+|---|---|---:|---:|
+| L1 | Tipo | 8,774 | 1,50 |
+| L2, L3 e L4 | Tipo | 4,150 | 1,50 |
+| L1, L2, L3 e L4 | Cobertura | 6,690 | 0,50 |
 
 ### Resumo das cargas nas vigas
 

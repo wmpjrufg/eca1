@@ -44,8 +44,8 @@ V1 a V6.
 - Vedações: alvenaria em bloco cerâmico vazado com $11{,}5\text{ cm}$ de
   espessura, com reboco (argamassa de cimento e areia) de $2\text{ cm}$ em cada
   face;
-- Alvenaria sobre a laje L1: considere um perímetro de alvenaria apoiado
-  diretamente na laje, em todo o seu contorno, com altura de $3{,}00\text{ m}$;
+- Alvenaria sobre a laje L1: considere um perímetro de 21,90 m de alvenaria apoiado
+  diretamente na laje, com altura de $3{,}00\text{ m}$;
 - Alvenaria sobre as vigas dos pavimentos-tipo: considere que todas as vigas
   (V1 a V6) recebem carga de alvenaria, com altura de $2{,}80\text{ m}$;
 - Platibanda da cobertura: as vigas de contorno da cobertura (V1, V3, V4 e V6)
@@ -102,7 +102,7 @@ A **Entrega 1** contempla as etapas de pré-dimensionamento dos elementos estrut
 - Entregar a **memória de cálculo em Markdown (extensão .md)**, apresentando o pré-dimensionamento de todas as vigas (V1 a V6), lajes e pilares do pavimento padrão, com as equações utilizadas, os valores adotados e a seção final ($b \times h$) de cada elemento.
 - Entregar uma **planta do pavimento padrão** (baseada na Figura 1) com a identificação das seções finais adotadas para vigas e pilares e a numeração de todas as lajes.
 - Incluir na memória de cálculo uma **tabela com os vãos efetivos** ($l_x$ e $l_y$) de cada laje, indicando a direção de armação (uma ou duas direções) e, quando for o caso, a condição de balanço.
-- Incluir na memória de cálculo o **levantamento das cargas variáveis e permanentes** de cada laje, com a memória de cálculo do carregamento total considerado.
+- Incluir na memória de cálculo o **levantamento das cargas permanentes ($g_k$) e variáveis ($q_k$)** de cada laje, com a memória de cálculo de cada parcela (sem efetuar combinações de ações nesta etapa).
 - Identificar a memória de cálculo e a planta com **nome completo e matrícula de todos os integrantes**, identificação da entrega e do projeto.
 - Incluir **notas de cálculo quando necessárias**, esclarecendo unidades, hipóteses e critérios adotados.
 - Organizar e nomear os arquivos de modo que seja possível identificar o grupo e o conteúdo correspondente. Conferir se todos os arquivos abrem corretamente.
