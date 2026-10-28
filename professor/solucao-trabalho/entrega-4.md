@@ -84,8 +84,8 @@ cobertura:
 |---|---|---|
 | Positivas $x$ de L1 a L4 | $m_{x,d,c}$ | Camada de barras na direção $x$; mínimo positivo bidirecional |
 | Positivas $y$ de L1 a L4 | $m_{y,d,c}$ | Camada de barras na direção $y$; mínimo positivo bidirecional |
-| Negativas de V2, trecho esquerdo e direito | $X_{c,d}$ de L1/L3 e L2/L4 | Barras superiores na direção $x$; mínimo negativo |
-| Negativas de V5, trecho superior e inferior | $X_{c,d}$ de L1/L2 e L3/L4 | Barras superiores na direção $y$; mínimo negativo |
+| Negativas de V2, trecho esquerdo e direito | $m'_{c,d}$ de L1/L3 e L2/L4 | Barras superiores na direção $x$; mínimo negativo |
+| Negativas de V5, trecho superior e inferior | $m'_{c,d}$ de L1/L2 e L3/L4 | Barras superiores na direção $y$; mínimo negativo |
 
 No encontro de V2 e V5 há sobreposição das negativas. Confira as alturas
 úteis e o alojamento das duas direções. Complete as armaduras de borda e de

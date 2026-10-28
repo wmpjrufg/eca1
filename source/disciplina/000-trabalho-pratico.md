@@ -136,7 +136,7 @@ viga e de rigidez dos pilares usados para obter os esforços das vigas constam n
 **Esforços nas lajes.** Para cada laje, registre o croqui com os eixos e os
 vínculos de cada borda, os vãos efetivos, o caso de apoio da tabela adotada, o
 valor de $\lambda=l_y/l_x$, a carga do caso analisado, os coeficientes (com
-interpolação, quando necessária) e os momentos $m_x$, $m_y$, $X_x$ e $X_y$.
+interpolação, quando necessária) e os momentos $m_x$, $m_y$, $m'_x$ e $m'_y$.
 Em cada borda interna, compatibilize os momentos negativos dos dois lados e
 corrija os momentos positivos, indicando a borda física e a direção
 envolvidas. Indique a combinação usada: os momentos de cálculo ($M_d$) para a

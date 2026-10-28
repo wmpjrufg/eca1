@@ -25,7 +25,7 @@ Adotaremos $x$ na direção do menor vão efetivo e $y$ na do maior, com $\lambd
 | $v_x$, $v_y$ | Esforços cortantes por unidade de largura | $\mathrm{kN/m}$ |
 | $M$, $V$ | Momento e cortante de uma barra ou faixa de largura definida | $\mathrm{kN\,m}$ e $\mathrm{kN}$ |
 
-Nas situações de flexão aqui estudadas, o momento positivo traciona a face inferior e o negativo, a superior. Usaremos $X$ para o **módulo** do momento negativo: se $X=8\,\mathrm{kN\,m/m}$, o momento com sinal será $-8\,\mathrm{kN\,m/m}$.
+Nas situações de flexão aqui estudadas, o momento positivo traciona a face inferior e o negativo, a superior. Usaremos $m'$ (com o índice da direção, $m'_x$ ou $m'_y$) para o **módulo** do momento negativo. Se $m'=8\,\mathrm{kN\,m/m}$, o momento com sinal será $-8\,\mathrm{kN\,m/m}$.
 
 Uma faixa de $1\,\mathrm{m}$ submetida a $m=5\,\mathrm{kN\,m/m}$ tem momento total $M=5\,\mathrm{kN\,m}$. Os números coincidem por causa da largura escolhida; as grandezas continuam diferentes.
 
@@ -124,16 +124,16 @@ m_y=\mu_y\frac{pl_x^2}{100},
 $$
 
 $$
-X_x=\mu'_x\frac{pl_x^2}{100},\qquad
-X_y=\mu'_y\frac{pl_x^2}{100}.
+m'_x=\mu'_x\frac{pl_x^2}{100},\qquad
+m'_y=\mu'_y\frac{pl_x^2}{100}.
 $$
 
 | Coeficiente | Resultado | Região associada |
 |---|---|---|
 | $\mu_x$ | $m_x$ positivo | Vão, direção $x$ |
 | $\mu_y$ | $m_y$ positivo | Vão, direção $y$ |
-| $\mu'_x$ | Módulo $X_x$ | Bordo engastado normal a $x$ |
-| $\mu'_y$ | Módulo $X_y$ | Bordo engastado normal a $y$ |
+| $\mu'_x$ | Módulo $m'_x$ | Bordo engastado normal a $x$ |
+| $\mu'_y$ | Módulo $m'_y$ | Bordo engastado normal a $y$ |
 
 **As quatro expressões usam $l_x^2$.** A participação do maior vão já está incorporada no coeficiente por meio de $\lambda$. Também é preciso conferir o divisor 100: outra publicação pode apresentar a mesma solução com uma normalização diferente.
 
@@ -208,20 +208,20 @@ Todos os valores estão em $\mathrm{kN\,m/m}$. A restrição à rotação mobili
 
 Ao calcular duas lajes separadamente, a mesma borda interna pode receber dois valores de momento negativo. Isso acontece porque cada painel tem seus próprios vãos, vínculos e ações. Para o cálculo manual por painéis, o material-base apresenta uma compatibilização aproximada desses valores.
 
-Se $X_1$ e $X_2$ são os módulos dos negativos dos dois lados da borda comum:
+Se $m'_1$ e $m'_2$ são os módulos dos negativos dos dois lados da borda comum:
 
 $$
-X_c=\max\left[\frac{X_1+X_2}{2};\,0{,}8\max(X_1,X_2)\right].
+m'_c=\max\left[\frac{m'_1+m'_2}{2};\,0{,}8\max(m'_1,m'_2)\right].
 $$
 
-Adota-se o momento $-X_c$ nos dois lados. Antes de aplicar a expressão, verifique se os valores correspondem à **mesma borda física, à flexão normal a ela e à mesma combinação de ações**. Os eixos locais de duas lajes podem ter nomes diferentes.
+Adota-se o momento $-m'_c$ nos dois lados. Antes de aplicar a expressão, verifique se os valores correspondem à **mesma borda física, à flexão normal a ela e à mesma combinação de ações**. Os eixos locais de duas lajes podem ter nomes diferentes.
 
 ### Ajuste do positivo
 
 Se o módulo do negativo de um painel diminui, aumenta-se seu positivo na direção correspondente. Para uma borda modificada:
 
 $$
-m^+_{i,c}=m^+_i+\frac{\max(0;X_i-X_c)}{2}.
+m^+_{i,c}=m^+_i+\frac{\max(0;m'_i-m'_c)}{2}.
 $$
 
 Quando o negativo aumenta, conserva-se o positivo inicial nessa aproximação. Se as duas extremidades da mesma direção sofrerem redução de negativo, somam-se os dois acréscimos. Esse procedimento é uma regra prática de cálculo por painéis; não representa uma solução conjunta das rotações de toda a borda.
@@ -238,7 +238,7 @@ Para uma mesma combinação, os resultados iniciais são:
 Valores em $\mathrm{kN\,m/m}$. O momento comum será:
 
 $$
-X_c=\max[(10+6)/2;\,0{,}8\times10]=8{,}0\,\mathrm{kN\,m/m}.
+m'_c=\max[(10+6)/2;\,0{,}8\times10]=8{,}0\,\mathrm{kN\,m/m}.
 $$
 
 Em L1, o positivo passa a $4+(10-8)/2=5{,}0\,\mathrm{kN\,m/m}$. Em L2, permanece em $3{,}0\,\mathrm{kN\,m/m}$. Na borda, registra-se $-8{,}0\,\mathrm{kN\,m/m}$ para ambos os painéis.
@@ -413,9 +413,9 @@ Uma laje tem vãos efetivos $4{,}00\times5{,}40\,\mathrm{m}$, carga uniforme dad
 1. Oriente os eixos e desenhe os vínculos.
 2. Calcule $\lambda$ e identifique o caso no recorte da tabela A-8.
 3. Determine os positivos e o negativo, registrando o sinal e a direção.
-4. Considere que o painel vizinho apresenta $X=7{,}00\,\mathrm{kN\,m/m}$ na borda comum, para a mesma combinação. Compatibilize os negativos e corrija o positivo da laje estudada.
+4. Considere que o painel vizinho apresenta $m'=7{,}00\,\mathrm{kN\,m/m}$ na borda comum, para a mesma combinação. Compatibilize os negativos e corrija o positivo da laje estudada.
 
-**Conferência:** $\lambda=1{,}35$, tipo 2B; $m_x\approx4{,}67$, $m_y\approx2{,}25$ e $X_x\approx10{,}12\,\mathrm{kN\,m/m}$. Mantendo as casas decimais durante as operações, $X_c\approx8{,}56$ e $m_{x,c}^+\approx5{,}45\,\mathrm{kN\,m/m}$. A correção dessa borda ocorre na direção $x$.
+**Conferência:** $\lambda=1{,}35$, tipo 2B; $m_x\approx4{,}67$, $m_y\approx2{,}25$ e $m'_x\approx10{,}12\,\mathrm{kN\,m/m}$. Mantendo as casas decimais durante as operações, $m'_c\approx8{,}56$ e $m_{x,c}^+\approx5{,}45\,\mathrm{kN\,m/m}$. A correção dessa borda ocorre na direção $x$.
 
 No trabalho da disciplina, registre para cada painel: croqui, vãos efetivos, caso de apoio, $\lambda$, carga do caso analisado, coeficientes e momentos. Acrescente um quadro por borda interna com os negativos dos dois lados, o valor comum e os positivos corrigidos. Esse registro permite conferir de onde veio cada esforço utilizado no dimensionamento.
 
