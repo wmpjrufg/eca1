@@ -149,10 +149,7 @@ compara as seções calculadas e as padronizadas.
 
 A [Tabela 4](#tabela-padronizacao) mostra que três seções (19 × 25, 19 × 45 e
 19 × 75) atendem a todos os pilares, com folga de 1 % a 31 % em relação à área
-necessária. Em troca de um pequeno acréscimo de concreto e de peso próprio, o
-projeto passa de seis para três fôrmas e fica simétrico, o que também uniformiza
-os vãos efetivos das vigas e a rigidez dos pórticos. Os pilares P6 e P5 ficam
-quase no limite (1 % e 6 %), de modo que não convém reduzi-los mais.
+necessária.
 
 ### Espessura inicial das lajes
 
@@ -245,13 +242,7 @@ $$
 a_i=\min(0{,}075;\,0{,}036)=0{,}036\text{ m}.
 $$
 
-Como $l_0=l_{eixos}-0{,}15$, resulta
-
-$$
-\boxed{l_{ef}=l_{eixos}-0{,}078\text{ m}}.
-$$
-
-Por exemplo, para L1 resulta em
+$l_0=l_{eixos}-0{,}15$ represneta o vão entre faces. Por exemplo, para L1 resulta em:
 
 $$
 l_x=5{,}250-0{,}15+2(0{,}036)=5{,}172\text{ m},
@@ -272,7 +263,7 @@ A [Tabela 7](#tabela-vaos) apresenta os vãos efetivos das quatro lajes e a rela
 | L4 | 4,922 | 6,272 | 1,2743 | Duas direções |
 
 O eixo $x$ é vertical na planta e o eixo $y$ é horizontal. As quatro lajes
-possuem apoio nos quatro lados e $\lambda<2$, e não há balanço no desenho.
+possuem apoio nos quatro lados e $\lambda<2$, e não há balanço no desenho. Lembrando que esse padrão só vale para este projeto.
 
 ### Vãos efetivos das vigas
 
@@ -334,8 +325,8 @@ Usando os valores das tabelas da [Aula 03](../aulas/003-carregamentos.md) e $h$ 
 Portanto,
 
 $$
-g_{k,tipo}=25h+1{,}150+g_{paredes}
-=4{,}150+g_{paredes}\quad(\mathrm{kN/m^2}).
+g_{k,tipo}=25h+1{,}150+g_{paredes,tipo}
+=4{,}150+g_{paredes,tipo}\quad(\mathrm{kN/m^2}).
 $$
 
 A sobrecarga de dormitório é $q_{k,tipo}=1{,}50\text{ kN/m}^2$.
@@ -389,10 +380,51 @@ $$
 g_{paredes}=\frac{\sum_j2{,}10H_{p,j}L_{p,j}}{A_{laje}}.
 $$
 
-Conforme a definição do professor, **todas as paredes estão apoiadas nas
-vigas**. Portanto, $g_{paredes}=g_{paredes,cob}=0$ nas lajes deste trabalho.
-As cargas lineares das paredes entram na composição das vigas na Entrega 2.
-O pé-esquerdo de 3,10 m não é automaticamente a altura livre da alvenaria.
+Conforme o enunciado, a alvenaria dos pavimentos-tipo é de bloco cerâmico vazado
+de $11{,}5\text{ cm}$ com reboco de $2\text{ cm}$ em cada face, o que dá
+$2{,}10\text{ kN/m}^2$ de parede, e se divide em dois casos. O pé-esquerdo de
+3,10 m não é automaticamente a altura livre da alvenaria.
+
+**Alvenaria sobre as vigas dos pavimentos-tipo.** Todas as vigas (V1 a V6)
+recebem parede de $2{,}80\text{ m}$ de altura, e a carga linear em cada uma é
+
+$$
+g_{parede,viga,tipo}=2{,}10\times2{,}80=5{,}88\text{ kN/m}.
+$$
+
+Essa carga entra na composição das vigas na Entrega 2 e não é lançada nas lajes.
+
+**Alvenaria sobre a laje L1.** O enunciado indica um perímetro de alvenaria
+apoiado diretamente em L1, em todo o seu contorno, com $3{,}00\text{ m}$ de altura.
+Tomando as dimensões entre faces das vigas ($5{,}10\text{ m}$ e $5{,}85\text{ m}$),
+o comprimento da parede, a carga linear e a carga total são
+
+$$
+L_p=2(5{,}10+5{,}85)=21{,}90\text{ m},
+\qquad
+g_{parede,lin}=2{,}10\times3{,}00=6{,}30\text{ kN/m},
+$$
+
+$$
+P_{parede}=6{,}30\times21{,}90=137{,}97\text{ kN}.
+$$
+
+Distribuindo essa carga na área livre da laje, $A_{L1}=5{,}10\times5{,}85=29{,}835\text{ m}^2$,
+obtém-se a carga equivalente por área
+
+$$
+g_{paredes,tipo}=\frac{137{,}97}{29{,}835}=4{,}624\text{ kN/m}^2.
+$$
+
+Assim, a carga permanente final de L1 nos pavimentos-tipo é
+
+$$
+g_{k,tipo,L1}=4{,}150+4{,}624=8{,}774\text{ kN/m}^2.
+$$
+
+Nas lajes L2, L3 e L4 não há parede apoiada diretamente, logo
+$g_{paredes,tipo}=0$ e $g_{k,tipo}=4{,}150\text{ kN/m}^2$. Na cobertura, também
+$g_{paredes,cob}=0$ nas lajes.
 
 **Platibanda da cobertura.** As vigas de contorno da cobertura (V1, V3, V4 e V6)
 recebem uma platibanda de $1{,}10\text{ m}$ de altura, em bloco cerâmico vazado
@@ -409,36 +441,87 @@ na composição das vigas de cobertura na Entrega 2.
 
 ### Combinações para as etapas seguintes
 
-Para o pavimento-tipo sem paredes diretamente sobre a laje, resulta
+Para as lajes L2, L3 e L4 dos pavimentos-tipo, sem paredes diretamente sobre a laje,
+com $g_{k,tipo}=4{,}150\text{ kN/m}^2$ e $q_{k,tipo}=1{,}50\text{ kN/m}^2$, resulta
 
 $$
-p_k=4{,}150+1{,}50=5{,}650\text{ kN/m}^2,
-$$
-
-$$
-p_d=1{,}4(g_k+q_k)=7{,}910\text{ kN/m}^2,
-$$
-
-$$
-p_{freq}=g_k+0{,}4q_k=4{,}750\text{ kN/m}^2,
+p_{k,tipo}=g_{k,tipo}+q_{k,tipo}=5{,}650\text{ kN/m}^2,
 \qquad
-p_{qp}=g_k+0{,}3q_k=4{,}600\text{ kN/m}^2.
+p_{d,ELU,tipo}=1{,}4(g_{k,tipo}+q_{k,tipo})=7{,}910\text{ kN/m}^2,
 $$
 
-Para a cobertura, empregam-se as mesmas expressões com $g_{k,cob}=6{,}690\text{ kN/m}^2$
-e $q_{k,cob}=0{,}50\text{ kN/m}^2$, o que resulta em
+$$
+p_{d,freq,tipo}=g_{k,tipo}+0{,}4q_{k,tipo}=4{,}750\text{ kN/m}^2,
+\qquad
+p_{d,qp,tipo}=g_{k,tipo}+0{,}3q_{k,tipo}=4{,}600\text{ kN/m}^2.
+$$
+
+Para a laje L1 dos pavimentos-tipo, com $g_{k,tipo,L1}=8{,}774\text{ kN/m}^2$, resulta
+
+$$
+p_{k,tipo,L1}=10{,}274\text{ kN/m}^2,
+\qquad
+p_{d,ELU,tipo,L1}=1{,}4(g_{k,tipo,L1}+q_{k,tipo})=14{,}384\text{ kN/m}^2,
+$$
+
+$$
+p_{d,freq,tipo,L1}=g_{k,tipo,L1}+0{,}4q_{k,tipo}=9{,}374\text{ kN/m}^2,
+\qquad
+p_{d,qp,tipo,L1}=g_{k,tipo,L1}+0{,}3q_{k,tipo}=9{,}224\text{ kN/m}^2.
+$$
+
+Para a cobertura, com $g_{k,cob}=6{,}690\text{ kN/m}^2$ e
+$q_{k,cob}=0{,}50\text{ kN/m}^2$, resulta
 
 $$
 p_{k,cob}=7{,}190\text{ kN/m}^2,
 \qquad
-p_{d,cob}=1{,}4(g_k+q_k)=10{,}066\text{ kN/m}^2,
+p_{d,ELU,cob}=1{,}4(g_{k,cob}+q_{k,cob})=10{,}066\text{ kN/m}^2,
 $$
 
 $$
-p_{freq,cob}=g_k+0{,}4q_k=6{,}890\text{ kN/m}^2,
+p_{d,freq,cob}=g_{k,cob}+0{,}4q_{k,cob}=6{,}890\text{ kN/m}^2,
 \qquad
-p_{qp,cob}=g_k+0{,}3q_k=6{,}840\text{ kN/m}^2.
+p_{d,qp,cob}=g_{k,cob}+0{,}3q_{k,cob}=6{,}840\text{ kN/m}^2.
 $$
 
 Os valores globais de 10 e 7 kN/m² do enunciado são estimativas
 para o pré-dimensionamento dos pilares e não substituem este levantamento.
+
+### Resumo das cargas nas lajes
+
+A [Tabela 11](#tabela-cargas-lajes) reúne as cargas por área que atuam nas lajes,
+já incluindo a alvenaria apoiada em L1 nos pavimentos-tipo.
+
+(tabela-cargas-lajes)=
+**Tabela 11.** Cargas por área nas lajes (kN/m²).
+
+| Laje | Pavimento | $g_k$ | $q_k$ | $p_k$ | $p_{d,ELU}$ | $p_{d,freq}$ | $p_{d,qp}$ |
+|---|---|---:|---:|---:|---:|---:|---:|
+| L1 | Tipo | 8,774 | 1,50 | 10,274 | 14,384 | 9,374 | 9,224 |
+| L2, L3 e L4 | Tipo | 4,150 | 1,50 | 5,650 | 7,910 | 4,750 | 4,600 |
+| L1, L2, L3 e L4 | Cobertura | 6,690 | 0,50 | 7,190 | 10,066 | 6,890 | 6,840 |
+
+### Resumo das cargas nas vigas
+
+A [Tabela 12](#tabela-cargas-vigas) apresenta as cargas lineares permanentes por
+tramo, com os vãos efetivos da [Tabela 8](#tabela-vigas-vaos). O peso próprio é
+$25b_wh_v$, com $b_w=0{,}15\text{ m}$, o que dá $2{,}063\text{ kN/m}$ nas vigas de
+$55\text{ cm}$ (V1 a V3) e $1{,}688\text{ kN/m}$ nas vigas de $45\text{ cm}$ (V4 a V6).
+A alvenaria é de $5{,}88\text{ kN/m}$ nos pavimentos-tipo e a platibanda é de
+$2{,}09\text{ kN/m}$ na cobertura, apenas em V1, V3, V4 e V6. As reações das lajes sobre as vigas
+serão somadas a estes valores na Entrega 2.
+
+(tabela-cargas-vigas)=
+**Tabela 12.** Cargas lineares permanentes nas vigas por tramo (kN/m), sem as reações das lajes.
+
+| Viga | Tramo | $l_{ef}$ (m) | Peso próprio | Alvenaria (tipo) | Total (tipo) | Platibanda (cobertura) | Total (cobertura) |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| V1 e V3 | 1 | 5,940 | 2,063 | 5,880 | 7,943 | 2,090 | 4,153 |
+| V1 e V3 | 2 | 6,290 | 2,063 | 5,880 | 7,943 | 2,090 | 4,153 |
+| V2 | 1 | 5,730 | 2,063 | 5,880 | 7,943 | 0,000 | 2,063 |
+| V2 | 2 | 6,080 | 2,063 | 5,880 | 7,943 | 0,000 | 2,063 |
+| V4 e V6 | 1 | 5,250 | 1,688 | 5,880 | 7,568 | 2,090 | 3,778 |
+| V4 e V6 | 2 | 5,000 | 1,688 | 5,880 | 7,568 | 2,090 | 3,778 |
+| V5 | 1 | 5,250 | 1,688 | 5,880 | 7,568 | 0,000 | 1,688 |
+| V5 | 2 | 5,000 | 1,688 | 5,880 | 7,568 | 0,000 | 1,688 |
