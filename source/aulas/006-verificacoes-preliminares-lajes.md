@@ -206,7 +206,7 @@ com $\alpha=1{,}5$ para a seção retangular. Se $M_a\leq M_r$, adota-se $I_{eq}
 
 ### Inércia da seção fissurada
 
-Quando $M_a>M_r$, calcula-se a seção no Estádio II. Para uma faixa retangular com armadura simples:
+Quando $M_a>M_r$, calcula-se a seção no Estádio II. Os estádios e o ensaio que os motiva são apresentados na [Aula 07](007-premissas-estadios-dominios.md); aqui basta o resultado. Para uma faixa retangular com armadura simples:
 
 $$
 \alpha_e=\frac{E_s}{E_{cs}},

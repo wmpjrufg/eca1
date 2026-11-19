@@ -287,6 +287,58 @@ de apoio e a flecha elástica imediata total. As reações vêm da
 Momentos em kN m/m, reações em kN/m e flechas em mm. Os valores $m'$ são
 módulos de momentos negativos.
 
+### Planta de esforços nas lajes
+
+As figuras desta seção lançam na planta os momentos de cálculo antes da
+compatibilização ([Tabela 18](#tabela-e2-mom-d); [Figura 1](#fig-sol-e2-tipo-antes) e
+[Figura 3](#fig-sol-e2-cob-antes)) e depois dela ([Tabela 20](#tabela-e2-mom-dc);
+[Figura 2](#fig-sol-e2-tipo-depois) e [Figura 4](#fig-sol-e2-cob-depois)). Cada
+momento fica na direção em que atua: $m_x$ e $m'_x$ na vertical, e $m_y$ e
+$m'_y$ na horizontal. Os positivos ($m_x$ e $m_y$) aparecem no centro de cada
+laje. Os negativos ficam nas bordas contínuas, com $m'_x$ sobre V2 e $m'_y$
+sobre V5. Nas demais bordas, de apoio simples, não há negativo.
+
+Antes da compatibilização, as duas lajes que dividem uma borda têm negativos
+diferentes. Por exemplo, sobre o trecho esquerdo de V2 no pavimento-tipo, L1 tem
+$m'_x=31{,}58$ e L3 tem $m'_x=16{,}59$ kN m/m. Depois, as duas adotam o valor
+comum $m'_c=25{,}26$ kN m/m ([Tabela 19](#tabela-e2-mc)). Nas plantas
+compatibilizadas, o valor anterior aparece em cinza onde houve mudança. O
+positivo só aumenta na laje cujo negativo foi reduzido (por exemplo, $m_x$ de L1
+passa de 14,74 para 17,90 kN m/m). Na laje cujo negativo cresce, como L3, o
+positivo não muda.
+
+(fig-sol-e2-tipo-antes)=
+**Figura 1.** Pavimento-tipo: momentos de cálculo antes da compatibilização (kN m/m).
+```{figure} ../../professor/solucao-trabalho/figuras/planta-esforcos-lajes-tipo-antes.png
+:alt: Planta do pavimento-tipo com os momentos positivos e negativos de cada laje antes da compatibilização
+:width: 95%
+:align: center
+```
+
+(fig-sol-e2-tipo-depois)=
+**Figura 2.** Pavimento-tipo: momentos de cálculo após a compatibilização (kN m/m).
+```{figure} ../../professor/solucao-trabalho/figuras/planta-esforcos-lajes-tipo-depois.png
+:alt: Planta do pavimento-tipo com os momentos compatibilizados e, em cinza, os valores anteriores
+:width: 95%
+:align: center
+```
+
+(fig-sol-e2-cob-antes)=
+**Figura 3.** Cobertura: momentos de cálculo antes da compatibilização (kN m/m).
+```{figure} ../../professor/solucao-trabalho/figuras/planta-esforcos-lajes-cobertura-antes.png
+:alt: Planta da cobertura com os momentos positivos e negativos de cada laje antes da compatibilização
+:width: 95%
+:align: center
+```
+
+(fig-sol-e2-cob-depois)=
+**Figura 4.** Cobertura: momentos de cálculo após a compatibilização (kN m/m).
+```{figure} ../../professor/solucao-trabalho/figuras/planta-esforcos-lajes-cobertura-depois.png
+:alt: Planta da cobertura com os momentos compatibilizados e, em cinza, os valores anteriores
+:width: 95%
+:align: center
+```
+
 ### Reações e áreas de influência
 
 As reações médias da [Tabela 16](#tabela-e2-reacoes) servem de estimativa inicial

@@ -329,7 +329,7 @@ A etapa final transforma o dimensionamento em desenhos executivos. As
 armaduras definidas na Entrega 4 são posicionadas e numeradas, e seus comprimentos
 são definidos considerando ancoragem e decalagem (itens 9.4 e 18.3 da
 [ABNT NBR 6118 [1]](#ref-1)), e os quantitativos de materiais são levantados. Os critérios de detalhamento das barras positivas, negativas, de borda e de canto, e a
-montagem da tabela de aço, constam na [Aula 09: Detalhamento de lajes maciças](../aulas/009-detalhamento-lajes.md).
+montagem da tabela de aço, constam na [Aula 10: Detalhamento de lajes maciças](../aulas/010-detalhamento-lajes.md).
 
 ```{admonition} Entrega 5: Detalhamento das lajes e pranchas finais
 :class: destaque-verde

@@ -1,6 +1,10 @@
-# Gabarito e notas do professor: Aula 07
+# Gabarito e notas do professor: Aula 08
 
 Material de uso do professor. Este arquivo fica fora de `source/` e não integra o site.
+
+## Divisão com a Aula 07
+
+Esta aula era a Aula 07. As premissas do ELU e a dedução das fronteiras entre domínios, incluindo $\varepsilon_{c2}$ e $\varepsilon_{cu}$ de C55 a C90, passaram para a nova [Aula 07](gabarito-aula-07.md). Aqui permanecem a dedução do equilíbrio, a tabela de consulta dos domínios (C20 a C50), o limite de ductilidade e o método do domínio 2.
 
 ## Recorte didático do capítulo 4
 

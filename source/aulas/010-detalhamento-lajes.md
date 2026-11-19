@@ -1,6 +1,6 @@
-# Aula 09: Detalhamento de lajes maciças
+# Aula 10: Detalhamento de lajes maciças
 
-As aulas anteriores levaram cada laje do pavimento até a área de aço por metro, em cada direção e em cada região: os esforços vieram da [Aula 05](005-esforcos-lajes.md), as verificações preliminares da [Aula 06](006-verificacoes-preliminares-lajes.md), o dimensionamento da [Aula 07](007-armadura-simples.md) e as regras de ancoragem da [Aula 08](008-detalhamento-secoes.md). Falta a etapa que chega à obra: **quais barras, com que espaçamento, com que comprimento, quantas e em que posição?**
+As aulas anteriores levaram cada laje do pavimento até a área de aço por metro, em cada direção e em cada região: os esforços vieram da [Aula 05](005-esforcos-lajes.md), as verificações preliminares da [Aula 06](006-verificacoes-preliminares-lajes.md), o dimensionamento da [Aula 08](008-armadura-simples.md) e as regras de ancoragem da [Aula 09](009-detalhamento-secoes.md). Falta a etapa que chega à obra: **quais barras, com que espaçamento, com que comprimento, quantas e em que posição?**
 
 A aula segue a ordem do trabalho do projetista: escolher bitola e espaçamento, conferir as armaduras mínimas e os limites construtivos, definir o comprimento das barras positivas e negativas, contar as barras, prever as armaduras de borda e de canto e, por fim, desenhar as plantas de armação e montar a tabela de aço. Um exemplo com duas lajes vizinhas, no padrão do trabalho prático, acompanha todas as etapas.
 
@@ -110,7 +110,7 @@ O comprimento das barras negativas deve vir do diagrama de momentos fletores na 
 - o **maior dos menores vãos** das lajes adjacentes, quando as duas foram consideradas engastadas nesse apoio;
 - o **menor vão da laje admitida engastada**, quando a outra foi suposta simplesmente apoiada nesse vínculo.
 
-Para lajes armadas em uma direção, com borda engastada, a extensão é $0{,}25$ do vão. O deslocamento do diagrama, em lajes sem armadura transversal, é $a_\ell=1{,}5\,d$, e $\ell_b$ é o comprimento de ancoragem da Aula 08 (com gancho, $0{,}7\,\ell_b$).
+Para lajes armadas em uma direção, com borda engastada, a extensão é $0{,}25$ do vão. O deslocamento do diagrama, em lajes sem armadura transversal, é $a_\ell=1{,}5\,d$, e $\ell_b$ é o comprimento de ancoragem da Aula 09 (com gancho, $0{,}7\,\ell_b$).
 
 ```{figure} ../_static/aulas/detalhamento-lajes/negativas-alternativas.png
 :alt: Diagrama trapezoidal de momento negativo sobre o apoio, com base de 0,25 do vão de cada lado, e três arranjos de barras negativas: um só tipo, dois comprimentos e barras alternadas de mesmo comprimento
@@ -199,7 +199,7 @@ As lajes são representadas em **plantas de armação**: uma para a armadura pos
 
 $$\underbrace{33}_{\text{quantidade}}\ \underbrace{\text{N1}}_{\text{posição}}\ \underbrace{\phi6{,}3}_{\text{bitola}}\ \underbrace{\text{c/15}}_{\text{espaçamento}}\ \underbrace{C=405}_{\text{comprimento (cm)}}$$
 
-A **tabela de aço** reúne, para cada posição, a bitola, a quantidade, o comprimento unitário e o comprimento total; e, para cada bitola, a massa total, com a massa linear da Aula 08.
+A **tabela de aço** reúne, para cada posição, a bitola, a quantidade, o comprimento unitário e o comprimento total; e, para cada bitola, a massa total, com a massa linear da Aula 09.
 
 ````{admonition} Exemplo resolvido: lajes L1 e L2
 :class: destaque-verde
@@ -224,7 +224,7 @@ Planta de armação positiva do exemplo.
 
 **1. Armaduras mínimas.** $A_{s,min}^{+}=0{,}67\cdot0{,}150\%\cdot100\cdot12=1{,}21\ \text{cm}^2/\text{m}$ (positiva, duas direções) e $A_{s,min}^{-}=0{,}150\%\cdot100\cdot12=1{,}80\ \text{cm}^2/\text{m}$ (negativa).
 
-**2. Áreas, bitolas e espaçamentos** (procedimento da Aula 07; todas as seções no domínio 2, $\varphi_{adot}=0{,}931$). A direção x, mais solicitada, fica na camada inferior; a direção y, sobre ela.
+**2. Áreas, bitolas e espaçamentos** (procedimento da Aula 08; todas as seções no domínio 2, $\varphi_{adot}=0{,}931$). A direção x, mais solicitada, fica na camada inferior; a direção y, sobre ela.
 
 | Armadura | $d$ (cm) | $A_{s,calc}$ | $A_{s,nec}$ | $s_{max}$ pela área | Adotado | $A_{s,ef}$ |
 |---|---:|---:|---:|---:|---|---:|

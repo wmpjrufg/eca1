@@ -1,8 +1,8 @@
-# Aula 07: Dimensionamento de seções retangulares com armadura simples
+# Aula 08: Dimensionamento de seções retangulares com armadura simples
 
-Na [Aula 06](006-verificacoes-preliminares-lajes.md), a armadura mínima permitiu avaliar preliminarmente as lajes. Agora vamos determinar a armadura longitudinal necessária para resistir ao momento fletor de cálculo. O mesmo equilíbrio de uma seção retangular serve para uma viga e para uma faixa de laje, desde que a largura e as unidades sejam coerentes.
+Na [Aula 06](006-verificacoes-preliminares-lajes.md), a armadura mínima permitiu avaliar preliminarmente as lajes, e a [Aula 07](007-premissas-estadios-dominios.md) apresentou o ensaio de Stuttgart, os estádios, as premissas do estado-limite último e os domínios de deformação. Agora vamos usar esse modelo para determinar a armadura longitudinal necessária para resistir ao momento fletor de cálculo. O mesmo equilíbrio de uma seção retangular serve para uma viga e para uma faixa de laje, desde que a largura e as unidades sejam coerentes.
 
-Esta aula sintetiza o capítulo 4, *Dimensionamento de seções retangulares com armadura simples*, do material fornecido pelo professor. A dedução concentra-se nas equações gerais. Os limites entre domínios, as expressões de verificação e as disposições construtivas aparecem em sua forma final. As referências normativas correspondem à NBR 6118:2023, versão corrigida de 2024, adotada no capítulo.
+Esta aula sintetiza o capítulo 4, *Dimensionamento de seções retangulares com armadura simples*, do material fornecido pelo professor. A dedução concentra-se nas equações gerais de equilíbrio. As premissas e a origem dos limites entre domínios estão na Aula 07; aqui eles são aplicados. As expressões de verificação e as disposições construtivas aparecem em sua forma final. As referências normativas correspondem à NBR 6118:2023, versão corrigida de 2024, adotada no capítulo.
 
 ```{admonition} Objetivos da aula
 :class: destaque-azul
@@ -38,7 +38,7 @@ Usaremos N, mm e MPa nas substituições: $1\text{ MPa}=1\text{ N/mm}^2$, $1\tex
 
 ## Modelo da seção no ELU
 
-As hipóteses empregadas são: seções planas permanecem planas, aderência perfeita entre os materiais, resistência à tração do concreto desprezada no ELU e tensões dos materiais obtidas de seus diagramas de cálculo. Essas hipóteses permitem representar a seção por um diagrama linear de deformações e por duas resultantes de forças.
+Valem as premissas da [Aula 07](007-premissas-estadios-dominios.md): seções planas permanecem planas, aderência perfeita entre os materiais, resistência à tração do concreto desprezada no ELU e tensões dos materiais obtidas de seus diagramas de cálculo. Elas permitem representar a seção por um diagrama linear de deformações e por duas resultantes de forças.
 
 ```{figure} ../_static/aulas/armadura-simples/secao-elu.png
 :alt: Seção retangular com armadura tracionada, diagrama linear de deformações e bloco retangular de compressão equilibrado pela força no aço
@@ -184,17 +184,9 @@ $$
 
 A primeira usa o equilíbrio de momentos; a segunda, o equilíbrio de forças. Ambas devem fornecer o mesmo resultado para o mesmo modelo.
 
-## Domínios e ductilidade: expressões finais
+## Domínios e ductilidade: resumo para consulta
 
-As fronteiras obtidas pela compatibilidade são
-
-$$
-\xi_{2a/2b}=\frac{\varepsilon_{c2}}{\varepsilon_{c2}+0{,}010},\qquad
-\xi_{2/3}=\frac{\varepsilon_{cu}}{\varepsilon_{cu}+0{,}010},\qquad
-\xi_{3/4}=\frac{\varepsilon_{cu}}{\varepsilon_{cu}+\varepsilon_{yd}}.
-$$
-
-Para C20 a C50, $\varepsilon_{c2}=2\text{‰}$ e $\varepsilon_{cu}=3{,}5\text{‰}$. Com CA-50:
+As fronteiras entre os domínios foram obtidas pela compatibilidade de deformações na [Aula 07](007-premissas-estadios-dominios.md), junto com as expressões de $\varepsilon_{c2}$ e $\varepsilon_{cu}$ para C55 a C90. Para C20 a C50 ($\varepsilon_{c2}=2\text{‰}$ e $\varepsilon_{cu}=3{,}5\text{‰}$) e CA-50, o resumo para consulta é:
 
 | Região | Intervalo de $\xi$ | Condição no ELU |
 |---|---|---|
@@ -204,14 +196,6 @@ Para C20 a C50, $\varepsilon_{c2}=2\text{‰}$ e $\varepsilon_{cu}=3{,}5\text{�
 | Domínio 4 | $0{,}628<\xi<1$ | Concreto alcança $\varepsilon_{cu}$ antes do escoamento da armadura |
 
 As fronteiras expressam compatibilidade física de deformações. No cálculo simplificado do domínio 2, a posição obtida pelo bloco retangular é uma estimativa de enquadramento; a correção do braço de alavanca será apresentada adiante.
-
-Para C55 a C90, usam-se nas mesmas expressões:
-
-$$
-\varepsilon_{c2}=\left[2+0{,}085(f_{ck}-50)^{0{,}53}\right]\text{‰},
-\qquad
-\varepsilon_{cu}=\left[2{,}6+35\left(\frac{90-f_{ck}}{100}\right)^4\right]\text{‰}.
-$$
 
 ### Limite de ductilidade
 

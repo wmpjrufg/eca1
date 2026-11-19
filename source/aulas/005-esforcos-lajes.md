@@ -364,7 +364,7 @@ Não se aplica outra vez a ponderação das ações: $p_d$ já é carga de cálc
 ```{admonition} Quanto o canto pede em relação ao vão?
 :class: destaque-azul
 
-Neste exemplo, o momento positivo do vão é $m_{x,d}=5{,}303\times1{,}344=7{,}13\,\mathrm{kN\,m/m}$: o canto pede **65%** dele, em cada direção e em cada face. Na laje tipo 1 quadrada, a relação $\mu_{xy}/\mu_x=3{,}712/4{,}420$ chega a **84%**; para $\lambda=2$, cai para cerca de 53%. Por isso a regra prática de "metade da armadura do vão" nem sempre é suficiente, como se discute na [Aula 9](009-detalhamento-lajes.md).
+Neste exemplo, o momento positivo do vão é $m_{x,d}=5{,}303\times1{,}344=7{,}13\,\mathrm{kN\,m/m}$: o canto pede **65%** dele, em cada direção e em cada face. Na laje tipo 1 quadrada, a relação $\mu_{xy}/\mu_x=3{,}712/4{,}420$ chega a **84%**; para $\lambda=2$, cai para cerca de 53%. Por isso a regra prática de "metade da armadura do vão" nem sempre é suficiente, como se discute na [Aula 10](010-detalhamento-lajes.md).
 ```
 
 ### Exemplo 2: flexão e torção no mesmo ponto
@@ -396,7 +396,7 @@ Para uniformizar por face, adota-se $\max(m_{x,d,\mathrm{arm}},m_{y,d,\mathrm{ar
 
 O passo seguinte é dimensionar a área de aço para cada momento final e altura útil. Momentos iguais não garantem áreas iguais, porque as camadas ortogonais podem ter alturas úteis diferentes. Se for escolhida a mesma malha nas duas direções, ela deve atender às duas verificações e aos mínimos aplicáveis.
 
-Os resultados do exemplo 1 são **locais no vértice**. Ao dimensionar uma região, também se avaliam os esforços ao longo dela. A extensão de $l_x/5$ e a regra simplificada de área apresentadas na [Aula 9](009-detalhamento-lajes.md) são critérios de detalhamento; não são deduzidas da multiplicação do coeficiente da tabela.
+Os resultados do exemplo 1 são **locais no vértice**. Ao dimensionar uma região, também se avaliam os esforços ao longo dela. A extensão de $l_x/5$ e a regra simplificada de área apresentadas na [Aula 10](010-detalhamento-lajes.md) são critérios de detalhamento; não são deduzidas da multiplicação do coeficiente da tabela.
 
 **Para fazer em sala:** repita o exemplo 1 para $\lambda=2{,}00$, mantendo $l_x$ e $p_d$. Calcule primeiro $m_{xy,d}$ e só depois os quatro momentos finais. Conferência: $m_{xy,d}\approx-4{,}78\,\mathrm{kN\,m/m}$ e momento final local de $4{,}78\,\mathrm{kN\,m/m}$ em cada direção de cada face.
 

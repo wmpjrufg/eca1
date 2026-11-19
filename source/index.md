@@ -24,7 +24,8 @@ aulas/003-carregamentos
 aulas/004-modelos-estruturais
 aulas/005-esforcos-lajes
 aulas/006-verificacoes-preliminares-lajes
-aulas/007-armadura-simples
-aulas/008-detalhamento-secoes
-aulas/009-detalhamento-lajes
+aulas/007-premissas-estadios-dominios
+aulas/008-armadura-simples
+aulas/009-detalhamento-secoes
+aulas/010-detalhamento-lajes
 ```

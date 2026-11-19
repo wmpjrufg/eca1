@@ -1,4 +1,4 @@
-# Gabarito do professor: Aula 09 (detalhamento de lajes maciças)
+# Gabarito do professor: Aula 10 (detalhamento de lajes maciças)
 
 Material **somente do professor**. Fica fora de `source/` e não é publicado.
 
@@ -9,7 +9,7 @@ Material **somente do professor**. Fica fora de `source/` e não é publicado.
 3. **Barras inferiores alternadas** ($0{,}85l$ e $0{,}70l$): transcritas da Figura 8 da apostila; a aula as apresenta só como opção.
 4. **Malha de canto inferior.** Na Figura 9 da apostila, a malha que substitui a armadura inferior de canto está indicada como "$2a_{sc}$". A aula descreve a substituição sem fixar esse valor; no exemplo, a malha positiva atende mesmo na interpretação mais exigente.
 5. **Momentos do exemplo.** São dados do enunciado (ordem de grandeza obtida com $p_d\approx9{,}1\ \text{kN/m}^2$ e coeficientes de tabela como na Aula 05), não um resultado a conferir.
-6. As áreas de aço usam o procedimento simplificado da Aula 07 ($\varphi_{adot}=\min(\varphi;0{,}931)$). Se a outra versão da Aula 07 mudar esse procedimento, as áreas do exemplo mudam um pouco (menos de $5\%$), sem alterar as bitolas adotadas.
+6. As áreas de aço usam o procedimento simplificado da Aula 08 ($\varphi_{adot}=\min(\varphi;0{,}931)$). Se a outra versão da Aula 08 mudar esse procedimento, as áreas do exemplo mudam um pouco (menos de $5\%$), sem alterar as bitolas adotadas.
 
 ## Exercício 1: completar o exemplo
 
