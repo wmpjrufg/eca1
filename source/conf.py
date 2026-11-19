@@ -21,7 +21,7 @@ extensions = [
 # Uma linha removida ou comentada equivale a False. Depois, gere/publique o site.
 solucao_entregas_liberadas = {
     1: True,  # Pré-dimensionamento, vãos efetivos e cargas
-    2: False,  # Esforços e descarregamento nas vigas
+    2: True,  # Esforços e descarregamento nas vigas
     3: False,  # Cisalhamento, fissuração e flecha com armadura mínima
     4: False,  # Dimensionamento à flexão e verificações finais
     5: False,  # Detalhamento e consolidação
