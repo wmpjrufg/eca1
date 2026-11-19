@@ -34,7 +34,7 @@ Costuma-se chamar de **ensaio de Stuttgart** o ensaio clássico de uma viga de c
 :width: 85%
 :align: center
 
-Figura 1. Ensaio de flexão em quatro pontos. Entre as duas cargas o cortante é nulo e o momento é constante. A viga é instrumentada com extensômetros no concreto e na armadura e com medição da flecha no meio do vão. Esquema sem escala.
+Figura 1. Ensaio de flexão em quatro pontos. Entre as duas cargas o cortante é nulo e o momento é constante. O diagrama de momento é desenhado do lado tracionado da viga. A viga é instrumentada com extensômetros no concreto e na armadura e com medição da flecha no meio do vão. Esquema sem escala.
 ```
 
 Com as cargas a uma distância $a=L/3$ de cada apoio, o trecho central fica em **flexão pura**: $V=0$ e
@@ -157,7 +157,7 @@ $$
 \sigma_c=0{,}85f_{cd}\quad(\varepsilon_{c2}\leq\varepsilon_c\leq\varepsilon_{cu}),
 $$
 
-com $\varepsilon_{c2}=2{,}0\text{‰}$ e $\varepsilon_{cu}=3{,}5\text{‰}$. O fator $0{,}85$ reúne, entre outros efeitos, a ação de longa duração da carga. Para o aço, $\varepsilon_{yd}=f_{yd}/E_s$, que vale $2{,}07\text{‰}$ para o CA-50 com $\gamma_s=1{,}15$ e $E_s=210000\text{ MPa}$.
+com $\varepsilon_{c2}=2{,}0\text{‰}$ e $\varepsilon_{cu}=3{,}5\text{‰}$. O fator $0{,}85$ considera a perda de resistência do concreto submetido a tensões constantes ao longo do tempo. Para o aço, $\varepsilon_{yd}=f_{yd}/E_s$, que vale $2{,}07\text{‰}$ para o CA-50 com $\gamma_s=1{,}15$ e $E_s=210000\text{ MPa}$.
 
 Para C55 a C90, os valores de $\varepsilon_{c2}$ e $\varepsilon_{cu}$ mudam:
 
@@ -205,7 +205,7 @@ Na **flexão simples**, a seção só pode estar nos domínios 2, 3 ou 4. O dom�
 
 - **Domínio 2.** Pouca armadura em relação à seção. O aço chega ao limite de $10\text{‰}$ sem que o concreto esteja esgotado. É o caso usual das lajes.
 - **Domínio 3.** Armadura adequada. O aço escoa e o concreto atinge $\varepsilon_{cu}$ ao mesmo tempo. A ruína é dúctil, com fissuras abertas e flecha grande antes do colapso.
-- **Domínio 4.** Armadura em excesso. O concreto esmaga antes de o aço escoar. A ruína é frágil e sem aviso, e o aço fica subaproveitado. Deve ser evitado.
+- **Domínio 4.** Armadura em excesso. O concreto esmaga antes de o aço escoar. A ruína é frágil e sem aviso, e o aço fica subaproveitado. A NBR 6118 não admite dimensionar vigas nesse domínio. Quando a seção cai nele, aumenta-se a altura ou usa-se armadura na zona comprimida (item 17.2.3), tema de outra aula.
 
 ### Limites entre os domínios
 
@@ -215,7 +215,7 @@ $$
 \xi=\frac{x}{d}=\frac{\varepsilon_c}{\varepsilon_c+\varepsilon_s}.
 $$
 
-As fronteiras entre domínios saem dessa expressão com as deformações dos pivôs:
+As fronteiras entre domínios saem dessa expressão com as deformações dos pivôs, todas na mesma unidade (aqui, $0{,}010=10\text{‰}$):
 
 $$
 \xi_{2a/2b}=\frac{\varepsilon_{c2}}{\varepsilon_{c2}+0{,}010},\qquad
@@ -232,7 +232,49 @@ O domínio 2 é subdividido em 2a, em que o concreto ainda está na parte parab�
 | Domínio 3 | $0{,}259\leq\xi\leq0{,}628$ | Concreto a $\varepsilon_{cu}$, com escoamento da armadura tracionada |
 | Domínio 4 | $0{,}628<\xi<1$ | Concreto atinge $\varepsilon_{cu}$ antes do escoamento da armadura |
 
-A seção pode estar no domínio 3 e, ainda assim, ter pouca ductilidade quando $\xi$ é grande. Por isso a NBR 6118 limita a posição da linha neutra em $\xi\leq0{,}45$ para $f_{ck}\leq50$ MPa (item 14.6.4.3). Esse limite é usado no dimensionamento da [Aula 08](008-armadura-simples.md).
+### Limites em função do momento adimensional
+
+Antes de calcular a armadura, o enquadramento costuma ser feito pelo **momento fletor adimensional**
+
+$$
+\mu=\frac{M_d}{b_wd^2f_{cd}},
+$$
+
+que depende só dos dados do projeto: $M_d$, $b_w$, $d$ e $f_{ck}$. Para a seção retangular, o equilíbrio (deduzido na [Aula 08](008-armadura-simples.md)) relaciona $\mu$ e $\xi$:
+
+$$
+\mu=\alpha_c\eta_c\lambda\xi\left(1-\frac{\lambda\xi}{2}\right),
+$$
+
+com $\lambda=0{,}8$ e $\alpha_c=0{,}85$ para $f_{ck}\leq50$ MPa, e com $\eta_c=1$ para $f_{ck}\leq40$ MPa e $\eta_c=(40/f_{ck})^{1/3}$ para $40<f_{ck}\leq90$ MPa. Substituindo os $\xi$ das fronteiras, obtêm-se os limites $\mu_L$. Entre C20 e C50 os $\xi_L$ não mudam, mas os $\mu_L$ diminuem acima de C40, por causa de $\eta_c$:
+
+| Limite | $\xi_L$ | $\mu_L$ até C40 | $\mu_L$ C45 | $\mu_L$ C50 |
+|---|---:|---:|---:|---:|
+| 2a / 2b | 0,167 | 0,106 | 0,102 | 0,098 |
+| 2 / 3 | 0,259 | 0,158 | 0,152 | 0,147 |
+| 3 / 4, CA-50 | 0,628 | 0,320 | 0,308 | 0,297 |
+| Ductilidade | 0,45 | 0,251 | 0,241 | 0,233 |
+
+Esses valores coincidem com os Quadros 4.1 a 4.4 do capítulo 4 do material do professor, que também traz C55 a C90. Para C60 e CA-50, por exemplo, $\xi_L=0{,}186$, $0{,}224$ e $0{,}582$, com $\mu_L=0{,}094$, $0{,}112$ e $0{,}246$.
+
+O domínio da seção é então:
+
+| Condição | Domínio |
+|---|---|
+| $\mu<\mu_{L(2a/2b)}$ | 2a |
+| $\mu_{L(2a/2b)}\leq\mu<\mu_{L(2/3)}$ | 2b |
+| $\mu_{L(2/3)}\leq\mu\leq\mu_{L(3/4)}$ | 3 |
+| $\mu>\mu_{L(3/4)}$ | 4 |
+
+Se a seção cai no domínio 4, a altura útil mínima para que ela passe ao domínio 3, mantidos $M_d$, $b_w$ e o concreto, é
+
+$$
+d_{min}=\sqrt{\frac{M_d}{\mu_{L(3/4)}\,b_wf_{cd}}}.
+$$
+
+### Ductilidade
+
+A seção pode estar no domínio 3 e, ainda assim, ter pouca ductilidade quando $\xi$ é grande. Por isso a NBR 6118 (item 14.6.4.3) limita a posição da linha neutra em $\xi\leq0{,}45$ para $f_{ck}\leq50$ MPa e em $\xi\leq0{,}35$ para $50<f_{ck}\leq90$ MPa. O capítulo 4 do material do professor verifica esse critério nas seções sobre apoios, com momento negativo, onde se espera a formação de rótulas plásticas. Nesta disciplina, ele é aplicado em todas as seções dos exercícios, como se verá na [Aula 08](008-armadura-simples.md). Em termos de $\mu$, o limite $\xi\leq0{,}45$ equivale a $\mu\leq0{,}251$ (até C40) e é mais restritivo que a fronteira entre os domínios 3 e 4. Assim, uma seção do domínio 3 pode não atender ao critério de ductilidade.
 
 ### Estádios e domínios
 
@@ -344,6 +386,64 @@ Indique o estádio associado a cada item: (a) cálculo de $M_r$; (b) abertura de
 
 **Conferência:** (a) Estádio I; (b) Estádio II; (c) Estádio III; (d) o Estádio I, por $I_c$, e o Estádio II, por $I_{II}$, combinados pela expressão de Branson.
 
+Os exercícios a seguir são variações dos exemplos da aula.
+
+```{admonition} Exercício 5: cargas do ensaio de outra viga (variação do Exemplo 1)
+:class: destaque-verde
+
+Uma viga C35 tem $b_w=25\text{ cm}$ e $h=60\text{ cm}$ e é ensaiada com $L=6{,}00\text{ m}$ e cargas a $L/3$ dos apoios. Seu momento resistente de cálculo é $M_{Rd}=310\text{ kN m}$. Desprezando o peso próprio, determine a carga total $P$ que inicia a fissuração, a carga total que leva à ruína e a razão entre elas.
+```
+
+**Conferência:** $f_{ctm}=3{,}210\text{ MPa}$, $I_c=4{,}5\times10^9\text{ mm}^4$ e $M_r\approx72{,}2\text{ kN m}$. Com $a=2{,}00\text{ m}$, $P/2\approx36{,}1\text{ kN}$ e $P\approx72{,}2\text{ kN}$ na fissuração; na ruína, $P/2=155\text{ kN}$ e $P=310\text{ kN}$. A razão é $\approx0{,}23$.
+
+```{admonition} Exercício 6: estádios de outra seção (variação do Exemplo 2)
+:class: destaque-verde
+
+Uma viga de $b_w=15\text{ cm}$, $h=40\text{ cm}$ e $d=36\text{ cm}$, em C30 e CA-50, tem armadura de $2\phi20$ ($A_s=6{,}28\text{ cm}^2$). Use $E_s=210\,000\text{ MPa}$ e $E_{cs}=26\,838\text{ MPa}$.
+
+1. Calcule o momento de fissuração $M_r$.
+2. Para um momento de serviço $M=40\text{ kN m}$, verifique se a seção está fissurada e determine $x_{II}$, $I_{II}$, $\sigma_c$ e $\sigma_s$.
+3. No ELU, o equilíbrio da seção (Aula 08) fornece $\xi=0{,}347$. Calcule $\varepsilon_s$, identifique o domínio e diga se o aço escoa.
+```
+
+**Conferência:** (1) $M_r\approx17{,}4\text{ kN m}$. (2) $40>17{,}4$, então a seção está fissurada. Com $\alpha_e=7{,}82$, $x_{II}\approx124{,}3\text{ mm}$, $I_{II}\approx3{,}69\times10^8\text{ mm}^4$ ($0{,}46I_c$), $\sigma_c\approx13{,}5\text{ MPa}$ e $\sigma_s\approx200\text{ MPa}$. (3) $\varepsilon_s=3{,}5(1-0{,}347)/0{,}347\approx6{,}59\text{‰}>2{,}07\text{‰}$: domínio 3, com o aço escoando.
+
+```{admonition} Exercício 7: domínios em concreto de alta resistência (variação do Exemplo 3)
+:class: destaque-verde
+
+Para C60 e CA-50, determine: (a) $\varepsilon_{c2}$ e $\varepsilon_{cu}$ pelas expressões do item de premissas; (b) os valores de $\xi$ nas fronteiras 2a/2b, 2/3 e 3/4; (c) o domínio de cada par $(\varepsilon_c;\varepsilon_s)$, em ‰: $(2{,}0;\,10)$, $(2{,}8;\,10)$, $(\varepsilon_{cu};\,5{,}0)$ e $(\varepsilon_{cu};\,1{,}5)$.
+```
+
+**Conferência:** (a) $\varepsilon_{c2}=2{,}288\text{‰}$ e $\varepsilon_{cu}=2{,}884\text{‰}$. (b) $\xi=0{,}186$, $0{,}224$ e $0{,}582$. (c) $\xi=0{,}167$, domínio 2a; $\xi=0{,}219$, domínio 2b; $\xi=0{,}366$, domínio 3; $\xi=0{,}658$, domínio 4.
+
+```{admonition} Exercício 8: domínio pelo momento adimensional
+:class: destaque-verde
+
+Uma seção em vão de viga de edifício residencial tem $b_w=20\text{ cm}$ e $d=46\text{ cm}$, com aço CA-50 e $\gamma_g=\gamma_q=1{,}4$. Para cada caso, calcule $M_d$, $f_{cd}$ e $\mu$ e identifique o domínio, usando a tabela de $\mu_L$:
+
+(a) C25, $M_{gk}=45\text{ kN m}$ e $M_{qk}=30\text{ kN m}$;
+(b) C25, $M_{gk}=50\text{ kN m}$ e $M_{qk}=45\text{ kN m}$;
+(c) o caso (b) com C50.
+```
+
+**Conferência:** (a) $M_d=105\text{ kN m}$, $f_{cd}=17{,}86\text{ MPa}$, $\mu=0{,}139$, domínio 2b ($0{,}106\leq\mu<0{,}158$). (b) $M_d=133\text{ kN m}$, $\mu=0{,}176$, domínio 3. (c) $f_{cd}=35{,}71\text{ MPa}$, $\mu=0{,}088<0{,}098$, domínio 2a. O mesmo momento, com concreto mais resistente, cai num domínio de menor aproveitamento do concreto.
+
+```{admonition} Exercício 9: seção sobre apoio e altura mínima
+:class: destaque-verde
+
+A seção do Exercício 8, em C25, está sobre um apoio interno de viga contínua com momento negativo $M_d=250\text{ kN m}$. Calcule $\mu$, identifique o domínio e diga se a seção atende ao critério de ductilidade. Em seguida, determine a altura útil mínima (a) para ficar no domínio 3 e (b) para atender à ductilidade.
+```
+
+**Conferência:** $\mu=0{,}331>0{,}320$, domínio 4, que a norma não admite para vigas, e também $\mu>0{,}251$, logo a ductilidade não é atendida. (a) $d_{min}=\sqrt{250\times10^6/(0{,}320\times200\times17{,}86)}\approx468\text{ mm}$. (b) $d_{min}=\sqrt{250\times10^6/(0{,}251\times200\times17{,}86)}\approx528\text{ mm}$. Adotando $d\approx53\text{ cm}$, atendem-se os dois critérios.
+
+```{admonition} Exercício 10: faixa de laje (variação do Exemplo 3)
+:class: destaque-verde
+
+Uma faixa de laje de $1{,}00\text{ m}$ tem $h=14\text{ cm}$ e $d=11\text{ cm}$, em C25 e CA-50, com $m_d=9\text{ kN m/m}$. Calcule $\mu$ e identifique o domínio. Estime $\xi=1{,}25\left(1-\sqrt{1-2\mu/0{,}85}\right)$ (expressão da Aula 08) e a deformação do concreto $\varepsilon_c=10\,\xi/(1-\xi)$, em ‰. Explique por que as lajes costumam ficar no domínio 2.
+```
+
+**Conferência:** $f_{cd}=17{,}86\text{ MPa}$ e $\mu=9\times10^6/(1000\times110^2\times17{,}86)=0{,}042<0{,}106$, domínio 2a. $\xi\approx0{,}063$ e $\varepsilon_c\approx0{,}67\text{‰}<\varepsilon_{c2}$. A espessura da laje é grande em relação ao momento por metro, então a armadura necessária é pequena: o aço chega a $10\text{‰}$ muito antes de o concreto se esgotar.
+
 ## O que levar para a Aula 08
 
 | Conceito | Papel no dimensionamento |
@@ -352,11 +452,13 @@ Indique o estádio associado a cada item: (a) cálculo de $M_r$; (b) abertura de
 | Premissas 1 a 7 | Permitem a compatibilidade de deformações e o equilíbrio da seção |
 | $\xi=\varepsilon_c/(\varepsilon_c+\varepsilon_s)$ | Liga a posição da linha neutra às deformações |
 | Fronteiras $0{,}167$, $0{,}259$ e $0{,}628$ | Classificam a seção após o cálculo de $\xi$ |
-| Limite $\xi\leq0{,}45$ | Garante ductilidade sem redistribuição de momentos |
+| $\mu=M_d/(b_wd^2f_{cd})$ e $\mu_L$ | Permitem enquadrar a seção antes de calcular a armadura |
+| $d_{min}$ para o domínio 3 | Dá a altura útil mínima quando a seção cai no domínio 4 |
+| Limite $\xi\leq0{,}45$ ($\mu\leq0{,}251$) | Garante ductilidade sem redistribuição de momentos |
 
 ## Referências
 
 - ABNT — ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. *NBR 6118: Projeto de estruturas de concreto*. Rio de Janeiro, 2023, versão corrigida de 2024. Itens 14.6.4.3 e 17.2.2.
-- *Dimensionamento de seções retangulares com armadura simples*. Capítulo 4 do material fornecido pelo professor, arquivo `ECA_Livro_2025-02_-_cap4_-_revisado`. Base da definição dos domínios e das expressões de $\varepsilon_{c2}$ e $\varepsilon_{cu}$.
+- *Dimensionamento de seções retangulares com armadura simples*. Capítulo 4 do material fornecido pelo professor, arquivo `ECA_Livro_2025-02_-_cap4_-_revisado`. Base da definição dos domínios, das expressões de $\varepsilon_{c2}$ e $\varepsilon_{cu}$ e dos limites $\xi_L$ e $\mu_L$ (Quadros 4.1 a 4.4).
 - LEONHARDT, F.; MÖNNIG, E. *Construções de concreto*, v. 1: Princípios básicos do dimensionamento de estruturas de concreto armado. Rio de Janeiro: Interciência. Comportamento à flexão e estádios.
 - CARVALHO, R. C.; FIGUEIREDO FILHO, J. R. *Cálculo e detalhamento de estruturas usuais de concreto armado*. São Carlos: EdUFSCar. Estádios e domínios de deformação.

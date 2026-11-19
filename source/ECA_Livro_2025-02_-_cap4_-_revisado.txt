@@ -1,0 +1,848 @@
+4  DIMENSIONAMENTO DE SEÇÕES RETANGULARES COM ARMADURA SIMPLES
+
+As seções das vigas de concreto armado têm a forma retangular, em T ou I e sua armadura longitudinal é disposta sempre na região tracionada e, em alguns casos, também na região comprimida. Este capítulo apresenta o equacionamento para o dimensionamento da armadura longitudinal de tração em seções retangulares de concreto armado sujeitas a flexão pura, nas quais atua apenas momento fletor. Este equacionamento também pode ser empregado para o dimensionamento da armadura longitudinal em seções sujeitas a flexão simples, nas quais atuam momento fletor e esforço cortante. São abordadas também as condições que devem ser obedecidas para o detalhamento da armadura longitudinal na seção transversal, de forma a garantir boas condições de execução da peça.
+4.1 Hipóteses básicas para o dimensionamento a flexão
+A norma ABNT NBR 6118 [1] indica diversos tipos de análise que podem ser empregadas no dimensionamento de estruturas em concreto armado: análise elástica linear; análise linear com redistribuição de esforços; análise plástica; análise não linear; e análise em modelos físicos. Essa mesma norma determina que as seções devem ser dimensionadas para o estado limite último (ELU), ou seja, no Estádio III, independentemente do tipo de análise usada no projeto estrutural.
+          Em seu item 14.6.1, a norma ABNT NBR 6118 estabelece que estruturas, ou partes de estruturas, que possam ter seu comportamento descrito por elementos lineares, como arcos, grelhas, pilares, tirantes ou vigas, podem ser analisadas atendendo às hipóteses básicas indicadas nos itens de a) a c). Em seu item 17.2.2, essa norma estabelece as hipóteses básicas para o dimensionamento de elementos lineares (vigas e pilares) de concreto armado em relação a solicitações normais, apresentadas nos itens d) a i).
+a) As seções transversais permanecem planas após a deformação
+Após o início da deformação e até o ELU, considera-se válida a hipótese de Bernoulli, ou seja, as seções se mantêm planas e perpendiculares ao eixo médio da seção transversal. Analisando-se a Figura 4.1, observa-se que, em consequência, as deformações normais ao longo da altura da viga são distribuídas linearmente. 
+
+Figura 4.1. Hipótese de Bernoulli.
+          Assim, a deformação em uma fibra genérica da seção é diretamente proporcional à sua distância até a linha neutra. As equações (4.1) e (4.2) refletem a compatibilidade de deformações na seção. As armaduras são formadas por conjuntos de barras e, para efeito de dimensionamento, pode-se considerar as forças atuantes nas barras concentradas no centro de gravidade das armaduras.
+	(4.1)
+	(4.2)
+Onde:
+?cc	– é a deformação na fibra mais comprimida da seção;
+?s	– é a deformação na fibra que correspondente ao centro de gravidade da armadura longitudinal tracionada;
+d	– é a altura útil da seção, dada pela distância entre a fibra mais comprimida e o centro de gravidade da armadura longitudinal tracionada;
+X	– é a altura da linha neutra, dada pela distância entre a fibra mais comprimida e a linha neutra;
+?	– é o parâmetro adimensional relacionado à posição da linha neutra.
+          As equações (4.1) e (4.2) são válidas em qualquer fase de comportamento da seção, ou seja, elas são aplicadas nos estádios I, II e III do concreto armado. No ELU, a deformação na fibra mais comprimida assume o valor de dimensionamento ?cd, a deformação na fibra que contém a armadura assume o valor de dimensionamento, ?sd, e tais equações tomam a forma (4.3) e (4.4), respectivamente.
+	(4.3)
+	(4.4)
+Onde:
+?cd	– é a deformação na fibra mais comprimida da seção no ELU;
+?sd	– é a deformação na fibra que contém a armadura tracionada no ELU;
+?d	– é o parâmetro adimensional relacionado à posição da linha neutra no ELU.
+b) Representação dos elementos por seus eixos longitudinais
+Embora os elementos estruturais sejam tridimensionais, na análise estrutural, os elementos lineares são representados por seu eixo longitudinal.
+c) Comprimento dos elementos lineares
+O comprimento dos trechos dos elementos lineares é limitado pelos centros dos apoios ou pelo cruzamento com o eixo de outro elemento estrutural.
+d) Compatibilidade de deformações
+A deformação das barras passivas aderentes, caso do concreto armado, tem o mesmo valor da deformação do concreto em seu entorno. Assim, no dimensionamento é adotada a hipótese de aderência perfeita entre o aço e o concreto, garantida, principalmente, pelas mossas presentes nas barras de aço de alta aderência.
+
+De forma geral, essa hipótese é válida para o dimensionamento de estruturas novas em concreto armado, onde são utilizadas barras de aço de boa qualidade e sem corrosão superficial. E ela facilita o equacionamento para o dimensionamento da armadura longitudinal de tração. No entanto, na avaliação de estruturas existentes, especialmente naquelas sujeitas à corrosão das armaduras, essa hipótese pode não ser válida. Da mesma forma, ela não é válida no dimensionamento de algumas estruturas em concreto protendido que utilizam de cordoalhas engraxadas.
+e) Tensões de tração no ELU
+As tensões normais de tração no concreto devem ser desprezadas no dimensionamento das seções no ELU.
+
+Como visto no Capítulo 3, as estruturas de concreto sob flexão encontram-se no Estádio III na situação de ruptura. E uma das hipóteses desse estádio é que as tensões no concreto tracionado são desprezadas. Isso decorre, fundamentalmente, da adoção da relação tensão–deformação à tração adotada pela norma ABNT NBR 6118 para o concreto, conforme mostrado na Figura 2.10. Contudo, o concreto simples possuiu certa resistência residual à tração após a deformação de 0,15‰, o que foi desprezado pela norma ABNT NBR 6118. Isso simplifica o equacionamento para o dimensionamento da armadura longitudinal de tração. Contudo, em alguns tipos de estruturas de concreto, em especial nas estruturas confeccionadas com concreto reforçado com fibras de aço (CRFA), essa hipótese não é válida. Neste tipo de estrutura, o concreto tracionado também contribui com a resistência da seção transversal no ELU. Para os interessados, há norma nacional [2] e códigos internacionais [3] que estabelecem os critérios de dimensionamento de estruturas confeccionadas com o CRFA.
+f) Encurtamento máximo do concreto
+No ELU, o encurtamento específico de ruptura do concreto na flexão simples é ?cu, valor que varia de acordo com a classe de resistência do concreto, conforme exposto no item 2.4.1.3 do Capítulo 2 deste livro. Com base no diagrama tensão–deformação da Figura 2.7, obtém-se a distribuição de tensões no concreto na região comprimida da Figura 4.2. Para deformações iguais ou superiores a ?c2, o valor de dimensionamento da tensão compressão é constante e igual a 0,85 ?c fcd e, para deformações inferiores a ?c2, as tensões de compressão caem gradativamente em uma curva até se anularem na linha neutra.
+
+Figura 4.2. Distribuição de deformações, de tensões e resultantes de tensões em uma seção no estádio III.
+g) Alongamento último das armaduras
+Para que não haja deformações excessivas na peça fletida, o alongamento máximo permitido ao aço, ?slim, é de 10 0/00 (ou 1%).
+h) Tensão de dimensionamento no aço
+O valor de dimensionamento da tensão no aço, ?sd, corresponde à deformação ?sd no diagrama 
+tensão–deformação do aço (Figura 2.13).
+i) Diagrama retangular equivalente para a distribuição de tensões no concreto
+Para efeito de dimensionamento, permite-se que o diagrama curva-retângulo que representa as tensões na parte comprimida da seção, como mostrado na Figura 4.2, seja substituído pelo diagrama retangular da Figura 4.3. O diagrama retangular possui altura de ? X, com ? dado pelas equações (4.5), conforme o item 17.2.2 da norma ABNT NBR 6118 [1].
+	para concretos até a classe de resistência C50 	(4.5a)
+	para concretos de classe de resistência superior a C50	(4.5b)
+Onde:
+?	– é um coeficiente adimensional relacionado à altura de atuação das tensões de compressão no diagrama tensão–deformação retangular equivalente;
+fck	– resistência característica à compressão do concreto.
+
+a.b.Figura 4.3. Simplificação na distribuição de tensões permitida pela norma ABNT NBR 6118 [1]: a. caso em que a largura da seção transversal, medida paralelamente à linha neutra, diminui a partir desta para a borda mais comprimida. b. caso em que a largura da seção transversal, medida paralelamente à linha neutra, não diminui a partir desta para a borda mais comprimida; 
+          Se a largura da seção, medida paralelamente à linha neutra, diminui a partir desta em direção à borda mais comprimida, a tensão máxima de compressão no diagrama retangular equivalente, ?cdeq, é dada pela equação (4.6a). Em caso contrário, pela equação (4.6b). Ambos os casos são ilustrados na Figura 4.3. No caso de seções com largura constante, utiliza-se a equação (4.6b).
+ 	(4.6a)
+	(4.6b)
+Onde:
+?cdeq	– é a tensão de compressão equivalente no diagrama tensão – deformação retangular;
+?c	– é o coeficiente adimensional associado à tensão de compressão no concreto no diagrama simplificado;
+?c	– é o coeficiente adimensional associado à redução da máxima tensão de compressão no concreto;
+fcd	– é a resistência de cálculo à compressão do concreto.
+Com:
+	para concretos até a classe de resistência C50	(4.7a)
+	para concretos de classe de resistência superior à C50	(4.7b)
+E, conforme já definido nas equações (2.10a) e (2.10b):
+	para concretos até a classe de resistência C40	(4.8a)
+	para concretos de classe de resistência superior à C40	(4.8b)
+
+O fator ?c das equações (4.7) foi introduzido na versão de 2023 da norma ABNT NBR 6118. O valor 0,85, para concretos até a classe de resistência C50, já era usado nas versões anteriores para computar a perda de resistência do concreto submetido a tensões constantes com o tempo. Este valor corresponde à tensão máxima do diagrama tensão–deformação da Figura 2.7 e está incluído na equação (2.9), válida para todas as classes de resistência do concreto. Já para concretos de classe de resistência superior à C50, o valor de ?c é menor que 0,85, mas só é introduzido na norma ABNT NBR 6118 na distribuição retangular equivalente de tensões. Esse procedimento é, na visão dos presentes autores, incongruente e tal coeficiente deveria ter sido introduzido no diagrama tensão–deformação da Figura 2.7 e na equação (2.9). Trata-se apenas de um problema conceitual. Na prática, o dimensionamento se dá com a resistência à compressão do concreto igual ?c ?c fcd e não 0,85 ?c fcd.
+          A Figura 4.4 apresenta os domínios de dimensionamento para estruturas de concreto em flexão. No caso de flexão simples, os domínios definidos pela norma ABNT NBR 6118 [1] e que fornecem as possíveis configurações de colapso ficam reduzidos aos domínios 2, 3 e 4.
+
+Figura 4.4. Domínio de estado-limite último de uma seção transversal
+Fonte: Adaptada da Figura 17.1 da norma ABNT NBR 6118 [1] com a subdivisão do domínio 2
+          Outra variável de interesse para o dimensionamento é o braço de alavanca, Z. Também é interessante expressar essa grandeza em forma adimensional, ?, dado pelas expressões (4.9). Salienta-se aqui que o parâmetro do EPS_ESTRANHO detalhado anteriormente dependerá da faixa de domínio e o mesmo será delimitado a seguir.
+	para todas as classes de resistência do concreto	(4.9a)
+	específico para concretos até a classe de resistência C50	(4.9b)
+4.2 Limites entre os domínios de dimensionamento à flexão simples
+A análise da fronteira entre os domínios permite determinar, em situação de projeto, a forma de ruptura de uma seção de concreto armado: se por alongamento excessivo do aço ou por esmagamento do concreto na fibra mais comprimida. O equacionamento do problema de dimensionamento de seções retangulares de concreto armado depende de em qual dos domínios a seção deve ser dimensionada. Para sustentar essa avaliação, é necessário examinar a fronteira entre eles. No caso do domínio 2 é interessante ainda uma subdivisão, separando o caso em que a ruptura se dá sem a plastificação do concreto (domínio 2a) do caso em que a ruptura se dá com plastificação (domínio 2b).
+4.2.1 Análise da fronteira entre os domínios 3 e 4
+Na fronteira entre os domínios 3 e 4, a deformação no baricentro da armadura, ?sd, é igual à deformação de escoamento do aço, ?yd, e a deformação máxima de compressão, ?cd, é igual à deformação última do concreto, ?cu, conforme representado na Figura 4.5.
+
+Figura 4.5. Deformações na fronteira entre os domínios 3 e 4.
+          Nesse caso, a equação (4.3), que expressa a compatibilidade de deformações, assume a forma das equações (4.10).
+	para todas as classes de resistência do concreto	(4.10a)
+	específico para concretos até a classe de resistência C50	(4.10b)
+          Por meio da relação tensão–deformação apresentada na Figura 2.7 e na equação (2.9), pode-se calcular a resultante de tensões no concreto. A distribuição equivalente de tensões admitida pela norma ABNT NBR 6118 [1] em seu item 17.2.2 e mostrada na Figura 4.3, facilita o equacionamento do dimensionamento das seções em concreto armado. Como a maior parte das seções transversais usualmente empregadas em projeto têm a forma retangular ou em T, será utilizada a equação (4.6b), pois tais seções encaixam-se no caso da Figura 4.3b.
+          Com a simplificação da relação tensão–deformação no concreto, ilustrada na Figura 4.6, calcula-se facilmente a resultante de compressão no concreto no ELU, expressa na equação (4.11), e escreve-se a equação de equilíbrio de momentos em relação ao centro de gravidade da armadura, expressa na equação (4.12).
+	(4.11)
+	(4.12)
+          É interessante trabalhar com equações adimensionais para estabelecer a fronteira entre os domínios, pois isso facilita os cálculos. Assim, define-se o momento fletor adimensional como:
+	(4.13)
+          Substituindo-se as expressões (4.11) e (4.13) em (4.12), chega-se à seguinte equação adimensional:
+	(4.14)
+          Substituindo se equação (4.10a) na equação (4.14), chega-se ao momento fletor adimensional na fronteira dos domínios 3 e 4, expresso em (4.15a) para concretos de qualquer classe de resistência. No caso dos concretos até a classe de resistência C50, a deformação última no concreto é ?cu = 3,5%0, ?u = 0,85 e ? = 0,8 e no caso dos concretos até a classe C40, ?c = 1,0. Assim, a equação (4.15a) reduz-se à equação (4.15b).
+	para concretos de qualquer classe 
+ 	de resistência	(4.15a)
+	específico para concretos até a classe
+ 	de resistência C40	(4.15b)
+
+Figura 4.6. Resultantes de tensão em uma seção transversal.
+          Os valores das equações (4.15) podem ser tabelados em função do tipo de aço, uma vez que, em todos os casos, a deformação no aço é igual à sua deformação de escoamento, expressa na equação (4.16). O Quadro 4.1 apresenta os valores para ?, ? e ? no limite entre os domínios 3 e 4 para os aços mais comuns utilizados no dimensionamento de estruturas de concreto.
+	(4.16)
+Quadro 4.1. Valores adimensionais no limite entre os domínios 3 e 4
+Açofyk (MPa)?yd (%o[wm1])Classe de resistência do concreto?L (3-4)?L (3-4)?L (3-4)CA-505002,070Até C400,6280,3200,749C450,308C500,297C550,6020,2690,763C600,5820,2460,774C650,5690,2270,783C700,5620,2110,789C750,5580,1970,794C800,5570,1850,798C850,5570,1730,802C900,5570,1630,805CA-606002,484Até C400,5850,3050,766C450,293C500,283C550,5570,2550,781C600,5370,2330,792C650,5240,2150.800C700,5170,1980,806C750.5130,1850,811C800,5120,1730,815C850,5110,1630,815C900,5110,1530,821
+4.2.2 Análise da fronteira entre os domínios 2 e 3
+Na fronteira entre os domínios 2 e 3, a deformação no baricentro da armadura tracionada é igual a 10%0 e a deformação máxima de compressão, ?cd, é igual a ?cu, conforme ilustrado na Figura 4.7.
+
+Figura 4.7. Deformações na fronteira entre os domínios 2 e 3.
+          Nesse caso, a equação (4.3), que expressa a compatibilidade de deformações, assume a forma das equações (4.17).
+	para todas as classes de resistência do concreto	(4.17a)
+	específico para concretos até a classe
+ 	de resistência C50	(4.17b)
+          A resultante de compressão no concreto no ELU continua a ser expressa pela equação (4.11) e o equilíbrio em relação à armadura pela equação (4.12), o que conduz à mesma equação adimensional (4.14). Na fronteira entre os domínios 2 e 3, as equações de compatibilidade de deformações são dadas pelas expressões (4.17). Assim, substituindo a equação (4.17a) na equação (4.14), chega-se ao momento fletor adimensional na fronteira entre os domínios 2 e 3, expresso em (4.18a), para concretos de qualquer classe de resistência. No caso dos concretos até a classe de resistência C50, a deformação última no concreto é ?cu = 3,5%0, com ? = 0,8 e ?c = 0,85. E até a classe de resistência C40, usa-se ?c = 1. Assim, chega-se na equação (4.18b) para concretos entre as classes de resistência C40 e C50 e na equação (4.18c) para concretos até a classe de resistência C40.
+	para todas as classes de resistência do concreto	(4.18a)
+	específico para classes de resistência 
+ 	entre C40 e C50	(4.18b)
+	específico para concretos até a classe 
+ 	de resistência C40	(4.18c)
+          Os valores das equações (4.18) também podem ser tabelados, e neste caso são independentes do tipo de aço. O Quadro 4.2 apresenta os valores para ?, ? e ? no limite entre os domínios 2 e 3.
+Quadro 4.2. Valores adimensionais no limite entre os domínios 2 e 3 para qualquer tipo de aço
+Classe de resistência do concreto?L (2-3)?L (2-3)?L (2-3)Até C400,2590,1580,896C450,152C500,147C550,2380,1270,906C600,2240,1120,913C650,2150,1010,918C700,2100,0920,921C750,2070,0850,923C800,2070,0790,925C850,2060,0740,926C900,2060,0700,928
+4.2.3 Análise da fronteira entre os subdomínios 2b e 2a
+Para o estudo das possibilidades de ruptura no domínio 2, adota-se uma subdivisão desse domínio. O subdomínio 2a corresponde à ruptura por alongamento excessivo da armadura com deformação na fibra mais comprimida, ?cd, inferior à deformação de plastificação, ?c2. O subdomínio 2b corresponde à ruptura também por alongamento excessivo da armadura, mas com deformação na fibra mais comprimida, ?cd, superior à deformação de plastificação, ?c2, e inferior à deformação última, ?cu. Assim, na fronteira entre os subdomínios 2a e 2b, a deformação no baricentro da armadura tracionada é igual a 10%o e a deformação na fibra mais comprimida, ?cd, é igual a ?c2, conforme representado na Figura 4.8. Nesse caso, a equação (4.3), que expressa a compatibilidade de deformações, assume a forma das equações (4.19).
+
+Figura 4.8. Deformações na fronteira entre os subdomínios 2a e 2b.
+	para todas as classes de resistência do concreto	(4.19a)
+	específico para concretos até a classe
+ 	de resistência C50	(4.19b)
+          A resultante de compressão no concreto continua a ser expressa pela equação (4.11) e o equilíbrio em relação à armadura pela equação (4.12), o que conduz à mesma equação adimensional (4.14). Na fronteira dos subdomínios 2a e 2b, as equações de compatibilidade de deformações são dadas pelas equações (4.19). Assim, substituindo se (4.19a) em (4.14), chega-se ao momento fletor adimensional na fronteira dos subdomínios 2a e 2b, expresso em (4.20a), para concretos de qualquer classe de resistência. No caso dos concretos até a classe de resistência C50, a deformação de plastificação no concreto é ?c2 = 2,0%0, com ? = 0,8 e ?c = 0,85. E até a classe de resistência C40, 
+usa-se ?c = 1, resultando na equação (4.20b) para concretos entre as classes de resistência C40 e C50 e na equação (4.20c) para concretos até a classe de resistência C40. Os valores das equações (4.20) podem ser tabelados, como mostrado no Quadro 4.3.
+	para todas as classes de resistência do concreto	(4.20a)
+	para concretos entre as classes
+ 	de resistência C40 e C50	(4.20b)
+	para concretos até a classe de resistência C40	(4.20c)
+Quadro 4.3. Valores adimensionais no limite entre os subdomínios 2a e 2b para qualquer tipo de aço.
+Classe de resistência do concreto?L (2a-2b)?L (2a-2b)?L (2a-2b)Até C400,1670,1060,933C450,102C500,098C550.1800,0980,929C600,1860,0940,928C650,1910,0900,927C700,1950,0860,927C750,1980,0820,927C800,2010,0770,927C850,2040,0730,927C900,2060,0700,928
+4.2.4 Resumo dos limites entre os domínios de dimensionamentos
+Dada uma seção retangular de concreto armado em flexão simples com base bw e altura útil d, o domínio de dimensionamento à flexão simples pode ser determinado por meio do momento fletor adimensional, ???ou por meio da linha neutra. A vantagem do uso do adimensional ? está no fato que ele depende unicamente de variáveis de projeto, uma vez que, de forma geral, as dimensões da seção transversal dos elementos lineares são pré-dimensionadas no início do projeto. E a classe de resistência do concreto também é escolhida em função de condicionantes econômicos e de durabilidade. Dessa forma, conhecidas as dimensões da seção transversal, o domínio de dimensionamento, para qualquer classe de resistência do concreto, fica definido pelas equações seguintes:
+	Dom. 2a
+	Dom 2b
+	Dom. 3
+	Dom. 4
+
+          Em função da posição da linha neutra, o domínio de dimensionamento, para qualquer classe de resistência do concreto, fica definido pelas equações seguintes:
+	Dom. 2a
+	Dom 2b
+	Dom. 3
+	Dom. 4
+          Vale ressaltar, novamente, que o dimensionamento de seções de viga no domínio 4 é proibido pela norma ABNT NBR 6118 [1], pois a ruptura se dá por compressão no concreto antes que o aço entre em escoamento, portanto, sem grande fissuração que indique que a estrutura esteja na iminência da ruptura. Nesse caso, diz-se que a ruptura ocorreria sem aviso prévio. O item 17.2.3 dessa norma indica que, se necessário, é possível utilizar armadura de compressão. Assim, o procedimento adotado na prática de projeto quando uma seção está no domínio 4 consiste em se aumentar a altura da viga ou adotar uma armadura na zona comprimida. O critério de dimensionamento dessa armadura de compressão será detalhado no capítulo 5.
+
+Exemplo 4.1: Verifique qual o domínio de ruptura da seção da Figura E4.1. Trata-se de seção em vão de uma viga de edifício residencial.
+Figura E4.1Dados:
+Concreto C25
+Aço CA-50
+Mgk = 50 kN?m (carga permanente)
+Mqak = 35 kN?m (carga de utilização)Solução:
+Como se trata de um edifício residencial, os coeficientes de combinação de ações na combinação normal do ELU são: ?g = 1,4 e ?q = 1,4.
+Momento fletor de dimensionamento: 
+Altura útil da seção: 
+Resistência de cálculo à compressão do concreto (equação (3.19) e Quadro 3.3):
+
+Momento fletor adimensional pela equação (4.13):
+
+Como o concreto é de classe de resistência até C40, os valores de ? nos limites entre os domínios são: 
+?L(2a-2b) = 0,106; ?L(2-3) = 0,158; ?L(3-4) = 0,320 (Quadros 4.1 a 4.3). Neste caso, ?L(2-3) < ? < ?L(3-4) e, assim, a seção atingirá a ruptura no ELU no Domínio 3.
+4.3 Critério de ductilidade
+A fim de melhorar a ductilidade das estruturas nas regiões de apoio das vigas (ou seja, nas regiões de momento fletor negativo) e garantir a capacidade de rotação das peças, a norma ABNT NBR 6118 [1], no item 14.6.4.3, recomenda que sejam atendidos limites máximos para a profundidade da linha neutra no estado-limite último (ELU). Esses limites dependem da classe de resistência do concreto e estão apresentados nas equações (4.21) em função do adimensional ?. Tais limites podem ser alterados se forem utilizados detalhes especiais de armaduras, como, por exemplo, os que produzem confinamento nessas regiões.
+	para concretos com fck ? 50 MPa	(4.21a)
+	para concretos com 50 MPa < fck ? 90 MPa	(4.21b)
+          Os limites de ductilidade apresentados nas equações (4.21) correspondem às condições apresentadas nas equações (4.22), escritas em função do momento fletor adimensional ?: 
+	para concretos com fck ? 40 MPa	(4.22a)
+	para concretos com 40 MPa < fck ? 50 MPa	(4.22b)
+	para concretos com 50 MPa < fck ? 90 MPa	(4.22c)
+          Os valores das equações (4.22) podem ser tabelados, uma vez que são independentes dos parâmetros do aço. O Quadro 4.4 apresenta os valores para ?, ? e ? para atendimento do critério de ductilidade em função da classe de resistência do concreto.
+          Os valores de ? e ? do Quadro 4.4 são menores que os valores do Quadro 4.1, calculados na fronteira entre os domínios 3 e 4. Assim, para atender ao critério de ductilidade, adotam-se para ?L, ?L e ?L os valores prescritos no Quadro 4.4. Isso significa que mesmo seções transversais dimensionadas no domínio 3 podem não atender ao critério de ductilidade das equações (4.21).
+Quadro 4.4. Valores adimensionais para atendimento do critério de ductilidade.
+Classe de resistência do concreto?L duct?L duct?L ductAté C400,450,2510,820C450,241C500,233C550,350,1770,862C600,1650,864C650,1550,867C700,1450,869C750,1360,871C800,1270,873C850,1190,875C900,1120,878
+          Muitas vezes é comum se comparar não os valores do coeficiente ?, mas a própria altura útil da seção. Dessa forma, para que o critério de ductilidade seja satisfeito, basta que a seção transversal tenha uma altura de cálculo maior que o valor da equação (4.23), que depende da classe de resistência do concreto (Quadro 4.4). É fácil observar que se o objetivo for garantir que a seção esteja no domínio 3, basta utilizar nessa equação os valores de ?L (3-4) apresentados no Quadro 4.1.
+	(4.23)
+
+Aqui cabe um comentário sobre o critério de ductilidade apresentado nesta seção, que visa garantir uma capacidade mínima de rotação das seções transversais dos elementos estruturais no ELU. A principal motivação para um limite máximo do adimensional ? é limitar a profundidade da linha neutra, garantindo uma maior capacidade de rotação para a seção transversal. Isso é particularmente importante quando os esforços são obtidos por uma análise elástica linear com redistribuição. Como explicado no Capítulo 3, essa redistribuição é proporcionada pela formação de rótulas plásticas nas estruturas hiperestáticas. No caso das vigas contínuas sob carregamento vertical, as rótulas plásticas formam-se inicialmente sobre os apoios, uma vez que o momento fletor negativo normalmente é maior que o momento fletor positivo nessas vigas. Assim, é suficiente garantir a capacidade de rotação sobre os apoios internos das vigas contínuas, que as transformará em uma estrutura isostática se surgirem rótulas plásticas sobre esses apoios1. 
+          Por essa razão, neste livro, os autores optaram por verificar o critério de ductilidade apenas para as seções transversais submetidas a momento fletor negativo, que representam seções sobre apoios internos de vigas contínuas com carregamento vertical. Isso está em conformidade com normas internacionais, que recomendam esses mesmos valores nas seções onde se formam rótulas plásticas [4]. Além disso, como mencionado por outros autores [5], o texto da norma ABNT NBR 6118 [1] não é explícito quanto ao procedimento a ser adotado para as seções de vigas submetidas a momento fletor positivo. Porém, como esse critério é para proporcionar o comportamento dúctil no ELU, fica subentendido que é suficiente garantir a formação das rótulas plásticas apenas sobre os apoios internos de vigas contínuas.
+          Nas situações de projeto submetidas a outros tipos de carregamento, em especial forças horizontais oriundas da ação do vento, e outros esquemas estruturais diferentes de vigas contínuas ou grelhas, deve-se verificar com cuidado em quais seções é necessário o atendimento do critério de ductilidade em função das seções onde se formarão as rótulas plásticas no ELU.
+
+A norma ABNT NBR 6118 [1], no item 14.6.4.3, apresenta outros limites para a profundidade da linha neutra quando for utilizada uma análise elástica linear com redistribuição do momento fletor. Assim, uma vez escolhido um valor para o coeficiente de redistribuição, ?, o coeficiente adimensional ? deve atender aos seguintes limites:
+	para concretos com fck ? 50 MPa
+	para concretos com 50 MPa < fck ? 90 MPa
+          O coeficiente de redistribuição, ?, deve, ainda, ser no máximo igual a 0,9 em estruturas de nós móveis2 e no máximo igual a 0,75 em qualquer outro caso. Assim, ao se escolher um valor para o coeficiente ?, o momento fletor em uma seção é reduzido de M para ?M. 
+          Esses limites para o coeficiente adimensional ? recaem nos valores das equações (4.21) ao se adotar ? = 1. Portanto, conclui-se que os valores das equações (4.21) devem ser utilizados quando os esforços forem obtidos de uma análise linear sem redistribuição.
+          No caso de se utilizar uma análise plástica para a avaliação das solicitações, deve-se verificar a capacidade de rotação plástica das seções transversais onde forem simuladas as rótulas plásticas. Contudo, a norma ABNT NBR 6118 dispensa essa verificação explícita, desde que o coeficiente adimensional ?  seja limitado a 0,25 para concretos de classe de resistência até C50 e a 0,15 para concretos com resistência (fck) acima de 50 MPa. Observe-se que esses valores são obtidos das equações acima ao se adotar ? = 0,75, que é o maior valor admissível para o coeficiente de redistribuição do momento fletor.
+          Portanto, caso sejam adotados valores menores para o coeficiente ? ou as rótulas plásticas tenham capacidade resistente menor que 75% dos esforços obtidos de uma análise elástica linear, é obrigatória a verificação explícita da capacidade de rotação plástica das seções transversais. Para informações sobre essa verificação, com os limites da rotação plástica solicitante, o leitor pode consultar o item 14.6.4.4 da norma ABNT NBR 6118 [1] ou normas internacionais [4].
+          A capacidade de rotação de rótulas plásticas informada na norma ABNT NBR 6118 [1] é idêntica aos valores informados na norma europeia EN 1992-1-1: 2004 [4]. Contudo, a norma brasileira não informou o trecho sobre os apoios internos de vigas e lajes contínuas a ser considerado no cálculo da rotação plástica solicitante. Neste caso, por questão de coerência, deve-se utilizar o procedimento simplificado da norma europeia EN 1992-1-1: 2004 [4] que recomenda utilizar um trecho de, aproximadamente, 0,6 vezes a altura da seção transversal (h) para cada lado do apoio interno, resultando em um comprimento de ?p = 1,2 h. A rotação plástica solicitante (?pl) neste trecho pode ser calculada, de forma simplificada, a partir da curvatura da seção transversal sobre o apoio pela seguinte expressão:
+
+onde ? é a curvatura da seção transversal do apoio [6].
+
+Exemplo 4.2: Verifique qual o domínio de ruptura da seção da Figura E4.2. Trata-se de seção sobre um apoio intermediário de viga de edifício comercial sem elevada concentração de pessoas.
+Figura E4.2Dados:
+Concreto C35
+Aço CA-50
+Mgk = 65 kN?m (carga permanente)
+Mqak = 50 kN?m (carga de utilização)Solução:
+Como se trata de um edifício comercial sem elevada concentração de pessoas, os coeficientes de combinação de ações na combinação normal do ELU são: ?g = 1,4 e ?q = 1,4.
+Momento fletor de dimensionamento: 
+Altura útil da seção: 
+Resistência de cálculo à compressão do concreto (equação (3.19) e Quadro 3.3):
+
+Momento fletor adimensional pele equação (4.13):
+
+Como se trata de seção sobre o apoio de viga, é necessário atender ao critério de ductilidade. Como o concreto é de classe de resistência até C40, os valores de ? nos limites entre os domínios são: 
+?L(2a-2b) = 0,106; ?L(2-3) = 0,158; ?L(3-4) = 0,320; ?Lduct= 0,251 (Quadros 4.1 a 4.4). Neste caso, 
+?L(2a-2b) < ? < ?L(2-3) e, assim, a seção atingirá a ruptura no ELU no domínio 2b.
+
+Exemplo 4.3: Verifique qual o domínio de ruptura da seção retangular do exemplo 4.1 se a classe de resistência do concreto for alterada para C50.Solução:
+O momento de dimensionamento e a altura útil da seção terão os valores já calculados no Exemplo 4.1: Md = 119 kN?m e d = 51 cm. 
+Resistência de cálculo à compressão do concreto (equação (3.19) e Quadro 3.3):
+
+Momento fletor adimensional pela equação (4.13):
+ 
+Para concreto C50, os valores de ? nos limites entre os domínios são: 
+?L(2a-2b) = 0,098; ?L(2-3) = 0,147; ?L(3-4) = 0,297 (Quadros 4.1 a 4.3). Como se trata de seção em vão de viga, não é necessário atender ao critério de ductilidade. Com a troca da classe de resistência do concreto para C50, ? < ?L(2a-2b) e, assim, a seção passará a atingir a ruptura no ELU no domínio 2a.
+
+Exemplo 4.4: Analise a forma de ruptura das seções dos exemplos 4.1 e 4.2. Classifique as seções em subarmadas, normalmente armadas ou superarmadas.Respostas:
+A seção no Exemplo 4.1 atingirá a ruptura no domínio 3. Logo, a ruptura se dará por compressão do concreto com escoamento da armadura tracionada. Como aço e concreto serão aproveitados no máximo de suas capacidades, a seção será normalmente armada.
+A seção no Exemplo 4.2 atingirá a ruptura no subdomínio 2b. Logo, a ruptura se dará por alongamento excessivo da armadura sem ruptura por compressão do concreto. Como o aço será aproveitado no máximo de sua capacidade e o concreto guardará folga de deformação, a seção será subarmada.
+
+Exemplo 4.5: O projetista decide reduzir a altura da seção transversal do Exemplo 4.1. Indique qual seria a menor altura da seção para que ela não seja superarmada e, ainda, atenda ao critério de ductilidade prescrito pela norma ABNT NBR 6118, se for o caso.Solução:
+Como se trata de uma seção em vão de viga, não é necessário atender ao critério de ductilidade. Seção superarmada é aquela com ruptura no domínio 4. O momento adimensional no limite entre os domínios 3 e 4 é ?L(3-4) = 0,320 (Quadro 4.1).
+O menor valor de altura útil para que a seção ainda se encontre no domínio 3 é obtido pela equação (4.23):
+
+A menor altura da seção para que ela ainda se encontre no domínio 3 no ELU é:
+
+
+Exemplo 4.6: O projetista decide reduzir a altura da seção transversal do Exemplo 4.2. Neste caso, a seção está localizada sobre um apoio intermediário. Indique qual seria a menor altura da seção para que ela não seja superarmada e, ainda, atenda ao critério de ductilidade prescrito pela norma ABNT NBR 6118, se for o caso.Solução:
+Como se trata de uma seção sobre um apoio intermediário de viga, é necessário atender ao critério de ductilidade. O momento fletor adimensional no limite entre os domínios 3 e 4 é ?L(3-4) = 0,320 (Quadro 4.1), e o limite do momento fletor adimensional para atender à ductilidade é ?Ld = 0,251 (Quadro 4.4). Assim, o limite de ductilidade prevalece sobre o limite do domínio 4 e a menor altura útil para que a viga ainda atenda ao limite de ductilidade (4.23) é:
+
+A menor altura da seção para que a seção ainda atenda ao limite de ductilidade é:
+
+4.4 Armadura mínima de tração
+Em estruturas de concreto armado com grandes seções transversais submetidas à flexão, ou em elementos estruturais submetidos a momento fletor de cálculo de baixa intensidade, normalmente é necessário garantir uma armadura mínima de tração para a segurança do elemento estrutural. Esta armadura mínima, de modo simplificado, deve ser utilizada para evitar uma ruptura brusca do elemento estrutural submetido à flexão quando da passagem do concreto do Estádio I para o Estádio II, isto é, deve-se garantir uma ductilidade mínima à estrutura antes de ela alcançar a ruptura. Para isso, é necessário garantir uma armadura capaz de absorver um momento fletor pelo menos igual ao momento de fissuração da seção transversal. Portanto, a armadura mínima de tração deve ser determinada de forma a satisfazer duas condições: limitar a abertura de fissuras sob forças de serviço a um valor aceitável (critério estético e de durabilidade ao longo prazo) e evitar o colapso frágil da peça (critério de resistência e ductilidade).
+          A norma ABNT NBR 6118 [1], em seu item 17.3.5.2.1, prevê que a armadura longitudinal mínima de tração em vigas é aquela determinada pelo dimensionamento da seção para um momento fletor mínimo, Md,min, dado pela equação (4.24), respeitado ainda a taxa mínima de 0,15%.
+	(4.24)
+Onde:
+Wo	– é o módulo de resistência da seção transversal bruta de concreto, relativo à fibra mais tracionada;
+fctk,sup	– é o valor superior da resistência característica à tração do concreto.
+No caso de seções retangulares, W0 é dado por:
+	(4.25)
+          A norma ABNT NBR 6118 considera que o dimensionamento para Md,mín pode ser considerado atendido se forem respeitadas as taxas mínimas de armadura apresentadas no Quadro 4.5. Essas taxas pressupõe o uso de aço CA-50, d/h = 0,8, ?c = 1,4 e ?s = 1,15. Para valores diferentes, ?min deve ser recalculado.
+Quadro 4.5. Taxas mínimas de armadura de flexão para vigas com seção transversal retangular.
+fck (MPa)2025303540455055?mín (%) = As,min/Ac (%)0,1500,1500,1500,1640,1790,1940,2080,211fck (MPa)60657075808590-------?mín (%) = As,min/Ac (%)0,2190,2260,2330,2390,2450,2510,256-------Fonte: Tabela 17.3 da norma ABNT NBR 6118 [1]
+Do Quadro 4.5:
+	(4.26)
+Onde:
+As,min	– é a armadura mínima de tração;
+?min	– é a taxa mínima de armadura de flexão;
+Ac	– é a área bruta da seção transversal.
+
+A armadura mínima de flexão é definida como sendo a armadura longitudinal concentrada próxima à face tracionada da viga que deve assegurar um comportamento estável desta após o aparecimento da primeira fissura de flexão. Ela é determinada estabelecendo-se a condição de simultaneidade da primeira fissura e do escoamento da armadura, isto é:
+	(N4.1)
+	(N4.2)
+sendo:
+fy	– é a resistência ao escoamento do aço,
+z	– é o braço de alavanca resistente da seção transversal,
+Mcr	– é o momento resistente da seção na transição do Estádio I para o Estádio II.
+
+          A definição da armadura longitudinal mínima está associada ao início da fissuração do concreto, ou seja, ao momento de fissuração, Mcr que, por sua vez, depende da resistência à tração do concreto. A Figura N4.1 mostra o diagrama de tensões normais no regime elástico linear adotado para a seção em que ocorre a fissuração, desprezando-se a contribuição das armaduras.
+
+Figura N4.1. Diagrama de tensões normais admitido para a seção em que M = Mcr
+          Na determinação do momento de fissuração de uma viga de seção transversal retangular, sem fissuração devido à retração e variação de temperatura e admitindo-se distribuição linear elástica das tensões de tração, a altura da linha neutra (X) é 0,5 h. Portanto, chega-se a:
+	(N4.3)
+que pode ser colocada na forma:
+, com 	(N4.4)
+          Nesta expressão, W0 é o módulo resistente da seção retangular relativo à fibra mais tracionada, desconsiderando-se a contribuição as armaduras, ou seja, usando seção bruta. O momento de fissuração de uma seção retangular (usando ? = 1,5, segundo a norma ABNT NBR 61183, e fctk,inf) pode ser escrito em função da resistência à compressão do concreto como:
+	(N4.5)
+          Adotando z = 0,9 d e h = 1,1 d, ou seja, z = 0,81 h, chega-se à seguinte expressão para a taxa de armadura longitudinal mínima:
+	(N4.6)
+Que também pode ser escrita como [7]:
+	(N4.7)
+          A sequência a seguir apresenta a dedução da equação (4.24):
+	(N4.8)
+	(N4.9)
+	(N4.10)
+	(N4.11)
+Sabendo que , tem-se:
+	(N4.12)
+Com , conclui-se que:
+	(N4.13)
+          Os valores de ?min do Quadro 4.5, aparentemente, foram obtidos da equação (N4.14) recomendada em códigos europeus [8], muito semelhante à expressão anteriormente apresentada:
+	(N4.14)
+          Ao se utilizar a equação (N4.14), porém utilizando fctd = fctm / ?c e fyd = fyk / ?s, com ?c = 1,4 e ?s = 1,15, obtém-se os valores do Quadro N4.1 a seguir para o aço CA-50:
+Quadro N4.1
+fck (MPa)2025303540455055?mín (%) --0,1450,1600,1750,1900,2030,210fck (MPa)60657075808590-------?mín (%) 0,2170,2240,2300,2360,2420,2470,252-------
+          Esses valores são muito próximos dos valores do Quadro 4.5. Para efeito de comparação, pode-se dimensionar uma seção retangular de concreto com o momento de cálculo igual ao momento de fissuração dado pela equação (N4.5), que depende da classe de resistência do concreto. Ao se utilizar Md = Mcr, as seções estarão no domínio 2. Aplicando o equacionamento do dimensionamento detalhado na seção 4.5, são obtidas as taxas de armadura mostradas no Quadro N4.2.
+Quadro N4.2
+fck (MPa)2025303540455055?mín (%) 0,1160,1350,1520,1680,1840,1990,2130,227fck (MPa)60657075808590-------?mín (%) 0,2410,2550,2670,2800,2920,3030,315-------
+          Observa-se que essas taxas de armadura são ligeiramente superiores às taxas mínimas de armadura de flexão mostradas no Quadro 4.5, com maior diferença nas classes mais altas de resistência do concreto.
+4.5 Dimensionamento de seções retangulares
+O primeiro passo do dimensionamento de seções retangulares de concreto armado consiste em se determinar o domínio correspondente às dimensões estimadas para a seção. Para tanto, calcula-se o coeficiente ?, apresentado na equação (4.13), e compara-se com os limites estabelecidos para os domínios. Para isso, são utilizadas as equações (4.15), (4.18), (4.20) e, se for o caso, as equações (4.22), ou os valores mostrados nos Quadros 4.1 a 4.4. O mesmo pode ser feito utilizando os dados relativos à altura útil da seção, pela equação (4.23). Esta seção apresenta o equacionamento para o dimensionamento da armadura longitudinal de tração em seções retangulares de concreto armado conforme o domínio de ruptura.
+4.5.1 Dimensionamento no domínio 3
+Nas seções que apresentam ruptura no domínio 3, a deformação na fibra mais comprimida é ?cu. As deformações e as resultantes de tensões são apresentadas na Figura 4.9, utilizando o diagrama retangular equivalente da Figura 4.6. As equações (4.11) a (4.14) podem ser aplicadas tanto ao domínio 3 quanto ao domínio 4, embora na prática de projeto não seja adotado dimensionamento no domínio 4. Desenvolvendo-se a equação (4.14) e rearranjando-se os termos, chega-se à equação o (4.27), válida para todas as classes de resistência do concreto.
+
+Figura 4.9. Deformações e resultantes de tensão para seções retangulares dimensionadas no 
+domínio 3.
+	(4.27)
+          A menor raiz da equação (4.27) fornece o coeficiente adimensional, ?d, relacionado à posição da linha neutra. A maior raiz dessa equação não tem significado físico, pois conduz a um valor de ?d superior à unidade, ou seja, X > d.
+	para todos os tipos de concreto	(4.28a)
+	específico para concretos até a classe de resistência C40	(4.28b)
+          Reescrevendo-se a equação (4.4), que expressa a compatibilidade de deformações ilustrada na Figura 4.1, tem-se,
+	(4.29)
+          Uma vez conhecida a deformação na armadura tracionada, ?sd, é possível determinar a tensão nela atuante, ?sd , em função do tipo de aço, utilizando as equações (4.30), e obter a resultante na armadura, Rsd., pela equação (4.31).
+	se ?sd < ?yd (Domínio 4)	(4.30a)
+	se ?sd ? ?yd (Domínio 3)	(4.30b)
+	(4.31)
+          Tomando-se o equilíbrio de momentos em relação à resultante de compressão na Figura 4.3a, tem-se:
+	(4.32)
+Onde ? é o coeficiente adimensional relacionado ao braço de alavanca do binário das resultantes de compressão e de tração, definida nas equações (4.9).
+          Substituindo-se a equação (4.31) na equação (4.32), chega-se à equação (4.33). Também é possível obter a área de aço necessária sabendo-se que a resultante de compressão no concreto, Rcd, dada pela equação (4.11), é igual à resultante de compressão no aço, Rsd, expressa na equação (4.32), chegando-se à equação (4.34).
+	(4.33)
+	(4.34)
+          No domínio 3, a tensão na armadura é igual a fyd. Assim, as equações (4.33) e (4.34) resultam na equação (4.35a). A equação (4.35b) é obtida utilizando os coeficientes ?c, ?c e ? até a classe de resistência C40.
+	para todos os tipos de concreto	(4.35a)
+	especificamente para concretos até a classe
+	de resistência C40	(4.35b)
+
+
+
+Dimensionamento no domínio 3:
+1.	Calcula-se o momento fletor adimensional ? pela equação (4.13) e identifica-se o domínio de ruptura;
+2.	Obtém-se o coeficiente adimensional, ?d, associado à posição da linha neutra utilizando as equações (4.28);
+3.	Obtém-se o coeficiente adimensional, ?, associado à posição da linha neutra utilizando as equações (4.9);
+4.	Obtém-se a área da armadura longitudinal de tração pela equação (4.35). É mais simples usando a igualdade à direita, mas pode-se usar também a igualdade à esquerda.
+
+
+Exemplo 4.7: Obtenha a área de armadura longitudinal de tração necessária para garantir a segurança da seção da Figura E4.3 no ELU. Considere que se trata de uma seção do vão de uma viga.
+Figura E4.3Dados:
+Concreto C30
+Aço CA-50
+Md = 390 kN?mSolução:
+A altura útil da seção é dada por:	
+Para o dimensionamento, são utilizados os coeficientes de ponderação de ações e de resistência da combinação última normal. Assim, a resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+O momento fletor adimensional é obtido pela equação (4.13):
+
+Como o concreto é de classe de resistência até C40, os valores de ? nos limites entre os domínios são: 
+?L(2a-2b) = 0,106; ?L(2-3) = 0,158; ?L(3-4) = 0,320 (Quadros 4.1 a 4.3). A seção está localizada no vão da viga e, portanto, não é necessário atender ao critério de ductilidade. Assim, a seção deve ser dimensionada utilizando as equações do domínio 3.
+A posição adimensional da linha neutra é obtida pela equação (4.28b):
+
+Como a seção está no domínio 3, a tensão na armadura é igual a fyd (equação (3.19) e Quadro 3.3):
+
+O braço de alavanca adimensional é obtido pela equação (4.9b):
+
+A armadura de tração é obtida pela equação (4.35b):
+
+Do Quadro 4.5, tem-se ?min = 0,150% para a classe de resistência C30.
+A armadura mínima de tração pela equação (4.26) é:
+
+Como As > As,min, utiliza-se As. Assim, As = 15,6 cm2.
+
+Exemplo 4.8: Obtenha a área de armadura longitudinal necessária para garantir a segurança da seção da Figura E4.4 no ELU. Considere que se trata de uma seção do vão de uma viga.
+Figura E4.4Dados:
+Concreto C60
+Aço CA-50
+Md = 320 kN?mSolução:
+A altura útil da seção é dada por:	
+Para o dimensionamento, são utilizados os coeficientes de ponderação de ações e de resistência da combinação última normal. Assim, a resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+O momento fletor adimensional é obtido pela equação (4.13):
+
+Como o concreto é da classe de resistência C60, os valores de ? nos limites entre os domínios são: 
+?L(2a-2b) = 0,094; ?L(2-3) = 0,112; ?L(3-4) = 0,246 (Quadros 4.1 a 4.3). A seção está localizada no vão da viga e, portanto, não é necessário atender ao critério de ductilidade. Assim, a seção deve ser dimensionada utilizando as equações do domínio 3.
+Para concreto da classe de resistência C60 (4.5b), (4.7b) e (4.8b), os valores das demais variáveis são:
+
+
+
+A posição adimensional da linha neutra é obtida pela equação (4.28a):
+
+Como a seção está no domínio 3, a tensão na armadura é igual a fyd (equação (3.19) e Quadro 3.3):
+
+O braço de alavanca adimensional é obtido pela equação (4.9a): 
+
+A armadura de tração é obtida pela equação (4.35a):
+
+Do Quadro 4.5, tem-se ?min = 0,219% para a classe de resistência C60.
+A armadura mínima de tração pela equação (4.26) é:
+
+Como As > As,min, utiliza-se As. Assim, As = 15,2 cm2.
+
+Exemplo 4.9: Obtenha o momento resistente da seção da Figura E4.5, sabendo que ela está sobre o apoio intermediário de uma viga de uma biblioteca.
+Figura E4.5Dados:
+Concreto C35
+Aço CA-50
+As = 12,6 cm2Solução:
+A altura útil da seção é dada por:	
+Neste caso, não se sabe de antemão qual o domínio de ruptura da seção transversal, uma vez que o momento fletor adimensional, ? , depende do momento fletor, que é a incógnita do problema. É possível resolver este problema utilizando as equações de dimensionamento, uma vez que as variáveis ? e ?d estão relacionadas pela equação (4.27). Substituindo as equações (4.9b), (4.13) e (4.33) na equação (4.27), é possível determinar uma expressão para a variável ?d, que ficará em função da tensão na armadura tracionada, ?sd. Esta, por sua vez, ainda dependerá do domínio de ruptura da seção transversal, que não é conhecido.
+Por esta razão, o problema será resolvido admitindo, inicialmente, que a tensão na armadura tracionada seja igual a fyd (equação (3.19) e Quadro 3.3):
+
+Posteriormente, essa hipótese será verificada. Se a armadura estiver escoando, então a resultante na armadura tracionada é:
+
+A resultante de compressão no concreto, Rcd, é determinada pela equação (4.11). Como a seção deve estar em equilíbrio em relação às forças normais nela atuante, então as forças resultantes no concreto e na armadura tracionada devem ser iguais, isto é, Rcd = Rsd.
+A resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+A posição da linha neutra é determinada a partir da equação (4.11), com ?c = 0,85, ?c = 1 (concreto da classe de resistência C35). Igualando-se as resultantes de força na região comprimida e na armadura tracionada, tem-se:
+
+	=>		=>	
+O coeficiente adimensional da posição da linha neutra indica que a seção irá atingir a ruptura no domínio 3, pois ?L(2-3) = 0,259 e ?L(3-4) = 0,628 (Quadro 4.1). Além disso, ele atende ao critério de ductilidade, pois ?Ld = 0,450. Assim, conclui-se que a hipótese de a armadura estar escoando quando da ruptura é verdadeira.
+O momento fletor resistente de cálculo é obtido pela equação (4.32):
+
+Forma alternativa de cálculo.
+Braço de alavanca adimensional pela equação (4.9b): 
+Momento fletor resistente de cálculo pela equação (4.32):
+
+4.5.2 Dimensionamento no domínio 2
+No domínio 2 a ruptura apresenta características especiais. A ruptura ocorre por alongamento excessivo da armadura e, assim, utilizando os aços permitidos pela norma ABNT NBR 6118 [1], a armadura tracionada terá tensão igual ao valor de cálculo da resistência ao escoamento do aço fyd. Porém, como a deformação na fibra mais comprimida do concreto é inferior a ?cu , o diagrama de tensões de compressão ainda não corresponde ao diagrama curva–retângulo completo para o qual a norma permite a transformação em diagrama retangular equivalente.
+          A rigor, o equacionamento desenvolvido para o domínio 3 pode ser empregado para o domínio 2 utilizando o diagrama curva–retângulo. Isso dificulta a dedução de equações analíticas para o dimensionamento, razão pela qual são empregados métodos numéricos para resolver esse problema. Outra solução é ainda utilizar o diagrama retangular equivalente com altura igual a ? X, contudo os valores do coeficiente ? apresentados na norma ABNT NBR 6118 devem ser corrigidos, uma vez que, como apresentados, eles equivalem ao diagrama curva–retângulo completo com deformação máxima ?cu. Se eles forem utilizados sem correção no domínio 2, o procedimento pode não representar adequadamente a distribuição de tensões de compressão no concreto.
+          A fim de melhorar a representação da distribuição de tensões de compressão no domínio 2, pode-se adotar dois caminhos distintos:
+i)	reduzir a tensão de compressão no diagrama retangular equivalente; 
+ii)	limitar o braço de alavanca a ser utilizado no dimensionamento da armadura a fim de que esse não supere aqueles obtidos com uma distribuição equivalente de tensões linear.
+4.5.2.1  Dimensionamento baseado na redução da tensão de compressão equivalente
+O processo a seguir foi adaptado para as prescrições da norma ABNT NBR 6118 [1] a partir do descrito por José Carlos Sussekind [9]. Considera-se que, a equivalência ilustrada na Figura 4.6 entre a distribuição de tensões advindas do diagrama tensão–deformação da Figura 2.7 e a distribuição retangular só se dá quando a deformação na fibra mais comprimida, ?cd, atinge o valor máximo prescrito para o concreto, ?cu. Assim, no domínio 2, é necessário corrigir o valor da tensão equivalente por meio de coeficiente redutor ?, conforme mostrado na Figura 4.10.
+
+Figura 4.10. Deformações e resultantes de tensão para seções retangulares dimensionadas no domínio 2.
+          A distribuição de tensões no concreto obedece à mesma configuração já estudada para os domínios 3 e 4, com uma pequena diferença no valor da tensão no concreto no diagrama retangular equivalente. A resultante de compressão no concreto é dada pela equação (4.36). Logo, a posição da linha neutra pode ser obtida das equações (4.37).
+	(4.36)
+	para todas as classes de resistência do concreto	(4.37a)
+	específico para concretos até a classe de resistência C40	(4.37b)
+
+
+O coeficiente ?c, introduzido pela versão de 2023 da norma ABNT NBR 6118 para a definição das tensões de dimensionamento do concreto, pode causar problemas de convergência no processo de iteração necessário para resolver a equação (4.37a) no domínio 2, especialmente no subomínio 2a. Os autores sugerem que, caso se opte pelo procedimento iterativo no dimensionamento de seções de vigas em qualquer das subdivisões do domínio 2, seja usado ?c = 1 na equação (4.37a). Por essa razão, o coeficiente ?c não aparece nas demais equações apresentadas nesta seção.
+          Este não é um procedimento arbitrário, uma vez que a ideia do coeficiente ?c é reduzir as tensões nos domínios 4a e 5, situação de dimensionamento de pilares e onde esse coeficiente foi validado [10].
+
+          Assim, a equação de equilíbrio em força normal fornece a área de aço necessária, conforme as equações (4.38). Nesse caso, a deformação final na armadura é conhecida, e a tensão na mesma é igual ao valor de cálculo da resistência ao escoamento do aço, fyd.
+	para todas as classes de resistência do concreto	(4.38a)
+	específico para concretos até classe C40	(4.38b)
+          Os valores do coeficiente ? são obtidos ao impor a igualdade de resultante de forças entre a distribuição retangular de tensões equivalente e a distribuição curva–retângulo.
+          No caso de seções no domínio 2 com ?c2 < ?cd < ?cu (subdomínio 2b), forma-se uma porção curva e outra retangular no diagrama de tensões, como mostrado na Figura 4.11. Nesse caso, pode-se dividir as resultantes de força no concreto em duas parcelas, conforme as equações (4.39) e (4.40): Rcdret é a integral das tensões no trecho retangular; e Rcdcur é a integral das tensões no trecho curvo.
+
+Figura 4.11. Distribuição real e simplificada de cálculo da tensão no subdomínio 2b (?c2 < ?cd < ?cu)4.
+	(4.39)
+	(4.40)
+Com o parâmetro ? obtido por compatibilidade de deformações:
+	(4.41)
+A deformação no trecho comprimido é dada por:
+	(4.42)
+No caso da distribuição retangular de tensões, a resultante de forças de compressão é dada por:
+	(4.43)
+          Assim, no caso de seções retangulares, calculando-se as resultantes Rcdret e Rcdcur e igualando-se a soma das parcelas à resultante Reqcd obtida com a distribuição de tensões retangular, obtém-se a expressão para o coeficiente redutor ? das tensões.
+	para todas as classes de resistência do concreto	(4.44a)
+	específico para concretos até a classe C50	(4.44b)
+          No caso de seções com ?cd < ?c2, subdomínio 2a, forma-se apenas a porção curva do diagrama de tensões, como mostrado na Figura 4.12, cuja resultante é apresentada na equação (4.45).
+
+Figura 4.12. Distribuição real e simplificada de cálculo da tensão para o subdomínio 2a (?cd??cu)5.
+	(4.45)
+A deformação no trecho comprimido é dada por:
+	(4.46)
+          Em seções com largura constante, calculando-se a resultante Rcdcur e igualando-se à resultante Rcdeq, obtida com a distribuição de tensões retangular, obtém-se a expressão para o coeficiente redutor das tensões, ?.
+	para todas as classes de resistência 
+	do concreto	(4.47a)
+	específico para concretos até a
+ 	classe de resistência C50	(4.47b)
+
+
+
+Processo iterativo para dimensionamento no domínio 2:
+1.	Estima-se o valor de ?cd conforme se esteja mais perto do limite entre os subdomínios 2a e 2b, ?cd = ?c2, ou do limite entre os domínios 2 e 3, ?cd = ?cu;
+2	Calcula-se o valor de ? pelas equações (4.44) ou (4.47), dependendo do subdomínio do domínio 2;
+3.	Obtém-se ? pelas equações (4.37)6;
+4.	Encontra-se o valor da deformação na fibra mais comprimida do concreto (?cd), pela equação (4.4), lembrando que, no domínio 2, ?sd = ???o;
+5.	Compara-se o valor obtido de ?cd com o valor estimado no passo 1:
+6.	Se os valores não forem convergentes, adota-se o novo valor de ?cd e volta-se ao passo 2;
+7.	Se forem convergentes, passa-se ao passo 8;
+8.	Após isso, utiliza-se o valor encontrado de ? (após a convergência) na primeira igualdade das equações (4.38)7 para encontrar a área da armadura longitudinal.
+Alternativamente, pode-se obter ? pelas equações (4.9), utilizando-se o valor encontrado de ?d (após a convergência), e usar a segunda igualdade das equações (4.38) para encontrar a área da armadura longitudinal.
+
+A convergência do processo iterativo pode ser acelerada por uma boa estimativa do valor inicial da deformação na fibra mais comprimida, ?cd. Para tanto, pode-se utilizar o valor do momento adimensional, ?, para estimar se está mais próximo da fronteira entre os subdomínios 2a e 2b (quando deve ser utilizado ?cd = 2%o como ponto de partida) ou mais próximo da fronteira entre o Subdomínio 2b e o domínio 3 (quando deve ser utilizado ?cd = 3,5%o como ponto de partida). Outra forma de acelerar a convergência do processo é utilizar um método de primeira ordem, como máximo declive, ou de segunda ordem, como Newton – Raphson.
+
+Exemplo 4.10: Obtenha a área de armadura longitudinal necessária para garantir a segurança da Figura E4.6 no ELU. Considere que se trata de uma seção do vão de uma viga.
+Figura E4.6Dados:
+Concreto C30
+Aço CA-50
+Md = 180 kN?mSolução:
+A altura útil da seção é dada por:	
+A resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+O momento fletor adimensional é obtido pela equação (4.13):
+
+Como o concreto é da classe de resistência até C40, os valores de ? nos limites entre os domínios são: ?L(2a-2b) = 0,106; ?L(2-3) = 0,158; ?L(3-4) = 0,320 (Quadro 4.1). Assim, a seção deve ser dimensionada utilizando as equações do subdomínio 2a, sendo necessário um procedimento iterativo.
+Iteração 1: ?cd = 2%o (limite dos subdomínios 2a e 2b)
+
+
+
+Teste de convergência: |0,002 – 0,00175|/0,002 = 0,123 = 12,3%
+Iteração 2:
+
+
+
+Teste de convergência: |0,00175 – 0,00192|/0,00175 = 0,095 = 9,5%
+Após 11 iterações, chega-se a ?cd = 0,00185
+Iteração 12:
+
+
+
+Convergência atingida.
+
+A tensão na armadura é igual a fyd (equação (3.19) e Quadro 3.3):
+
+O braço de alavanca adimensional é obtido pela equação (4.9b):
+
+A armadura de tração é obtida pela equação (4.38b):
+
+Do Quadro 4.5, tem-se ?min = 0,150% para a classe de resistência C30.
+A armadura mínima de tração pela equação (4.26) é:
+
+Como As > As,min, utiliza-se As. Assim, As = 6,79 cm2.
+
+Exemplo 4.11: Obtenha a área de armadura longitudinal necessária para garantir a segurança da Figura E4.7 no ELU. Considere que se trata de uma seção do vão de uma viga.
+Figura E4.7Dados:
+Concreto C25
+Aço CA-50
+Md = 100 kN?mSolução:
+A altura útil da seção é dada por:	
+A resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+O momento fletor adimensional é obtido pela equação (4.13):
+
+Como o concreto é da classe de resistência até C40, os valores de ? nos limites entre os domínios são: ?L(2a-2b) = 0,106; ?L(2-3) = 0,158; ?L(3-4) = 0,320 (Quadros 4.1 a 4.3). Assim, a seção deve ser dimensionada utilizando as equações do subdomínio 2b e será necessário um procedimento iterativo.
+Iteração 1: ?cd = 3,5%o (limite dos subdomínios 2b e 3)
+
+
+
+Teste de convergência: |0,0035 – 0,00270|/0,0035 = 0,270 = 27,0%
+Iteração 2:
+
+
+
+Teste de convergência: |0,0027 – 0,00294|/0,0027 = 0,089 = 8,9%
+Após 6 iterações, chega-se a ?cd = 0,00287
+Iteração 7:
+
+
+
+Convergência atingida.
+
+A tensão na armadura é igual a fyd (equação (3.19) e Quadro 3.3):
+
+O braço de alavanca adimensional é obtido pela equação (4.9b):
+
+A armadura de tração é obtida pela equação (4.35b):
+
+Do Quadro 4.5, tem-se ?min = 0,150% para a classe de resistência C25.
+A armadura mínima de tração pela equação (4.26) é:
+
+Como As > As,min, utiliza-se As. Assim, As = 5,49 cm2.
+4.5.2.2  Dimensionamento simplificado com limitação do braço de alavanca
+O processo iterativo de cálculo da armadura de tração nos subdomínios 2a e 2b apresentado no item 4.5.2.1 é extenso para cálculos manuais, embora não seja de fácil implementação computacional. A correção no diagrama retangular equivalente não é prevista pela norma ABNT NBR 6118 [1] e o emprego do equacionamento desenvolvido para o domínio 3 para o domínio 2 pode resultar em braços de alavanca superiores ao que seria obtido com uma distribuição linear de tensões. Assim, Aderson Moreira da Rocha [11] propôs um processo mais simples que consiste em empregar as equações desenvolvidas no item 4.2.1 para o domínio 3, introduzindo uma limitação ao braço de alavanca com o intuito de impedir que se obtenha um valor superior àquele advindo de uma distribuição equivalente linear das tensões de compressão, apresentado na Figura 4.13. A distribuição linear é mais próxima da distribuição parabólica que a retangular proposta pela distribuição retangular equivalente.
+
+Figura 4.13. Deformações e resultantes de tensões para seções retangulares com distribuição de tensões de compressão linear.
+          Admitindo o limite entre os domínios 2 e 3 com uma distribuição equivalente de tensões linear, a altura da região comprimida é dada pela equação (4.48) e, assim, o maior valor do braço de alavanca a ser utilizado do dimensionamento simplificado no domínio 2 é dado pela equação (4.49).
+	(4.48)
+	(4.49)
+          Substituindo-se as equações (4.17) na equação (4.49), tem-se os seguintes valores máximos para o braço de alavanca adimensional a serem utilizados no dimensionamento no domínio 2.
+	para todos as classes de resistência do concreto	(4.50a)
+	específico para concretos até a classe de resistência C50	(4.50b)
+          Os valores das equações (4.50) podem ser tabelados. O Quadro 4.6 apresenta os valores para ?máx visando o dimensionamento rápido no domínio 2.
+Quadro 4.6. Valores adimensionais limites para o dimensionamento rápido no domínio 2.
+fck2025303540455055?máx0,9310,9310,9310,9310,9310,9310,9310,938fck60657075808590?máx0,9430,9460,9480,9500,9510,9520,936
+
+
+Processo simplificado para dimensionamento no Domínio 2:
+1.	Calcula-se o momento adimensional ? pela equação (4.13) e identifica-se o domínio de dimensionamento;
+2.	Obtém-se o coeficiente adimensional ?d, associado à posição da linha neutra utilizando as equações (4.28);
+3.	Obtém-se o coeficiente adimensional ?, associado à posição da linha neutra utilizando as equações (4.9);
+4.	Se o coeficiente adimensional ? for superior ao valor máximo indicado nas equações (4.50), utiliza-se o valor limite;
+5.	Obtém-se a área da armadura longitudinal de tração pela equação (4.35). É mais simples usando a igualdade à direita, mas pode-se usar também a igualdade à esquerda.
+
+Exemplo 4.12: Obtenha a área de armadura longitudinal necessária na seção do Exemplo 4.10 utilizando o processo simplificado.Dados:
+Concreto C30	Aço CA-50	Md = 180 kN?m
+bw = 25 cm	h = 70 cm	d’ = 5 cmSolução:
+A altura útil da seção é dada por:	
+A resistência de cálculo à compressão do concreto e o momento fletor adimensional são os mesmos já calculados e valem: fcd = 21,4 MPa e ? = 0,08. Como também já verificado, a seção deve ser dimensionada utilizando as equações do domínio 2. 
+A posição adimensional da linha neutra é obtida pela equação (4.28b):
+
+Como a seção está no domínio 2, a tensão na armadura é igual a fyd (equação (3.19) e Quadro 3.3):
+
+O braço de alavanca adimensional é obtido pela equação (4.9b):
+
+O limite do braço de alavanca adimensional é (Quadro 4.6): ?máx = 0,931
+Como ? > ?máx, adota-se ? = ?máx
+A armadura de tração é obtida pela equação (4.38b) utilizando ?máx:
+
+Observa-se que há pequena diferença entre os valores obtidos para a armadura de tração pelo processo iterativo (As = 6,79 cm2) e pelo processo simplificado (As = 6,84 cm2). A título de curiosidade, a armadura obtida com uso apenas do diagrama retangular equivalente é: As = 6,71 cm2. Assim, ambas as correções no diagrama equivalente aqui indicadas fornecem soluções com mais armadura que a obtida apenas com o uso direto do diagrama retangular equivalente.
+Do Quadro 4.5, tem-se ?min = 0,150% para a classe de resistência C30. A armadura mínima de tração pela equação (4.26) é:
+
+Como As > As,min, utiliza-se As. Assim, As = 6,84 cm2.
+
+Exemplo 4.13: Obtenha a área de armadura longitudinal necessária na seção do Exemplo 4.11 utilizando o processo simplificado.Dados:
+Concreto C25	Aço CA-50	Md = 100 kN?m
+bw = 20 cm	h = 50 cm	d’ = 4 cmSolução:
+A altura útil da seção é dada por:	
+A resistência de cálculo à compressão do concreto e o momento fletor adimensional são os mesmos já calculados e valem: fcd = 17,9 MPa e ? = 0,132. Como também já verificado, a seção deve ser dimensionada utilizando as equações do domínio 2.
+A posição adimensional da linha neutra é obtida pela equação (4.28b):
+
+Como a seção está no domínio 2, a tensão na armadura é igual a fyd (equação (3.19) e Quadro 3.3):
+
+O braço de alavanca adimensional é obtido pela equação (4.9b):
+
+O limite do braço de alavanca adimensional é (Quadro 4.6): ?máx = 0,931. Como ? < ?máx, utiliza-se o valor calculado para ??
+A armadura de tração é obtida pela equação (4.35b):
+
+
+Observa-se que há pequena diferença entre os valores obtidos para a armadura de tração pelo processo iterativo (As = 5,49 cm2) e pelo processo rápido (As = 5,46 cm2). Além disso, a diferença de armadura entre os dois processos foi menor neste exemplo por se estar mais próximo da fronteira entre os domínios 2 e 3. A título de curiosidade, a armadura obtida com uso apenas do diagrama retangular equivalente é As = 5,26 cm2. Assim, ambas as correções no diagrama equivalente aqui indicadas fornecem soluções com mais armadura que a obtida apenas com o uso direto do diagrama retangular equivalente.
+O procedimento para o cálculo da armadura mínima não se altera em relação ao feito naquele Exemplo 4.11. Assim, As,min = 1,50 cm2. E, As = 5,46 cm2.
+4.5.3 Tabelas para dimensionamento da armadura longitudinal
+As expressões desenvolvidas neste capítulo permitem a confecção de códigos computacionais ou de planilhas eletrônicas para a automatização dos cálculos. Em cálculos manuais, o dimensionamento de seções de concreto armado até a classe de resistência C40 pode ser feito com o auxílio do Quadro 4.7, obtido utilizando o processo iterativo no domínio 2.
+          O trecho da coluna ? marcado em cinza claro corresponde a valores de braço de alavanca superiores ao da distribuição linear de tensões no concreto. A linha em cinza corresponde ao critério de ductilidade da ABNT NBR 6118 [1]. Nesse caso, não se deve utilizar o coeficiente ? do Quadro 4.7, mas acrescentar armadura de compressão, cujo cálculo é apresentado no Capítulo 5.
+Quadro 4.7. Dimensionamento de seções retangulares com concreto até C40
+D?cd (%o)?sd (%o)?d???D?cd (%o)?sd (%o)?d???Domínio 2a0,101100,0100,060,0000,996Domínio 33,57,4380,3201,000,1900,8720,204100,0200,120,0020,9923,57,1060,3301,000,1950,8680,309100,0300,180,0040,9883,56,7940,3401,000,2000,8640,417100,0400,240,0060,9843,56,5000,3501,000,2050,8600,526100,0500,300,0100,9803,56,2220,3601,000,2100,8560,638100,0600,360,0140,9763,55,9590,3701,000,2140,8520,753100,0700,410,0190,9723,55,7110,3801,000,2190,8480,870100,0800,460,0240,9683,55,4740,3901,000,2240,8440,989100,0900,520,0300,9643,55,2500,4001,000,2280,8401,111100,1000,570,0370,9603,55,0370,4101,000,2330,8361,236100,1100,610,0440,9563,54,8330,4201,000,2380,8321,364100,1200,660,0510,9523,54,6400,4301,000,2420,8281,494100,1300,700,0590,9483,54,4550,4401,000,2470,8241,628100,1400,740,0670,9443,54,2780,4501,000,2510,8201,765100,1500,780,0750,9403,54,1090,4601,000,2550,8161,905100,1600,810,0830,9363,53,9470,4701,000,2600,8122,048100,1700,840,0910,9323,53,7920,4801,000,2640,8082,195100,1800,870,0990,9283,53,6430,4901,000,2680,804Domínio 2b2,346100,1900,890,1070,9243,53,5000,5001,000,2720,8002,500100,2000,920,1150,9203,53,3630,5101,000,2760,7962,658100,2100,940,1220,9163,53,2310,5201,000,2800,7922,821100,2200,950,1300,9123,53,1040,5301,000,2840,7882,987100,2300,970,1380,9083,52,9810,5401,000,2880,7843,158100,2400,990,1450,9043,52,8640,5501,000,2920,7803,333100,2501,000,1530,9003,52,7500,5601,000,2960,776Domínio 33,5100,2601,000,1580,8963,52,6400,5701,000,2990,7723,59,4630,2701,000,1640,8923,52,5340,5801,000,3030,7683,59,0000,2801,000,1690,8883,52,4320,5901,000,3070,7643,58,5690,2901,000,1740,8843,52,3330,6001,000,3100,7603,58,1670,3001,000,1800,8803,52,2380,6101,000,3140,7563,57,7900,3101,000,1850,8763,52,1450,6201,000,3170,752
+
+Exemplo 4.14: Obtenha a área de armadura longitudinal necessária para dimensionamento da seção da Figura E4.3 (mesma do Exemplo 4.7) no ELU usando o Quadro 4.7. Considere que seja uma seção do vão de uma viga.Dados:
+Concreto C30	Aço CA-50	Md = 390 kN?m
+bw = 25 cm	h = 70 cm 	d’ = 5 cmSolução:
+A altura útil da seção é dada por:	
+A resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+O momento fletor adimensional pela equação (4.13) é:
+
+No Quadro 4.7, para ? = 0,174, obtém-se ? = 0,884.
+A tensão na armadura tracionada é igual a fyd, pois a seção está no domínio 3 de ruptura:
+
+Armadura de tração pela equação (4.35b):
+
+Como esperado, o resultado coincide com o obtido no Exemplo 4.7. O procedimento para o cálculo da armadura mínima não se altera em relação ao feito naquele exemplo.
+
+Exemplo 4.14: Obtenha a área de armadura longitudinal necessária para dimensionamento da seção da Figura E4.3 (mesma do Exemplo 4.7) no ELU usando o Quadro 4.7. Considere que seja uma seção do vão de uma viga.Dados:
+Concreto C30	Aço CA-50	Md = 390 kN?m
+bw = 25 cm	h = 70 cm 	d’ = 5 cmSolução:
+A altura útil da seção é dada por:	
+A resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+O momento fletor adimensional pela equação (4.13) é:
+
+No Quadro 4.7, para ? = 0,174, obtém-se ? = 0,884.
+A tensão na armadura tracionada é igual a fyd, pois a seção está no domínio 3 de ruptura:
+
+Armadura de tração pela equação (4.35b):
+
+Como esperado, o resultado coincide com o obtido no Exemplo 4.7. O procedimento para o cálculo da armadura mínima não se altera em relação ao feito naquele exemplo.
+Exemplo 4.15: Obtenha a área de armadura longitudinal necessária para dimensionamento da seção da Figura E4.6 (mesma do Exemplo 4.10) no ELU usando o Quadro 4.7. Considere que seja uma seção do vão de uma viga.Dados:
+Concreto C30	Aço CA-50	Md = 180 kN?m
+bw = 25 cm	h = 70 cm	d’ = 5 cmSolução:
+A altura útil da seção é dada por:	
+A resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+O momento fletor adimensional pela equação (4.13) vé:
+ 
+No Quadro 4.7, para ? = 0,083, obtém-se ? = 0,936.
+A tensão na armadura tracionada é igual a fyd, pois a seção está no domínio 2 de ruptura:
+
+Armadura de tração pela equação (4.35b): 
+
+Como esperado, o resultado coincide com o obtido no Exemplo 4.10. O procedimento para o cálculo da armadura mínima não se altera em relação ao feito naquele exemplo.
+Exemplo 4.16: Obtenha a área de armadura longitudinal necessária para dimensionamento da seção da Figura E4.7 (mesma do Exemplo 4.11) no ELU usando o Quadro 4.7. Considere que seja uma seção do vão de uma viga.Dados:
+Concreto C25	Aço CA-50	Md = 100 kN?m
+bw = 20 cm	h = 50 cm	d’ = 4 cmSolução:
+A altura útil da seção é dada por:	
+A resistência de cálculo à compressão do concreto é (equação (3.19) e Quadro 3.3):
+
+O momento fletor adimensional pela equação (4.13) é:
+
+No Quadro 4.7, para ? = 0,138 (que é o valor imediatamente acima do calculado), obtém-se ? = 0,908.
+A tensão na armadura tracionada é igual a fyd, pois a seção está no domínio 2 de ruptura:
+
+Armadura de tração pela equação (4.35b):e´:
+
+Como esperado, o resultado coincide com o obtido no Exemplo 4.11. O procedimento para o cálculo da armadura mínima não se altera em relação ao feito naquele exemplo.
+4.6 Disposições construtivas para detalhamento da armadura longitudinal nas seções transversais de vigas
+A durabilidade das estruturas de concreto depende de que todas as armaduras sejam completamente envoltas em concreto e essa cobertura seja capaz de prover uma proteção adequada contra eventuais agentes agressivos. Assim, é necessário garantir, na execução, que o concreto envolva todas as barras sem que haja segregação de agregados e que as dimensões das seções transversais forneçam condições adequadas para essa execução. A proteção da armadura é garantida prescrevendo um valor mínimo de cobrimento para todas as armaduras e as condições de execução são garantidas prescrevendo espaçamentos mínimos entre as barras que compõem a armadura.
+4.6.1 Dimensões mínimas
+As dimensões mínimas para as vigas e vigas-paredes8 são estabelecidas de modo a evitar um desempenho inaceitável para esses elementos e a garantir condições de execução adequadas. Segundo o item 13.2.2 da norma ABNT NBR 6118 [1], as seções transversais de vigas e vigas parede devem apresentar largura maior ou igual a:
+* 12 cm para o caso de vigas;
+* 15 cm para o caso de vigas-paredes.
+          Tais limites podem ser reduzidos para 10 cm em casos excepcionais, desde que sejam garantidas as condições de alojamento das armaduras e sejam estudadas as interferências das armaduras de outros elementos estruturais. Para tanto, deve-se respeitar os cobrimentos e os espaçamentos entre barras estabelecidos pela norma ABNT NBR 6118 e ainda garantir condições adequadas de lançamento e de vibração do concreto segundo a norma ABNT NBR 14931 [12].
+4.6.2 Cobrimentos mínimos e nominais
+O cobrimento mínimo da armadura é o menor valor aceito na execução entre a face externa do elemento estrutural e a superfície da armadura externa, em geral a face externa do estribo. Esse valor deve ser respeitado ao longo de todo o elemento estrutural e constitui um critério de aceitação da obra. Os valores mínimos de cobrimento devem ser estabelecidos em função da classe de agressividade ambiental. Essa, por sua vez, é determinada em função do risco de deterioração da estrutura. O Quadro 4.8 apresenta relação estabelecida pela norma ABNT NBR 6118 [1], em seu item 6.4, da classe de agressividade ambiental com o tipo de ambiente e o risco de deterioração da estrutura.
+Quadro 4.8. Classes de agressividade ambiental (CAA).
+Classe de
+agressividade
+ambientalAgressividadeClassificação geral do tipo de ambiente para efeito de projetoRisco de deterioração da estruturaIFracaRuralInsignificanteSubmersaIIModeradaUrbana (1,2)PequenoIIIForteMarinha (1)GrandeIndustrial (1,2)IVMuito forteIndustrial (1,3)ElevadoRespingos de maré(1)  Pode-se admitir um microclima com uma classe de agressividade mais branda (uma classe acima) para ambientes internos secos (salas, dormitórios, banheiros, cozinhas e áreas de serviço de apartamentos residenciais e conjuntos comerciais ou ambientes com concreto revestido com argamassa e pintura).
+(2)  Pode-se admitir uma classe de agressividade mais branda (uma classe acima) em obras em regiões de clima seco, com umidade média relativa do ar menor ou igual a 65 %, partes da estrutura protegidas de chuva em ambientes predominantemente secos ou regiões onde raramente chove.
+(3)  Ambientes quimicamente agressivos, tanques industriais, galvanoplastia, branqueamento em indústrias de celulose e papel, armazéns de fertilizantes, indústrias químicas.Fonte: Tabela 6.1 da norma ABNT NBR 6118 [1]
+          A qualidade e a espessura do cobrimento das armaduras têm influência considerável na durabilidade das estruturas de concreto armado e protendido. Há, portanto, uma forte correspondência entre a relação água/cimento, a resistência à compressão do concreto e sua durabilidade. Nos casos gerais devem ser atendidos os requisitos mínimos de durabilidade expressos no Quadro 4.9.
+Quadro 4.9. Correspondência entre classes de agressividade ambiental e qualidade do concreto armado.
+ConcretoClasse de agressividadeIIIIIIIVRelação água/cimento em massa? 0,65? 0,60? 0,55? 0,45Classe de resistência do concreto conforme a norma ABNT NBR 8953 [13]? C20? C25? C30? C40Fonte: Tabela 7.1 da norma ABNT NBR 6118 [1]
+          Segundo o item 7.4.7 da norma ABNT NBR 6118 [1], para se garantir o cobrimento mínimo, cmín, deve-se considerar, em projeto, o cobrimento nominal, cnom, que nada mais é que o cobrimento mínimo acrescido de uma tolerância de execução ?c:
+	(4.51)
+          As dimensões das armaduras e os espaçadores usados em obra devem respeitar o cobrimento nominal, cnom. Nos casos em que houver um controle de qualidade adequado e forem estabelecidos limites rígidos de tolerância da variabilidade das medidas durante a execução, pode-se adotar o valor 5 mm para ?c. Caso contrário, nas obras correntes, o valor da tolerância ?c deve ser de no mínimo 10 mm.
+          O cobrimento nominal, cnom, de uma barra da armadura passiva (concreto armado) deve atender ainda à inequação (4.52), ou a inequação (4.53) no caso de armadura composta por feixes de barras. Os feixes de barras são encontrados, por exemplo, nas emendas de armaduras por meio de traspasse. Além disso, a dimensão máxima característica do agregado graúdo, dmáx, não pode ser superior ao estabelecido na equação (4.54).
+	(4.52)
+	(4.53)
+	(4.54)
+Onde:
+cnom	– é o cobrimento nominal das armaduras;
+?barra	– é o diâmetro das barras que compõem a armadura;
+?feixe	– é o diâmetro do feixe de barras que compõem a armadura;
+dmáx	– é a dimensão máxima característica do agregado graúdo.
+          O Quadro 4.10 apresenta os valores de cobrimento nominal a ser usado em projeto, de acordo com a classe de agressividade ambiental e o tipo de elemento, para ?c = 10 mm.
+Quadro 4.10. Correspondência entre classes de agressividade e o cobrimento nominal para ?c = 10 mm.
+Peças em concreto armadoComponente ou elementoClasse de agressividade ambiental (CAA)IIIIIIIV(2)cnom (mm)Laje (1)20253545Viga / pilar25304050Elementos estruturais em contato com o solo (3)30304050(1) Para a face superior de lajes e vigas que serão revestidas com argamassa de contrapiso, com revestimentos finais secos tipo carpete ou madeira; com argamassa de revestimento e acabamento tais como pisos de elevado desempenho, pisos cerâmicos, pisos asfálticos e outros tantos, as exigências desta tabela podem ser substituídas pelas expressões (4.76) a (4.78), respeitado o cobrimento nominal igual ou superior a 15 mm.
+(2) Nas superfícies expostas a ambientes agressivos, como reservatórios, estações de tratamento de água e esgoto, condutos de esgoto, canaletas de efluentes e outras obras em ambientes química e intensamente agressivos, devem ser atendidos os cobrimentos da classe de agressividade IV.
+(3) No trecho dos pilares em contato com o solo junto aos elementos de fundação, a armadura deve ter cobrimento nominal ? 45 mm.Fonte: Tabela 7.2 da norma ABNT NBR 6118 [1]
+4.6.3 Espaçamento entre barras longitudinais
+A armadura deve ser disposta de maneira a garantir que ela se comporte de acordo com as hipóteses de projeto e proporcione condições adequadas de execução. Os espaços entre as barras ou feixes de barras devem ser projetados de forma a garantir boas condições de lançamento e de adensamento do concreto, evitando vazios e segregação de agregados. Tais condições são atendidas se forem respeitados os espaçamentos mínimos previstos em (4.55) e (4.56). A Figura 4.14 ilustra os espaçamentos ah e av.
+	(4.55)
+	(4.56)
+Onde:
+ah	– é o espaçamento horizontal mínimo;
+av	– é o espaçamento vertical mínimo;
+dmáx	– é a dimensão máxima característica do agregado graúdo.
+          Deve-se garantir os valores de espaçamentos mínimos, ah e av, inclusive nas regiões de emendas das barras por trespasse, conforme a Figura 4.14.
+
+a.b.Figura 4.14. Espaçamentos entre barras de armadura longitudinal em vigas de concreto armado: a. região sem emendas nas barras; b. região com emendas nas barras.
+          O Quadro 4.11 apresenta os limites para o diâmetro máximo do agregado em função da classificação comercial da brita.
+Quadro 4.11. Classificação das britas.
+Tipo de britaDiâmetro do agregado (mm)Brita 04,8 a 9,5Brita 19,5 a 19Brita 219 a 25Brita 325 a 38
+          Para facilitar a concretagem, muitas vezes utiliza-se feixes de duas, três ou quatro barras. Nesses casos, considera-se cada feixe como uma barra equivalente de mesmo centro de gravidade e área igual à soma das áreas das barras que constituem o feixe. O diâmetro nominal da barra equivalente é dado pela equação (4.57), onde ? é o diâmetro da barra e n o número de barras no feixe. Os espaçamentos mínimos expressos em (4.55) e (4.56) e o cobrimento nominal expresso em (4.57) referem-se a essa barra equivalente.
+	(4.57)
+          Nos casos com mais de uma camada, o arranjo adotado deve permitir ainda a introdução de vibradores a fim de se garantir um bom adensamento do concreto. Sugere-se aqui que se considere para cada posição de vibração um raio de 30 cm para um adensamento eficiente promovido pelo vibrador e a possibilidade de que ele penetre até antes da primeira camada. A abertura deixada para cada posição de vibração deve ter largura igual ou superior ao diâmetro do vibrador. Sugere-se que seja acrescido de 2 cm ao diâmetro do vibrador para garantir sua passagem sem que toque nas armaduras, conforme apresentado na Figura 4.15.
+
+Figura 4.15. Espaçamentos para garantir a passagem de vibrador.
+4.6.4 Furos, aberturas e canalizações embutidas
+Para compatibilização do projeto de estruturas com a necessidade de passagem de canalizações, é necessário prever furos ou aberturas nos elementos estruturais. Furos têm dimensões pequenas em relação às dos elementos estruturais, enquanto as aberturas apresentam dimensões significativas. Um conjunto de furos muito próximos deve ser tratado como abertura. Segundo o item 13.2.5 da norma ABNT NBR 6118 [1], quando forem previstos furos e aberturas nos elementos estruturais, deve-se verificar seu efeito na resistência e na deformação das peças.
+          Essas verificações podem ser dispensadas no caso de furos que atravessem as vigas na direção de sua largura, desde que respeitadas todas as condições abaixo:
+* O furo situe-se em zona de tração e a uma distância de no mínimo 2 h da face do apoio, onde h é a altura da viga;
+* A dimensão do furo não exceda a 12 cm nem a h/3;
+* A distância entre faces de furos situados em um mesmo tramo seja de no mínimo 2 h;
+* Os cobrimentos sejam suficientes e não haja seccionamento das armaduras.
+          Em qualquer caso, a distância mínima de um furo à face mais próxima da viga não deve ser menor que 5 cm nem duas vezes o cobrimento nominal previsto para essa face.
+          Segundo o item 21.3.3 da norma ABNT NBR 6118 [1], os furos que atravessam as vigas na direção da altura devem estar em conformidade com as seguintes indicações, ilustradas na Figura 4.16:
+* O diâmetro do furo não pode ter diâmetro superior a 1/3 da largura da viga nas regiões desses furos; 
+* A distância mínima de um furo à face mais próxima da viga deve ser no mínimo igual a 5 cm e duas vezes o cobrimento previsto nessa face;
+* A seção remanescente nessa região, descontada a área ocupada pelo furo, deve ser capaz de resistir aos esforços previstos em projeto, além de permitir uma boa concretagem;
+* No caso de ser necessário um conjunto de furos, esses devem ser alinhados e a distância entre suas faces deve ser de no mínimo 5 cm ou o diâmetro do furo; cada intervalo entre furos deve conter pelo menos um estribo;
+* No caso de elementos estruturais submetidos à torção, esses limites devem ser ajustados para permitir um funcionamento adequado.
+ 
+Figura 4.16. Furos na direção da altura das vigas.
+4.7 Verificação do centro de gravidade da armadura
+O dimensionamento das armaduras, tanto as tracionadas quanto as comprimidas, é feito geralmente considerando-se que todas as barras estejam concentradas no centro de gravidade das armaduras. A Figura 4.17 representa graficamente o centro de gravidade das armaduras, que deve reproduzir numericamente a força normal e o momento fletor do conjunto das barras.
+
+Figura 4.17. Centro de gravidade das armaduras.
+          O cálculo do centro de gravidade das armaduras é feito a partir da igualdade entre os momentos fletores das duas situações da Figura 4.17:
+	(4.58)
+Onde:
+nb	– é o número de barras;
+asi	– é a área de cada barra i;
+yi	– é a distância do centro de gravidade da barra i ao referencial;
+yCG	– é a distância do centro de gravidade da armadura ao referencial.
+          Como o dimensionamento das seções de concreto armado deve se dar nos domínios 2 ou 3, a tensão de dimensionamento ?sd é igual a fyd. A norma ABNT NBR 6118 [1], em seu item 17.2.4, indica que as forças nas armaduras podem ser consideradas concentradas no centro de gravidade correspondente se a distância deste centro de gravidade ao centro da armadura mais afastada, medida normalmente à linha neutra, for menor que 10% da altura da seção. Essa situação é apresentada na Figura 4.18. Atendendo a essa condição, garante-se que todas as barras tenham ultrapassado a deformação de escoamento, ?yd. Assim, a tensão em cada barra também é igual a fyd e a equação (4.58) resulta em (4.59). Nos casos em que a referida distância exceda ao limite prescrito, deve-se verificar a tensão nas barras.
+	(4.59)
+
+Figura 4.18. Centro de gravidade das armaduras.
+
+Exemplo 4.17: Proponha um arranjo de armadura longitudinal para a seção da Figura E4.8. Considere que a seção pertença a uma viga revestida com argamassa de uma estrutura situada em região urbana, que na confecção do concreto seja usada a Brita 1 como agregado graúdo e que o diâmetro do estribo seja de 6,3 mm. Considere ainda que o dimensionamento da seção tenha sido feito de acordo com a norma ABNT NBR 6118 e que tenha sido encontrado o valor de 10,2 cm2 para a armadura longitudinal.
+Figura E4.8Solução:
+Segundo o Quadro 4.8, regiões urbanas têm classe de agressividade ambiental (CAA) II (agressividade moderada). No entanto, o mesmo quadro afirma que, em ambientes com concreto revestido com argamassa e pintura pode-se admitir um microclima com uma classe de agressividade mais branda. Assim, o detalhamento pode ser feito considerando CAA I (agressividade fraca). Segundo o Quadro 4.9, o cobrimento nominal, cnom, em vigas em CAA I deve ser 2,5 cm.
+          O Quadro 4.11 indica que a dimensão máxima da Brita 1 está entre 9,5 mm e 19 mm. Assim, adota-se dmáx = 1,9 cm.
+A. Primeira opção para o arranjo da armadura:
+Adotando-se 9 barras de 12,5 mm, tem-se:  
+Os espaçamentos mínimos entre as barras são:
+Assim, a largura livre é: 
+O número máximo de barras que é possível acomodar por camada é:
+
+	=> é possível acomodar até 5 barras por camada
+Com 5 barras por camada, o espaçamento entre as barras é:  
+
+Figura E4.9. Proposta de detalhe com 9 ? 12,5 mm
+          Tomando-se como referencial a base da seção transversal, têm-se as distâncias entre base e o centro das camadas e o centro de gravidade da armadura para o detalhe da Figura E4.9:
+
+
+
+          Como yCG > d’ da Figura E4.8, o arranjo proposto na Figura E4.9 não atende à altura útil usada no dimensionamento. Nesse caso, há duas opções de projeto: recalcular a armadura necessária ou elaborar um novo arranjo de armadura.
+
+B. Segunda opção para o arranjo da armadura:
+Adotando-se 4 ? de 16 mm e 2 ? de 12,5 mm, tem-se: 
+          Quando se usam diâmetros diferentes, deve-se usar o maior diâmetro para o cálculo de ah e av. A alteração do diâmetro da barra para 16 mm não altera os valores de ah e av calculados para o diâmetro de 12,5 mm, uma vez que predominaram outros valores que não o diâmetro da barra.
+O número máximo de barras que é possível acomodar por camada é:
+	=> é possível acomodar até 5 barras por camada
+
+Figura E4.10. Proposta de detalhe com 4 ? 16 mm e 2 ? 12,5 mm
+Com 4 barras de 16 mm de diâmetro na primeira camada, o espaçamento entre as barras é: 
+          Tomando-se como referencial a base da seção transversal, têm-se as distâncias entre base e o centro das camadas e o centro de gravidade da armadura para o detalhe da Figura E4.10:
+
+
+
+Como yCG < d’ da Figura E4.8, o arranjo proposto na Figura E4.10 atende à altura útil usada no dimensionamento.
+4.8 Problemas propostos
+1) A seção retangular do vão de uma viga de um edifício residencial tem largura de 20 cm e altura de 60 cm e está submetida a um momento fletor solicitante de 200 kN?m. Considere o concreto com fck de 30 MPa, armadura longitudinal com aço CA-50, d’ igual a 5 cm. Determine o domínio de dimensionamento dessa seção, a forma de ruptura e a área de aço necessária.
+2) A seção retangular do apoio de uma viga de um edifício comercial tem largura de 20 cm e altura de 60 cm e está submetida a um momento fletor solicitante de 250 kN?m. Considere o concreto com fck de 30 MPa, armadura longitudinal com aço CA-50, d’ igual a 5 cm. Determine o domínio de dimensionamento dessa seção, a forma de ruptura e a área de aço necessária.
+3) A seção retangular do vão uma viga de um edifício comercial com largura de 15 cm e altura de 50 cm está submetida a um momento fletor solicitante de 50 kN?m. Considere o concreto com fck de 20 MPa, armadura longitudinal com aço CA-50, d’ igual a 4 cm. Determine o domínio de dimensionamento dessa seção e a área de aço necessária.
+4) A seção retangular do vão de uma viga de um edifício residencial com largura de 20 cm e altura de 50 cm está submetida a um momento fletor solicitante de 30 kN?m. Considere o concreto com fck de 30 MPa, armadura longitudinal com aço CA-50, d’ igual a 5 cm. Determine o domínio de dimensionamento dessa seção, a forma de ruptura e a área de aço necessária.
+5) A seção retangular do vão de uma viga de um edifício comercial com largura de 25 cm e altura de 50 cm está submetida a um momento fletor solicitante de 300 kN?m. Considere o concreto com fck de 70 MPa, armadura longitudinal com aço CA-50, d’ igual a 5 cm. Determine o domínio de dimensionamento dessa seção, a forma de ruptura e a área de aço necessária.
+6) Calcule a área armadura longitudinal necessária para a seção do meio do vão da viga da Figura P4.1. Considere que a viga se insere em um edifício residencial.
+
+Figura P4.1   Dados:
+   Aço CA-50
+   fck = 20 MPa
+   d’ = 4 cm
+7) Refaça o problema 6 com pk = 15 kN/m.
+8) Obtenha o momento resistente da seção da Figura P4.2, do vão de uma viga de um edifício comercial. Considere que a distância entre a fibra mais tracionada e o centro de gravidade da armadura seja de 4 cm.
+
+Figura P4.2   Dados:
+   Aço CA-50
+   fck = 20 MPa
+   As = 3,5 cm29) Proponha um arranjo de armadura longitudinal para a seção do problema 1. Considere que a seção pertença a uma viga revestida com argamassa de uma estrutura situada em região urbana, que na confecção do concreto seja usada a Brita 1 como agregado graúdo e que o diâmetro do estribo seja de 6,3 mm.
+10) Proponha um arranjo de armadura longitudinal para a seção do problema 3. Considere que a seção pertença a uma viga revestida com argamassa de uma estrutura situada em região urbana, que na confecção do concreto seja usada a Brita 1 como agregado graúdo e que o diâmetro do estribo seja de 6,3 mm.
+4.9 Referências
+[1]	Associação Brasileira de Normas Técnicas. ABNT NBR 6118: Projeto de estruturas de concreto – procedimento. Rio de Janeiro, 2023 (versão corrigida de 2024). 242p.
+[2]	Associação Brasileira de Normas Técnicas. ABNT NBR 16935: Projeto de estruturas de concreto reforçado com fibras – procedimento. Rio de Janeiro, 2021. 27p.
+[3]	International Federation for Structural Concrete. FIB Model Code for Concrete Structures 2010 (MC-10). Berlin: Wilhelm Ernst & Sohn; 2013. DOI:10.1002/9783433604090
+[4]	EUROPEAN COMMITTEE FOR STANDARDIZATION. Eurocode 2: Design of concrete structures - Part 1-1: General rules and rules for buildings. EN 1992-1-1:2004. Brussels: CEN, 2004.
+[5]	ARÚJO, J.M. Dimensionamento à flexão simples de seções transversais de concreto armado com ênfase na ductilidade. Revista Teoria e Prática na Engenharia Civil, n.14, p.1-13, 2009. Disponível em https://www.editoradunas.com.br/revistatpec/Art1_N14.pdf. Acesso em 08/01/2025.
+[6]	FERREIRA, M.A.; ARAÚJO, D.L.; JEREMIAS JR, A. C. Estabilidade global de estruturas reticuladas em concreto pré-moldado. In: Congresso Brasileiro do Concreto – CBC 2005, 47, 2005, Olinda. Anais. São Paulo: IBRACON, 2005. v. XI. p. 182-196.
+[7]	OLIVEIRA, C.A.S. Avaliação da redução de armadura mínima de flexão em vigas de concreto armado com adição de fibras de aço. 2007. 234p. Dissertação (Mestrado em Engenharia Civil) – Universidade Federal de Goiás, 2007.
+[8]	QUEIRÓZ, R.R. Taxa de armadura mínima de flexão e de cortante em vigas de concreto armado. 1999. 100p. Tese (mestrado em Engenharia Civil) – COPPE, Universidade Federal do Rio de Janeiro. 1999.
+[9]	SUSSEKIND, J.C. Curso de Concreto: Concreto Armado, vol. 1. 4ª ed. Rio de Janeiro: Editora Globo, 1980. 376p.
+[10]	MOCCIA, F.; YU, Q.; RUIZ, M. F.; MUTTONI, A. Concrete compressive strength: From material characterization to a structural value. Structural Concrete. 2021; 22 (Suppl. 1): E634–E654. https://doi.org/10.1002/suco.202000211
+[11]	ROCHA, A.M. Concreto Armado, vol. 1. 22ª ed. São Paulo: Editora Nobel, 1987. 484p.
+[12]	Associação Brasileira de Normas Técnicas. ABNT NBR 14931: Execução de estruturas de concreto armado, protendido e com fibras — Requisitos. Rio de Janeiro, 2023. 85p.
+[13]	Associação Brasileira de Normas Técnicas. ABNT NBR 8953: Concreto para fins estruturais - Classificação pela massa específica, por grupos de resistência e consistência. Rio de Janeiro, 2015. (Confirmada em 16-01-2025). 3p.
+1 A exceção são os apoios de vigas que possuem trechos em balanço. Neste caso, como já explicado, a formação da rótula plástica nesse apoio acarretará a ruína local do balanço.
+2 Toda estrutura quando sujeita a forças horizontais apresenta deslocamentos horizontais. As estruturas de nós móveis são estruturas esbeltas em que os efeitos dos deslocamentos horizontais devem ser considerados no projeto.
+3 ? é um fator que correlaciona, aproximadamente, a resistência à tração na flexão com a resistência à tração direta do concreto. De forma simplificada, ele considera a contribuição do concreto tracionado no Estádio Ib.
+4 Os autores sugerem utilizar ?c =1 nesse equacionamento.
+5 Os autores sugerem utilizar ?c =1 nesse equacionamento.
+6 Os autores sugerem utilizar ?c =1 na equação (4.37a).
+7 Os autores sugerem utilizar ?c =1 na equação (4.38a).
+8 São consideradas vigas–paredes as vigas em que a razão entre vão teórico, l, e altura, h, é inferior a 2 em vigas biapoiadas e inferior a 3 em vigas contínuas. Assim como as vigas, as vigas parede podem receber carregamentos na face superior ou na face inferior.
+[wm1]Isso aqui fica grande assim mesmo?
+---------------
+
+------------------------------------------------------------
+
+---------------
+
+------------------------------------------------------------
+
+Estruturas de Concreto Armado – fundamentos do dimensionamento de vigas	1
+

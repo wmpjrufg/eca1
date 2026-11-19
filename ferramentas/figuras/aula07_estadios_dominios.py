@@ -80,15 +80,15 @@ def fig_ensaio():
         av.spines[s].set_visible(False)
     av.tick_params(bottom=False)
 
-    # momento
+    # momento: convenção brasileira, desenhado do lado tracionado (para baixo)
     xm = [0, a, L - a, L]
-    ym = [0, 1, 1, 0]
+    ym = [0, -1, -1, 0]
     am.fill(xm, ym, color="#f7d9d6", ec=VERMELHO, lw=1.6)
     am.axhline(0, color="#333", lw=0.9)
-    am.set_ylim(-0.2, 1.65)
+    am.set_ylim(-1.65, 0.2)
     am.set_ylabel("$M$", rotation=0, fontsize=13, labelpad=14, va="center")
-    am.text(L / 2, 1.07, "$M=\\dfrac{P}{2}\\,a=\\dfrac{PL}{6}$ (constante)",
-            ha="center", va="bottom", fontsize=11.5, color=VERMELHO)
+    am.text(L / 2, -1.07, "$M=\\dfrac{P}{2}\\,a=\\dfrac{PL}{6}$ (constante)",
+            ha="center", va="top", fontsize=11.5, color=VERMELHO)
     am.set_yticks([])
     for s in ("top", "right", "left", "bottom"):
         am.spines[s].set_visible(False)
