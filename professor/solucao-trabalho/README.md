@@ -16,13 +16,20 @@ Use `True` e `False` com inicial maiúscula, sem aspas, pois o arquivo é Python
 Comentar ou remover a linha de uma entrega também a mantém oculta. As liberações
 são independentes: liberar a Entrega 2 não libera automaticamente a Entrega 1.
 
-Edite a solução de cada entrega no respectivo `entrega-N.md` desta pasta. Os
-links para as aulas usam `../aulas/`, pois o texto é renderizado na página
-`source/disciplina/000-solucao-trabalho.md`. Mantenha os títulos de entrega em
-nível 2 (`##`) e as etapas em nível 3 (`###`).
+Edite a solução de cada entrega no respectivo `entrega-N.md` desta pasta. Cada
+entrega é uma página própria, `source/disciplina/000-solucao-entrega-N.md`, que
+contém só o marcador `<!-- solucao:entrega-N -->`; é nela que o texto é
+renderizado, e por isso aparece como subitem de "Solução do trabalho" no menu
+lateral. Os links para as aulas usam `../aulas/`. Mantenha o título da entrega
+em nível 2 (`##`) e as etapas em nível 3 (`###`): na página, o título é
+substituído por `# Entrega N: ...` e as etapas sobem para nível 2, que é o que o
+menu da direita lista. Referências por rótulo, como `[Tabela 11](#tabela-cargas-lajes)`,
+funcionam entre entregas. Uma entrega não liberada continua com sua página, que
+mostra apenas o aviso de que a solução ainda não foi liberada.
 
 Gere o site com `sphinx-build -b html source build/html` e confira
-`build/html/disciplina/000-solucao-trabalho.html`. No fluxo atual, o push em
+`build/html/disciplina/000-solucao-trabalho.html` e as páginas
+`000-solucao-entrega-N.html`. No fluxo atual, o push em
 `main` reconstrói e publica o site pelo GitHub Actions. Para retirar uma parte
 já liberada, volte seu valor para `False` e publique novamente.
 
